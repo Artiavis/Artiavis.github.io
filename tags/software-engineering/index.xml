@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software Engineering on Just a Blog in the Park</title>
+    <link>http://Artiavis.github.io/tags/software-engineering/</link>
+    <description>Recent content in Software Engineering on Just a Blog in the Park</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2017</copyright>
+    <lastBuildDate>Sat, 09 Jan 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://Artiavis.github.io/tags/software-engineering/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How Programming is Like Cooking</title>
+      <link>http://Artiavis.github.io/2016/01/09/how-programming-is-like-cooking/</link>
+      <pubDate>Sat, 09 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2016/01/09/how-programming-is-like-cooking/</guid>
+      <description>Peter Naur, famous in the programming world for his contributions to ALGOL and the Backus-Naur Form (BNF) notation for expressing grammars, passed away last week. (For those who are not in the programming world, ALGOL&amp;rsquo;s grammatical syntax inspired most of today&amp;rsquo;s most popular programming languages, like C, C++, Java, and Python). As a very young millennial programmer, I&amp;rsquo;d of course heard Naur&amp;rsquo;s name from the BNF notation, but didn&amp;rsquo;t really get to appreciate just how prescient his work was at the time.</description>
+    </item>
+    
+    <item>
+      <title>Software Engineering and Computer Science</title>
+      <link>http://Artiavis.github.io/2013/12/24/software-engineering-and-computer-science/</link>
+      <pubDate>Tue, 24 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2013/12/24/software-engineering-and-computer-science/</guid>
+      <description>I&amp;rsquo;m planning on this post being the first in a series about my naïve thoughts about the significance of Software Engineering as an undergraduate with little so-called real-world experience. Stay tuned for followup posts, which I&amp;rsquo;ll post back here.
+For the past several decades, computer programming has been done in special programming languages which can be either interpreted or compiled (translated) into a form which is natively comprehensible to computers (known as machine code).</description>
+    </item>
+    
+  </channel>
+</rss>

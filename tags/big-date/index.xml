@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Big Date on Just a Blog in the Park</title>
+    <link>http://Artiavis.github.io/tags/big-date/</link>
+    <description>Recent content in Big Date on Just a Blog in the Park</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2017</copyright>
+    <lastBuildDate>Thu, 10 Apr 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://Artiavis.github.io/tags/big-date/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Intro to Big Data</title>
+      <link>http://Artiavis.github.io/2014/04/10/intro-to-big-data/</link>
+      <pubDate>Thu, 10 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2014/04/10/intro-to-big-data/</guid>
+      <description>Last Friday, I had the chance to attend a panel of career technologists and data scientists who all work in the fascinating field known as “big data”. “Big data” is an umbrella term to describe data whose qualities are so atypical that classical data analysis techniques fail to even begin to tackle understanding them. The data can be in any conceivable format and in any field of study. For instance, in news analysis, “How are news articles relevantly accessed when more arrive in a single day than a person can read in a lifetime?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Just a Blog in the Park</title>
+    <link>http://Artiavis.github.io/</link>
+    <description>Recent content on Just a Blog in the Park</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2017</copyright>
+    <lastBuildDate>Sun, 19 Mar 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://Artiavis.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>XCOM2: Review</title>
+      <link>http://Artiavis.github.io/2017/03/19/xcom2-review/</link>
+      <pubDate>Sun, 19 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2017/03/19/xcom2-review/</guid>
+      <description>Over the holidays I picked up the iPad version of XCOM: Enemy Within, the previous iteration in the XCOM franchise. For those unfamiliar with XCOM, it&amp;rsquo;s a brilliant (but extremely challenging) series of turn-based tiled-map strategy games. Although I ended up wiping close to 2&amp;frasl;3 of the way through my play through, I found Enemy Within compelling enough to try out XCOM 2, with some encouragement from friends and family.</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>http://Artiavis.github.io/about/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/about/</guid>
+      <description>About Me My name is Jeff Rabinowitz. I&amp;rsquo;m a nerd and programmer living in the outskirts of New York City with my beautiful wife. I currently work in advertising technology (primarily using Java). My interests include finance, economics, biology, photography, and especially programming (and programming languages).
+You can see my social media profiles on the navbar at the top of my site.</description>
+    </item>
+    
+    <item>
+      <title>Switching to Spacemacs As My Default Editor</title>
+      <link>http://Artiavis.github.io/2016/10/02/switching-to-spacemacs-as-my-default-editor/</link>
+      <pubDate>Sun, 02 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2016/10/02/switching-to-spacemacs-as-my-default-editor/</guid>
+      <description>I recently began to use Emacs as my default text editor for most things, having switched from Sublime Text. Specifically, I&amp;rsquo;m using the brilliant Spacemacs project, which can best be described as a fairly comprehensive set of sensible defaults and plugins for Emacs with a clever plugin architecture.
+I used to be a casual VIM user for remote file editing and a Sublime Text user for local editing (with plugins).</description>
+    </item>
+    
+    <item>
+      <title>I&#39;m Impressed by iPhone Photograpy</title>
+      <link>http://Artiavis.github.io/2016/06/26/im-impressed-by-iphone-photograpy/</link>
+      <pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2016/06/26/im-impressed-by-iphone-photograpy/</guid>
+      <description>My wife and I got back from our honeymoon in Italy a few weeks ago (which you can read about here), and I need to remark on how impressed I am by the performance our iPhones. Both my wife&amp;rsquo;s iPhone 5S and my iPhone 6 performed spectacularly, taking hundreds of photos for us during our ten days on holiday.
+I know there&amp;rsquo;s a lot of marketing hype about how good the iPhone camera is, but this was my first time relying exclusively upon a smartphone camera for pictures of a momentous chapter of my life, and I now buy the hype.</description>
+    </item>
+    
+    <item>
+      <title>My First Holiday in Italy</title>
+      <link>http://Artiavis.github.io/2016/06/26/my-first-holiday-in-italy/</link>
+      <pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2016/06/26/my-first-holiday-in-italy/</guid>
+      <description>This blog post is long overdue; I&amp;rsquo;ve been a bit preoccupied since getting back to the States, but I wanted to briefly share some of my thoughts from my recent honeymoon in Italy.
+My wife and I had our long-overdue honeymoon early last month, in gorgeous Italy: Venice, Rome, Florence, and Milan. This was the realization of a dream for us; few countries in the world have the culture, history, art, dining, and exquisite beauty which Italy has.</description>
+    </item>
+    
+    <item>
+      <title>Microsoft&#39;s Word Flow Keyboard for iOS</title>
+      <link>http://Artiavis.github.io/2016/05/17/microsofts-word-flow-keyboard-for-ios/</link>
+      <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2016/05/17/microsofts-word-flow-keyboard-for-ios/</guid>
+      <description>The other day, I heard about a new iOS app put out by Microsoft&amp;rsquo;s experimental app development team (a &amp;ldquo;Microsoft Garage&amp;rdquo; project): &amp;ldquo;Word Flow&amp;rdquo;. Having been impressed with some previous Microsoft Garage projects, and noticing that the keyboard looked suspiciously familiar, I decided to check it out.
+Like Swype, Word Flow allows both the classic point-and-tap typing mechanism, and the swiping typing mechanism wherein a user drags their finger continuously between the various letters on the keyboard which constitute a desired word in order to generate it.</description>
+    </item>
+    
+    <item>
+      <title>Upgrading to Windows 10</title>
+      <link>http://Artiavis.github.io/2016/03/20/upgrading-to-windows-10/</link>
+      <pubDate>Sun, 20 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2016/03/20/upgrading-to-windows-10/</guid>
+      <description>Last weekend I finally decided to take the plunge and update my gaming PC to Windows 10. My wife upgraded, my parents upgraded, and even my grandmother upgraded, so I figured I may as well see what all the rage is about.
+The initial upgrade seemed to go smoothly, and completed in under an hour. However, immediately after the first system restart (and Windows users know how mandatory restarts can be for applying updates), the Start button stopped working for me.</description>
+    </item>
+    
+    <item>
+      <title>Cooked</title>
+      <link>http://Artiavis.github.io/2016/03/01/cooked/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2016/03/01/cooked/</guid>
+      <description>Those who know me know I have a strong interest in cooking shows. I am a huge fan of Iron Chef and Alton Brown&amp;rsquo;s Good Eats (so much so that I actually own all three volumes of the Good Eats cookbooks!). Although I haven&amp;rsquo;t watched much in the way of cooking shows in recent years due to not having a permanent cable subscription, my zest for this content is as strong as ever.</description>
+    </item>
+    
+    <item>
+      <title>Master of None</title>
+      <link>http://Artiavis.github.io/2016/01/24/master-of-none/</link>
+      <pubDate>Sun, 24 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2016/01/24/master-of-none/</guid>
+      <description>My wife and I finally finished Aziz Ansari&amp;rsquo;s &amp;ldquo;Master of None&amp;rdquo;, the social commentary comedy about the challenges of coming of (older) age for a directionless aspiring actor and his friends rounding their thirties.
+I particularly enjoyed episodes two and ten. Episode two has Dev and his friend Brian discovering more about the culture of their immigrant families, which they took for granted and never really learned about growing up. Episode ten, the season finale, explores Dev&amp;rsquo;s struggles with commitment and aspirations for his own life.</description>
+    </item>
+    
+    <item>
+      <title>Lisp Finally Clicked</title>
+      <link>http://Artiavis.github.io/2016/01/17/lisp-finally-clicked/</link>
+      <pubDate>Sun, 17 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2016/01/17/lisp-finally-clicked/</guid>
+      <description>I&amp;rsquo;ve been meaning to write this post for a couple of weeks now. There is a story told among programming language enthusiasts that programming as an art only &amp;ldquo;clicks&amp;rdquo; once a programmer understands the Lisp programming language. I finally feel like I&amp;rsquo;ve reached that point. Although I don&amp;rsquo;t think I&amp;rsquo;m an amazing programmer, I finally feel like I understand the difference between languages (like Python and Lisp), and why Lisp is often considered so much more flexible and powerful (at least in theory) than a language like Python or C.</description>
+    </item>
+    
+    <item>
+      <title>Comparing Freemium Game Models</title>
+      <link>http://Artiavis.github.io/2016/01/10/comparing-freemium-game-models/</link>
+      <pubDate>Sun, 10 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2016/01/10/comparing-freemium-game-models/</guid>
+      <description>I suppose I&amp;rsquo;ve been playing freemium video games for a few years now. (For those who haven&amp;rsquo;t heard of the &amp;ldquo;freemium&amp;rdquo; business model, it&amp;rsquo;s the strategy of selling a good or service which is free to access but costs money for premium features. Freemium software, especially video games, are popular because the barrier to entry is made as low as possible to hook people. I highly recommend the South Park episode on the subject, &amp;ldquo;Freemium Isn&amp;rsquo;t Free&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>How Programming is Like Cooking</title>
+      <link>http://Artiavis.github.io/2016/01/09/how-programming-is-like-cooking/</link>
+      <pubDate>Sat, 09 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2016/01/09/how-programming-is-like-cooking/</guid>
+      <description>Peter Naur, famous in the programming world for his contributions to ALGOL and the Backus-Naur Form (BNF) notation for expressing grammars, passed away last week. (For those who are not in the programming world, ALGOL&amp;rsquo;s grammatical syntax inspired most of today&amp;rsquo;s most popular programming languages, like C, C++, Java, and Python). As a very young millennial programmer, I&amp;rsquo;d of course heard Naur&amp;rsquo;s name from the BNF notation, but didn&amp;rsquo;t really get to appreciate just how prescient his work was at the time.</description>
+    </item>
+    
+    <item>
+      <title>IaaS and PaaS Explained: A Food Analogy</title>
+      <link>http://Artiavis.github.io/2015/11/22/iaas-and-paas-explained-a-food-analogy/</link>
+      <pubDate>Sun, 22 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2015/11/22/iaas-and-paas-explained-a-food-analogy/</guid>
+      <description>The other night, I was meditating about my various options for deploying applications at work, including &amp;ldquo;Infrastructure as a Service&amp;rdquo; (IaaS) and &amp;ldquo;Platform as a Service&amp;rdquo; (PaaS). Amidst my musing, I came up with an analogy for explaining the difference between these various ways of deploying programming solutions, in addition to the much more conventional approaches which were used formerly (and are often still necessary).
+The Analogy Suppose you want to get into the food services industry.</description>
+    </item>
+    
+    <item>
+      <title>The Clojure “Reductions” Function</title>
+      <link>http://Artiavis.github.io/2015/11/17/the-clojure-reductions-function/</link>
+      <pubDate>Tue, 17 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2015/11/17/the-clojure-reductions-function/</guid>
+      <description>Tonight, while attempting a problem at 4 Clojure (problem number omitted so as not to give too many hints), I was struck by the following problem:
+ What if I need a Clojure function which can take a sequence of functions and can sequentially call them on some seed value?
+ I&amp;rsquo;m specifically looking at something like:
+(defn some-fun [seed-val &amp;amp; funs] ; Keep passing the calculated value through, while also appending to sequence (list ((first funs) seed-val) ((second funs) ((first funs) seed-val)) .</description>
+    </item>
+    
+    <item>
+      <title>Teaching Binary Using the Socratic Method</title>
+      <link>http://Artiavis.github.io/2015/11/06/teaching-binary-using-the-socratic-method/</link>
+      <pubDate>Fri, 06 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2015/11/06/teaching-binary-using-the-socratic-method/</guid>
+      <description>Yesterday, I saw this article shared on Reddit&amp;rsquo;s programming subreddit. I can&amp;rsquo;t due justice to the article, so I won&amp;rsquo;t even try to summarize it. (Definitely read it before reading on here.)
+However, I think it&amp;rsquo;s worth sharing because it highlights one of the most fundamental things that we take for granted when trying to teach friends or family something (not all of us are trained teachers). Not every new concept is actually so complex and layered that it can&amp;rsquo;t be easily intuited by someone with basic knowledge.</description>
+    </item>
+    
+    <item>
+      <title>Clojure Zippers Emulate Object-Oriented Programming?</title>
+      <link>http://Artiavis.github.io/2015/11/05/clojure-zippers-emulate-object-oriented-programming/</link>
+      <pubDate>Thu, 05 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2015/11/05/clojure-zippers-emulate-object-oriented-programming/</guid>
+      <description>Yesterday, I posted about using Clojure zippers to solve the problem of automatically generating a Table of Contents. During my work with Clojure&amp;rsquo;s implementation of zippers, I noticed something interesting.
+The zipper function creates (and returns) a new zipper object. Its parameters are the following (lifted straight from the documentation):
+ branch? &amp;ndash; a function that takes a node of the zipper and returns a true/false if it is capable of having children (even if it currently does not).</description>
+    </item>
+    
+    <item>
+      <title>Coding: Debugging the Gender Gap</title>
+      <link>http://Artiavis.github.io/2015/11/05/coding-debugging-the-gender-gap/</link>
+      <pubDate>Thu, 05 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2015/11/05/coding-debugging-the-gender-gap/</guid>
+      <description>On Monday, I had the chance to view a private screening of the newish documentary &amp;ldquo;Code: Debugging the Gender Gap&amp;rdquo;. The premise of the documentary, lifted straight from IMDB:
+ CODE documentary exposes the dearth of female and minority software engineers and explores the reasons for this gender gap and digital divide. The film highlights breakthrough efforts that are producing more diverse programmers and shows how this critical gap can be closed.</description>
+    </item>
+    
+    <item>
+      <title>Implementing a Table of Contents Using Zippers</title>
+      <link>http://Artiavis.github.io/2015/11/04/implementing-a-table-of-contents-using-zippers/</link>
+      <pubDate>Wed, 04 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2015/11/04/implementing-a-table-of-contents-using-zippers/</guid>
+      <description>As I continue my forays with Clojure, I&amp;rsquo;m finding it enjoyable (if not entirely productive) to hack with it on Cryogen, a nifty little blog generator I already discussed recently.
+On Sunday I had the privilege of making my first pull request. The essence of the PR was to fix a couple of bugs with the existing implementation of the logic for generating a Table of Contents for a given blog post, and also replace a less robust algorithm (for real-life use cases) with a more robust one.</description>
+    </item>
+    
+    <item>
+      <title>F Sharp vs Clojure Toy Problem Shootout</title>
+      <link>http://Artiavis.github.io/2015/10/28/f-sharp-vs-clojure-toy-problem-shootout/</link>
+      <pubDate>Wed, 28 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2015/10/28/f-sharp-vs-clojure-toy-problem-shootout/</guid>
+      <description>As a continuation of my forays in interesting and less industrially-oriented programming languages, I decided to compare F Sharp against Clojure for a relatively simple programming problem, and to compare how the two felt in terms of programming ease, friendliness, and how they each viewed the problem.
+The Problem The problem is a relatively one from Reddit&amp;rsquo;s &amp;ldquo;Daily Programmer&amp;rdquo; subreddit, called JSON Treasure Hunt: given a random, unstructured JSON object, traverse the object looking for a specific terminal value (in this case, a string &amp;ldquo;dailyprogrammer&amp;rdquo;).</description>
+    </item>
+    
+    <item>
+      <title>Returning to Blogging with Cryogen</title>
+      <link>http://Artiavis.github.io/2015/10/24/returning-to-blogging-with-cryogen/</link>
+      <pubDate>Sat, 24 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2015/10/24/returning-to-blogging-with-cryogen/</guid>
+      <description>It&amp;rsquo;s been a long while since I last blogged. My last post dates back to April of 2014, shortly before I graduated from Rutgers Engineering. My life since then has been a bit of a whirlwind. I&amp;rsquo;ve since graduated, moved to the Upper West Side, started working in banking, gotten engaged and married, and moved out. I suppose I could be forgiven for not blogging as actively.
+Why I Took Down My Old Blog My old blog was running on Ghost, a nifty JavaScript-based modern reimagination of the classic web-based blogging platform.</description>
+    </item>
+    
+    <item>
+      <title>Pros and Cons of Clojure</title>
+      <link>http://Artiavis.github.io/2015/10/18/pros-and-cons-of-clojure/</link>
+      <pubDate>Sun, 18 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2015/10/18/pros-and-cons-of-clojure/</guid>
+      <description>As part of my forays in interesting (and generally unusable at work) programming languages, I began investigating Clojure back in June. Although I really love the language as a whole (and, in fact, I&amp;rsquo;m using it to power this blog!), I struggled not only to set it up, but to find its ideal niche. This essay/rant is a result of a conversation I had about Clojure with two friends, one who is an excellent polyglot programmer, and one who is a beginner simply interested in Clojure as a practical Lisp.</description>
+    </item>
+    
+    <item>
+      <title>Intro to Big Data</title>
+      <link>http://Artiavis.github.io/2014/04/10/intro-to-big-data/</link>
+      <pubDate>Thu, 10 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2014/04/10/intro-to-big-data/</guid>
+      <description>Last Friday, I had the chance to attend a panel of career technologists and data scientists who all work in the fascinating field known as “big data”. “Big data” is an umbrella term to describe data whose qualities are so atypical that classical data analysis techniques fail to even begin to tackle understanding them. The data can be in any conceivable format and in any field of study. For instance, in news analysis, “How are news articles relevantly accessed when more arrive in a single day than a person can read in a lifetime?</description>
+    </item>
+    
+    <item>
+      <title>Version Controlling Documents</title>
+      <link>http://Artiavis.github.io/2014/03/23/version-controlling-documents/</link>
+      <pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2014/03/23/version-controlling-documents/</guid>
+      <description>As a college student (and despite studying Engineering), I&amp;rsquo;m occasionally required to write paper for class. Sometimes they&amp;rsquo;re simply one-off papers that only need to be a page or two (like for my Ethics class), in which case it doesn&amp;rsquo;t really matter what I write the papers in or whether I back them up in any meaningful capacity. In theory, if the worst happened and I lost the file, I could rewrite it in a couple of hours and it wouldn’t be the end of the world.</description>
+    </item>
+    
+    <item>
+      <title>Multiple Cores and Multithreading</title>
+      <link>http://Artiavis.github.io/2014/03/09/multiple-cores-and-multithreading/</link>
+      <pubDate>Sun, 09 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2014/03/09/multiple-cores-and-multithreading/</guid>
+      <description>Have you ever seen advertisements for the latest computers which promote fancy processors with multi-core processors and wonder exactly the advantage of having multiple cores is?
+The most tempting explanation, although perhaps too simplistic, is that &amp;ldquo;more is better&amp;rdquo;. The most common mistake is thinking that n cores must run programs n times faster than one core, ie a four core processor is approximately four times faster than a single-core processor.</description>
+    </item>
+    
+    <item>
+      <title>Job Hunting On Campus</title>
+      <link>http://Artiavis.github.io/2014/02/09/job-hunting-on-campus/</link>
+      <pubDate>Sun, 09 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2014/02/09/job-hunting-on-campus/</guid>
+      <description>It&amp;rsquo;s February, and with the summer slowly approaching, many of my friends are beginning to look for work for after graduation (or just the summer if they&amp;rsquo;re continuing at University). I&amp;rsquo;m fortunate enough to already have had a job lined up for after graduation for a while, but this isn&amp;rsquo;t the norm. Most people are only beginning to look for jobs and internships now. Although I don&amp;rsquo;t claim to be an expert at searching for jobs (far from it), I have been out there since my freshman year, so I do have a couple of tips which will hopefully be helpful.</description>
+    </item>
+    
+    <item>
+      <title>A Slight Change in Schedule…</title>
+      <link>http://Artiavis.github.io/2014/02/04/a-slight-change-in-schedule/</link>
+      <pubDate>Tue, 04 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2014/02/04/a-slight-change-in-schedule/</guid>
+      <description>Three months ago, I posted my tentative schedule for this semester, my final one in undergrad. At the time, I was very optimistic about taking Systems Programming because I had been recommended the professor, Brian Russell, by my roommate. In the end, I switched it out for a seminar in Gender and Sexuality in Judaism. Here&amp;rsquo;s how.
+Overlap Between Systems and Network Originally, I signed up for both Systems Programming and Network-centric Programming, both of which are low-level programming courses in the C programming language.</description>
+    </item>
+    
+    <item>
+      <title>Global Entry - Quick Border Reentry</title>
+      <link>http://Artiavis.github.io/2014/01/23/global-entry---quick-border-reentry/</link>
+      <pubDate>Thu, 23 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2014/01/23/global-entry---quick-border-reentry/</guid>
+      <description>Last week, when I got back to JFK after my Israel trip, I was kind of dreading going through customs &amp;ndash; and not because I was carrying contraband. Last time I went through border control, I spent what felt like forty five minutes (after a twelve hour flight, no less) waiting to go to the bathroom and grab my luggage and scram. However, this time around, I saw something which piqued my interest, and somewhat reminded me of my earlier eigenface project.</description>
+    </item>
+    
+    <item>
+      <title>Pathways Israel</title>
+      <link>http://Artiavis.github.io/2014/01/17/pathways-israel/</link>
+      <pubDate>Fri, 17 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2014/01/17/pathways-israel/</guid>
+      <description>Each winter at University, I find myself wondering what to do with my winter breaks about a week before finals. Usually I spend my breaks conducting research for various labs at Rutgers, or else getting a head-start on school for the Spring. So about this time last month, while wondering what I would do with my (hopefully) final winter break of undergraduate studies, I received an email which offered a fantastic opportunity &amp;mdash; go to Israel for two weeks on a deeply discounted program!</description>
+    </item>
+    
+    <item>
+      <title>Software Engineering and Computer Science</title>
+      <link>http://Artiavis.github.io/2013/12/24/software-engineering-and-computer-science/</link>
+      <pubDate>Tue, 24 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2013/12/24/software-engineering-and-computer-science/</guid>
+      <description>I&amp;rsquo;m planning on this post being the first in a series about my naïve thoughts about the significance of Software Engineering as an undergraduate with little so-called real-world experience. Stay tuned for followup posts, which I&amp;rsquo;ll post back here.
+For the past several decades, computer programming has been done in special programming languages which can be either interpreted or compiled (translated) into a form which is natively comprehensible to computers (known as machine code).</description>
+    </item>
+    
+    <item>
+      <title>Bad Bidding or Avoid Buying Used Stuff</title>
+      <link>http://Artiavis.github.io/2013/11/26/bad-bidding-or-avoid-buying-used-stuff/</link>
+      <pubDate>Tue, 26 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2013/11/26/bad-bidding-or-avoid-buying-used-stuff/</guid>
+      <description>As some of you may know, I&amp;rsquo;m currently in a class on Game Theory in the Economics department. I originally signed up because, hey, games, but also because I saw A Beautiful Mind and I wanted to learn a little more about Game Theory. (My professor confessed that despite a large number of students taking the class because of the movie, the little Game Theory used in the film is actually incorrect.</description>
+    </item>
+    
+    <item>
+      <title>Bitmap Graphics vs Vector Graphics</title>
+      <link>http://Artiavis.github.io/2013/11/21/bitmap-graphics-vs-vector-graphics/</link>
+      <pubDate>Thu, 21 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2013/11/21/bitmap-graphics-vs-vector-graphics/</guid>
+      <description>One astute reader of a previous post observed that although I seemed to imply that only bitmaps can be digital images, there also exists such a thing as vector graphics which are also considered digital images. At the time, it was not clear in context what was meant in describing an image as digital. While I conflated digital images with bitmaps, which is inaccurate, I was only discussing bitmaps in that post, and the conclusions therein are still valid.</description>
+    </item>
+    
+    <item>
+      <title>The Eigenfacebook</title>
+      <link>http://Artiavis.github.io/2013/11/19/the-eigenfacebook/</link>
+      <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2013/11/19/the-eigenfacebook/</guid>
+      <description>The end of the fall semester is always a very special time of year. The hubbub of plans for winter break are omnipresent, festive lights illuminate themselves around campus, and most importantly of all, professors finally get around to assigning all their term projects with scarcely three weeks left with which to complete them. This isn&amp;rsquo;t news to my fellow upperclassmen, although the sophomores may only just begin to experience this for the first time.</description>
+    </item>
+    
+    <item>
+      <title>How to Smooth Out the Curves - Understanding Digital Image Filtering</title>
+      <link>http://Artiavis.github.io/2013/11/04/how-to-smooth-out-the-curves---understanding-digital-image-filtering/</link>
+      <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2013/11/04/how-to-smooth-out-the-curves---understanding-digital-image-filtering/</guid>
+      <description>In a previous post, I discussed the physical interpretation of digital music (and all digital audio) as both a time-varying signal and a frequency-varying signal. This, of course, makes intuitive sense - as we spend three or four minutes listening to a song, we can hear the guitars and horns coming in and fading out, a singer intone the chorus of a song, etc. At the same time, we appreciate the frequencies changing as well &amp;mdash; the singer hitting different notes, the instruments forming different chords.</description>
+    </item>
+    
+    <item>
+      <title>How to Pump Up the Bass: Understanding Audio Frequencies</title>
+      <link>http://Artiavis.github.io/2013/10/30/how-to-pump-up-the-bass-understanding-audio-frequencies/</link>
+      <pubDate>Wed, 30 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2013/10/30/how-to-pump-up-the-bass-understanding-audio-frequencies/</guid>
+      <description>The other day I was having a discussion with my roommate Mike about the physical intuition of digital photographs, and how performing even the most fundamental of operations (e.g. resizing) requires an appreciation of the underlying mathematics. We are both currently in image processing classes, but very different kinds. His course is in Computer Science, so his studies tend to be of the use Java; things happen; make apps variety, with only some slight motivation and understanding of what&amp;rsquo;s happening under the hood.</description>
+    </item>
+    
+    <item>
+      <title>Classes for Final Semester</title>
+      <link>http://Artiavis.github.io/2013/10/28/classes-for-final-semester/</link>
+      <pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2013/10/28/classes-for-final-semester/</guid>
+      <description>I recently finished signing up for (hopefully) my final semester of (undergraduate) classes at University. I don&amp;rsquo;t think the significance of this coming semester being my final one has quite sunk in yet. Maybe it&amp;rsquo;s simply due to me already being in the middle of the semester now, but I haven&amp;rsquo;t yet begun panicking or experiencing &amp;lsquo;senioritis&amp;rsquo;. I&amp;rsquo;m sure those will both come in due time, but in the meantime, I had to figure out which classes to take to round up my college education.</description>
+    </item>
+    
+    <item>
+      <title>Welcome to the Park!</title>
+      <link>http://Artiavis.github.io/2013/10/28/welcome-to-the-park/</link>
+      <pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://Artiavis.github.io/2013/10/28/welcome-to-the-park/</guid>
+      <description>I love going for walks in the park. Whether I&amp;rsquo;m flushed with ideas and want to let them percolate in my head, or I&amp;rsquo;m bone dry and can&amp;rsquo;t seem to get a single thought to hit me, I find going for a walk always helps. Something about keeping moving and watching the world stroll by always seems to get the juices flowing at just the right pace.
+But a walk can&amp;rsquo;t be just anywhere to have this effect.</description>
+    </item>
+    
+  </channel>
+</rss>

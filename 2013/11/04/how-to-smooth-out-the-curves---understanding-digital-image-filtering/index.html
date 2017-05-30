@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Smooth Out the Curves - Understanding Digital Image Filtering | Just a Blog in the Park</title>
+<link rel="stylesheet" href="http://Artiavis.github.io//css/style.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+<link rel="stylesheet" href="http://Artiavis.github.io//css/dracula.min.css">
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75" />
+        <a class="nav-item" href="http://Artiavis.github.io/"><h1 class="title is-4">Just a Blog in the Park</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="/about">
+            <span class="icon">
+              <i class="fa fa-user-circle-o"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/tags">
+            <span class="icon">
+              <i class="fa fa-tags"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://github.com/Artiavis">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://linkedin.com/in/JeffreyCRabinowitz">
+            <span class="icon">
+              <i class="fa fa-linkedin"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">November 4, 2013</h2>
+    <h1 class="title">How to Smooth Out the Curves - Understanding Digital Image Filtering</h1>
+    <ul id="tags">
+  
+    <li><a href="/tags/photography"><i class="fa fa-tag" aria-hidden="true"></i> photography</a></li>
+  
+    <li><a href="/tags/dsp"><i class="fa fa-tag" aria-hidden="true"></i> dsp</a></li>
+  
+</ul>
+<br />
+    <div class="content">
+      
+
+<p>In <a href="/posts/2013-10-30-how-to-pump-up-the-bass.html">a previous post</a>, I discussed the physical
+interpretation of digital music (and all digital audio) as both a time-varying
+signal and a frequency-varying signal. This, of course, makes intuitive sense -
+as we spend three or four minutes listening to a song, we can hear the guitars
+and horns coming in and fading out, a singer intone the chorus of a song, etc.
+At the same time, we appreciate the frequencies changing as well &mdash; the
+singer hitting different notes, the instruments forming different chords.
+Understanding the time and frequency behavior of auditory information is fairly
+intuitive - in fact, one could even argue that visualizing the frequency-based
+content is more informative than visualizing the time-based content.</p>
+
+<p>Unfortunately, visual information does not operate in exactly the same way as
+auditory information, and  therefore understanding the time-frequency duality is
+slightly more involved. However, with a few examples, we can generalize our
+conceptual understanding of signals from time-varying signals to space-varying
+signals.</p>
+
+<h3 id="preface-how-do-digital-images-work">Preface: How Do Digital Images Work?</h3>
+
+<p>You can feel free to skip this section if you&rsquo;re already familiar with how
+digital images are stored and represented on a computer. If not, don&rsquo;t worry
+&mdash; it&rsquo;s pretty straightforward.</p>
+
+<p>Digital images, which is to say bitmap images, are fundamentally composed of
+<a href="http://en.wikipedia.org/wiki/Pixel">pixels</a>. (Bitmap images should not be
+confused with vector images, which are not composed of pixels.) Pixels are
+simply little boxes containing some combination of colors placed into a grid;
+when viewing a grid of several hundred, several thousand, or (especially today)
+several million at once, the pixels taken together appear as an <em>image</em>. (For
+you artists, this is exactly analogous to
+<a href="http://en.wikipedia.org/wiki/Pointillism">pointillism</a>, except with squares
+instead of dots.)</p>
+
+<p><img src="/img/pixels.jpg" alt="Example of how pixels are squares of color" /></p>
+
+<p>Black and white images, which are simpler to think about and store, are
+basically a grid of values, with the value in each element in the grid
+representing a color. The purest black is the value 0, the purest white is the
+value 255, and every whole number in between is a shade of gray. (Color images
+are a bit more complex - they use the same 0 to 255 scale grid, but they use 3
+grids each measuring Red, Green and Blue values. Each pixel is then the
+depiction of the combination of Red, Green, and Blue at the corresponding
+location in each grid. We can discuss the basic concepts of imaging without
+worrying about color.) When a computer displays any image, it checks each pixel
+value and displays the corresponding color. However, the images are still
+fundamentally a grid of pixels.</p>
+
+<p>The fact that digital images are composed of these myriad discrete, uniformly
+distributed elements (pixels) is very important because these elements of color
+and shade can be understood as approximations of a whole image. In fact, this is
+what is meant by a <em>digital</em> image &mdash; the image contains digital data
+(digital meaning containing a series of discrete and finite-values); these
+digital data comprise the digital image.</p>
+
+<h3 id="time-varying-signals-vs-space-varying-signals">Time-Varying Signals vs Space-Varying Signals</h3>
+
+<p>The concept of a time-varying signal really isn&rsquo;t too hard to understand. At
+every time, there is a value, and the value varies over time. Hence the name.
+And that&rsquo;s it.</p>
+
+<p>Space-varying signals may sound bad, but they&rsquo;re actually not much different
+than time-varying signals. The main difference is in the physical meaning of the
+signal &mdash; everything else is exactly the same.</p>
+
+<p>For a space-varying signal, at every <em>element</em> in the &ldquo;signal&rdquo; there is a
+<em>value</em>. Sound familiar? That&rsquo;s how we defined digital images! At every row, for
+each column, there is a value. Therefore, images are space-varying signals.</p>
+
+<p>Actually, it&rsquo;s a little more complex than that. Because there&rsquo;s both a row and a
+column needed to identify a value in an image, images are actually varying in
+two dimensions at once. This is a bit more advanced than our time-varying songs,
+which only vary in time. Nevertheless, both conceptually and physically, they
+each operate exactly the same way. This is immensely useful because the
+techniques which worked on music will also work on images, although with a
+different meaning.</p>
+
+<h3 id="what-is-the-frequency-of-space">What is the Frequency of Space?</h3>
+
+<p>If you recall how I explained a
+<a href="http://en.wikipedia.org/wiki/Low-pass_filter">lowpass filter</a>
+in the previous post, I stated that the idea is to keep the low frequencies of a
+signal largely intact while trying to reject the higher frequencies of a signal.
+In that context, &ldquo;pumping up the bass&rdquo; is accomplished with a low-pass filter.</p>
+
+<p>At the time, I mentioned that much of the finer details of music is contained in
+the upper frequencies of a song, without going into too much depth. This is an
+appropriate time to expand upon that concept.</p>
+
+<p>The physical/mathematical meaning of frequency is the rate at which some
+repetitive event repeats itself. (For example, a birthday has a frequency of
+once a year, but the 31st day of the month has a frequency of 9 times a year.)
+An important result of mathematics states that not only is it possible, but it
+is also meaningful to generalize that statement to say that <em>even events which
+<strong>never</strong> repeat</em> have frequency. The correct interpretation of frequency then
+becomes <em>how quickly</em> something occurs, rather than <em>how often</em> it repeats. This
+generalized definition does not contradict the previous definition &mdash;
+repeating events also have a frequency; the slower the rate of occurrence of an
+event, the lower its  frequency. Emphasis on &ldquo;rate&rdquo;.</p>
+
+<p>Believe it or not, this approach to understanding frequencies actually allows us
+to interpret images as having frequencies. Recall that an image is fundamentally
+just a grid of values, and frequency is how quickly something happens. What if I
+said frequency is the rate at which adjacent pixels spike in value? A slow
+change in values across several pixels would have a low frequency because it
+happens slowly, and a rapid spike in value across only a few pixels would then
+have a high frequency because it happens quickly. Of course, we would have to
+measure these frequencies in two dimensions, because the original image was also
+defined in dimensions. Nevertheless, we have discovered a powerful technique.</p>
+
+<h2 id="frequency-filtering-images">Frequency Filtering Images</h2>
+
+<p>With our broader understanding of frequency, we can begin to apply frequency-
+domain techniques to images. Perhaps it is best to start with an example. Below
+is a black-and-white of the famous PG-version image of
+<a href="http://en.wikipedia.org/wiki/Lena_S%C3%B6derberg">Lena</a>  from November 1972,
+and below that is a low-pass filtered version of it.</p>
+
+<p><img src="/img/lena.png" alt="Lena" /></p>
+
+<p>At first glance, the lower image appears badly blurred &ndash; and it is. Much
+of the detail has been lost. However, take note of how smooth Lena&rsquo;s skin in the
+filtered image is, and how soft the edges in the picture are. These effects are
+created by the filter. Low pass filtering remove the high frequency components
+of an image. As explained above, the high frequency components are rapid and
+extreme changes in value between nearby portions of pixels. Therefore, the low
+pass filter removed things like the borders between objects and skin
+imperfections, which have large local differences in pixel value. Think of it as
+smoothing out the image.</p>
+
+<p><img src="/img/lpf_lena.png" alt="Low-pass Filtered Lena" /></p>
+
+<p>Although the filtered image shown is an extreme example, this technique is
+actually a standard in a Photoshop user&rsquo;s repertoire. For instance, judicious
+application of low-pass filtering to select portions of a picture of model&rsquo;s
+skin, for instance, goes a long way in creating the illusion of having flawless
+skin.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>There are many more applications of image processing than shown here, a great
+deal of which require more advanced mathematics than I care to show here.
+However, I hope I have given a taste of how a strong understanding of the
+physics of digital images and audio allows us to enhance things to be more to
+our liking.</p>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'justabloginthepark';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/Artiavis">Jeff Rabinowitz</a>, 2017</p>
+  </div>
+</section>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/bash.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/clojure.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/cs.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/cpp.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/css.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/fsharp.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/javascript.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/ini.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/java.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/json.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/markdown.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/python.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/ruby.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/sql.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/tex.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+

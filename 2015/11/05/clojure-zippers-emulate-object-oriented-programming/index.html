@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clojure Zippers Emulate Object-Oriented Programming? | Just a Blog in the Park</title>
+<link rel="stylesheet" href="http://Artiavis.github.io//css/style.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+<link rel="stylesheet" href="http://Artiavis.github.io//css/dracula.min.css">
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75" />
+        <a class="nav-item" href="http://Artiavis.github.io/"><h1 class="title is-4">Just a Blog in the Park</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="/about">
+            <span class="icon">
+              <i class="fa fa-user-circle-o"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/tags">
+            <span class="icon">
+              <i class="fa fa-tags"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://github.com/Artiavis">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://linkedin.com/in/JeffreyCRabinowitz">
+            <span class="icon">
+              <i class="fa fa-linkedin"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">November 5, 2015</h2>
+    <h1 class="title">Clojure Zippers Emulate Object-Oriented Programming?</h1>
+    <ul id="tags">
+  
+    <li><a href="/tags/programming"><i class="fa fa-tag" aria-hidden="true"></i> programming</a></li>
+  
+    <li><a href="/tags/clojure"><i class="fa fa-tag" aria-hidden="true"></i> clojure</a></li>
+  
+</ul>
+<br />
+    <div class="content">
+      
+
+<p>Yesterday, I posted about using Clojure
+<a href="http://clojuredocs.org/clojure.zip/zipper">zippers</a>
+to solve the problem of automatically generating a Table of Contents.
+During my work with Clojure&rsquo;s implementation of zippers, I noticed something
+interesting.</p>
+
+<p>The <code>zipper</code> function creates (and returns) a new zipper object. Its parameters
+are the following (lifted straight from the documentation):</p>
+
+<ol>
+<li><code>branch?</code> &ndash; a function that takes a node of the zipper and returns a
+true/false if it is capable of having children (even if it currently
+does not).</li>
+<li><code>children</code> &ndash; a function which, given a node in the zipper which is a
+branch, returns a <code>seq</code> (sequence) of its children.</li>
+<li><code>make-node</code> &ndash; a function which, given a node and a sequence of its
+children, returns a new branch node with the supplied children.</li>
+<li><code>root</code> &ndash; the root node of the data structure (which can also be
+any valid tree that the zipper to be constructed understands).</li>
+</ol>
+
+<p>At first, this was a bit impenetrable. Why doesn&rsquo;t the zipper just know how
+to zip over its data? How many types of zippers are there, exactly?</p>
+
+<h3 id="clojure-hiding-objects-in-plain-site">Clojure: Hiding Objects in Plain Site?</h3>
+
+<p>After studying the source code, the truth came to light. The <code>zipper</code> function
+is what a Java programmer might call a Factory function. It constructs valid
+zipper &ldquo;objects&rdquo; (my words) to the specifications in the first three arguments
+of the function by doing the following:</p>
+
+<ol>
+<li>It creates a new 2-element vector and associates the tree to be zipped
+over  to the first element and the state of the object (whether it&rsquo;s
+modified, possible parent nodes, etc.) to the second element.</li>
+<li>It attaches <em>metadata</em> to the vector, essentially hiding/storing the
+three specified functions on the vector.</li>
+</ol>
+
+<p>All of the utility functions for manipulating zippers are then defined in terms
+of the functions provided when constructing the zipper! They function by
+extracting the embedded metadata from the zipper, using the necessary embedded
+functions as needed, and then returning the manipulated zipper with the same
+metadata included.</p>
+
+<p>For example, the <code>append-child</code> function, which creates a new child node and
+appends it to the current node, needs some knowledge of the type of node to
+create. It gets that knowledge from provided <code>make-node</code> and <code>children</code>
+functions:</p>
+
+<ol>
+<li>It pulls those functions from the metadata</li>
+<li>Appends the new item to the node&rsquo;s children using the <code>children</code> function</li>
+<li>Calls the <code>make-node</code> function with the existing node and the appended
+children as its argument</li>
+<li>Replaces the existing node in-place with one with updated children</li>
+</ol>
+
+<p>In fact, the <code>make-node</code> function is itself a Factory function for creating
+new nodes! All of the functions in the zipper namespace cohesively act like
+what a Java programmer would call an Abstract Base Class, and the <code>zipper</code>
+function creates anonymous instances of the &ldquo;Zipper interface&rdquo;.</p>
+
+<h3 id="implications">Implications</h3>
+
+<p>Although Clojure is touted as a purely functional language with no
+object-orientation (outside of its <a href="http://clojure.org/protocols">protocols</a>),
+the zipper class is an elegant example of being able to achieve clean
+object-oriented design without even needing objects; The zipper object
+is transparently manipulated by the &ldquo;methods&rdquo; defined during its creation.</p>
+
+<h3 id="c-style-object-orientedness">C Style Object-Orientedness</h3>
+
+<p>Actually, come to think of it, this is reminiscent of C-style &ldquo;classes&rdquo;:
+actually <code>struct</code>s which may contain functions (function pointers)
+which perform operations over concrete instances of the &ldquo;type&rdquo;. I don&rsquo;t
+have much experience with C-style classes, so this seemed novel to me as I
+was learning the API surface, but in hindsight, this is a classic pattern
+in languages which have things remotely resembling first-class functions.
+(Even C is more advanced than Java in this respect.)</p>
+
+<h2 id="references">References</h2>
+
+<p><a href="https://github.com/clojure/clojure/blob/59b65669860a1f33825775494809e5d500c19c63/src/clj/clojure/zip.clj">The clojure.zip source code</a>
+is interesting in that it was released with Clojure 1.0 over five years ago,
+and has not had a single update since then! Powerful abstractions indeed.</p>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'justabloginthepark';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/Artiavis">Jeff Rabinowitz</a>, 2017</p>
+  </div>
+</section>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/bash.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/clojure.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/cs.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/cpp.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/css.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/fsharp.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/javascript.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/ini.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/java.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/json.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/markdown.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/python.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/ruby.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/sql.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/tex.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
