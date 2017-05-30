@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meta on Just a Blog in the Park</title>
-    <link>http://Artiavis.github.io/tags/meta/</link>
+    <link>http://justabloginthepark.com/tags/meta/</link>
     <description>Recent content in Meta on Just a Blog in the Park</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2017</copyright>
     <lastBuildDate>Sat, 24 Oct 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://Artiavis.github.io/tags/meta/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://justabloginthepark.com/tags/meta/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Returning to Blogging with Cryogen</title>
-      <link>http://Artiavis.github.io/2015/10/24/returning-to-blogging-with-cryogen/</link>
+      <link>http://justabloginthepark.com/2015/10/24/returning-to-blogging-with-cryogen/</link>
       <pubDate>Sat, 24 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://Artiavis.github.io/2015/10/24/returning-to-blogging-with-cryogen/</guid>
+      <guid>http://justabloginthepark.com/2015/10/24/returning-to-blogging-with-cryogen/</guid>
       <description>It&amp;rsquo;s been a long while since I last blogged. My last post dates back to April of 2014, shortly before I graduated from Rutgers Engineering. My life since then has been a bit of a whirlwind. I&amp;rsquo;ve since graduated, moved to the Upper West Side, started working in banking, gotten engaged and married, and moved out. I suppose I could be forgiven for not blogging as actively.
 Why I Took Down My Old Blog My old blog was running on Ghost, a nifty JavaScript-based modern reimagination of the classic web-based blogging platform.</description>
     </item>
     
     <item>
       <title>Welcome to the Park!</title>
-      <link>http://Artiavis.github.io/2013/10/28/welcome-to-the-park/</link>
+      <link>http://justabloginthepark.com/2013/10/28/welcome-to-the-park/</link>
       <pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://Artiavis.github.io/2013/10/28/welcome-to-the-park/</guid>
+      <guid>http://justabloginthepark.com/2013/10/28/welcome-to-the-park/</guid>
       <description>I love going for walks in the park. Whether I&amp;rsquo;m flushed with ideas and want to let them percolate in my head, or I&amp;rsquo;m bone dry and can&amp;rsquo;t seem to get a single thought to hit me, I find going for a walk always helps. Something about keeping moving and watching the world stroll by always seems to get the juices flowing at just the right pace.
 But a walk can&amp;rsquo;t be just anywhere to have this effect.</description>
     </item>

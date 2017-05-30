@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Clojure on Just a Blog in the Park</title>
-    <link>http://Artiavis.github.io/tags/clojure/</link>
+    <link>http://justabloginthepark.com/tags/clojure/</link>
     <description>Recent content in Clojure on Just a Blog in the Park</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2017</copyright>
     <lastBuildDate>Sun, 17 Jan 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://Artiavis.github.io/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://justabloginthepark.com/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Lisp Finally Clicked</title>
-      <link>http://Artiavis.github.io/2016/01/17/lisp-finally-clicked/</link>
+      <link>http://justabloginthepark.com/2016/01/17/lisp-finally-clicked/</link>
       <pubDate>Sun, 17 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://Artiavis.github.io/2016/01/17/lisp-finally-clicked/</guid>
+      <guid>http://justabloginthepark.com/2016/01/17/lisp-finally-clicked/</guid>
       <description>I&amp;rsquo;ve been meaning to write this post for a couple of weeks now. There is a story told among programming language enthusiasts that programming as an art only &amp;ldquo;clicks&amp;rdquo; once a programmer understands the Lisp programming language. I finally feel like I&amp;rsquo;ve reached that point. Although I don&amp;rsquo;t think I&amp;rsquo;m an amazing programmer, I finally feel like I understand the difference between languages (like Python and Lisp), and why Lisp is often considered so much more flexible and powerful (at least in theory) than a language like Python or C.</description>
     </item>
     
     <item>
       <title>The Clojure “Reductions” Function</title>
-      <link>http://Artiavis.github.io/2015/11/17/the-clojure-reductions-function/</link>
+      <link>http://justabloginthepark.com/2015/11/17/the-clojure-reductions-function/</link>
       <pubDate>Tue, 17 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://Artiavis.github.io/2015/11/17/the-clojure-reductions-function/</guid>
+      <guid>http://justabloginthepark.com/2015/11/17/the-clojure-reductions-function/</guid>
       <description>Tonight, while attempting a problem at 4 Clojure (problem number omitted so as not to give too many hints), I was struck by the following problem:
  What if I need a Clojure function which can take a sequence of functions and can sequentially call them on some seed value?
  I&amp;rsquo;m specifically looking at something like:
@@ -35,10 +35,10 @@
     
     <item>
       <title>Clojure Zippers Emulate Object-Oriented Programming?</title>
-      <link>http://Artiavis.github.io/2015/11/05/clojure-zippers-emulate-object-oriented-programming/</link>
+      <link>http://justabloginthepark.com/2015/11/05/clojure-zippers-emulate-object-oriented-programming/</link>
       <pubDate>Thu, 05 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://Artiavis.github.io/2015/11/05/clojure-zippers-emulate-object-oriented-programming/</guid>
+      <guid>http://justabloginthepark.com/2015/11/05/clojure-zippers-emulate-object-oriented-programming/</guid>
       <description>Yesterday, I posted about using Clojure zippers to solve the problem of automatically generating a Table of Contents. During my work with Clojure&amp;rsquo;s implementation of zippers, I noticed something interesting.
 The zipper function creates (and returns) a new zipper object. Its parameters are the following (lifted straight from the documentation):
  branch? &amp;ndash; a function that takes a node of the zipper and returns a true/false if it is capable of having children (even if it currently does not).</description>
@@ -46,40 +46,40 @@ The zipper function creates (and returns) a new zipper object. Its parameters ar
     
     <item>
       <title>Implementing a Table of Contents Using Zippers</title>
-      <link>http://Artiavis.github.io/2015/11/04/implementing-a-table-of-contents-using-zippers/</link>
+      <link>http://justabloginthepark.com/2015/11/04/implementing-a-table-of-contents-using-zippers/</link>
       <pubDate>Wed, 04 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://Artiavis.github.io/2015/11/04/implementing-a-table-of-contents-using-zippers/</guid>
+      <guid>http://justabloginthepark.com/2015/11/04/implementing-a-table-of-contents-using-zippers/</guid>
       <description>As I continue my forays with Clojure, I&amp;rsquo;m finding it enjoyable (if not entirely productive) to hack with it on Cryogen, a nifty little blog generator I already discussed recently.
 On Sunday I had the privilege of making my first pull request. The essence of the PR was to fix a couple of bugs with the existing implementation of the logic for generating a Table of Contents for a given blog post, and also replace a less robust algorithm (for real-life use cases) with a more robust one.</description>
     </item>
     
     <item>
       <title>F Sharp vs Clojure Toy Problem Shootout</title>
-      <link>http://Artiavis.github.io/2015/10/28/f-sharp-vs-clojure-toy-problem-shootout/</link>
+      <link>http://justabloginthepark.com/2015/10/28/f-sharp-vs-clojure-toy-problem-shootout/</link>
       <pubDate>Wed, 28 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://Artiavis.github.io/2015/10/28/f-sharp-vs-clojure-toy-problem-shootout/</guid>
+      <guid>http://justabloginthepark.com/2015/10/28/f-sharp-vs-clojure-toy-problem-shootout/</guid>
       <description>As a continuation of my forays in interesting and less industrially-oriented programming languages, I decided to compare F Sharp against Clojure for a relatively simple programming problem, and to compare how the two felt in terms of programming ease, friendliness, and how they each viewed the problem.
 The Problem The problem is a relatively one from Reddit&amp;rsquo;s &amp;ldquo;Daily Programmer&amp;rdquo; subreddit, called JSON Treasure Hunt: given a random, unstructured JSON object, traverse the object looking for a specific terminal value (in this case, a string &amp;ldquo;dailyprogrammer&amp;rdquo;).</description>
     </item>
     
     <item>
       <title>Returning to Blogging with Cryogen</title>
-      <link>http://Artiavis.github.io/2015/10/24/returning-to-blogging-with-cryogen/</link>
+      <link>http://justabloginthepark.com/2015/10/24/returning-to-blogging-with-cryogen/</link>
       <pubDate>Sat, 24 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://Artiavis.github.io/2015/10/24/returning-to-blogging-with-cryogen/</guid>
+      <guid>http://justabloginthepark.com/2015/10/24/returning-to-blogging-with-cryogen/</guid>
       <description>It&amp;rsquo;s been a long while since I last blogged. My last post dates back to April of 2014, shortly before I graduated from Rutgers Engineering. My life since then has been a bit of a whirlwind. I&amp;rsquo;ve since graduated, moved to the Upper West Side, started working in banking, gotten engaged and married, and moved out. I suppose I could be forgiven for not blogging as actively.
 Why I Took Down My Old Blog My old blog was running on Ghost, a nifty JavaScript-based modern reimagination of the classic web-based blogging platform.</description>
     </item>
     
     <item>
       <title>Pros and Cons of Clojure</title>
-      <link>http://Artiavis.github.io/2015/10/18/pros-and-cons-of-clojure/</link>
+      <link>http://justabloginthepark.com/2015/10/18/pros-and-cons-of-clojure/</link>
       <pubDate>Sun, 18 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://Artiavis.github.io/2015/10/18/pros-and-cons-of-clojure/</guid>
+      <guid>http://justabloginthepark.com/2015/10/18/pros-and-cons-of-clojure/</guid>
       <description>As part of my forays in interesting (and generally unusable at work) programming languages, I began investigating Clojure back in June. Although I really love the language as a whole (and, in fact, I&amp;rsquo;m using it to power this blog!), I struggled not only to set it up, but to find its ideal niche. This essay/rant is a result of a conversation I had about Clojure with two friends, one who is an excellent polyglot programmer, and one who is a beginner simply interested in Clojure as a practical Lisp.</description>
     </item>
     
