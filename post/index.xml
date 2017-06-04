@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2017</copyright>
-    <lastBuildDate>Sun, 04 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Jun 2017 14:30:28 -0400</lastBuildDate>
     
 	<atom:link href="http://justabloginthepark.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Review: Overwatch</title>
+      <link>http://justabloginthepark.com/2017/06/04/review-overwatch/</link>
+      <pubDate>Sun, 04 Jun 2017 14:30:28 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/2017/06/04/review-overwatch/</guid>
+      <description>Around February, a friend told me that the extremely popular (and award-winning) &amp;ldquo;Overwatch&amp;rdquo; video game was on sale for Chinese New Years. It was available at something like half off, so I picked it up and decided to try it out. This is essentially my first purchase of a video game that could be considered an FPS, a shooter, and a &amp;ldquo;Team Fortress&amp;rdquo; style objective-based unique character-driven map. Here are my thoughts on it in brief.</description>
+    </item>
     
     <item>
       <title>Bearish on Clojure in 2017</title>
