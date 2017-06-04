@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2017</copyright>
-    <lastBuildDate>Sat, 24 Oct 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Jun 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://justabloginthepark.com/tags/meta/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Switching to Hugo Blogging</title>
+      <link>http://justabloginthepark.com/2017/06/03/switching-to-hugo-blogging/</link>
+      <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/2017/06/03/switching-to-hugo-blogging/</guid>
+      <description>I recently decided to switch the backend static site compilation toolchain for this blog from the small Cryogen project in Clojure to the venerable Hugo project written in Golang. Although I had previously written that I wanted a hackable static site generator at Returning to Blogging with Cryogen, my requirements lately have changed. I thought I&amp;rsquo;d write a couple of quick notes about why I switched (and why I didn&amp;rsquo;t).</description>
+    </item>
     
     <item>
       <title>Returning to Blogging with Cryogen</title>
