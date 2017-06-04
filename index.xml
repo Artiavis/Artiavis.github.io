@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2017</copyright>
-    <lastBuildDate>Sat, 03 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Jun 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://justabloginthepark.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bearish on Clojure in 2017</title>
+      <link>http://justabloginthepark.com/2017/06/04/bearish-on-clojure-in-2017/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/2017/06/04/bearish-on-clojure-in-2017/</guid>
+      <description>There was a recent brouhaha in the Clojure community about the recent blog post by a Clojure dabbler to the effect that Clojure may be a clean and beautiful language but that it fails in a few pragmatic and ergonomic senses which hurts its adoption and limits its appeal. Although the author admits that he probably made a mistake in jumping to adopt Clojure, a foreign technological concept to him, for a startup in a space that was also completely foreign to him, he does bring up some worthwhile points that are worth chewing over.</description>
+    </item>
     
     <item>
       <title>Switching to Hugo Blogging</title>
