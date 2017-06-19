@@ -60,6 +60,58 @@
   <div class="container">
     
     <article>
+      <h2 class="subtitle is-6">June 18, 2017</h2>
+      <h1 class="title"><a href="http://justabloginthepark.com/2017/06/18/clojure-and-the-esoteric-mysteries-of-namespaces/">Clojure and the Esoteric Mysteries of Namespaces</a></h1>
+      <div class="content">
+        I recently had the drive/opportunity to deep-dive on how Clojure&rsquo;s namespaces function and how they provide a simple abstraction using the concept of Clojure&rsquo;s &ldquo;Vars&rdquo;. Here is a deep-dive on how they work. This is a two-part series. The previous part of the series is available at Clojure and the Esoteric Mysteries of Vars.
+A a fair warning, this requires a far bit of gory Clojure compiler internals to really understand.
+        
+        ...<br />
+        <ul id="tags">
+  
+    <li><a href="/tags/programming"><i class="fa fa-tag" aria-hidden="true"></i> programming</a></li>
+  
+    <li><a href="/tags/clojure"><i class="fa fa-tag" aria-hidden="true"></i> clojure</a></li>
+  
+</ul>
+
+        <a class="button is-link" href="http://justabloginthepark.com/2017/06/18/clojure-and-the-esoteric-mysteries-of-namespaces/" style="height:28px">
+          Read more
+          <span class="icon is-small">
+            <i class="fa fa-angle-double-right"></i>
+          </span>
+        </a>
+        
+      </div>
+    </article>
+    
+    <article>
+      <h2 class="subtitle is-6">June 18, 2017</h2>
+      <h1 class="title"><a href="http://justabloginthepark.com/2017/06/18/clojure-and-the-esoteric-mysteries-of-vars/">Clojure and the Esoteric Mysteries of Vars</a></h1>
+      <div class="content">
+        I recently had the drive/opportunity to deep-dive on how Clojure&rsquo;s namespaces function and how they provide a simple abstraction using the concept of Clojure&rsquo;s &ldquo;Vars&rdquo;. Here is a deep-dive on how they work. This is a two-part series. The next part of the series is available at Clojure and the Esoteric Mysteries of Namespaces.
+Vars: A Simplified Model of Variables One of Clojure&rsquo;s essential motivations is to provide a hosted runtime for easily concurrent programs, wherein most of the challenges of locking and thread-safety are provided &ldquo;for free&rdquo; (at least in the sense of the programmer not having to worry about these low-level concepts).
+        
+        ...<br />
+        <ul id="tags">
+  
+    <li><a href="/tags/clojure"><i class="fa fa-tag" aria-hidden="true"></i> clojure</a></li>
+  
+    <li><a href="/tags/programming"><i class="fa fa-tag" aria-hidden="true"></i> programming</a></li>
+  
+</ul>
+
+        <a class="button is-link" href="http://justabloginthepark.com/2017/06/18/clojure-and-the-esoteric-mysteries-of-vars/" style="height:28px">
+          Read more
+          <span class="icon is-small">
+            <i class="fa fa-angle-double-right"></i>
+          </span>
+        </a>
+        
+      </div>
+    </article>
+    
+    <article>
       <h2 class="subtitle is-6">June 4, 2017</h2>
       <h1 class="title"><a href="http://justabloginthepark.com/2017/06/04/bearish-on-clojure-in-2017/">Bearish on Clojure in 2017</a></h1>
       <div class="content">
@@ -127,61 +179,6 @@
 </ul>
 
         <a class="button is-link" href="http://justabloginthepark.com/2016/01/17/lisp-finally-clicked/" style="height:28px">
-          Read more
-          <span class="icon is-small">
-            <i class="fa fa-angle-double-right"></i>
-          </span>
-        </a>
-        
-      </div>
-    </article>
-    
-    <article>
-      <h2 class="subtitle is-6">November 17, 2015</h2>
-      <h1 class="title"><a href="http://justabloginthepark.com/2015/11/17/the-clojure-reductions-function/">The Clojure “Reductions” Function</a></h1>
-      <div class="content">
-        Tonight, while attempting a problem at 4 Clojure (problem number omitted so as not to give too many hints), I was struck by the following problem:
- What if I need a Clojure function which can take a sequence of functions and can sequentially call them on some seed value?
- I&rsquo;m specifically looking at something like:
-(defn some-fun [seed-val &amp; funs] ; Keep passing the calculated value through, while also appending to sequence (list ((first funs) seed-val) ((second funs) ((first funs) seed-val)) .
-        
-        ...<br />
-        <ul id="tags">
-  
-    <li><a href="/tags/clojure"><i class="fa fa-tag" aria-hidden="true"></i> clojure</a></li>
-  
-    <li><a href="/tags/programming"><i class="fa fa-tag" aria-hidden="true"></i> programming</a></li>
-  
-</ul>
-
-        <a class="button is-link" href="http://justabloginthepark.com/2015/11/17/the-clojure-reductions-function/" style="height:28px">
-          Read more
-          <span class="icon is-small">
-            <i class="fa fa-angle-double-right"></i>
-          </span>
-        </a>
-        
-      </div>
-    </article>
-    
-    <article>
-      <h2 class="subtitle is-6">November 5, 2015</h2>
-      <h1 class="title"><a href="http://justabloginthepark.com/2015/11/05/clojure-zippers-emulate-object-oriented-programming/">Clojure Zippers Emulate Object-Oriented Programming?</a></h1>
-      <div class="content">
-        Yesterday, I posted about using Clojure zippers to solve the problem of automatically generating a Table of Contents. During my work with Clojure&rsquo;s implementation of zippers, I noticed something interesting.
-The zipper function creates (and returns) a new zipper object. Its parameters are the following (lifted straight from the documentation):
- branch? &ndash; a function that takes a node of the zipper and returns a true/false if it is capable of having children (even if it currently does not).
-        
-        ...<br />
-        <ul id="tags">
-  
-    <li><a href="/tags/programming"><i class="fa fa-tag" aria-hidden="true"></i> programming</a></li>
-  
-    <li><a href="/tags/clojure"><i class="fa fa-tag" aria-hidden="true"></i> clojure</a></li>
-  
-</ul>
-
-        <a class="button is-link" href="http://justabloginthepark.com/2015/11/05/clojure-zippers-emulate-object-oriented-programming/" style="height:28px">
           Read more
           <span class="icon is-small">
             <i class="fa fa-angle-double-right"></i>

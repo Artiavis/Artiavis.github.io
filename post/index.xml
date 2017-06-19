@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2017</copyright>
-    <lastBuildDate>Sun, 04 Jun 2017 14:30:28 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 18 Jun 2017 13:12:46 -0400</lastBuildDate>
     
 	<atom:link href="http://justabloginthepark.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Clojure and the Esoteric Mysteries of Namespaces</title>
+      <link>http://justabloginthepark.com/2017/06/18/clojure-and-the-esoteric-mysteries-of-namespaces/</link>
+      <pubDate>Sun, 18 Jun 2017 13:12:46 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/2017/06/18/clojure-and-the-esoteric-mysteries-of-namespaces/</guid>
+      <description>I recently had the drive/opportunity to deep-dive on how Clojure&amp;rsquo;s namespaces function and how they provide a simple abstraction using the concept of Clojure&amp;rsquo;s &amp;ldquo;Vars&amp;rdquo;. Here is a deep-dive on how they work. This is a two-part series. The previous part of the series is available at Clojure and the Esoteric Mysteries of Vars.
+A a fair warning, this requires a far bit of gory Clojure compiler internals to really understand.</description>
+    </item>
+    
+    <item>
+      <title>Clojure and the Esoteric Mysteries of Vars</title>
+      <link>http://justabloginthepark.com/2017/06/18/clojure-and-the-esoteric-mysteries-of-vars/</link>
+      <pubDate>Sun, 18 Jun 2017 11:07:02 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/2017/06/18/clojure-and-the-esoteric-mysteries-of-vars/</guid>
+      <description>I recently had the drive/opportunity to deep-dive on how Clojure&amp;rsquo;s namespaces function and how they provide a simple abstraction using the concept of Clojure&amp;rsquo;s &amp;ldquo;Vars&amp;rdquo;. Here is a deep-dive on how they work. This is a two-part series. The next part of the series is available at Clojure and the Esoteric Mysteries of Namespaces.
+Vars: A Simplified Model of Variables One of Clojure&amp;rsquo;s essential motivations is to provide a hosted runtime for easily concurrent programs, wherein most of the challenges of locking and thread-safety are provided &amp;ldquo;for free&amp;rdquo; (at least in the sense of the programmer not having to worry about these low-level concepts).</description>
+    </item>
     
     <item>
       <title>Review: Overwatch</title>

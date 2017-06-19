@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://justabloginthepark.com/2017/06/18/clojure-and-the-esoteric-mysteries-of-namespaces/</loc>
+    <lastmod>2017-06-18T13:12:46-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/2017/06/18/clojure-and-the-esoteric-mysteries-of-vars/</loc>
+    <lastmod>2017-06-18T11:07:02-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://justabloginthepark.com/2017/06/04/review-overwatch/</loc>
     <lastmod>2017-06-04T14:30:28-04:00</lastmod>
   </url>
@@ -210,7 +220,7 @@
   
   <url>
     <loc>http://justabloginthepark.com/tags/clojure/</loc>
-    <lastmod>2017-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2017-06-18T13:12:46-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -252,7 +262,7 @@
   
   <url>
     <loc>http://justabloginthepark.com/</loc>
-    <lastmod>2017-06-04T14:30:28-04:00</lastmod>
+    <lastmod>2017-06-18T13:12:46-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -276,13 +286,13 @@
   
   <url>
     <loc>http://justabloginthepark.com/post/</loc>
-    <lastmod>2017-06-04T14:30:28-04:00</lastmod>
+    <lastmod>2017-06-18T13:12:46-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://justabloginthepark.com/tags/programming/</loc>
-    <lastmod>2017-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2017-06-18T13:12:46-04:00</lastmod>
     <priority>0</priority>
   </url>
   
