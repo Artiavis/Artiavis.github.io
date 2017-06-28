@@ -33,7 +33,7 @@
     <item>
       <title>Clojure</title>
       <link>http://justabloginthepark.com/tags/clojure/</link>
-      <pubDate>Sun, 18 Jun 2017 13:12:46 -0400</pubDate>
+      <pubDate>Wed, 28 Jun 2017 00:20:27 -0400</pubDate>
       
       <guid>http://justabloginthepark.com/tags/clojure/</guid>
       <description></description>
@@ -94,6 +94,24 @@
     </item>
     
     <item>
+      <title>Java</title>
+      <link>http://justabloginthepark.com/tags/java/</link>
+      <pubDate>Wed, 28 Jun 2017 00:20:27 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kotlin</title>
+      <link>http://justabloginthepark.com/tags/kotlin/</link>
+      <pubDate>Wed, 28 Jun 2017 00:20:27 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/kotlin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Meta</title>
       <link>http://justabloginthepark.com/tags/meta/</link>
       <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
@@ -123,7 +141,7 @@
     <item>
       <title>Programming</title>
       <link>http://justabloginthepark.com/tags/programming/</link>
-      <pubDate>Sun, 18 Jun 2017 13:12:46 -0400</pubDate>
+      <pubDate>Wed, 28 Jun 2017 00:20:27 -0400</pubDate>
       
       <guid>http://justabloginthepark.com/tags/programming/</guid>
       <description></description>
@@ -135,6 +153,15 @@
       <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://justabloginthepark.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scala</title>
+      <link>http://justabloginthepark.com/tags/scala/</link>
+      <pubDate>Wed, 28 Jun 2017 00:20:27 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/scala/</guid>
       <description></description>
     </item>
     
