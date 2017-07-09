@@ -60,7 +60,7 @@
   <div class="container">
     <h2 class="subtitle is-6">June 18, 2017</h2>
     <h1 class="title">Clojure and the Esoteric Mysteries of Namespaces</h1>
-    <h2 class="subtitle is-6" >11 minute read</h2>
+    <h2 class="subtitle is-6" >15 minute read</h2>
     <ul id="tags">
   
     <li><a href="/tags/programming"><i class="fa fa-tag" aria-hidden="true"></i> programming</a></li>
@@ -71,6 +71,12 @@
 <br />
     <div class="content">
       
+
+<p>If you&rsquo;ve ever been programming in Clojure and encountered an error which looks
+something like, <code>IllegalStateException(&quot;Can't change/establish root binding of: *ns* with set&quot;)</code>,
+read on!</p>
+
+<h2 id="preface">Preface</h2>
 
 <p>I recently had the drive/opportunity to deep-dive on how Clojure&rsquo;s namespaces
 function and how they provide a simple abstraction using the concept of Clojure&rsquo;s
@@ -83,7 +89,31 @@ The previous part of the series is available at
 really understand. I&rsquo;m going to attempt to walk through the relevant bits, but
 it may not make much sense without also reading the relevant portions of source
 code. Thankfully, Lisps are simple to understand, so it should only take a few
-hours (instead of days or weeks).</p>
+hours (instead of days or weeks). However, if you just want the short version/the spoiler,
+here&rsquo;s the TL;DR:</p>
+
+<pre><code class="language-clojure">;; In Clojure, this works:
+(ns namespace-1)
+(println *ns*)
+;; #namespace[namespace-1]
+
+;; This also works
+(in-ns 'namespace-2)
+(clojure.core/println clojure.core/*ns*)
+;; #namespace[namespace-2]
+;; you could use
+(refer-clojure)
+;; to use the shorthand syntax available in the previous example
+
+;; However, this fails miserably at runtime, and there is no good documentation
+;; available which explains why this is so:
+(defn -main
+  [&amp; args]
+  (in-ns 'namespace-3)
+  (refer-clojure)
+  (println *ns*))
+;; Will shout and complain that you can't set a Var that's not locally bound
+</code></pre>
 
 <h2 id="what-s-in-a-name">What&rsquo;s in a Name?</h2>
 
@@ -359,6 +389,105 @@ the local bindings set up correctly. If you need to do runtime code loading (via
 (Technically Clojure does not guard against malicious actors, so custom classloaders
 may be needed if you&rsquo;re loading code from an untrusted party.)</p>
 
+<h2 id="bringing-it-all-together">Bringing it All Together</h2>
+
+<p>To save you some scrolling, I&rsquo;ll repeat my example from above, down here:</p>
+
+<pre><code class="language-clojure">;; In Clojure, this works:
+(ns namespace-1)
+(println *ns*)
+;; #namespace[namespace-1]
+
+;; This also works
+(in-ns 'namespace-2)
+(clojure.core/println clojure.core/*ns*)
+;; #namespace[namespace-2]
+;; you could use
+(refer-clojure)
+;; to use the shorthand syntax available in the previous example
+
+;; However, this fails miserably at runtime, and there is no good documentation
+;; available which explains why this is so:
+(defn -main
+  [&amp; args]
+  (in-ns 'namespace-3)
+  (refer-clojure)
+  (println *ns*))
+;; Will shout and complain that you can't set a Var that's not locally bound
+</code></pre>
+
+<p><em>Why is it that the first two examples work (during compilation and the REPL) and the last one does not (at runtime)?</em>
+I&rsquo;ve already hinted why above, but I&rsquo;ll give the long-form explanation.</p>
+
+<p>In the interest of efficiency and expediency, the compiler and the REPL both
+pretend to be within an interactive user session, and allow the global
+<code>*ns*</code> variable to be manipulated fairly freely. Every <code>def</code> and <code>defn</code> call
+(e.g. every declaration of a global variable, whether that variable is a function or not)
+translates into something like, &ldquo;Take this object and shove it into the
+named box within the compartment named by <code>*ns*</code>.&rdquo; In order to ensure that
+it&rsquo;s easy to assign those boxes into those compartments, the compiler and REPL
+both take pains to ensure that <code>*ns*</code> looks like what a user would expect it to,
+such that compilation proceeds in an orderly fashion.</p>
+
+<p>This does not hold for the Clojure runtime itself! When someone calls a <code>-main</code>
+function in Clojure, there is no magic call of <code>with-bindings</code> like
+those which occur in <code>clojure.main</code> and <code>clojure.lang.RT</code> to allow <code>*ns*</code> to
+be freely tweaked. As such, this will fail with the error
+<code>IllegalStateException(&quot;Can't change/establish root binding of: *ns* with set&quot;)</code>.
+Fuzzy and unclear before, it is now obvious: <em>before</em>, the compiler and REPL were
+root-binding <code>*ns*</code>, so taht we would never see this error! <em>Now</em>, we&rsquo;re on our
+own, and we&rsquo;ll be blindsided by a fastball if we aren&rsquo;t either deeply engrossed
+in the language runtime fundamentals, or previously warned of this quirk!</p>
+
+<h2 id="should-clojure-be-nicer-about-this">Should Clojure be nicer about this?</h2>
+
+<p>After I explained all of the above to a colleague at work
+(<a href="https://github.com/ztellman/primitive-math/issues/8">related to this Github issue</a>),
+he was justifiably upset.
+<a href="https://groups.google.com/forum/#!topic/clojure/6CXUNuPIUyQ">He submitted a ticket on the Clojure mailing list</a>
+and eventually received a response from Alex Miller himself. (I chimed in toward the end
+but the conversation was essentially concluded by the time I added my two cents.)</p>
+
+<p>The debate essentially goes as follows:</p>
+
+<blockquote>
+<p>Clojure User: Since <code>*ns*</code> and <code>in-ns</code> work consistently during compilation
+and in the REPL, they aught to behave the same way even at runtime.
+To do so is to violate the <a href="https://en.wikipedia.org/wiki/Principle_of_least_astonishment">principle of least surprise</a>.
+Please provide a shim to the runtime such that even when launching
+<code>gen-class</code>ed Clojure from the Java command line,
+or when invoking the runtime via the Java API,
+<code>*ns*</code> and <code>in-ns</code> will have
+received the same treatment as they get in other contexts.</p>
+
+<p>Clojure Maintainer: There isn&rsquo;t any canonical or deliberately consistent
+behavior of <code>*ns*</code> or <code>in-ns</code> in the manner you perceive. The compiler happens
+to work the way it does. <code>clojure.main</code>/Leiningen/Boot are by no means the
+canonical implementations; they provide the same setup for the convenience of
+the REPL, and happen to have chosen consistent conventions, but for us to impose
+those conventions unilaterally would be to take an actual stance and dictate
+that there is a canonical implementation.</p>
+
+<p>Clojure User: It&rsquo;s apparent that the community has consolidated around a canonical
+implementation, and to deny that is to consign developers to stumble upon this
+every few months, until this happens again. Although theoretically it was not
+necessary to provide this shim to achieve the language runtime, it is needed
+to avoid shocking users.</p>
+
+<p>Clojure Maintainer: Sure, open a ticket!</p>
+
+<p>Clojure User: <a href="https://dev.clojure.org/jira/browse/CLJ-2185">Done.</a></p>
+</blockquote>
+
+<h2 id="update">Update</h2>
+
+<p>After the initial publication of this post, I got some push backs from friends
+and colleagues that it did not sufficiently motivate why namespaces have
+counter-intuitive behavior and what can be done about it. Therefore I&rsquo;ve taken
+the approach (from which I normally refrain) of updating this post with more
+information and content, specifically the sections on &ldquo;Bringing it All Together&rdquo;,
+&ldquo;Should Clojure be nicer about this?&rdquo;, and the TL;DR at the top.</p>
+
 <h2 id="references">References</h2>
 
 <ul>
@@ -413,6 +542,8 @@ on their function/purpose.</li>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/css.min.js"></script>
 
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/fsharp.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/kotlin.min.js"></script>
 
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/javascript.min.js"></script>
 
