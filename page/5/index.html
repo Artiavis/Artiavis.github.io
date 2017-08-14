@@ -61,6 +61,35 @@
     
     
     <article>
+      <h2 class="subtitle is-6">November 17, 2015</h2>
+      <h1 class="title"><a href="http://justabloginthepark.com/2015/11/17/the-clojure-reductions-function/">The Clojure “Reductions” Function</a></h1>
+      <h2 class="subtitle is-6" >2 minute read</h2>
+      <div class="content">
+        Tonight, while attempting a problem at 4 Clojure (problem number omitted so as not to give too many hints), I was struck by the following problem:
+ What if I need a Clojure function which can take a sequence of functions and can sequentially call them on some seed value?
+ I&rsquo;m specifically looking at something like:
+(defn some-fun [seed-val &amp; funs] ; Keep passing the calculated value through, while also appending to sequence (list ((first funs) seed-val) ((second funs) ((first funs) seed-val)) .
+        
+        ...<br />
+        <ul id="tags">
+  
+    <li><a href="/tags/clojure"><i class="fa fa-tag" aria-hidden="true"></i> clojure</a></li>
+  
+    <li><a href="/tags/programming"><i class="fa fa-tag" aria-hidden="true"></i> programming</a></li>
+  
+</ul>
+
+        <a class="button is-link" href="http://justabloginthepark.com/2015/11/17/the-clojure-reductions-function/" style="height:28px">
+          Read more
+          <span class="icon is-small">
+            <i class="fa fa-angle-double-right"></i>
+          </span>
+        </a>
+        
+      </div>
+    </article>
+    
+    <article>
       <h2 class="subtitle is-6">November 6, 2015</h2>
       <h1 class="title"><a href="http://justabloginthepark.com/2015/11/06/teaching-binary-using-the-socratic-method/">Teaching Binary Using the Socratic Method</a></h1>
       <h2 class="subtitle is-6" >2 minute read</h2>
@@ -156,35 +185,6 @@ On Sunday I had the privilege of making my first pull request. The essence of th
 </ul>
 
         <a class="button is-link" href="http://justabloginthepark.com/2015/11/04/implementing-a-table-of-contents-using-zippers/" style="height:28px">
-          Read more
-          <span class="icon is-small">
-            <i class="fa fa-angle-double-right"></i>
-          </span>
-        </a>
-        
-      </div>
-    </article>
-    
-    <article>
-      <h2 class="subtitle is-6">October 28, 2015</h2>
-      <h1 class="title"><a href="http://justabloginthepark.com/2015/10/28/f-sharp-vs-clojure-toy-problem-shootout/">F Sharp vs Clojure Toy Problem Shootout</a></h1>
-      <h2 class="subtitle is-6" >10 minute read</h2>
-      <div class="content">
-        As a continuation of my forays in interesting and less industrially-oriented programming languages, I decided to compare F Sharp against Clojure for a relatively simple programming problem, and to compare how the two felt in terms of programming ease, friendliness, and how they each viewed the problem.
-The Problem The problem is a relatively one from Reddit&rsquo;s &ldquo;Daily Programmer&rdquo; subreddit, called JSON Treasure Hunt: given a random, unstructured JSON object, traverse the object looking for a specific terminal value (in this case, a string &ldquo;dailyprogrammer&rdquo;).
-        
-        ...<br />
-        <ul id="tags">
-  
-    <li><a href="/tags/programming"><i class="fa fa-tag" aria-hidden="true"></i> programming</a></li>
-  
-    <li><a href="/tags/clojure"><i class="fa fa-tag" aria-hidden="true"></i> clojure</a></li>
-  
-    <li><a href="/tags/f-sharp"><i class="fa fa-tag" aria-hidden="true"></i> f-sharp</a></li>
-  
-</ul>
-
-        <a class="button is-link" href="http://justabloginthepark.com/2015/10/28/f-sharp-vs-clojure-toy-problem-shootout/" style="height:28px">
           Read more
           <span class="icon is-small">
             <i class="fa fa-angle-double-right"></i>
