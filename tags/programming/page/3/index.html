@@ -63,6 +63,34 @@
   <div class="container">
     
     <article>
+      <h2 class="subtitle is-6">November 17, 2015</h2>
+      <h1 class="title"><a href="http://justabloginthepark.com/2015/11/17/the-clojure-reductions-function/">The Clojure “Reductions” Function</a></h1>
+      <div class="content">
+        Tonight, while attempting a problem at 4 Clojure (problem number omitted so as not to give too many hints), I was struck by the following problem:
+ What if I need a Clojure function which can take a sequence of functions and can sequentially call them on some seed value?
+ I&rsquo;m specifically looking at something like:
+(defn some-fun [seed-val &amp; funs] ; Keep passing the calculated value through, while also appending to sequence (list ((first funs) seed-val) ((second funs) ((first funs) seed-val)) .
+        
+        ...<br />
+        <ul id="tags">
+  
+    <li><a href="/tags/clojure"><i class="fa fa-tag" aria-hidden="true"></i> clojure</a></li>
+  
+    <li><a href="/tags/programming"><i class="fa fa-tag" aria-hidden="true"></i> programming</a></li>
+  
+</ul>
+
+        <a class="button is-link" href="http://justabloginthepark.com/2015/11/17/the-clojure-reductions-function/" style="height:28px">
+          Read more
+          <span class="icon is-small">
+            <i class="fa fa-angle-double-right"></i>
+          </span>
+        </a>
+        
+      </div>
+    </article>
+    
+    <article>
       <h2 class="subtitle is-6">November 5, 2015</h2>
       <h1 class="title"><a href="http://justabloginthepark.com/2015/11/05/clojure-zippers-emulate-object-oriented-programming/">Clojure Zippers Emulate Object-Oriented Programming?</a></h1>
       <div class="content">
@@ -158,31 +186,6 @@ The Problem The problem is a relatively one from Reddit&rsquo;s &ldquo;Daily Pro
 </ul>
 
         <a class="button is-link" href="http://justabloginthepark.com/2015/10/28/f-sharp-vs-clojure-toy-problem-shootout/" style="height:28px">
-          Read more
-          <span class="icon is-small">
-            <i class="fa fa-angle-double-right"></i>
-          </span>
-        </a>
-        
-      </div>
-    </article>
-    
-    <article>
-      <h2 class="subtitle is-6">October 18, 2015</h2>
-      <h1 class="title"><a href="http://justabloginthepark.com/2015/10/18/pros-and-cons-of-clojure/">Pros and Cons of Clojure</a></h1>
-      <div class="content">
-        As part of my forays in interesting (and generally unusable at work) programming languages, I began investigating Clojure back in June. Although I really love the language as a whole (and, in fact, I&rsquo;m using it to power this blog!), I struggled not only to set it up, but to find its ideal niche. This essay/rant is a result of a conversation I had about Clojure with two friends, one who is an excellent polyglot programmer, and one who is a beginner simply interested in Clojure as a practical Lisp.
-        
-        ...<br />
-        <ul id="tags">
-  
-    <li><a href="/tags/programming"><i class="fa fa-tag" aria-hidden="true"></i> programming</a></li>
-  
-    <li><a href="/tags/clojure"><i class="fa fa-tag" aria-hidden="true"></i> clojure</a></li>
-  
-</ul>
-
-        <a class="button is-link" href="http://justabloginthepark.com/2015/10/18/pros-and-cons-of-clojure/" style="height:28px">
           Read more
           <span class="icon is-small">
             <i class="fa fa-angle-double-right"></i>
