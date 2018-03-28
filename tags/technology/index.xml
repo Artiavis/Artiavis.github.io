@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright>
-    <lastBuildDate>Sun, 17 Sep 2017 21:46:54 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 27 Mar 2018 22:58:22 -0400</lastBuildDate>
     
 	<atom:link href="http://justabloginthepark.com/tags/technology/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Computer Backup Methodologies</title>
+      <link>http://justabloginthepark.com/2018/03/27/computer-backup-methodologies/</link>
+      <pubDate>Tue, 27 Mar 2018 22:58:22 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/2018/03/27/computer-backup-methodologies/</guid>
+      <description>I was chatting with my dad the other day, and the topic of backing up computers came up. At the moment, he uses the &amp;ldquo;Time Machine&amp;rdquo; feature built into his aging MacBook Pro to do backups of his hard drive. However, his Time Machine is backing up to an already tired external USB hard drive, and he&amp;rsquo;s now at the point where both his laptop and his USB hard drive are at risk of keeling over whenever.</description>
+    </item>
     
     <item>
       <title>Why I am not jumping on the newly debuted iPhone</title>

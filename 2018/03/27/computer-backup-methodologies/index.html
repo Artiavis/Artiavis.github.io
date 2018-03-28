@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Computer Backup Methodologies | Just a Blog in the Park</title>
+<link rel="stylesheet" href="http://justabloginthepark.com//css/style.css">
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/solid.js" integrity="sha384-P4tSluxIpPk9wNy8WSD8wJDvA8YZIkC6AQ+BfAFLXcUZIPQGu4Ifv4Kqq+i2XzrM" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/brands.js" integrity="sha384-qJKAzpOXfvmSjzbmsEtlYziSrpVjh5ROPNqb8UZ60myWy7rjTObnarseSKotmJIx" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/fontawesome.js" integrity="sha384-2IUdwouOFWauLdwTuAyHeMMRFfeyy4vqYNjodih+28v2ReC+8j+sLF9cK339k5hY" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="http://justabloginthepark.com//css/vs2015.min.css">
+<link rel="stylesheet" href="http://justabloginthepark.com//css/images.min.css">
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75" />
+        <a class="nav-item" href="http://justabloginthepark.com/"><h1 class="title is-4">Just a Blog in the Park</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="/about">
+            <span class="icon">
+              <i class="fas fa-user-circle"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/tags">
+            <span class="icon">
+              <i class="fas fa-tags"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://github.com/Artiavis">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://linkedin.com/in/JeffreyCRabinowitz">
+            <span class="icon">
+              <i class="fab fa-linkedin"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1">
+            <span class="icon">
+              <i class="fas fa-file-pdf"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fas fa-rss-square"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">March 27, 2018</h2>
+    <h1 class="title">Computer Backup Methodologies</h1>
+    <h2 class="subtitle is-6" >14 minute read</h2>
+    <ul id="tags">
+  
+    <li><a href="/tags/computers"><i class="fas fa-tag" aria-hidden="true"></i> computers</a></li>
+  
+    <li><a href="/tags/technology"><i class="fas fa-tag" aria-hidden="true"></i> technology</a></li>
+  
+    <li><a href="/tags/tech-support"><i class="fas fa-tag" aria-hidden="true"></i> tech-support</a></li>
+  
+</ul>
+<br />
+    <div class="content">
+      
+
+<p>I was chatting with my dad the other day, and the topic of backing up computers
+came up. At the moment, he uses the &ldquo;Time Machine&rdquo; feature built into his aging
+MacBook Pro to do backups of his hard drive. However, his Time Machine is backing
+up to an already tired external USB hard drive, and he&rsquo;s now at the point where
+both his laptop and his USB hard drive are at risk of keeling over whenever.
+What should he be doing in his situation?</p>
+
+<p>Although I&rsquo;m not an IT guy, I play one on TV, and quickly discussed the three
+main options, as I see it today, for backing up personal computers for &ldquo;typical&rdquo;
+types of home computer users. (This includes folks who are into most forms of
+non-technical hobbies, but not necessarily professional videographers or
+home supercomputer enthusiasts.)</p>
+
+<p><strong><a href="#summary">TL;DR: If you want advice on what kind of backup solution to consider, use this link to skip to the summary table, then skim back up as necessary.</a></strong></p>
+
+<h2 id="option-1-local-os-image-backups">Option 1: local OS image backups</h2>
+
+<p>The first family of options is also the oldest and most conventional.
+Rely on the tools built into your operating system to create restore points of your computer
+<em>but put them onto an external drive you won&rsquo;t lose or break</em>.
+macOS (formerly OS X) has (in my opinion) the better backup option in its
+&ldquo;<a href="https://support.apple.com/en-us/HT201250">Time Machine</a>&rdquo; utility (which, for
+nerds out there, is apparently just <code>rsync</code>
+with some hard links thrown in). Although Time Machine is getting on in years,
+it still works effectively at what it needs to do, and at any rate there&rsquo;s no
+superior option in this category. Windows <em>used</em> to have one way to do it, which
+was &ldquo;<a href="https://support.microsoft.com/en-us/help/17127/windows-back-up-restore">System Restore Points</a>&rdquo;,
+but as of Windows 10, now has a <em>second</em> way to do
+backups, which seems to just be called
+&ldquo;<a href="https://support.microsoft.com/en-us/help/17143/windows-10-back-up-your-files">Backup</a>&rdquo;.
+(If I had to guess, I think the reason why Microsoft encourages the new, second
+option over the first option is that the system restore points were opaque,
+confusing, heavy-weight, slow, and did not easily expose the file-restore
+functionality many people expect from OS image backups).</p>
+
+<p>Once any of these tools are set up, your operating system will recognize a
+certain external drive as being a backup disk, and whenever that disk is
+connected to your machine for a non-trivial length of time, the operating system
+will automatically and transparently begin backing up onto it. For both Time
+Machine and System Restore Points, even a brand new machine or a cleanly
+reinstalled machine, could theoretically back up from one of these images. This
+makes them very handy for bouncing back from a lost/stolen/broken machine,
+<em>which highlights the importance of regular backups</em>.</p>
+
+
+<figure>
+    
+        <img src="/img/2018/03/26/classic-ancient-usb-hard-drive.jpg" alt="A classic, ancient USB hard drive which may have been used for OS backups." />
+    
+    
+    <figcaption>
+        <p>
+        A classic, ancient USB hard drive which may have been used for OS backups.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>However, as if to make this even harder, the cheapest and most obvious
+way to backup is also the
+easiest way to mess it up - using USB external hard drives which are easy to lose,
+easy to forget to plug in, and which break just as quickly as a laptop!
+Don&rsquo;t get me wrong, having a backup is better than having <em>nothing at all</em>, but
+<em>how much better</em> than nothing at all is another matter entirely.</p>
+
+<p>Suppose you have a four-year-old laptop and a four-year-old USB external hard
+drive, and furthermore you&rsquo;ve been diligent and been backing up the laptop to
+the USB external hard drive via Time Machine/System Restore Points fairly
+regularly. Unexpectedly, your laptop crashes, and you need to restore the OS
+onto a new computer from the old USB hard drive.
+<em>What are the odds that, having never attempted the restoration before, your one hard drive, which is just as old as your laptop, and far cheaper, happens to be able to perfectly restore everything?</em></p>
+
+<p>Case in point, after we scrapped my wife&rsquo;s old laptop, we took a look at her old
+USB external hard drive. Although we were able to get all her files off of it
+(and we&rsquo;re both reasonably sure they&rsquo;re pristine as well as unconcerned if not),
+we started experiencing gremlins trying to use the hard drive for other machines.
+It seems that it was halfway to giving up the ghost already, and that we were
+fortunate enough to be able to get to it before it was gone entirely!</p>
+
+<p>Thus, while OS backups can make sense for some people in some situations, they&rsquo;re
+easy to mess up, and have gotchas which I haven&rsquo;t already gotten to, including:</p>
+
+<ul>
+<li>Your external hard drive can get lost/stolen/break independently of your machine.</li>
+<li>Your have no backup of your backup, which leads to an awkward chicken-and-egg problem if you want peace of mind.
+(Would you want to store your life&rsquo;s savings or family photos on a machine with only one backup?)</li>
+</ul>
+
+<p>I&rsquo;m being harsh on OS image backups because they&rsquo;re so easy to mess up, which
+makes them less suitable for some people. They can be made to work,
+and are (in some ways) most cost-effective for
+&ldquo;infinite-storage backups&rdquo;, but by and large are phasing out in popularity.
+At home, I use <a href="https://www.synology.com/en-us/products/series/j">one of Synology&rsquo;s j-series</a>
+Network-attached storage devices, so that all the family&rsquo;s machines can be backed
+up via WiFi, with effectively infinite backup sizes.</p>
+
+<p><img src="/img/2018/03/26/synology-ds216j.jpg" alt="" /></p>
+
+<h2 id="option-2-cloud-os-image-backups">Option 2: Cloud OS image backups</h2>
+
+<p>With the advent of fast internet connections and public cloud technology comes
+options for backing up a copy of your OS to &ldquo;the cloud&rdquo;. (For those who don&rsquo;t know,
+&ldquo;the cloud&rdquo; is a no-longer-new phrase for referring to any given internet-hosted
+colossal amorphous fleet of computers run by a company/organization, for purposes
+of giving flexible, cost-effective, remote computing resources to people who
+aren&rsquo;t themselves colossal amorphous organizations.)
+The nice part of using cloud-based backup solutions is that they skirt many of
+the thornier aspects of backups which typically stump lay users:</p>
+
+<ul>
+<li>Lay users often don&rsquo;t know or can&rsquo;t be bothered to follow the IT &ldquo;Rule of Three&rdquo;,
+which posits that for any important data, there should be at least three copies,
+and one of those copies should be physically outside the place you keep your
+original and your primary backup. There&rsquo;s a couple of reasons why the
+&ldquo;Rule of Three&rdquo; is hard for a typical person to follow:
+
+<ol>
+<li>It&rsquo;s &ldquo;expensive&rdquo; in dollars and cents &ndash; someone has to pay for three disks
+when only one disk is needed for the computer.</li>
+<li>It requires work and setup &ndash; keeping the off-site backup requires having
+safe-deposit box or a friend/relative&rsquo;s house in which to stash the off-site
+copy. The fact that the other copy has to be physically removed from the
+primary computing site (ie home) makes it work to get to. Paradoxically,
+the geographically further the off-site backup is, the safer it is, but also
+the more onerous to get in case something catastrophic actually does occur.</li>
+</ol></li>
+</ul>
+
+<p>Many people are perfectly content to keep all their photos, videos, documents,
+and settings on a single computer, as long as they can operate in the good faith
+that were a cataclysm were to occur, they could still get everything back;
+in other words, they want insurance and peace of mind, without the expense of
+maintaining physical machines.</p>
+
+<p>To this challenge has risen a number of companies,
+<a href="https://www.tomsguide.com/us/best-cloud-backup,review-2678.html">the current top contender</a>
+of which is &ldquo;<a href="https://www.backblaze.com/cloud-backup.html">Backblaze</a>&rdquo;.
+(Full disclosure, I use Backblaze for my &ldquo;Rule of Three&rdquo; off-site NAS backups,
+but don&rsquo;t currenty use them for personal cloud backups.)</p>
+
+<p>The basic gist of using Backblaze (or anything like it) is as follows:</p>
+
+<ol>
+<li>You open up your wallet and pony up around $50/year to subscribe to their &ldquo;service&rdquo;,
+and run their program on your machine.</li>
+<li>Their unobtrusive program occasionally checks for changes to your computer,
+and when it sees them, encrypts (and probably compresses) them and sends them
+over the internet to their &ldquo;Cloud&rdquo;. (You can set it up so that not even they
+can read your data, by using an encryption key,
+but if you do that, you&rsquo;re on your own if you forget the
+password you used; they are incapable of resetting it if you do that.)</li>
+<li>In a best case scenario, you never need to use Backblaze for restorations.
+You paid them $50, which you won&rsquo;t get back, but it&rsquo;s simpler and easier than buying and
+testing and maintaining an unlimited supply of USB external hard drives anyway.</li>
+<li>If you <em>do</em> need to restore, you have two options (as of the time of this writing):
+
+<ol>
+<li>You can get back a moderate amount of data over the internet. This is useful
+in case you want to get back some documents, but don&rsquo;t need to restore everything.</li>
+<li>If that&rsquo;s too little data or too slow, they can mail you a hard drive, for
+restoring everything in bulk. There&rsquo;s a deposit-style model, where you can
+pay $189 for a drive to be mailed to you, but you can get the money back if you
+return that drive within 30 days.</li>
+</ol></li>
+</ol>
+
+<p>For your $50/year, you get peace of mind, unlimited data backups for a single
+computer (plus all hard drives), and can offload much of the burden and cost of maintaining
+the required technology to someone else.</p>
+
+<h2 id="option-3-cloud-file-backups">Option 3: Cloud file backups</h2>
+
+<p>Cloud backup solutions like <a href="http://dropbox.com/">Dropbox</a>
+and <a href="http://drive.google.com/">Google Drive</a>
+are great options for folks who mostly consider computers fancy ways of editing
+Word files or Excel spreadsheets. Typical office files don&rsquo;t occupy much disk
+space and consequently computer users who don&rsquo;t need much else to be saved can
+get away with free or cheap tiers with the various providers of file backups.</p>
+
+
+<figure>
+    
+        <img src="/img/2018/03/26/dropbox-app-open-on-ipad.jpg" alt="I store copies of my resume and other precious documents on my iPad, for both backup purposes and easy access on the move." />
+    
+    
+    <figcaption>
+        <p>
+        I store copies of my resume and other precious documents on my iPad, for both backup purposes and easy access on the move.
+        
+            
+        
+        </p> 
+    </figcaption>
+    
+</figure>
+
+
+<p>As explained above, storing files in &ldquo;the cloud&rdquo; avoids the thorny issues relating
+to buying and maintaining your own computer hardware and backups, while still giving
+peace of mind and flexibility.</p>
+
+<p>Firms like Dropbox, Google, and Microsoft (but importantly not Apple, at least not in the way the other firms do) typically provide
+an &ldquo;app&rdquo; which runs on the computer in the background and silently mirrors all the
+files on your local computer to the cloud, and vice versa.
+Once in the cloud, your files can be accessed from desktops, laptops, tablets,
+and phones, as long as you have an internet connection. That flexibility can be
+invaluable to students and other academic or white collar professionals who need
+to access and update documents on the go. Having all your files at your fingertips
+over the internet takes the concept of cloud system backups, and takes it to the
+extreme, making your files mobile. On the other hand, you generally leave your
+computer behind; you don&rsquo;t get backups of your apps, settings, and have limited
+space for backups of photos<sup class="footnote-ref" id="fnref:photo"><a href="#fn:photo">1</a></sup> and videos<sup class="footnote-ref" id="fnref:video"><a href="#fn:video">2</a></sup>.</p>
+
+<p>The cost model for cloud file backup solutions tends to have a moderately sized
+free tier, which should service most folks who use them for backing up only
+important documents; professionals, academics, or folks who feel they want to
+back up everything may have to pay more, sometimes a lot more.
+Summarizing <a href="https://www.dropbox.com/individual/plans-comparison">Dropbox&rsquo;s individual pricing plans</a>,
+<a href="https://www.google.com/drive/pricing/">Google Drive&rsquo;s pricing plans</a>,
+and <a href="https://onedrive.live.com/about/en-US/plans/">Microsoft OneDrive&rsquo;s pricing plans</a>
+yields the following prices for access in the US (where 1TB = 1,000GB):</p>
+
+<table>
+<thead>
+<tr>
+<th>Price Plan</th>
+<th>Dropbox</th>
+<th>Google<sup class="footnote-ref" id="fnref:gpricnig"><a href="#fn:gpricnig">3</a></sup></th>
+<th>Apple<sup class="footnote-ref" id="fnref:apricing"><a href="#fn:apricing">4</a></sup></th>
+<th>Microsoft</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Free</td>
+<td>2GB</td>
+<td>15GB</td>
+<td>5GB</td>
+<td>5GB</td>
+</tr>
+
+<tr>
+<td>$12/year</td>
+<td>-</td>
+<td>-</td>
+<td>50GB</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>$20/year</td>
+<td>-</td>
+<td>100GB</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>$24/year</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>50GB</td>
+</tr>
+
+<tr>
+<td>$36/year</td>
+<td>-</td>
+<td>-</td>
+<td>200GB</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>$70/year</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>1TB, Microsoft Office included</td>
+</tr>
+
+<tr>
+<td>$100/year</td>
+<td>1TB</td>
+<td>1TB</td>
+<td>-</td>
+<td>1TB and Microsoft Office for each of 5 people</td>
+</tr>
+
+<tr>
+<td>$120/year</td>
+<td>-</td>
+<td>-</td>
+<td>2TB</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+<p>On paper, more is better, and it would seem like Microsoft or Google have more
+cost-effective plans, especially at cheaper price points.
+However, only Dropbox is really trying to support the true mobile file experience.
+Google is trying to push their internet-based Office apps, which require storing
+the files in the cloud; they also throw in free photo storage for most folks.
+Apple makes it easy to go all-in on their subscriptions but isn&rsquo;t as flexible as
+the other companies, in that they deliberately make it harder to use other services
+in their quest to make it easier to use their own. Microsoft is mostly
+competing with Apple and Google at the same time, and throws in an Office subscription
+as a teaser to lure customers away from Apple and Google&rsquo;s attractive, and very sticky,
+ecosystems.</p>
+
+<p>For students, using one (or all) of these options
+is a perfectly reasonable choice (and actually one such cloud may be provided
+or required by the school). For other people who expect to use more files,
+the following considerations may help:</p>
+
+<ul>
+<li>If your home computer is an Apple computer and you would rather back up files
+than your computer as a whole, or if you enjoy the concept of cloud sharing of
+files between an iPhone/iPad/MacBook/iMac, then iCloud can be appealing (as it&rsquo;s
+easier to use iCloud on phones and tablets than the competition). However,
+the other options may be more apealing.</li>
+<li>If you&rsquo;re a student who just wants basic office functionality, or someone who
+really just wants infinite backups of their photos, Google&rsquo;s offerings right
+now are especially compelling.</li>
+<li>If your only concern is backing up your Word/Excel/PowerPoint documents, then
+using Microsoft&rsquo;s out-of-the-box approach with its discounted/free Office
+subscription included is probably the most compelling.</li>
+<li>Otherwise, I&rsquo;d just go with Dropbox (perhaps in combination with the others).</li>
+</ul>
+
+<h2 id="summary">Summary</h2>
+
+<p>If you have a PC or laptop at home which you don&rsquo;t back up, you should really get
+on that! Odds are, if you aren&rsquo;t already doing the backups, the best thing to do
+would be to use either Backblaze (or a competitor) or Dropbox (or a competitor),
+depending on your needs. I&rsquo;ve put together a little summary table to help with
+those decisions.</p>
+
+<table>
+<thead>
+<tr>
+<th>Use case</th>
+<th>Local OS backup</th>
+<th>Cloud OS backup</th>
+<th>Cloud file backup</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Back up documents</td>
+<td>Fair to Great</td>
+<td>Fair to Good</td>
+<td>Excellent</td>
+</tr>
+
+<tr>
+<td>Back up photos<sup class="footnote-ref" id="fnref:photo"><a href="#fn:photo">1</a></sup></td>
+<td>Great</td>
+<td>Good</td>
+<td>OK up a point, but expensive</td>
+</tr>
+
+<tr>
+<td>Back up videos<sup class="footnote-ref" id="fnref:video"><a href="#fn:video">2</a></sup></td>
+<td>Good</td>
+<td>Fair</td>
+<td>OK for a couple, gets expensive fast</td>
+</tr>
+
+<tr>
+<td>Back up OS settings</td>
+<td>Great</td>
+<td>Good</td>
+<td>Almost useless</td>
+</tr>
+
+<tr>
+<td>Back up everything!</td>
+<td>Great</td>
+<td>Great</td>
+<td>Mediocre at best</td>
+</tr>
+
+<tr>
+<td>Annualized cost</td>
+<td>$20-40/TB</td>
+<td>$50/&ldquo;unlimited&rdquo;</td>
+<td>$100/TB<sup class="footnote-ref" id="fnref:cloud-file-plans"><a href="#fn:cloud-file-plans">5</a></sup></td>
+</tr>
+
+<tr>
+<td>Effort required</td>
+<td>Moderate</td>
+<td>Very low</td>
+<td>Very low to moderate, depending on use</td>
+</tr>
+</tbody>
+</table>
+
+<p>As shown in the table, the annualized cost of using a USB hard drive for backing
+up may seem low on paper, but fails to account for the human costs associated with
+manually curating backups. As such, using local backups should be primarily done
+for those with large photo/video collections, who need to keep files handy. Otherwise,
+cloud backups tend to be more economical in terms of both time saved, and optimizing
+for various price points.</p>
+
+<p>Do you think I missed anything, or have comments to add? Feel free to leave a note
+in the comments below!</p>
+
+<h2 id="appendix">Appendix</h2>
+
+<p>I&rsquo;m a big fan of technology blogger Scott Hansleman, and he has quite a few
+blog posts which themselves are treasure troves of wisdom on IT resilience and
+backup options. Some of my favorites are:</p>
+
+<ul>
+<li><a href="https://www.hanselman.com/blog/IsYourStuffBackedUpRecoveringFromAHardwareFailure.aspx">Is Your Stuff Backed Up? Recovering From A Hardware Failure</a></li>
+<li><a href="https://www.hanselman.com/blog/TheComputerBackupRuleOfThree.aspx">The Computer Backup Rule of Three</a></li>
+</ul>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:photo">For the sake of argument, I include a discussion of how effective cloud file backup solutions are at backing up photo libraries. However, it&rsquo;s true that increasingly many people rely upon &ldquo;free&rdquo; (as of the time of this writing) cloud backup/management solutions like <a href="https://www.amazon.com/Cloud-Drive-Storage/b?node=13234696011">Amazon Prime Photos</a> or <a href="https://photos.google.com/">Google Photos</a>. For those who eschew the &ldquo;free&rdquo; solutions, or who have large personal catalogs that they enjoy working with locally, including this section is still cogent.
+ <a class="footnote-return" href="#fnref:photo"><sup>[return]</sup></a></li>
+<li id="fn:video">Video files are so large that it&rsquo;s actually not a good idea to store them in any of these options; that being said, if you insist on doing so, which of these options are the best.
+ <a class="footnote-return" href="#fnref:video"><sup>[return]</sup></a></li>
+<li id="fn:gpricnig">Google is vaguely in competition with Microsoft, trying to push their Google Office applications which compete with Microsoft&rsquo;s world renowned office suite, but has some attractive offerings of their own, like unlimited free photo backup (for consumer cameras and smartphone cameras).
+ <a class="footnote-return" href="#fnref:gpricnig"><sup>[return]</sup></a></li>
+<li id="fn:apricing">Billed monthly only, so no discount for annualizing.
+ <a class="footnote-return" href="#fnref:apricing"><sup>[return]</sup></a></li>
+<li id="fn:cloud-file-plans">There&rsquo;s quite a bit of competition in this space, which means that there tends to be a variety of price points and free-tiers for thrifty shoppers. Companies like Google, Apple, Dropbox, Microsoft, Amazon, and others all compete in the fairly crowded file-cloud solution space. In fact, I remember that when I was in university, the standard wisdom was for all the students to open up trial with each; in the end, everybody seemed to have something like 10-20GB of free file storage, which is plenty for most students.
+ <a class="footnote-return" href="#fnref:cloud-file-plans"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <script type="text/javascript">
+      var disqus_shortname = 'justabloginthepark';
+      var disqus_loaded = false;
+
+      function disqus() {
+        if (!disqus_loaded) {
+          disqus_loaded = true;
+          
+          if (window.location.hostname == "localhost")
+            return;
+
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }
+      };
+    </script>
+    <script type="text/javascript">
+      window.onscroll = function(e) {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            if (!disqus_loaded) {
+              disqus();
+            }
+        }
+      };
+    </script>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/Artiavis">Jeff Rabinowitz</a>, 2018</p>
+  </div>
+</section>
+
+
+
+
+
