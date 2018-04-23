@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright>
-    <lastBuildDate>Mon, 09 Apr 2018 19:07:51 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 22 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://justabloginthepark.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My Photo Gallery</title>
+      <link>http://justabloginthepark.com/photos/</link>
+      <pubDate>Sun, 22 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/photos/</guid>
+      <description>Lunch at Rolen&amp;#39;s Bagels.
+Travelers grabbing a bite of Halal Cart on Passover.
+Team bowling outing at Hudson Yards.
+Pocket books seem to be a popular mode of transport in New York City.</description>
+    </item>
     
     <item>
       <title>Making Chicken Stock From Scratch</title>
