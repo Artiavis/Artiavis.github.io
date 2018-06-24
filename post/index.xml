@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright>
-    <lastBuildDate>Tue, 22 May 2018 21:59:35 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 24 Jun 2018 18:22:04 -0400</lastBuildDate>
     
 	<atom:link href="http://justabloginthepark.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Photoswipe Hugo Gallery</title>
+      <link>http://justabloginthepark.com/2018/06/24/photoswipe-hugo-gallery/</link>
+      <pubDate>Sun, 24 Jun 2018 18:22:04 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/2018/06/24/photoswipe-hugo-gallery/</guid>
+      <description>As I&amp;rsquo;ve recently gotten more into photography, I&amp;rsquo;ve been feeling the dearth of a gallery on this site. While I&amp;rsquo;ve recently dusted off my Instagram account, I still want to be able to share my better pictures without forcing my visitors to enter Facebook&amp;rsquo;s internet dragnet. So I started looking at options.
+The first, and most obvious choice, was to see about whether I could scrape photos or photo links from my Instagram and mirror them here.</description>
+    </item>
     
     <item>
       <title>Fuji LH X100 Len Hood</title>

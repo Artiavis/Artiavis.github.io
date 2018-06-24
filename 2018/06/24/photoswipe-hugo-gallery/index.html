@@ -2,7 +2,7 @@
 <html lang="en-us">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cooked | Just a Blog in the Park</title>
+<title>Photoswipe Hugo Gallery | Just a Blog in the Park</title>
 <link rel="stylesheet" href="http://justabloginthepark.com//css/style.css">
 <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/solid.js" integrity="sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0" crossorigin="anonymous"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/brands.js" integrity="sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM" crossorigin="anonymous"></script>
@@ -68,67 +68,62 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="subtitle is-6">March 1, 2016</h2>
-    <h1 class="title">Cooked</h1>
+    <h2 class="subtitle is-6">June 24, 2018</h2>
+    <h1 class="title">Photoswipe Hugo Gallery</h1>
     <h2 class="subtitle is-6" >3 minute read</h2>
-    <ul id="tags">
-  
-    <li><a href="/tags/tv"><i class="fas fa-tag" aria-hidden="true"></i> tv</a></li>
-  
-</ul>
-<br />
+    
     <div class="content">
-      <p>Those who know me know I have a strong interest in cooking shows.
-I am a huge fan of <em>Iron Chef</em> and Alton Brown&rsquo;s <em>Good Eats</em>
-(so much so that I actually own all three volumes of the <em>Good Eats</em> cookbooks!).
-Although I haven&rsquo;t watched much in the way of cooking shows in recent years due
-to not having a permanent cable subscription, my zest for this content is as
-strong as ever.</p>
+      <p>As I&rsquo;ve recently gotten
+<a href="/2017/08/13/fuji-x100t/">more</a>
+<a href="/2017/12/05/fuji-tcl-x100-ii/">into</a>
+<a href="/2017/12/17/asking-about-camera-advice/">photography</a>,
+I&rsquo;ve been feeling the dearth of a gallery on this site.
+While I&rsquo;ve recently
+<a href="https://www.instagram.com/artiavis/">dusted off my Instagram account</a>,
+I still want to be able to share my better pictures without forcing my visitors
+to enter Facebook&rsquo;s internet dragnet. So I started looking at options.</p>
 
-<p>That&rsquo;s why I was so excited to watch all four parts of the new Netflix series
-<em>Cooked</em>, based on the book by Michael Pollan. The strong emphasis on emotions,
-flavor, quality ingredients, and food science hits all the highlights for me.
-(And unlike the series <em>Chef&rsquo;s Table</em>, also on Netflix, <em>Cooked</em> doesn&rsquo;t lose sight
-of the food when studying the quirks of individual cooks.)</p>
+<p>The first, and most obvious choice, was to see about whether I could scrape
+photos or photo links from my Instagram and mirror them here. While this
+does exist, and there are third-party services who will mirror images for you,
+there isn&rsquo;t an easy and standalone way to mirror my Instagram here.
+Not being interested in linking individual Instagram posts onto this blog, I went
+looking for something a bit less heavy and overwrought.</p>
 
-<p><em>Cooked</em> consists of four mini-documentaries, each discussing a different type
-of &ldquo;cooking&rdquo;: braising/grilling, cooking, baking (specifically of bread),
-and fermenting/pickling/aging. Although each episode has a different feel,
-and often centers itself in different locales, they all tend to follow a similar
-arc:</p>
+<p>Ultimately, I found <a href="http://photoswipe.com/">Photoswipe.js</a>, an elegant and
+lightweight &ldquo;lightbox&rdquo; gallery display toolchain.
+It works using a clever mix of static markup and lazy JavaScript to build a
+lightweight gallery of image thumbnails, which get replaced with high-resolution
+images as site visitors click through the gallery. In this way, mobile devices
+aren&rsquo;t forced to download tens of megabytes of full-resolution images that they
+won&rsquo;t necessarily look at. (This scratches my own itch; I often consult my blog
+while I&rsquo;m on my phone, and don&rsquo;t want to waste 1% of my mobile data budget to
+quicky check something.)</p>
 
-<ul>
-<li>Introducing a novel perspective on a specific type of cooking</li>
-<li>Introduce cooking some dishes that way, exploring what really goes into that
-method</li>
-<li>Discuss the history of the cooking method</li>
-<li>Segue into a discussion about the food science of that type of cooking, and
-some nuances of that science (I especially loved every second featuring
-<a href="https://en.wikipedia.org/wiki/Nathan_Myhrvold">Nathan Myhrvold</a>)</li>
-<li>Spend some time discussing how degenerate the American diet is with respect
-to this cooking method, and how we should all hearken back to 1950&rsquo;s American
-culinary traditions</li>
-<li>Philosophize about how we&rsquo;re okay even if we don&rsquo;t hearken back to 1950&rsquo;s
-American culinary traditions, as long as we eat healthier and cook our own
-food more.</li>
-</ul>
+<p><a href="/2017/06/03/switching-to-hugo-blogging/">As I now do my blogging using Hugo</a>,
+I tried looking around for some tools which would help me get on my feet faster.
+(While Photoswipe is mercifully free and open-source software, it&rsquo;s not quite a
+turn-key solution either. )
+There&rsquo;s a couple of examples of this on GitHub, but I ended up going with
+<a href="https://github.com/liwenyip/hugo-easy-gallery">liwenyip/hugo-easy-gallery</a> as
+a template, and tweaked things from there.
+(There&rsquo;s a helpful demo site set up by Li-Wen <a href="https://www.liwen.id.au/heg/">here</a>).</p>
 
-<p>I&rsquo;m a bit ambivalent about this systematic approach to the documentary
-structure.
-Although the approach was novel and refreshing for the first two
-episodes, by the third episode, I was already anticipating what each act would
-hold. I also grew weary of the token-mandatory-philosophizing which apparently
-needs to conclude every episode of every modern pop-documentary.
-(Maybe I don&rsquo;t like being philosophized to?) However, I still found each episode
-and the overall approach compelling enough to be able to take each episode on its
-own strengths. I definitely think that this series being only four episodes,
-and having a well-defined scope, contributed significantly to the watchability
-of the series.</p>
+<p>Basically, Li-Wen&rsquo;s templates use Hugo shortcodes (macros) to expand an
+annotated image link into a Photoswipe gallery stub on a page;
+multiple disparate galleries can be featured on a given page, and images can be
+strewn all over a page despite being part of a single logical &ldquo;gallery&rdquo;.
+Whenever an image is clicked on, it expands into a lightbox gallery viewer for
+the whole page; quite nifty.</p>
 
-<p>Overall, I would recommend this series to other cooking show enthusiasts.
-Although I don&rsquo;t believe it would interest anyone not at least interested in food,
-or convert to traditional cooking anyone not already so interested,
-it definitely holds power and pleasure for those of us who are.</p>
+<p>One unfortunate side-effect of how Hugo macros work, is that, unfortunatey,
+there doesn&rsquo;t yet appear to be an easy way to statically emit HTML and JavaScript
+macros for an entire gallery using only a single command. Nevertheless, the
+advantages of using self-hosted seems to outweight the slight inconvenience of
+needing to maintain the gallery macros (considering that I&rsquo;m not particularly
+prolific).</p>
+
+<p><a href="/photos">You can check out my photo gallery here.</a></p>
 
     </div>
   </div>
