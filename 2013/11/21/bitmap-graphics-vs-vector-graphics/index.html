@@ -1,135 +1,27 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bitmap Graphics vs Vector Graphics | Just a Blog in the Park</title>
-<link rel="stylesheet" href="http://justabloginthepark.com//css/style.css">
-<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/solid.js" integrity="sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/brands.js" integrity="sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js" integrity="sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM" crossorigin="anonymous"></script>
-
-    
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    
-    <link rel="stylesheet" href="http://justabloginthepark.com//css/vs2015.min.css">
-
-
-    <link rel="stylesheet" href="http://justabloginthepark.com//css/images.min.css">
-
-
-<section class="section">
-  <div class="container">
-    <nav class="nav">
-      <div class="nav-left">
-        <a href="/about">
-          <img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75" />
-        </a>
-        <a class="nav-item" href="http://justabloginthepark.com/"><h1 class="title is-4">Just a Blog in the Park</h1></a>
-      </div>
-      <div class="nav-right">
-        <nav class="nav-item level is-mobile">
-          
-          <a class="level-item" href="/photos">
-            <span class="icon">
-              <i class="fas fa-camera"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="/tags">
-            <span class="icon">
-              <i class="fas fa-tags"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="https://github.com/Artiavis">
-            <span class="icon">
-              <i class="fab fa-github"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="https://linkedin.com/in/JeffreyCRabinowitz">
-            <span class="icon">
-              <i class="fab fa-linkedin"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1">
-            <span class="icon">
-              <i class="fas fa-file-pdf"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="/index.xml">
-            <span class="icon">
-              <i class="fas fa-rss-square"></i>
-            </span>
-          </a>
-          
-        </nav>
-      </div>
-    </nav>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="subtitle is-6">November 21, 2013</h2>
-    <h1 class="title">Bitmap Graphics vs Vector Graphics</h1>
-    <h2 class="subtitle is-6" >6 minute read</h2>
-    <ul id="tags">
-  
-    <li><a href="/tags/photography"><i class="fas fa-tag" aria-hidden="true"></i> photography</a></li>
-  
-    <li><a href="/tags/dsp"><i class="fas fa-tag" aria-hidden="true"></i> dsp</a></li>
-  
-</ul>
-<br />
-    <div class="content">
-      
-
-<p>One astute reader of
-<a href="/2013/11/04/how-to-smooth-out-the-curves---understanding-digital-image-filtering/">a previous post</a> observed that
+<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Bitmap Graphics vs Vector Graphics | Just a Blog in the Park</title><link rel=stylesheet href=http://justabloginthepark.com//css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css><link rel=stylesheet href=http://justabloginthepark.com//css/vs2015.min.css><link rel=stylesheet href=http://justabloginthepark.com//css/images.min.css><section class=section><div class=container><nav class=nav><div class=nav-left><a href=/about><img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75"></a>
+<a class=nav-item href=http://justabloginthepark.com/><h1 class="title is-4">Just a Blog in the Park</h1></a></div><div class=nav-right><nav class="nav-item level is-mobile"><a class=level-item href=/photos><span class=icon><i class="fas fa-camera"></i></span></a><a class=level-item href=/tags><span class=icon><i class="fas fa-tags"></i></span></a><a class=level-item href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span></a><a class=level-item href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span></a><a class=level-item href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span></a><a class=level-item href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span></a></nav></div></nav></div></section><section class=section><div class=container><h2 class="subtitle is-6">November 21, 2013</h2><h1 class=title>Bitmap Graphics vs Vector Graphics</h1><h2 class="subtitle is-6">6 minute read</h2><ul id=tags><li><a href=/tags/photography><i class="fas fa-tag" aria-hidden=true></i>photography</a></li><li><a href=/tags/dsp><i class="fas fa-tag" aria-hidden=true></i>dsp</a></li></ul><br><div class=content><p>One astute reader of
+<a href=/2013/11/04/how-to-smooth-out-the-curves---understanding-digital-image-filtering/>a previous post</a> observed that
 although I seemed to imply that only
-<a href="https://en.wikipedia.org/wiki/Bitmap">bitmaps</a>
+<a href=https://en.wikipedia.org/wiki/Bitmap>bitmaps</a>
 can be digital images, there also exists such a thing as
-<a href="//en.wikipedia.org/wiki/Vector_graphics">vector graphics</a>
+<a href=//en.wikipedia.org/wiki/Vector_graphics>vector graphics</a>
 which are also considered
 digital images. At the time, it was not clear in context what was meant in
 describing an image as <em>digital</em>. While I conflated digital images with bitmaps,
 which is inaccurate, I was only discussing bitmaps in that post, and the
-conclusions therein are still valid.</p>
-
-<p>Nevertheless, that reader raised a few interesting and related points.</p>
-
-<ol>
-<li><p>What does it mean for an image to <em>be</em> digital?</p></li>
-
-<li><p>What does it mean for a digital image to <em>contain digital data</em>? What does it mean for a digital image to contain non-digital (continuous) data?</p></li>
-
-<li><p>Why do we not care about applying our techniques to non-digital images?</p></li>
-</ol>
-
-<p>I would like to address the second point, which may be a point of confusion. In answering it, I hope the answer to the first and third points will become more readily apparent.</p>
-
-<h3 id="bitmaps-and-digital-data">Bitmaps and Digital Data</h3>
-
-<p>As discussed <a href="/2013/11/04/how-to-smooth-out-the-curves---understanding-digital-image-filtering/">in the previous post</a>, bitmaps (also known
+conclusions therein are still valid.</p><p>Nevertheless, that reader raised a few interesting and related points.</p><ol><li><p>What does it mean for an image to <em>be</em> digital?</p></li><li><p>What does it mean for a digital image to <em>contain digital data</em>? What does it mean for a digital image to contain non-digital (continuous) data?</p></li><li><p>Why do we not care about applying our techniques to non-digital images?</p></li></ol><p>I would like to address the second point, which may be a point of confusion. In answering it, I hope the answer to the first and third points will become more readily apparent.</p><h3 id=bitmaps-and-digital-data>Bitmaps and Digital Data</h3><p>As discussed <a href=/2013/11/04/how-to-smooth-out-the-curves---understanding-digital-image-filtering/>in the previous post</a>, bitmaps (also known
 as raster images) are a kind of digital image. Actually when people discuss
 digital images they are <em><strong>almost always</strong></em> referring to bitmaps. This is in no
 small part due to the ready availability of bitmaps in the form of digital
 photographs, Adobe Photoshop, and even Microsoft Paint, all of which contain and
-operate on bitmaps. The vast majority of digital images are bitmaps.</p>
-
-<p>However, there is more to calling bitmaps digital images than just the
+operate on bitmaps. The vast majority of digital images are bitmaps.</p><p>However, there is more to calling bitmaps digital images than just the
 commonality of bitmaps. The bitmap actually <em>contains</em> digital data in the form
 of pixels, which are element-wise approximations of a greater whole. In the
 majority case of a digital photograph, the digital photograph is approximating
-the real, continuous image seen by a digital camera when the picture was taken.</p>
-
-<p>To elaborate on that point, consider the case of film photography vs.
+the real, continuous image seen by a digital camera when the picture was taken.</p><p>To elaborate on that point, consider the case of film photography vs.
 digital photography &mdash; how much information is stored in each image?
 Ken Rockwell explains on his excellent website
-<a href="http://www.kenrockwell.com/tech/film-resolution.htm">that the &ldquo;resolution&rdquo; of film is anywhere between about 87 megapixels to almost 2000</a>!
+<a href=http://www.kenrockwell.com/tech/film-resolution.htm>that the &ldquo;resolution&rdquo; of film is anywhere between about 87 megapixels to almost 2000</a>!
 As most digital cameras these days take images with around 15 megapixels, that
 means film is still technically between 6 to several hundred times more data-
 dense than digital. Does that mean that digital images actually convey less
@@ -138,37 +30,25 @@ the same time, both formats present a perfectly acceptable presentation of the
 original scene. The takeaway is &mdash; a set of digital data are approximating
 a nearly infinitely large set of data using a small, finite sampling of the
 original set; and that the digital data represents the camera&rsquo;s &ldquo;own subjective
-reality&rdquo; of the image it saw.</p>
-
-<h3 id="vector-graphics">Vector Graphics</h3>
-
-<p>When explaining bitmaps, I referenced
-<a href="https://en.wikipedia.org/wiki/Pointillism">pointillism</a>, the art of creating a
+reality&rdquo; of the image it saw.</p><h3 id=vector-graphics>Vector Graphics</h3><p>When explaining bitmaps, I referenced
+<a href=https://en.wikipedia.org/wiki/Pointillism>pointillism</a>, the art of creating a
 picture from many small points, and how these points approximate a larger, whole
 picture. For painters (and likewise for drawers), the points are only painted to
 facilitate the greater painting. However, if they so chose, they could simply
 paint shapes. In fact, painting shapes is the classical art form when it comes
-to painting, and pointillism is an alternate form.</p>
-
-<p>Although obtaining digital images in the form of bitmaps is easy due to digital
+to painting, and pointillism is an alternate form.</p><p>Although obtaining digital images in the form of bitmaps is easy due to digital
 photography, there is another way to obtain a digital image (digital here
 meaning able to be stored on a computer). Much like painters can paint shapes of
 color and texture, digital graphic artists can also generate shapes of color and
-texture.</p>
-
-<p><img src="/img/raster_vs_vector.jpg" alt="Raster Image vs. Vector Image" /></p>
-
-<p>The technique for doing this is a little bit involved, but it revolves around
-the idea of <a href="https://en.wikipedia.org/wiki/Bezier_curves">Bézier curves</a>.
+texture.</p><p><img src=/img/raster_vs_vector.jpg alt="Raster Image vs. Vector Image"></p><p>The technique for doing this is a little bit involved, but it revolves around
+the idea of <a href=https://en.wikipedia.org/wiki/Bezier_curves>Bézier curves</a>.
 Put simply,
 Bézier curves are special, mathematically defined lines which can be coaxed into
 any shape, have any length, and be placed in any position in space. (The name
 <em>vector</em> comes from the mathematical notion of vector being a line in space with
 specific endpoints.) This makes them very powerful for forming shapes &mdash;
 essentially a circle is just a singe curve, a square four curves, etc. Even
-letters can be so represented!</p>
-
-<p>The advantage to approaching digital images as a series of mathematically-
+letters can be so represented!</p><p>The advantage to approaching digital images as a series of mathematically-
 defined geometric shapes is related to resizing the image. Because the shapes
 are described mathematically, their &ldquo;size&rdquo; is arbitrary. A circle can be small or
 large, a line can be any width, etc. This is ideal for distributing graphics on
@@ -177,30 +57,20 @@ size of vector images means that the image can be perfectly clear and the right
 size in all situations. This is not so with bitmaps, where either multiple
 copies of the same graphic are used at various sizes, or one extremely large
 image is used everywhere. (This is in addition to the storage advantages from
-storing a constant set of mathematical equations which work at all sizes.)</p>
-
-<h3 id="why-do-we-only-process-bitmaps">Why Do We Only Process Bitmaps?</h3>
-
-<p>If you&rsquo;ve followed everything so far, the answers to the questions raised
+storing a constant set of mathematical equations which work at all sizes.)</p><h3 id=why-do-we-only-process-bitmaps>Why Do We Only Process Bitmaps?</h3><p>If you&rsquo;ve followed everything so far, the answers to the questions raised
 previously should be falling into place. A digital image is, generally speaking,
 an image stored digitally on a computer; however, it more often refers to
-bitmaps, which is a digital image containing digital data.</p>
-
-<p>Furthermore, we only speak about processing bitmaps because bitmaps
+bitmaps, which is a digital image containing digital data.</p><p>Furthermore, we only speak about processing bitmaps because bitmaps
 <em>represent something greater than the sum of their pixels</em>,
 while vectors are
 <em>nothing more than the sum of their equations</em>. A digital photograph is trying to capture an
 entire scene of infinite details with only a finite set of information!
 Processing that digital photograph can reveal hidden details, enhance
 aesthetics, and more. Simply put, there is more to the photograph than just the
-pixels.</p>
-
-<p>On the other hand, vectors are generated by artists in a vacuum. There are no
+pixels.</p><p>On the other hand, vectors are generated by artists in a vacuum. There are no
 hidden details or sub-optimal aesthetics which can be improved by analyzing the
 properties of the image. The generated image <em>is exactly the sum of its parts</em>.
-There is nothing more or less than what was put their by its artist.</p>
-
-<p>That&rsquo;s not to say that techniques which work on bitmaps won&rsquo;t work on vectors
+There is nothing more or less than what was put their by its artist.</p><p>That&rsquo;s not to say that techniques which work on bitmaps won&rsquo;t work on vectors
 &mdash; in fact, they would most likely be easier to apply. There just isn&rsquo;t any
 point. Unlike bitmaps, where the image is a finite, lossy approximation of what
 once was, a &ldquo;secondary source&rdquo;, a vector is an infinite representation of the
@@ -209,102 +79,11 @@ out of a bitmap, or to try and modify it without damaging the original image,
 because it is difficult to modify the secondary source without losing the
 information it has from its primary source. On the other hand, anyone can simply
 open up a vector image and begin modifying it, because they have the primary
-source.</p>
-
-<h3 id="conclusion">Conclusion</h3>
-
-<p>In one sense, bitmaps are much more crude than vectors, because they&rsquo;re a
+source.</p><h3 id=conclusion>Conclusion</h3><p>In one sense, bitmaps are much more crude than vectors, because they&rsquo;re a
 limited copy. Yet there&rsquo;s also many more possibilities &mdash; a vector image
 needs to be generated in order to convey information, while a bitmap
 intrinsically has information. In fact, detailed digital images such as digital
 photographs can have many fine details which can be incredibly hard to recreate
-using vector images. Although bitmaps may only have so  many pixels, each pixel
-is its own sandbox.</p>
-
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <aside><div id="disqus_thread"></div></aside>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-    <script type="text/javascript">
-      var disqus_shortname = 'justabloginthepark';
-      var disqus_loaded = false;
-
-      function disqus() {
-        if (!disqus_loaded) {
-          disqus_loaded = true;
-          
-          if (window.location.hostname == "localhost")
-            return;
-
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }
-      };
-    </script>
-    <script type="text/javascript">
-      window.onscroll = function(e) {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            if (!disqus_loaded) {
-              disqus();
-            }
-        }
-      };
-    </script>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container has-text-centered">
-    <p>&copy; <a href="https://github.com/Artiavis">Jeff Rabinowitz</a>, 2018</p>
-  </div>
-</section>
-
-
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js"></script>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
+using vector images. Although bitmaps may only have so many pixels, each pixel
+is its own sandbox.</p></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname='justabloginthepark';var disqus_loaded=false;function disqus(){if(!disqus_loaded){disqus_loaded=true;if(window.location.hostname=="localhost")
+return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);}};</script><script type=text/javascript>window.onscroll=function(e){if((window.innerHeight+window.scrollY)>=document.body.offsetHeight){if(!disqus_loaded){disqus();}}};</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2018</p></div></section><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js></script><script>hljs.initHighlightingOnLoad();</script>

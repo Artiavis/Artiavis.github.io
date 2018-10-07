@@ -1,123 +1,13 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Why Kotlin Over Lombok? | Just a Blog in the Park</title>
-<link rel="stylesheet" href="http://justabloginthepark.com//css/style.css">
-<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/solid.js" integrity="sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/brands.js" integrity="sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js" integrity="sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM" crossorigin="anonymous"></script>
-
-    
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    
-    <link rel="stylesheet" href="http://justabloginthepark.com//css/vs2015.min.css">
-
-
-    <link rel="stylesheet" href="http://justabloginthepark.com//css/images.min.css">
-
-
-<section class="section">
-  <div class="container">
-    <nav class="nav">
-      <div class="nav-left">
-        <a href="/about">
-          <img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75" />
-        </a>
-        <a class="nav-item" href="http://justabloginthepark.com/"><h1 class="title is-4">Just a Blog in the Park</h1></a>
-      </div>
-      <div class="nav-right">
-        <nav class="nav-item level is-mobile">
-          
-          <a class="level-item" href="/photos">
-            <span class="icon">
-              <i class="fas fa-camera"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="/tags">
-            <span class="icon">
-              <i class="fas fa-tags"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="https://github.com/Artiavis">
-            <span class="icon">
-              <i class="fab fa-github"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="https://linkedin.com/in/JeffreyCRabinowitz">
-            <span class="icon">
-              <i class="fab fa-linkedin"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1">
-            <span class="icon">
-              <i class="fas fa-file-pdf"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="/index.xml">
-            <span class="icon">
-              <i class="fas fa-rss-square"></i>
-            </span>
-          </a>
-          
-        </nav>
-      </div>
-    </nav>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="subtitle is-6">December 23, 2017</h2>
-    <h1 class="title">Why Kotlin Over Lombok?</h1>
-    <h2 class="subtitle is-6" >7 minute read</h2>
-    <ul id="tags">
-  
-    <li><a href="/tags/programming"><i class="fas fa-tag" aria-hidden="true"></i> programming</a></li>
-  
-    <li><a href="/tags/java"><i class="fas fa-tag" aria-hidden="true"></i> java</a></li>
-  
-    <li><a href="/tags/kotlin"><i class="fas fa-tag" aria-hidden="true"></i> kotlin</a></li>
-  
-</ul>
-<br />
-    <div class="content">
-      
-
-<p>This is a continuation of the ideas from <a href="/2017/06/28/is-kotlin-the-new-java/">&ldquo;Is Kotlin the New Java?&rdquo;</a>.</p>
-
-<h2 id="what-is-lombok">What is Lombok?</h2>
-
-<p>For those of you who are not familiar,
-<a href="https://projectlombok.org/features/all">Project Lombok</a> is a build tool for the
+<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Why Kotlin Over Lombok? | Just a Blog in the Park</title><link rel=stylesheet href=http://justabloginthepark.com//css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css><link rel=stylesheet href=http://justabloginthepark.com//css/vs2015.min.css><link rel=stylesheet href=http://justabloginthepark.com//css/images.min.css><section class=section><div class=container><nav class=nav><div class=nav-left><a href=/about><img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75"></a>
+<a class=nav-item href=http://justabloginthepark.com/><h1 class="title is-4">Just a Blog in the Park</h1></a></div><div class=nav-right><nav class="nav-item level is-mobile"><a class=level-item href=/photos><span class=icon><i class="fas fa-camera"></i></span></a><a class=level-item href=/tags><span class=icon><i class="fas fa-tags"></i></span></a><a class=level-item href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span></a><a class=level-item href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span></a><a class=level-item href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span></a><a class=level-item href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span></a></nav></div></nav></div></section><section class=section><div class=container><h2 class="subtitle is-6">December 23, 2017</h2><h1 class=title>Why Kotlin Over Lombok?</h1><h2 class="subtitle is-6">7 minute read</h2><ul id=tags><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i>programming</a></li><li><a href=/tags/java><i class="fas fa-tag" aria-hidden=true></i>java</a></li><li><a href=/tags/kotlin><i class="fas fa-tag" aria-hidden=true></i>kotlin</a></li></ul><br><div class=content><p>This is a continuation of the ideas from <a href=/2017/06/28/is-kotlin-the-new-java/>&ldquo;Is Kotlin the New Java?&rdquo;</a>.</p><h2 id=what-is-lombok>What is Lombok?</h2><p>For those of you who are not familiar,
+<a href=https://projectlombok.org/features/all>Project Lombok</a> is a build tool for the
 Java programming language, which adds nifty capabilities that many Java developers
-feel they sorely lack. Some of the more vanilla features include:</p>
-
-<ul>
-<li><a href="https://projectlombok.org/features/GetterSetter">&ldquo;Getter&rdquo; and &ldquo;Setter&rdquo; generators</a></li>
-<li><a href="https://projectlombok.org/features/ToString">&ldquo;ToString&rdquo;</a> and <a href="https://projectlombok.org/features/EqualsAndHashCode">&ldquo;EqualsAndHashCode&rdquo;</a> generators</li>
-<li><a href="https://projectlombok.org/features/Data">&ldquo;Data&rdquo;</a> and <a href="https://projectlombok.org/features/Value">&ldquo;Value&rdquo;</a> class generators</li>
-<li><a href="https://projectlombok.org/features/Cleanup">Automatic resource cleanup</a></li>
-<li><a href="https://projectlombok.org/features/NonNull">Not-Null</a> assertions</li>
-<li><a href="https://projectlombok.org/features/Builder">Builder class generators</a></li>
-<li><a href="https://projectlombok.org/features/constructor">Constructor helpers of various sorts</a></li>
-</ul>
-
-<p>There&rsquo;s also a few more exotic features (which I personally have not seen developers)
+feel they sorely lack. Some of the more vanilla features include:</p><ul><li><a href=https://projectlombok.org/features/GetterSetter>&ldquo;Getter&rdquo; and &ldquo;Setter&rdquo; generators</a></li><li><a href=https://projectlombok.org/features/ToString>&ldquo;ToString&rdquo;</a> and <a href=https://projectlombok.org/features/EqualsAndHashCode>&ldquo;EqualsAndHashCode&rdquo;</a> generators</li><li><a href=https://projectlombok.org/features/Data>&ldquo;Data&rdquo;</a> and <a href=https://projectlombok.org/features/Value>&ldquo;Value&rdquo;</a> class generators</li><li><a href=https://projectlombok.org/features/Cleanup>Automatic resource cleanup</a></li><li><a href=https://projectlombok.org/features/NonNull>Not-Null</a> assertions</li><li><a href=https://projectlombok.org/features/Builder>Builder class generators</a></li><li><a href=https://projectlombok.org/features/constructor>Constructor helpers of various sorts</a></li></ul><p>There&rsquo;s also a few more exotic features (which I personally have not seen developers)
 use in the wild, but which no doubt <em>someone</em> is using, including
-<a href="https://projectlombok.org/features/SneakyThrows">suppressing checked exceptions</a>, <a href="https://projectlombok.org/features/GetterLazy">lazy fields</a>, <a href="https://projectlombok.org/features/val">magic &ldquo;val&rdquo; keyword</a>, <a href="https://projectlombok.org/features/experimental/Delegate">delegation</a>, <a href="https://projectlombok.org/features/experimental/Wither">&ldquo;with&rdquo;ers</a>, <a href="https://projectlombok.org/features/experimental/UtilityClass">util</a> and <a href="https://projectlombok.org/features/experimental/Helper">helper</a> classes.</p>
-
-<p>Lombok ameliorates common concerns with the Java programming
+<a href=https://projectlombok.org/features/SneakyThrows>suppressing checked exceptions</a>, <a href=https://projectlombok.org/features/GetterLazy>lazy fields</a>, <a href=https://projectlombok.org/features/val>magic &ldquo;val&rdquo; keyword</a>, <a href=https://projectlombok.org/features/experimental/Delegate>delegation</a>, <a href=https://projectlombok.org/features/experimental/Wither>&ldquo;with&rdquo;ers</a>, <a href=https://projectlombok.org/features/experimental/UtilityClass>util</a> and <a href=https://projectlombok.org/features/experimental/Helper>helper</a> classes.</p><p>Lombok ameliorates common concerns with the Java programming
 language, from &ldquo;within&rdquo; the programming language (ie by not formally changing languages as in Scala or Kotlin). Thereby, developers can gain access to the
 features they crave, without having to foresake the Java programming language
-they know and &ldquo;love&rdquo; (for some definition of &ldquo;love&rdquo;).</p>
-
-<pre><code class="language-java">// When Lombok compiles, this...
+they know and &ldquo;love&rdquo; (for some definition of &ldquo;love&rdquo;).</p><pre><code class=language-java>// When Lombok compiles, this...
 @Value
 class MyPojo {
     String string;
@@ -139,9 +29,7 @@ final class MyPojo {
     public String toString() { }
     public boolean equals(Object o) { }
 }
-</code></pre>
-
-<p><a href="http://notatube.blogspot.com/2010/11/project-lombok-trick-explained.html">This excellent post explains that Lombok does this by abusing Java annotations and annotation processors</a>.
+</code></pre><p><a href=http://notatube.blogspot.com/2010/11/project-lombok-trick-explained.html>This excellent post explains that Lombok does this by abusing Java annotations and annotation processors</a>.
 When the Java compiler runs, it offers (what it believes to be) a read-only copy
 of the abstract syntax tree (AST) of the Java program to Lombok. Lombok uses its
 knowledge of which classes are used in the implementation of some Java compilers
@@ -151,33 +39,21 @@ in-memory representation of the Java program before compilation completes. It&rs
 a clever trick which results in &ldquo;extensions&rdquo; to the Java programming language
 without ever writing syntactically invalid Java programs. And as long as you
 compile your Java programs using the Java compiler, this works fine. (More on this
-later.)</p>
-
-<p>However, Lombok is mildly controversial in the Java/JVM community, for the same
+later.)</p><p>However, Lombok is mildly controversial in the Java/JVM community, for the same
 reason. Fundamentally, reaching inside internal compiler calls and making
 non-standard modifications to the AST are no-no&rsquo;s. The technical debt here manifests
-itself in subtle ways; <a href="https://github.com/mapstruct/mapstruct/issues/510">when competing annotation processors run</a>,
-or when <a href="https://stackoverflow.com/questions/11171631/error-compiling-java-scala-mixed-project-and-lombok">alternate programming languages want to call Lombok</a>, they often hit issues.
+itself in subtle ways; <a href=https://github.com/mapstruct/mapstruct/issues/510>when competing annotation processors run</a>,
+or when <a href=https://stackoverflow.com/questions/11171631/error-compiling-java-scala-mixed-project-and-lombok>alternate programming languages want to call Lombok</a>, they often hit issues.
 Those other systems cannot see the Lombok-generated code, and getting them to
-play nicely can be challenging.</p>
-
-<p>Probably more Java developers than not would rather take what Lombok has to offer
+play nicely can be challenging.</p><p>Probably more Java developers than not would rather take what Lombok has to offer
 than deal with its absence; although alternate tools exist for POJO generation,
-<a href="http://immutables.github.io/">such as Immutables.io</a>, they are a little more
-verbose and a little more narrowly scoped than Lombok, and came along much later.</p>
-
-<h2 id="what-is-kotlin">What is Kotlin?</h2>
-
-<p>You may already recognize <a href="http://kotlinlang.org/">Kotlin</a> from my previous post,
-<a href="/2017/06/28/is-kotlin-the-new-java/">&ldquo;Is Kotlin the New Java?&rdquo;</a>
+<a href=http://immutables.github.io/>such as Immutables.io</a>, they are a little more
+verbose and a little more narrowly scoped than Lombok, and came along much later.</p><h2 id=what-is-kotlin>What is Kotlin?</h2><p>You may already recognize <a href=http://kotlinlang.org/>Kotlin</a> from my previous post,
+<a href=/2017/06/28/is-kotlin-the-new-java/>&ldquo;Is Kotlin the New Java?&rdquo;</a>
 In short, Kotlin is a hot new programming language from the folks behind the
-<a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> editor.</p>
-
-<p>Kotlin has virtually all of the same features that Lombok enumerated below,
+<a href=https://www.jetbrains.com/idea/>IntelliJ IDEA</a> editor.</p><p>Kotlin has virtually all of the same features that Lombok enumerated below,
 but in a first-class way, because the features are built into a language designed
-to support them: <a href="http://kotlinlang.org/docs/reference/idioms.html">Data classes, default function values, lazy properties, extension methods, null checks, resource cleanup, and much more, just on a getting started page!</a></p>
-
-<pre><code class="language-kotlin">// This...
+to support them: <a href=http://kotlinlang.org/docs/reference/idioms.html>Data classes, default function values, lazy properties, extension methods, null checks, resource cleanup, and much more, just on a getting started page!</a></p><pre><code class=language-kotlin>// This...
 data class MyPojo(val string: String, val integer: Int, val object: Any)
 // Also translates to this...
 final class MyPojo {
@@ -193,69 +69,35 @@ final class MyPojo {
     public String toString() { }
     public boolean equals(Object o) { }
 }
-</code></pre>
-
-<p>Kotlin doesn&rsquo;t stop there, though. It has many more powerful features which are
-impossible to hack onto Java through Lombok:</p>
-
-<ul>
-<li><a href="https://kotlinlang.org/docs/reference/collections.html">Read-only data structures, for safer API development</a></li>
-<li><a href="http://kotlinlang.org/docs/reference/basic-syntax.html">More fluent programming over loops, conditionals, functions, strings, and type-checking</a></li>
-<li><a href="http://kotlinlang.org/docs/reference/multi-declarations.html">Destructuring</a>, <a href="http://kotlinlang.org/docs/reference/operator-overloading.html">operator overloading</a>, and <a href="http://kotlinlang.org/docs/reference/exceptions.html">unchecked exceptions</a></li>
-<li>A <a href="http://kotlinlang.org/docs/reference/inline-functions.html">limited but type-safe macro system</a></li>
-</ul>
-
-<p>One of my favorite and underrated features of Kotlin, which seemingly all modern
-languages have now, <a href="https://stackoverflow.com/questions/44188240/kotlin-how-to-correctly-concatenate-a-string">is string interpolation</a>:</p>
-
-<pre><code class="language-kotlin">val firstName = &quot;firstName&quot;
+</code></pre><p>Kotlin doesn&rsquo;t stop there, though. It has many more powerful features which are
+impossible to hack onto Java through Lombok:</p><ul><li><a href=https://kotlinlang.org/docs/reference/collections.html>Read-only data structures, for safer API development</a></li><li><a href=http://kotlinlang.org/docs/reference/basic-syntax.html>More fluent programming over loops, conditionals, functions, strings, and type-checking</a></li><li><a href=http://kotlinlang.org/docs/reference/multi-declarations.html>Destructuring</a>, <a href=http://kotlinlang.org/docs/reference/operator-overloading.html>operator overloading</a>, and <a href=http://kotlinlang.org/docs/reference/exceptions.html>unchecked exceptions</a></li><li>A <a href=http://kotlinlang.org/docs/reference/inline-functions.html>limited but type-safe macro system</a></li></ul><p>One of my favorite and underrated features of Kotlin, which seemingly all modern
+languages have now, <a href=https://stackoverflow.com/questions/44188240/kotlin-how-to-correctly-concatenate-a-string>is string interpolation</a>:</p><pre><code class=language-kotlin>val firstName = &quot;firstName&quot;
 val lastName = &quot;lastName&quot;
 val query = &quot;&quot;&quot;
 SELECT $firstName, $lastName
 FROM customers
 WHERE $lastName LIKE '%smith%';
 &quot;&quot;&quot;
-</code></pre>
-
-<p>Another one of my favorite features of Kotlin is its type-safe builders feature (which I
+</code></pre><p>Another one of my favorite features of Kotlin is its type-safe builders feature (which I
 am given to understand is derived from Groovy). For example, the
-<a href="https://github.com/kotlintest/kotlintest">KotlinTest</a> library adds support
-for behavior-driven development <em>from within Kotlin</em> programs!</p>
-
-<pre><code class="language-kotlin">class MyTests : StringSpec() {
+<a href=https://github.com/kotlintest/kotlintest>KotlinTest</a> library adds support
+for behavior-driven development <em>from within Kotlin</em> programs!</p><pre><code class=language-kotlin>class MyTests : StringSpec() {
   init {
     &quot;length should return size of string&quot; {
       &quot;hello&quot;.length shouldBe 5
     }
   }
 }
-</code></pre>
-
-<p>Compare this with some of <a href="https://dzone.com/articles/brief-comparison-bdd">the most popular ways of achieving behavior-driven development in Java</a>, and you get a list of
+</code></pre><p>Compare this with some of <a href=https://dzone.com/articles/brief-comparison-bdd>the most popular ways of achieving behavior-driven development in Java</a>, and you get a list of
 tools which are either difficult to read/understand/write, require magic text files
 in other languages, or <em>aren&rsquo;t even written in Java</em>! (Okay, sure, Groovy is better
-than magic text files, but it concedes the point that Java is at a huge disadvantage.)</p>
-
-<h3 id="why-kotlin">Why Kotlin?</h3>
-
-<p><a href="https://discuss.kotlinlang.org/t/history-of-kotlin-language/2161/5">As summarized on this thread</a>, the raison d&rsquo;être of Kotlin is to be a next-generation JVM programming language with fully native bi-directional interop with existing Java programs, with fast compile times and superb IDE
+than magic text files, but it concedes the point that Java is at a huge disadvantage.)</p><h3 id=why-kotlin>Why Kotlin?</h3><p><a href=https://discuss.kotlinlang.org/t/history-of-kotlin-language/2161/5>As summarized on this thread</a>, the raison d&rsquo;être of Kotlin is to be a next-generation JVM programming language with fully native bi-directional interop with existing Java programs, with fast compile times and superb IDE
 experience. Although Scala, Groovy, and Clojure already each exist, none of them
 are ideal fits for interoperating with existing legacy code bases with large
 footprints, sensitive responsiveness times, and requirements for fast and easy
-tooling and compilation.</p>
-
-<p>As seen in this widget below, (originally pointed out by a colleague), Kotlin
-interest surged <a href="https://blog.jetbrains.com/kotlin/2017/05/kotlin-on-android-now-official/">in the late spring when Google announced official support for Kotlin on Android</a>,
-and has been steadily climbing ever since.</p>
-
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1243_RC12/embed_loader.js"></script>
-<script type="text/javascript">
-trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0_lcrx4","geo":"","time":"2017-01-01 2017-12-31"},{"keyword":"/m/091hdj","geo":"","time":"2017-01-01 2017-12-31"},{"keyword":"/m/03yb8hb","geo":"","time":"2017-01-01 2017-12-31"},{"keyword":"/m/02js86","geo":"","time":"2017-01-01 2017-12-31"}],"category":0,"property":""}, {"exploreQuery":"q=%2Fm%2F0_lcrx4,%2Fm%2F091hdj,%2Fm%2F03yb8hb,%2Fm%2F02js86&date=2017-01-01 2017-12-31,2017-01-01 2017-12-31,2017-01-01 2017-12-31,2017-01-01 2017-12-31","guestPath":"https://trends.google.com:443/trends/embed/"});
-</script>
-
-<h2 id="what-are-the-differences-between-lombok-and-kotlin">What are the differences between Lombok and Kotlin?</h2>
-
-<p>Here&rsquo;s where I believe most Java developers&rsquo; ears pick up. To date, Lombok has
+tooling and compilation.</p><p>As seen in this widget below, (originally pointed out by a colleague), Kotlin
+interest surged <a href=https://blog.jetbrains.com/kotlin/2017/05/kotlin-on-android-now-official/>in the late spring when Google announced official support for Kotlin on Android</a>,
+and has been steadily climbing ever since.</p><script type=text/javascript src=https://ssl.gstatic.com/trends_nrtr/1243_RC12/embed_loader.js></script><script type=text/javascript>trends.embed.renderExploreWidget("TIMESERIES",{"comparisonItem":[{"keyword":"/m/0_lcrx4","geo":"","time":"2017-01-01 2017-12-31"},{"keyword":"/m/091hdj","geo":"","time":"2017-01-01 2017-12-31"},{"keyword":"/m/03yb8hb","geo":"","time":"2017-01-01 2017-12-31"},{"keyword":"/m/02js86","geo":"","time":"2017-01-01 2017-12-31"}],"category":0,"property":""},{"exploreQuery":"q=%2Fm%2F0_lcrx4,%2Fm%2F091hdj,%2Fm%2F03yb8hb,%2Fm%2F02js86&date=2017-01-01 2017-12-31,2017-01-01 2017-12-31,2017-01-01 2017-12-31,2017-01-01 2017-12-31","guestPath":"https://trends.google.com:443/trends/embed/"});</script><h2 id=what-are-the-differences-between-lombok-and-kotlin>What are the differences between Lombok and Kotlin?</h2><p>Here&rsquo;s where I believe most Java developers&rsquo; ears pick up. To date, Lombok has
 excelled at the POJO use case, and some developers also enjoy its ability to aid
 with other types of common application-level boilerplate. Kotlin provides all of
 this as table-stakes, and also adds features from many other popular Java tools
@@ -264,76 +106,15 @@ As the cost-of-entry, Kotlin requires learning a new formal programming language
 but one which has a very low learning curve and strong compatibility with Java
 code. The result is a more enjoyable and consistent programming experience across
 the board, as long as you are willing to venture out and try a new programming
-language.</p>
-
-<p>To aid with decision-making, I&rsquo;ll provide a table of abbreviated features and of
-expanded features, to help see where Lombok provides parity and where it does not.</p>
-
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th>Total Points</th>
-<th>Lombok</th>
-<th>Kotlin</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>POJOs</td>
-<td>5</td>
-<td>5</td>
-<td>5</td>
-</tr>
-
-<tr>
-<td>Null Safety</td>
-<td>3</td>
-<td>1</td>
-<td>3</td>
-</tr>
-
-<tr>
-<td>Util/Helper/Delegates</td>
-<td>3</td>
-<td>2</td>
-<td>3</td>
-</tr>
-
-<tr>
-<td>val/var</td>
-<td>2</td>
-<td>2</td>
-<td>2</td>
-</tr>
-
-<tr>
-<td>Interop</td>
-<td>10</td>
-<td>9</td>
-<td>9</td>
-</tr>
-
-<tr>
-<td>Total</td>
-<td>23</td>
-<td>19</td>
-<td>22</td>
-</tr>
-</tbody>
-</table>
-
-<p>On its own turf, Lombok and Kotlin are very close. I gave some more points to
+language.</p><p>To aid with decision-making, I&rsquo;ll provide a table of abbreviated features and of
+expanded features, to help see where Lombok provides parity and where it does not.</p><table><thead><tr><th>Feature</th><th>Total Points</th><th>Lombok</th><th>Kotlin</th></tr></thead><tbody><tr><td>POJOs</td><td>5</td><td>5</td><td>5</td></tr><tr><td>Null Safety</td><td>3</td><td>1</td><td>3</td></tr><tr><td>Util/Helper/Delegates</td><td>3</td><td>2</td><td>3</td></tr><tr><td>val/var</td><td>2</td><td>2</td><td>2</td></tr><tr><td>Interop</td><td>10</td><td>9</td><td>9</td></tr><tr><td>Total</td><td>23</td><td>19</td><td>22</td></tr></tbody></table><p>On its own turf, Lombok and Kotlin are very close. I gave some more points to
 Kotlin for null safety; although Lombok has <code>@NotNull</code>, it&rsquo;s not the same as
 having ubiquitous null safety guarantees throughout the code base. Similarly,
 although Lombok has clever delegation/util hooks, they don&rsquo;t compete with how
 native and fluent Kotlin&rsquo;s own extensions are. For interop, I deducted a point
 from each because of niggling concerns I have. Lombok, as referenced above,
 sometimes doesn&rsquo;t play nice with other tools; Kotlin has nearly flawless Java
-interop, but sometimes it&rsquo;s not perfect.</p>
-
-<p>And if we add points for the other features which Kotlin brings and Lombok simply
+interop, but sometimes it&rsquo;s not perfect.</p><p>And if we add points for the other features which Kotlin brings and Lombok simply
 does not, then the imbalance becomes much more pronounced. For fairness, I did
 not do that here; however, that is essentially the operative concern for Java
 developers. If you are conservative and think that Lombok is the most extreme
@@ -343,92 +124,5 @@ you&rsquo;ve been pining for a modern, statically typed and compiled programming
 a language which provides in a single coherent and fun
 compiler/runtime all the features you want
 from a dozen different libraries and tools; and a language which was written
- <em>by working developers</em>, <em>for developers</em>, then Kotlin is surely your bet!</p>
-
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <aside><div id="disqus_thread"></div></aside>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-    <script type="text/javascript">
-      var disqus_shortname = 'justabloginthepark';
-      var disqus_loaded = false;
-
-      function disqus() {
-        if (!disqus_loaded) {
-          disqus_loaded = true;
-          
-          if (window.location.hostname == "localhost")
-            return;
-
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }
-      };
-    </script>
-    <script type="text/javascript">
-      window.onscroll = function(e) {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            if (!disqus_loaded) {
-              disqus();
-            }
-        }
-      };
-    </script>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container has-text-centered">
-    <p>&copy; <a href="https://github.com/Artiavis">Jeff Rabinowitz</a>, 2018</p>
-  </div>
-</section>
-
-
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js"></script>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
+<em>by working developers</em>, <em>for developers</em>, then Kotlin is surely your bet!</p></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname='justabloginthepark';var disqus_loaded=false;function disqus(){if(!disqus_loaded){disqus_loaded=true;if(window.location.hostname=="localhost")
+return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);}};</script><script type=text/javascript>window.onscroll=function(e){if((window.innerHeight+window.scrollY)>=document.body.offsetHeight){if(!disqus_loaded){disqus();}}};</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2018</p></div></section><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js></script><script>hljs.initHighlightingOnLoad();</script>
