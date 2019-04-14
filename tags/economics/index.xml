@@ -1,1 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Economics on Just a Blog in the Park</title><link>http://justabloginthepark.com/tags/economics/</link><description>Recent content in Economics on Just a Blog in the Park</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright><lastBuildDate>Sun, 10 Jan 2016 00:00:00 +0000</lastBuildDate><atom:link href="http://justabloginthepark.com/tags/economics/index.xml" rel="self" type="application/rss+xml"/><item><title>Comparing Freemium Game Models</title><link>http://justabloginthepark.com/2016/01/10/comparing-freemium-game-models/</link><pubDate>Sun, 10 Jan 2016 00:00:00 +0000</pubDate><guid>http://justabloginthepark.com/2016/01/10/comparing-freemium-game-models/</guid><description>I suppose I&amp;rsquo;ve been playing freemium video games for a few years now. (For those who haven&amp;rsquo;t heard of the &amp;ldquo;freemium&amp;rdquo; business model, it&amp;rsquo;s the strategy of selling a good or service which is free to access but costs money for premium features. Freemium software, especially video games, are popular because the barrier to entry is made as low as possible to hook people. I highly recommend the South Park episode on the subject, &amp;ldquo;Freemium Isn&amp;rsquo;t Free&amp;rdquo;.</description></item><item><title>Bad Bidding or Avoid Buying Used Stuff</title><link>http://justabloginthepark.com/2013/11/26/bad-bidding-or-avoid-buying-used-stuff/</link><pubDate>Tue, 26 Nov 2013 00:00:00 +0000</pubDate><guid>http://justabloginthepark.com/2013/11/26/bad-bidding-or-avoid-buying-used-stuff/</guid><description>As some of you may know, I&amp;rsquo;m currently in a class on Game Theory in the Economics department. I originally signed up because, hey, games, but also because I saw A Beautiful Mind and I wanted to learn a little more about Game Theory. (My professor confessed that despite a large number of students taking the class because of the movie, the little Game Theory used in the film is actually incorrect.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Economics on Just a Blog in the Park</title>
+    <link>http://justabloginthepark.com/tags/economics/</link>
+    <description>Recent content in Economics on Just a Blog in the Park</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright>
+    <lastBuildDate>Sun, 10 Jan 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://justabloginthepark.com/tags/economics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Comparing Freemium Game Models</title>
+      <link>http://justabloginthepark.com/2016/01/10/comparing-freemium-game-models/</link>
+      <pubDate>Sun, 10 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/2016/01/10/comparing-freemium-game-models/</guid>
+      <description>I suppose I&amp;rsquo;ve been playing freemium video games for a few years now. (For those who haven&amp;rsquo;t heard of the &amp;ldquo;freemium&amp;rdquo; business model, it&amp;rsquo;s the strategy of selling a good or service which is free to access but costs money for premium features. Freemium software, especially video games, are popular because the barrier to entry is made as low as possible to hook people. I highly recommend the South Park episode on the subject, &amp;ldquo;Freemium Isn&amp;rsquo;t Free&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Bad Bidding or Avoid Buying Used Stuff</title>
+      <link>http://justabloginthepark.com/2013/11/26/bad-bidding-or-avoid-buying-used-stuff/</link>
+      <pubDate>Tue, 26 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/2013/11/26/bad-bidding-or-avoid-buying-used-stuff/</guid>
+      <description>As some of you may know, I&amp;rsquo;m currently in a class on Game Theory in the Economics department. I originally signed up because, hey, games, but also because I saw A Beautiful Mind and I wanted to learn a little more about Game Theory. (My professor confessed that despite a large number of students taking the class because of the movie, the little Game Theory used in the film is actually incorrect.</description>
+    </item>
+    
+  </channel>
+</rss>

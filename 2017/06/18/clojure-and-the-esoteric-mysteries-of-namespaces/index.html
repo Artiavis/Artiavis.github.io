@@ -1,17 +1,113 @@
-<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Clojure and the Esoteric Mysteries of Namespaces | Just a Blog in the Park</title><link rel=stylesheet href=http://justabloginthepark.com//css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css><link rel=stylesheet href=http://justabloginthepark.com//css/vs2015.min.css><link rel=stylesheet href=http://justabloginthepark.com//css/images.min.css><section class=section><div class=container><nav class=nav><div class=nav-left><a href=/about><img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75"></a>
-<a class=nav-item href=http://justabloginthepark.com/><h1 class="title is-4">Just a Blog in the Park</h1></a></div><div class=nav-right><nav class="nav-item level is-mobile"><a class=level-item href=/photos><span class=icon><i class="fas fa-camera"></i></span></a><a class=level-item href=/tags><span class=icon><i class="fas fa-tags"></i></span></a><a class=level-item href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span></a><a class=level-item href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span></a><a class=level-item href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span></a><a class=level-item href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span></a></nav></div></nav></div></section><section class=section><div class=container><h2 class="subtitle is-6">June 18, 2017</h2><h1 class=title>Clojure and the Esoteric Mysteries of Namespaces</h1><h2 class="subtitle is-6">15 minute read</h2><ul id=tags><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i>programming</a></li><li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i>clojure</a></li></ul><br><div class=content><p>If you&rsquo;ve ever been programming in Clojure and encountered an error which looks
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clojure and the Esoteric Mysteries of Namespaces | Just a Blog in the Park</title>
+<link rel="stylesheet" href="http://justabloginthepark.com//css/style.css">
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/solid.js" integrity="sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/brands.js" integrity="sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js" integrity="sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM" crossorigin="anonymous"></script>
+
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    
+    <link rel="stylesheet" href="http://justabloginthepark.com//css/vs2015.min.css">
+
+
+    <link rel="stylesheet" href="http://justabloginthepark.com//css/images.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="/about">
+          <img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75" />
+        </a>
+        <a class="nav-item" href="http://justabloginthepark.com/"><h1 class="title is-4">Just a Blog in the Park</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="/photos">
+            <span class="icon">
+              <i class="fas fa-camera"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/tags">
+            <span class="icon">
+              <i class="fas fa-tags"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://github.com/Artiavis">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://linkedin.com/in/JeffreyCRabinowitz">
+            <span class="icon">
+              <i class="fab fa-linkedin"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1">
+            <span class="icon">
+              <i class="fas fa-file-pdf"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fas fa-rss-square"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">June 18, 2017</h2>
+    <h1 class="title">Clojure and the Esoteric Mysteries of Namespaces</h1>
+    <h2 class="subtitle is-6" >15 minute read</h2>
+    <ul id="tags">
+  
+    <li><a href="/tags/programming"><i class="fas fa-tag" aria-hidden="true"></i> programming</a></li>
+  
+    <li><a href="/tags/clojure"><i class="fas fa-tag" aria-hidden="true"></i> clojure</a></li>
+  
+</ul>
+<br />
+    <div class="content">
+      
+
+<p>If you&rsquo;ve ever been programming in Clojure and encountered an error which looks
 something like, <code>IllegalStateException(&quot;Can't change/establish root binding of: *ns* with set&quot;)</code>,
-read on!</p><h2 id=preface>Preface</h2><p>I recently had the drive/opportunity to deep-dive on how Clojure&rsquo;s namespaces
+read on!</p>
+
+<h2 id="preface">Preface</h2>
+
+<p>I recently had the drive/opportunity to deep-dive on how Clojure&rsquo;s namespaces
 function and how they provide a simple abstraction using the concept of Clojure&rsquo;s
 &ldquo;<code>Var</code>s&rdquo;. Here is a deep-dive on how they work. This is a two-part
 series.
 The previous part of the series is available at
-<a href=/2017/06/18/clojure-and-the-esoteric-mysteries-of-vars/>Clojure and the Esoteric Mysteries of Vars</a>.</p><p>A a fair warning, this requires a far bit of gory Clojure compiler internals to
+<a href="/2017/06/18/clojure-and-the-esoteric-mysteries-of-vars/">Clojure and the Esoteric Mysteries of Vars</a>.</p>
+
+<p>A a fair warning, this requires a far bit of gory Clojure compiler internals to
 really understand. I&rsquo;m going to attempt to walk through the relevant bits, but
 it may not make much sense without also reading the relevant portions of source
 code. Thankfully, Lisps are simple to understand, so it should only take a few
 hours (instead of days or weeks). However, if you just want the short version/the spoiler,
-here&rsquo;s the TL;DR:</p><pre><code class=language-clojure>;; In Clojure, this works:
+here&rsquo;s the TL;DR:</p>
+
+<pre><code class="language-clojure">;; In Clojure, this works:
 (ns namespace-1)
 (println *ns*)
 ;; #namespace[namespace-1]
@@ -32,51 +128,90 @@ here&rsquo;s the TL;DR:</p><pre><code class=language-clojure>;; In Clojure, this
   (refer-clojure)
   (println *ns*))
 ;; Will shout and complain that you can't set a Var that's not locally bound
-</code></pre><h2 id=what-s-in-a-name>What&rsquo;s in a Name?</h2><p>Since the earliest days of Computer Science, programmers have struggled with
+</code></pre>
+
+<h2 id="what-s-in-a-name">What&rsquo;s in a Name?</h2>
+
+<p>Since the earliest days of Computer Science, programmers have struggled with
 confining subsets of their routines into global compartments, to both minimize
 the cognitive load of juggling a multitude of routines and variable names, as
 well as to differentiate between public and private routines (API&rsquo;s). Of course,
-to a certain extent, these distinctions are indistinct to a computer.</p><ul><li>In binary or assembly languages, all symbols are global and essentially public.</li><li>In C, which is itself a low-level abstraction over common computer hardware
+to a certain extent, these distinctions are indistinct to a computer.</p>
+
+<ul>
+<li>In binary or assembly languages, all symbols are global and essentially public.</li>
+<li>In C, which is itself a low-level abstraction over common computer hardware
 (but without requiring writing to specific CPU instructions), all variables
 and routines are still essentially global. There is, however, a limited concept of
 privacy in that a library developer need only expose certain routines and
-data structures.</li></ul><p>Since then, different approaches have been taken to try and tackle the concept
+data structures.</li>
+</ul>
+
+<p>Since then, different approaches have been taken to try and tackle the concept
 of compartmentalizing units of code. C++ bolted-on namespaces a few year after
 its release, but they are primarily oriented towards avoiding a global quagmire of
 potentially-conflicting names. (During compilation all namespace distinctions
 are essentially erased). Java (and I assume C#) have something similar to
 namespaces in that &ldquo;packages&rdquo; uniquely and globally distinguish names
 (similarly to C++). Although Java itself does not provide an easy facility for
-first-class manipulation of namespaces, <a href=https://stackoverflow.com/questions/520328/can-you-find-all-classes-in-a-package-using-reflection>there are ways of discovering things about them</a>.
-This is not the same as the language/platform itself providing that facility.</p><p>Clojure (and languages like it) provide first-class namespace support. There
-are two distinct aspects to namespaces in Clojure:</p><ol><li>Namespaces are globally-available Clojure objects which both contain as well
+first-class manipulation of namespaces, <a href="https://stackoverflow.com/questions/520328/can-you-find-all-classes-in-a-package-using-reflection">there are ways of discovering things about them</a>.
+This is not the same as the language/platform itself providing that facility.</p>
+
+<p>Clojure (and languages like it) provide first-class namespace support. There
+are two distinct aspects to namespaces in Clojure:</p>
+
+<ol>
+<li>Namespaces are globally-available Clojure objects which both contain as well
 as name public (as well as private) objects.
 Accessing a Clojure namespace is as simple as requesting it
 from the runtime. There is not necessarily any relationship between Clojure
 namespaces and files of Clojure source code, although for practical purposes
-they&rsquo;re usually kept one-to-one.</li><li>Namespaces, in particular through the &ldquo;current&rdquo; namespace, are
+they&rsquo;re usually kept one-to-one.</li>
+<li>Namespaces, in particular through the &ldquo;current&rdquo; namespace, are
 used to write programs without fully qualifying references. When the compiler
 sees references which are not fully-qualified, it will fall back upon the
 &ldquo;current&rdquo; namespace to resolve fully-qualified <code>Var</code> references.
 This (like in other languages e.g. Java/C++) is not a strict necessity, but
 it is ubiquitous in practice, and has some startling implications due to
-Clojure&rsquo;s highly dynamic nature.</li></ol><h2 id=namespaces-as-maps>Namespaces as Maps</h2><p>At its simplest, namespaces are global lookup-maps within Clojure&rsquo;s runtime
-which provide a level of indirection similar to that of a filesystem:</p><ul><li>Namespaces operate as maps of namespace-names to namespace-objects. The names
-just uniquely identify the namespace objects.</li><li>Namespace objects are containers for mapping names of <code>Var</code>s to <code>Var</code>s. The
+Clojure&rsquo;s highly dynamic nature.</li>
+</ol>
+
+<h2 id="namespaces-as-maps">Namespaces as Maps</h2>
+
+<p>At its simplest, namespaces are global lookup-maps within Clojure&rsquo;s runtime
+which provide a level of indirection similar to that of a filesystem:</p>
+
+<ul>
+<li>Namespaces operate as maps of namespace-names to namespace-objects. The names
+just uniquely identify the namespace objects.</li>
+<li>Namespace objects are containers for mapping names of <code>Var</code>s to <code>Var</code>s. The
 indicated <code>Var</code> instances need not always be stored in the namespace from
 which they are found; it is common to <em>alias</em> some <code>Var</code> objects from multiple
 namespaces, especially the functions from within <code>clojure.core</code> (which is the
-core library of Clojure).</li></ul><p>Much like a filesystem can have multiple distinct fully-qualified filenames which
+core library of Clojure).</li>
+</ul>
+
+<p>Much like a filesystem can have multiple distinct fully-qualified filenames which
 ultimately reference the same files through the use of symbolic links, Clojure
 allows aliases such that multiple fully-qualified references name the same <code>Var</code>.
 Unlike file systems, Clojure <code>Var</code> objects generally know within which namespace
-they were originally bound.</p><p>To borrow my samples from the previous article, let&rsquo;s create a <code>Var</code> named
-<code>my-variable</code> within the <code>user</code> namespace.</p><pre><code class=language-clojure>user=&gt; (def my-variable 5)
+they were originally bound.</p>
+
+<p>To borrow my samples from the previous article, let&rsquo;s create a <code>Var</code> named
+<code>my-variable</code> within the <code>user</code> namespace.</p>
+
+<pre><code class="language-clojure">user=&gt; (def my-variable 5)
 #'user/my-variable
-</code></pre><p>The fully qualified name for this <code>Var</code> is <code>#'user/my-variable</code>, which I previously
+</code></pre>
+
+<p>The fully qualified name for this <code>Var</code> is <code>#'user/my-variable</code>, which I previously
 explained means that the <code>Var</code> knows it is named <code>my-variable</code> and that it is
-rooted in the <code>user</code> namespace.</p><p>If we were to then switch namespaces and reference the variable,
-the reference would become locally available in an unqualified manner:</p><pre><code class=language-clojure>user=&gt; (ns 'other-ns)
+rooted in the <code>user</code> namespace.</p>
+
+<p>If we were to then switch namespaces and reference the variable,
+the reference would become locally available in an unqualified manner:</p>
+
+<pre><code class="language-clojure">user=&gt; (ns 'other-ns)
 nil
 other-ns=&gt; (refer 'user :only '[my-variable])
 nil
@@ -86,13 +221,19 @@ other-ns=&gt; my-variable
 5
 other-ns=&gt; #'my-variable
 #'user/my-variable
-</code></pre><p>We do not need the fully-qualified name if we choose to omit it (and in fact
+</code></pre>
+
+<p>We do not need the fully-qualified name if we choose to omit it (and in fact
 this can enable certain programming patterns by dynamically replacing certain
 utilities with wrappers for convenience/performance). As already described, the
 <code>Var</code> is not fooled &ndash; it knows where it is bound.
 (Compare this to, say, Python, which does <em>not</em> know where variables actually
 live, and in which is not conventionally possible to globally change the
-definition of all uses of a certain import retroactively.)</p><h2 id=namespaces-as-compilation-contexts>Namespaces as Compilation Contexts</h2><p>It is traditional in most programming languages which support local references
+definition of all uses of a certain import retroactively.)</p>
+
+<h2 id="namespaces-as-compilation-contexts">Namespaces as Compilation Contexts</h2>
+
+<p>It is traditional in most programming languages which support local references
 to omit the fully (namespace) qualified names for variables. As indicated above,
 one would omit the fully qualified name <code>user/my-variable</code> and instead simply use
 <code>my-variable</code> in scope. For performance reasons, however, Clojure does not look
@@ -103,80 +244,128 @@ references, and those references will be embedded into the compiled code. In
 this way, a program can change the root <code>binding</code> using the already-discussed
 <code>alter-var-root</code> function and it will be seen globally by all code using that
 <code>Var</code>, because the references are fully-resolved by the compiler when parsing
-code. How does this occur?</p><h3 id=compilation-as-batched-code-definitions>Compilation as Batched Code Definitions</h3><p>Within any Lisp, not just Clojure, the distinction between code which is
+code. How does this occur?</p>
+
+<h3 id="compilation-as-batched-code-definitions">Compilation as Batched Code Definitions</h3>
+
+<p>Within any Lisp, not just Clojure, the distinction between code which is
 compiled in advance of program execution, and code which is interpreted (and
 then compiled) on the fly, is blurry at best. These runtimes typically bootstrap
 a core language implementation and then successively load and compile units of
 code until an entire program has been defined; these runtimes are then coerced
 to dump a copy of their working memory to some sort of file
-(<a href=https://lwn.net/Articles/673724/>see <code>unexec</code> for Emacs/Emacs Lisp</a>
-or <a href=https://stackoverflow.com/questions/3561145/what-is-a-smalltalk-image>images for Smalltalk</a>).
+(<a href="https://lwn.net/Articles/673724/">see <code>unexec</code> for Emacs/Emacs Lisp</a>
+or <a href="https://stackoverflow.com/questions/3561145/what-is-a-smalltalk-image">images for Smalltalk</a>).
 Indeed, the fundamental property
 of systems like Lisps and Smalltalk (which was inspired by Lisp) is that the
 &ldquo;final&rdquo; program is one where it is no longer necessary to define
 additional routines. As such, some programs (*cough* Emacs) are <em>never</em>
-considered finished, because more functionality can be added in at any time.</p><p>Thus, the process of adding new functionality (code) to a Lisp (in this case
+considered finished, because more functionality can be added in at any time.</p>
+
+<p>Thus, the process of adding new functionality (code) to a Lisp (in this case
 Clojure) is <em>mostly</em> indistinguishable from compiling code in advance, and
-restoring the compiled code ex-post facto.</p><h3 id=code-loading-occurs-within-namespaces>Code Loading Occurs Within Namespaces</h3><p>We already discussed above that all <code>Var</code>s live within namespaces. How does
+restoring the compiled code ex-post facto.</p>
+
+<h3 id="code-loading-occurs-within-namespaces">Code Loading Occurs Within Namespaces</h3>
+
+<p>We already discussed above that all <code>Var</code>s live within namespaces. How does
 Clojure decide into which namespace to assign a newly defined <code>Var</code>? Although
 the machinery is available such that a programmer can attempt to directly create and
 intern a <code>Var</code> into an arbitrary namespace, it is far more common to simply
 create unspecified &ldquo;definitions&rdquo; which default to the current
 namespace. When authoring Clojure source code, developers will create new
-namespaces and add functionality into them until complete, and then repeat:</p><ol><li>Enter a namespace and import the relevant Clojure machinery. This is typically
+namespaces and add functionality into them until complete, and then repeat:</p>
+
+<ol>
+<li>Enter a namespace and import the relevant Clojure machinery. This is typically
 done in source code using the <code>ns</code> macro, which creates and enters that
 namespace, and then optionally does things like copy <code>Var</code>s from other
 namespaces into the current namespace. (As already discussed, there&rsquo;s not
 too much overhead from this, because all the references point to the same <code>Var</code>
-object.)</li><li>Declare and define functions and objects, without explicitly declaring the
+object.)</li>
+<li>Declare and define functions and objects, without explicitly declaring the
 namespace. The namespace within which the definitions occur magically becomes
-the namespace within which those variables are interned.</li></ol><h2 id=what-is-the-ldquo-current-namespace-rdquo>What is the &ldquo;Current Namespace&rdquo;?</h2><p>Ay, there&rsquo;s the rub! The current namespace in Clojure is stored in the <code>Var</code>
+the namespace within which those variables are interned.</li>
+</ol>
+
+<h2 id="what-is-the-ldquo-current-namespace-rdquo">What is the &ldquo;Current Namespace&rdquo;?</h2>
+
+<p>Ay, there&rsquo;s the rub! The current namespace in Clojure is stored in the <code>Var</code>
 &ldquo;<code>#'clojure.core/*ns*</code>&rdquo;. (The book-ended asterisks in Clojure are
 called &ldquo;earmuffs&rdquo;, and imply (but do not promise) that the thusly-named
 <code>Var</code> is dynamic.) As already discussed, <code>Var</code>s usually have a single, global
 root, and can optionally have thread-local bindings. When the current namespace
 is changed through the use of the <code>ns</code> macro or the <code>in-ns</code> function, the value
 of <code>*ns*</code> is altered. Is this done by swapping the <code>Var</code> root, or by changing a
-thread-local binding?</p><p>To answer this question, I had to dive deep into the source code for the Clojure
+thread-local binding?</p>
+
+<p>To answer this question, I had to dive deep into the source code for the Clojure
 runtime (which is distinct from the <code>clojure.core</code> library, although <code>clojure.core</code>
-surfaces <em>most</em> of the runtime through public API&rsquo;s). Let&rsquo;s take a tour.</p><h3 id=bootstrapping-the-clojure-runtime>Bootstrapping the Clojure Runtime</h3><p>First, let&rsquo;s poke around the Clojure runtime (which is written in Java for the
+surfaces <em>most</em> of the runtime through public API&rsquo;s). Let&rsquo;s take a tour.</p>
+
+<h3 id="bootstrapping-the-clojure-runtime">Bootstrapping the Clojure Runtime</h3>
+
+<p>First, let&rsquo;s poke around the Clojure runtime (which is written in Java for the
 canonical implementation). Looking
-<a href=https://github.com/clojure/clojure/blob/42a7fd42cfae973d2af16d4bed40c7594574b58b/src/jvm/clojure/lang/RT.java#L221-L222>in the initial declarations</a>
+<a href="https://github.com/clojure/clojure/blob/42a7fd42cfae973d2af16d4bed40c7594574b58b/src/jvm/clojure/lang/RT.java#L221-L222">in the initial declarations</a>
 of <code>clojure.lang.RT</code>, we see that <code>*ns*</code> is <em>secretly</em> defined in Java and
 declared as dynamic <code>Var</code>. It <em>also</em> happens to have a default value of
 <code>clojure.core</code>. This means that the global root of <code>*ns*</code> everywhere is really
 <code>clojure.core</code>. But how do we enter new namespaces if <code>*ns*</code> is globally
-<code>clojure.core</code>?</p><p>Enter <code>in-ns</code>, the Clojure function which changes the current namespace, <code>*ns*</code>.
-<a href=https://github.com/clojure/clojure/blob/42a7fd42cfae973d2af16d4bed40c7594574b58b/src/jvm/clojure/lang/RT.java#L231-L244>The source for this function is just a few lines further down in the same file!</a>
+<code>clojure.core</code>?</p>
+
+<p>Enter <code>in-ns</code>, the Clojure function which changes the current namespace, <code>*ns*</code>.
+<a href="https://github.com/clojure/clojure/blob/42a7fd42cfae973d2af16d4bed40c7594574b58b/src/jvm/clojure/lang/RT.java#L231-L244">The source for this function is just a few lines further down in the same file!</a>
 <code>in-ns</code> in Clojure is really a <code>Var</code> (not dynamic) in Java which references the
 Java function <code>inNamespace</code>, which in turn calls <code>.set(ns)</code> on the <code>CURRENT_NS</code> <code>Var</code>.
 To see how this works, we must read the source in turn for <code>Var</code> in
-<code>clojure.lang.Var</code>.</p><h3 id=how-does-setting-a-var-work>How Does Setting a Var Work?</h3><p>Calling <code>.set(...)</code> on a <code>Var</code> happens
-<a href=https://github.com/clojure/clojure/blob/d7e92e5d71ca2cf4503165e551859207ba709ddf/src/jvm/clojure/lang/Var.java#L214-L224>here</a>.
+<code>clojure.lang.Var</code>.</p>
+
+<h3 id="how-does-setting-a-var-work">How Does Setting a Var Work?</h3>
+
+<p>Calling <code>.set(...)</code> on a <code>Var</code> happens
+<a href="https://github.com/clojure/clojure/blob/d7e92e5d71ca2cf4503165e551859207ba709ddf/src/jvm/clojure/lang/Var.java#L214-L224">here</a>.
 This function checks for a &ldquo;thread binding&rdquo; and throws an exception
 if one cannot be found. The thread binding is defined
-<a href=https://github.com/clojure/clojure/blob/d7e92e5d71ca2cf4503165e551859207ba709ddf/src/jvm/clojure/lang/Var.java#L354-L362>here</a>
+<a href="https://github.com/clojure/clojure/blob/d7e92e5d71ca2cf4503165e551859207ba709ddf/src/jvm/clojure/lang/Var.java#L354-L362">here</a>
 and
-<a href=https://github.com/clojure/clojure/blob/d7e92e5d71ca2cf4503165e551859207ba709ddf/src/jvm/clojure/lang/Var.java#L172-L178>here</a>
+<a href="https://github.com/clojure/clojure/blob/d7e92e5d71ca2cf4503165e551859207ba709ddf/src/jvm/clojure/lang/Var.java#L172-L178">here</a>
 and
-<a href=https://github.com/clojure/clojure/blob/d7e92e5d71ca2cf4503165e551859207ba709ddf/src/jvm/clojure/lang/Var.java#L314-L328>here</a>.
+<a href="https://github.com/clojure/clojure/blob/d7e92e5d71ca2cf4503165e551859207ba709ddf/src/jvm/clojure/lang/Var.java#L314-L328">here</a>.
 What this essentially says is, &ldquo;If and only if a thread-local binding
 already exists for this variable in the current thread, perform the set operation,
 otherwise you are attempting to make a thread-local modification to a global
-<code>Var</code> and that&rsquo;s forbidden so have an exception.&rdquo;</p><h3 id=the-current-namespace-is-a-phantasm>The Current Namespace is a Phantasm</h3><p>This is where things get to be a bit head-spinning, but also very cool and
+<code>Var</code> and that&rsquo;s forbidden so have an exception.&rdquo;</p>
+
+<h3 id="the-current-namespace-is-a-phantasm">The Current Namespace is a Phantasm</h3>
+
+<p>This is where things get to be a bit head-spinning, but also very cool and
 powerful. <em>The current namespace, at least globally, is always just <code>clojure.core</code></em>!
 (Of course you could monkey with the root binding of the <code>Var</code>, but I would not
 recommend that, given this information.)
 Whenever a Clojure source program claims to be changing the namespace, it&rsquo;s really just
 <em>changing the current namespace within the current thread of execution of the program!</em>.
 In other words, the current namespace is illusory, a convenient fiction maintained
-by large parts of the Clojure runtime for expedience and convenience.</p><p>&ldquo;How has the wool been pulled over our eyes this entire time!?&rdquo; you
+by large parts of the Clojure runtime for expedience and convenience.</p>
+
+<p>&ldquo;How has the wool been pulled over our eyes this entire time!?&rdquo; you
 and I both ask. In order for this to happen, everywhere we might have believed
 that we were changing the namespace globally, we must have only been permuting
-it within a single thread. The two main places this illusion arises are:</p><ol><li>During REPL use.</li><li>During compilation.</li></ol><p>I will show that in both of these locations, the Clojure runtime actually creates
+it within a single thread. The two main places this illusion arises are:</p>
+
+<ol>
+<li>During REPL use.</li>
+<li>During compilation.</li>
+</ol>
+
+<p>I will show that in both of these locations, the Clojure runtime actually creates
 a thread-local <code>binding</code> for <code>*ns*</code>, effectively isolating the global namespace
-for the purpose of defining new code.</p><h2 id=the-clojure-repl-binds-the-namespace>The Clojure REPL Binds the Namespace</h2><p>There&rsquo;s not much to say here. The relevant lines of the Clojure REPl source code
-<a href=https://github.com/clojure/clojure/blob/e3c4d2e8c7538cfda40accd5c410a584495cb357/src/clj/clojure/main.clj#L65-L89>are defined here</a>.
+for the purpose of defining new code.</p>
+
+<h2 id="the-clojure-repl-binds-the-namespace">The Clojure REPL Binds the Namespace</h2>
+
+<p>There&rsquo;s not much to say here. The relevant lines of the Clojure REPl source code
+<a href="https://github.com/clojure/clojure/blob/e3c4d2e8c7538cfda40accd5c410a584495cb357/src/clj/clojure/main.clj#L65-L89">are defined here</a>.
 The interactive Read-Evaluate-Print-Loop with which we are so familiar is actually
 concealing a thread-local binding (override) to <code>*ns*</code> under the hood. Because
 the binding underpins the entire REPL, within the REPL one could be forgiven for
@@ -184,26 +373,42 @@ thinking that the current namespace actually exists. In reality,
 <em>it exists only within that thread</em>. It&rsquo;s fairly uncommon to start spawning off
 new threads from the REPL which attempt to read the current namespace, so this
 could easily be missed.
-<a href=https://cemerick.com/2009/11/03/be-mindful-of-clojures-binding/>Here&rsquo;s a nice counterexample showing that the current namespace is not as real as you might think.</a></p><h2 id=the-clojure-compiler-binds-the-namespace>The Clojure Compiler Binds the Namespace</h2><p>I&rsquo;ll be honest, I&rsquo;m not yet quite adept at reading compiler source code, even
+<a href="https://cemerick.com/2009/11/03/be-mindful-of-clojures-binding/">Here&rsquo;s a nice counterexample showing that the current namespace is not as real as you might think.</a></p>
+
+<h2 id="the-clojure-compiler-binds-the-namespace">The Clojure Compiler Binds the Namespace</h2>
+
+<p>I&rsquo;ll be honest, I&rsquo;m not yet quite adept at reading compiler source code, even
 for a Lisp. However, it&rsquo;s fairly easy to spot what we&rsquo;re looking for, now that
 we know what that is.
-<a href=https://github.com/clojure/clojure/blob/f2987665d00a579bf4efb169cf86ed141e0c1106/src/jvm/clojure/lang/Compiler.java#L7561-L7724>Compilation happens inside this large <code>compile</code> function</a>.
+<a href="https://github.com/clojure/clojure/blob/f2987665d00a579bf4efb169cf86ed141e0c1106/src/jvm/clojure/lang/Compiler.java#L7561-L7724">Compilation happens inside this large <code>compile</code> function</a>.
 Notice that, at the top of the function, it creates a thread-local binding for
 <code>#'clojure.core/*ns*</code>, based on the current value. (Tracking exactly where in the
 compiler it <em>evaluates</em> the <code>in-ns</code> function is a bit tricky. It appears to do
 that while it&rsquo;s parsing and emitting bytecode, but I haven&rsquo;t gotten that far into
-the code base.)</p><h2 id=implications>Implications</h2><p>The fact that the machinery for creating namespaces, defining <code>Var</code>s, and sticking
+the code base.)</p>
+
+<h2 id="implications">Implications</h2>
+
+<p>The fact that the machinery for creating namespaces, defining <code>Var</code>s, and sticking
 those <code>Var</code>s inside namespaces uses thread-local bindings means that, for the most
 part, Clojure code can be added at runtime from any number of threads, relatively
 safety. (Relatively is the operative term &ndash; if different threads are trying to
 load data with the same name, and set them as root bindings, trampling can and
 probably will still occur.
-See <a href=https://groups.google.com/forum/#!topic/clojure/b3DB23nJ7h8>this ancient thread with Rich Hickey about the lack of safety of changing root bindings dynamically</a>.)</p><p>Although this may seem strange, it&rsquo;s actually quite liberating. There is nothing
+See <a href="https://groups.google.com/forum/#!topic/clojure/b3DB23nJ7h8">this ancient thread with Rich Hickey about the lack of safety of changing root bindings dynamically</a>.)</p>
+
+<p>Although this may seem strange, it&rsquo;s actually quite liberating. There is nothing
 particularly special about the Clojure compiler or REPL; they just happen to have
 the local bindings set up correctly. If you need to do runtime code loading (via
 <code>eval</code> or the like), you could similarly set up new namespaces for that code.
 (Technically Clojure does not guard against malicious actors, so custom classloaders
-may be needed if you&rsquo;re loading code from an untrusted party.)</p><h2 id=bringing-it-all-together>Bringing it All Together</h2><p>To save you some scrolling, I&rsquo;ll repeat my example from above, down here:</p><pre><code class=language-clojure>;; In Clojure, this works:
+may be needed if you&rsquo;re loading code from an untrusted party.)</p>
+
+<h2 id="bringing-it-all-together">Bringing it All Together</h2>
+
+<p>To save you some scrolling, I&rsquo;ll repeat my example from above, down here:</p>
+
+<pre><code class="language-clojure">;; In Clojure, this works:
 (ns namespace-1)
 (println *ns*)
 ;; #namespace[namespace-1]
@@ -224,8 +429,12 @@ may be needed if you&rsquo;re loading code from an untrusted party.)</p><h2 id=b
   (refer-clojure)
   (println *ns*))
 ;; Will shout and complain that you can't set a Var that's not locally bound
-</code></pre><p><em>Why is it that the first two examples work (during compilation and the REPL) and the last one does not (at runtime)?</em>
-I&rsquo;ve already hinted why above, but I&rsquo;ll give the long-form explanation.</p><p>In the interest of efficiency and expediency, the compiler and the REPL both
+</code></pre>
+
+<p><em>Why is it that the first two examples work (during compilation and the REPL) and the last one does not (at runtime)?</em>
+I&rsquo;ve already hinted why above, but I&rsquo;ll give the long-form explanation.</p>
+
+<p>In the interest of efficiency and expediency, the compiler and the REPL both
 pretend to be within an interactive user session, and allow the global
 <code>*ns*</code> variable to be manipulated fairly freely. Every <code>def</code> and <code>defn</code> call
 (e.g. every declaration of a global variable, whether that variable is a function or not)
@@ -233,7 +442,9 @@ translates into something like, &ldquo;Take this object and shove it into the
 named box within the compartment named by <code>*ns*</code>.&rdquo; In order to ensure that
 it&rsquo;s easy to assign those boxes into those compartments, the compiler and REPL
 both take pains to ensure that <code>*ns*</code> looks like what a user would expect it to,
-such that compilation proceeds in an orderly fashion.</p><p>This does not hold for the Clojure runtime itself! When someone calls a <code>-main</code>
+such that compilation proceeds in an orderly fashion.</p>
+
+<p>This does not hold for the Clojure runtime itself! When someone calls a <code>-main</code>
 function in Clojure, there is no magic call of <code>with-bindings</code> like
 those which occur in <code>clojure.main</code> and <code>clojure.lang.RT</code> to allow <code>*ns*</code> to
 be freely tweaked. As such, this will fail with the error
@@ -241,37 +452,156 @@ be freely tweaked. As such, this will fail with the error
 Fuzzy and unclear before, it is now obvious: <em>before</em>, the compiler and REPL were
 root-binding <code>*ns*</code>, so taht we would never see this error! <em>Now</em>, we&rsquo;re on our
 own, and we&rsquo;ll be blindsided by a fastball if we aren&rsquo;t either deeply engrossed
-in the language runtime fundamentals, or previously warned of this quirk!</p><h2 id=should-clojure-be-nicer-about-this>Should Clojure be nicer about this?</h2><p>After I explained all of the above to a colleague at work
-(<a href=https://github.com/ztellman/primitive-math/issues/8>related to this Github issue</a>),
+in the language runtime fundamentals, or previously warned of this quirk!</p>
+
+<h2 id="should-clojure-be-nicer-about-this">Should Clojure be nicer about this?</h2>
+
+<p>After I explained all of the above to a colleague at work
+(<a href="https://github.com/ztellman/primitive-math/issues/8">related to this Github issue</a>),
 he was justifiably upset.
-<a href=https://groups.google.com/forum/#!topic/clojure/6CXUNuPIUyQ>He submitted a ticket on the Clojure mailing list</a>
+<a href="https://groups.google.com/forum/#!topic/clojure/6CXUNuPIUyQ">He submitted a ticket on the Clojure mailing list</a>
 and eventually received a response from Alex Miller himself. (I chimed in toward the end
-but the conversation was essentially concluded by the time I added my two cents.)</p><p>The debate essentially goes as follows:</p><blockquote><p>Clojure User: Since <code>*ns*</code> and <code>in-ns</code> work consistently during compilation
+but the conversation was essentially concluded by the time I added my two cents.)</p>
+
+<p>The debate essentially goes as follows:</p>
+
+<blockquote>
+<p>Clojure User: Since <code>*ns*</code> and <code>in-ns</code> work consistently during compilation
 and in the REPL, they aught to behave the same way even at runtime.
-To do so is to violate the <a href=https://en.wikipedia.org/wiki/Principle_of_least_astonishment>principle of least surprise</a>.
+To do so is to violate the <a href="https://en.wikipedia.org/wiki/Principle_of_least_astonishment">principle of least surprise</a>.
 Please provide a shim to the runtime such that even when launching
 <code>gen-class</code>ed Clojure from the Java command line,
 or when invoking the runtime via the Java API,
 <code>*ns*</code> and <code>in-ns</code> will have
-received the same treatment as they get in other contexts.</p><p>Clojure Maintainer: There isn&rsquo;t any canonical or deliberately consistent
+received the same treatment as they get in other contexts.</p>
+
+<p>Clojure Maintainer: There isn&rsquo;t any canonical or deliberately consistent
 behavior of <code>*ns*</code> or <code>in-ns</code> in the manner you perceive. The compiler happens
 to work the way it does. <code>clojure.main</code>/Leiningen/Boot are by no means the
 canonical implementations; they provide the same setup for the convenience of
 the REPL, and happen to have chosen consistent conventions, but for us to impose
 those conventions unilaterally would be to take an actual stance and dictate
-that there is a canonical implementation.</p><p>Clojure User: It&rsquo;s apparent that the community has consolidated around a canonical
+that there is a canonical implementation.</p>
+
+<p>Clojure User: It&rsquo;s apparent that the community has consolidated around a canonical
 implementation, and to deny that is to consign developers to stumble upon this
 every few months, until this happens again. Although theoretically it was not
 necessary to provide this shim to achieve the language runtime, it is needed
-to avoid shocking users.</p><p>Clojure Maintainer: Sure, open a ticket!</p><p>Clojure User: <a href=https://dev.clojure.org/jira/browse/CLJ-2185>Done.</a></p></blockquote><h2 id=update>Update</h2><p>After the initial publication of this post, I got some push backs from friends
+to avoid shocking users.</p>
+
+<p>Clojure Maintainer: Sure, open a ticket!</p>
+
+<p>Clojure User: <a href="https://dev.clojure.org/jira/browse/CLJ-2185">Done.</a></p>
+</blockquote>
+
+<h2 id="update">Update</h2>
+
+<p>After the initial publication of this post, I got some push backs from friends
 and colleagues that it did not sufficiently motivate why namespaces have
 counter-intuitive behavior and what can be done about it. Therefore I&rsquo;ve taken
 the approach (from which I normally refrain) of updating this post with more
 information and content, specifically the sections on &ldquo;Bringing it All Together&rdquo;,
-&ldquo;Should Clojure be nicer about this?&rdquo;, and the TL;DR at the top.</p><h2 id=references>References</h2><ul><li><a href=https://clojure.org/reference/namespaces>The official documentation on namespaces</a>.
+&ldquo;Should Clojure be nicer about this?&rdquo;, and the TL;DR at the top.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="https://clojure.org/reference/namespaces">The official documentation on namespaces</a>.
 I&rsquo;m actually less of a fan of this document than I was of the <code>Var</code> document,
 because it doesn&rsquo;t address potential corner-cases with the <code>*ns*</code> <code>Var</code> that
-I highlighted above (which is admittedly an uncommon use case).</li><li>As mentioned in the previous article, <a href=https://clojure.org/reference/vars>the official documentation on <code>Var</code> is helpful, but a bit terse.</a>
+I highlighted above (which is admittedly an uncommon use case).</li>
+<li>As mentioned in the previous article, <a href="https://clojure.org/reference/vars">the official documentation on <code>Var</code> is helpful, but a bit terse.</a>
 <code>Var</code>s and namespaces go hand in hand, so don&rsquo;t be afraid to refresh yourself
-on their function/purpose.</li><li><a href=https://github.com/clojure/clojure/blob/d7e92e5d71ca2cf4503165e551859207ba709ddf/src/jvm/clojure/lang/Namespace.java><code>clojure.lang.Namespace</code></a></li><li><a href=https://github.com/clojure/clojure/blob/42a7fd42cfae973d2af16d4bed40c7594574b58b/src/jvm/clojure/lang/RT.java><code>clojure.lang.RT</code></a></li><li><a href=https://github.com/clojure/clojure/blob/f2987665d00a579bf4efb169cf86ed141e0c1106/src/jvm/clojure/lang/Compiler.java><code>clojure.lang.Compiler</code></a></li></ul></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname='justabloginthepark';var disqus_loaded=false;function disqus(){if(!disqus_loaded){disqus_loaded=true;if(window.location.hostname=="localhost")
-return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);}};</script><script type=text/javascript>window.onscroll=function(e){if((window.innerHeight+window.scrollY)>=document.body.offsetHeight){if(!disqus_loaded){disqus();}}};</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2018</p></div></section><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js></script><script>hljs.initHighlightingOnLoad();</script>
+on their function/purpose.</li>
+<li><a href="https://github.com/clojure/clojure/blob/d7e92e5d71ca2cf4503165e551859207ba709ddf/src/jvm/clojure/lang/Namespace.java"><code>clojure.lang.Namespace</code></a></li>
+<li><a href="https://github.com/clojure/clojure/blob/42a7fd42cfae973d2af16d4bed40c7594574b58b/src/jvm/clojure/lang/RT.java"><code>clojure.lang.RT</code></a></li>
+<li><a href="https://github.com/clojure/clojure/blob/f2987665d00a579bf4efb169cf86ed141e0c1106/src/jvm/clojure/lang/Compiler.java"><code>clojure.lang.Compiler</code></a></li>
+</ul>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <script type="text/javascript">
+      var disqus_shortname = 'justabloginthepark';
+      var disqus_loaded = false;
+
+      function disqus() {
+        if (!disqus_loaded) {
+          disqus_loaded = true;
+          
+          if (window.location.hostname == "localhost")
+            return;
+
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }
+      };
+    </script>
+    <script type="text/javascript">
+      window.onscroll = function(e) {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            if (!disqus_loaded) {
+              disqus();
+            }
+        }
+      };
+    </script>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/Artiavis">Jeff Rabinowitz</a>, 2018</p>
+  </div>
+</section>
+
+
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+

@@ -1,47 +1,155 @@
-<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Bearish on Clojure in 2017 | Just a Blog in the Park</title><link rel=stylesheet href=http://justabloginthepark.com//css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css><link rel=stylesheet href=http://justabloginthepark.com//css/vs2015.min.css><link rel=stylesheet href=http://justabloginthepark.com//css/images.min.css><section class=section><div class=container><nav class=nav><div class=nav-left><a href=/about><img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75"></a>
-<a class=nav-item href=http://justabloginthepark.com/><h1 class="title is-4">Just a Blog in the Park</h1></a></div><div class=nav-right><nav class="nav-item level is-mobile"><a class=level-item href=/photos><span class=icon><i class="fas fa-camera"></i></span></a><a class=level-item href=/tags><span class=icon><i class="fas fa-tags"></i></span></a><a class=level-item href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span></a><a class=level-item href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span></a><a class=level-item href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span></a><a class=level-item href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span></a></nav></div></nav></div></section><section class=section><div class=container><h2 class="subtitle is-6">June 4, 2017</h2><h1 class=title>Bearish on Clojure in 2017</h1><h2 class="subtitle is-6">11 minute read</h2><ul id=tags><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i>programming</a></li><li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i>clojure</a></li></ul><br><div class=content><p>There was a recent brouhaha in the Clojure community about
-<a href=https://lambdaisland.com/blog/25-05-2017-simple-and-happy-is-clojure-dying-and-what-has-ruby-got-to-do-with-it>the recent blog post</a>
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bearish on Clojure in 2017 | Just a Blog in the Park</title>
+<link rel="stylesheet" href="http://justabloginthepark.com//css/style.css">
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/solid.js" integrity="sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/brands.js" integrity="sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js" integrity="sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM" crossorigin="anonymous"></script>
+
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    
+    <link rel="stylesheet" href="http://justabloginthepark.com//css/vs2015.min.css">
+
+
+    <link rel="stylesheet" href="http://justabloginthepark.com//css/images.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="/about">
+          <img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75" />
+        </a>
+        <a class="nav-item" href="http://justabloginthepark.com/"><h1 class="title is-4">Just a Blog in the Park</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="/photos">
+            <span class="icon">
+              <i class="fas fa-camera"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/tags">
+            <span class="icon">
+              <i class="fas fa-tags"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://github.com/Artiavis">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://linkedin.com/in/JeffreyCRabinowitz">
+            <span class="icon">
+              <i class="fab fa-linkedin"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1">
+            <span class="icon">
+              <i class="fas fa-file-pdf"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fas fa-rss-square"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">June 4, 2017</h2>
+    <h1 class="title">Bearish on Clojure in 2017</h1>
+    <h2 class="subtitle is-6" >11 minute read</h2>
+    <ul id="tags">
+  
+    <li><a href="/tags/programming"><i class="fas fa-tag" aria-hidden="true"></i> programming</a></li>
+  
+    <li><a href="/tags/clojure"><i class="fas fa-tag" aria-hidden="true"></i> clojure</a></li>
+  
+</ul>
+<br />
+    <div class="content">
+      
+
+<p>There was a recent brouhaha in the Clojure community about
+<a href="https://lambdaisland.com/blog/25-05-2017-simple-and-happy-is-clojure-dying-and-what-has-ruby-got-to-do-with-it">the recent blog post</a>
 by a Clojure dabbler to the effect that Clojure may be a clean and beautiful language
 but that it fails in a few pragmatic and ergonomic senses which hurts its adoption
 and limits its appeal. Although the author admits that he probably made a mistake
 in jumping to adopt Clojure, a foreign technological concept to him,
 for a startup in a space that was also completely foreign to him, he does bring
-up some worthwhile points that are worth chewing over.</p><h2 id=clojure-s-paltry-introduction-for-beginners>Clojure&rsquo;s Paltry Introduction for Beginners</h2><p>It is a well-known issue in the Clojure community that getting started with
+up some worthwhile points that are worth chewing over.</p>
+
+<h2 id="clojure-s-paltry-introduction-for-beginners">Clojure&rsquo;s Paltry Introduction for Beginners</h2>
+
+<p>It is a well-known issue in the Clojure community that getting started with
 Clojure is extremely difficult for both beginners to programming, as well
 as to those without hardcore programming experience. Here are just a few
-of the challenges beginners face:</p><h3 id=development-environment-setup-is-non-trivial>Development Environment Setup is Non-trivial</h3><p>Getting a development environment set up is non-trivial, to say the least.
-Although the <a href=https://leiningen.org/>Leiningen</a> project is excellent
-at helping individuals install and bootstrap a working Clojure environment,
-getting libraries installed and launching a REPL, Leiningen (on its own)
-does not help would-be developers learn the Clojure development experience.
-Although there are a few environments that somewhat simplify the experience,
-they are all imperfect in various ways:</p><ul><li><p><a href=https://cursive-ide.com/>Cursive</a> is a plugin for IntelliJ IDEA which
+of the challenges beginners face:</p>
+
+<h3 id="development-environment-setup-is-non-trivial">Development Environment Setup is Non-trivial</h3>
+
+<p>Getting a development environment set up is non-trivial, to say the least.
+ Although the <a href="https://leiningen.org/">Leiningen</a> project is excellent
+ at helping individuals install and bootstrap a working Clojure environment,
+ getting libraries installed and launching a REPL, Leiningen (on its own)
+ does not help would-be developers learn the Clojure development experience.
+ Although there are a few environments that somewhat simplify the experience,
+ they are all imperfect in various ways:</p>
+
+<ul>
+<li><p><a href="https://cursive-ide.com/">Cursive</a> is a plugin for IntelliJ IDEA which
 provides third-party support for Clojure within an existing IntelliJ
 installation (even the free version). This is one of the most fully-featured
 IDE&rsquo;s for Clojure. However, it suffers from the fact that it&rsquo;s a plugin
 within an existing IDE (which means finding and configuring it is more difficult),
 and that you must learn quite a bit about configuring IntelliJ itself in
 addition to Cursive. As IntelliJ is a heavy-weight Java IDE, learning Cursive
-is not for the faint of heart for programming/JVM beginners.</p></li><li><p><a href=https://cider.readthedocs.io/en/latest/>Cider</a> is a plugin/mode ecosystem
+is not for the faint of heart for programming/JVM beginners.</p></li>
+
+<li><p><a href="https://cider.readthedocs.io/en/latest/">Cider</a> is a plugin/mode ecosystem
 for programming in Clojure in Emacs. This is a well-maintained, highly polished,
 very deep mode for Emacs and it works well. However, like Cursive (in its own way),
 it requires very deep buy-in for a beginner. Emacs can take an extensive period of
 time to learn, and because Cider fancies itself as an Emacs-native environment
 within Emacs, it is probably impossible to use Cider without first/concurrently
 learning Emacs. (I understand there is a similar project for Vim called
-<a href=https://github.com/tpope/vim-fireplace>&ldquo;Fireplace&rdquo;</a>
+<a href="https://github.com/tpope/vim-fireplace">&ldquo;Fireplace&rdquo;</a>
 but I believe it uses the same backend as Cider and requires
-equal buy-in to Vim, which is even less beginner-friendly than Emacs.)</p></li><li><p><a href=http://lighttable.com/>Light Table</a> IDE was actually developed in a dialect
-of Clojure (<a href=https://clojurescript.org/>ClojureScript</a>) and comes fairly close
+equal buy-in to Vim, which is even less beginner-friendly than Emacs.)</p></li>
+
+<li><p><a href="http://lighttable.com/">Light Table</a> IDE was actually developed in a dialect
+of Clojure (<a href="https://clojurescript.org/">ClojureScript</a>) and comes fairly close
 to being a fluent Clojure IDE. However, Light Table is not actively developed
 or maintained, and is not a production-level IDE for anything, let alone for
 Clojure. It&rsquo;s good for introductions but is not really something a Clojure
-developer should invest heavily in.</p></li><li><p>There is a project similar to Light Table called <a href=https://github.com/oakes/Nightcode>Night Code</a>,
+developer should invest heavily in.</p></li>
+
+<li><p>There is a project similar to Light Table called <a href="https://github.com/oakes/Nightcode">Night Code</a>,
 which is a cute Swing-based Clojure IDE written in Java which attempts to be
 a Clojure-specific starter IDE (like Light Table) but with more templates.
 Night Code is nice in that it has templates for creating new projects, and it
 is aware of your code so that you can connect to it. However, like Light Table,
-it is not a true IDE, and is not ideal for serious Clojure coding.</p></li></ul><p>In short, there is nothing for Clojure like there is for Java/C#/Python/Ruby - no
+it is not a true IDE, and is not ideal for serious Clojure coding.</p></li>
+</ul>
+
+<p>In short, there is nothing for Clojure like there is for Java/C#/Python/Ruby - no
 dedicated, standalone IDE which can be installed and out-of-the-box support
 Clojure with simple documentation and a straightforward learning curve from
 beginner usage to being able to develop production apps. This limits Clojure&rsquo;s
@@ -49,7 +157,11 @@ appeal because beginners either must be veteran e.g. Java programmers moving ont
 Clojure with their existing JVM and IntelliJ knowledge; or they can experiment
 using the lightweight editors, but will not learn about techniques like debugging
 and refactoring, which will make advancing to higher levels of programming more
-difficult.</p><h3 id=opaque-or-bizarre-error-messages>Opaque or Bizarre Error Messages</h3><p>I won&rsquo;t spill much (digital) ink on this point because it&rsquo;s both rather well
+difficult.</p>
+
+<h3 id="opaque-or-bizarre-error-messages">Opaque or Bizarre Error Messages</h3>
+
+<p>I won&rsquo;t spill much (digital) ink on this point because it&rsquo;s both rather well
 known, and also an area of active research (although not finished yet). Clojure
 is a Lisp (an interpreted, dynamic language) canonically hosted on the Java virtual machine
 and written in Java (which is yet another interpreted, dynamic language, albeit
@@ -58,43 +170,74 @@ When an error happens in Clojure, for performance reasons, the error is caught
 by the runtime of the JVM, which knows nothing about either Clojure or why this
 embedded language allowed this error to occur. This results in an awkward
 dichotomy for both veteran JVM programmers new to Clojure, as well as general
-beginners:</p><ol><li><p>If the error is due to a misuse of JVM constructs or a mistake in writing
+beginners:</p>
+
+<ol>
+<li><p>If the error is due to a misuse of JVM constructs or a mistake in writing
 Clojure code, the error will probably extensively mention JVM types, but will
 actually be an error in the usage of the Clojure language. These errors can
-be recognized with experience but are not always clearly called-out.</p></li><li><p>If the error is due to a mistake in the usage of a Clojure API, the Clojure
+be recognized with experience but are not always clearly called-out.</p></li>
+
+<li><p>If the error is due to a mistake in the usage of a Clojure API, the Clojure
 runtime will <em>sometimes</em> call this out, but often, a Java stack trace is also
 printed, which confuses the issue of where the error lies. (In this case it
 is almost universally in the usage of the API&rsquo;s within syntactically valid
-Clojure, but to a beginner that nuance is blurry at best.)</p></li></ol><p>There are no perfect solutions here, due to the dynamic and interpreted nature
+Clojure, but to a beginner that nuance is blurry at best.)</p></li>
+</ol>
+
+<p>There are no perfect solutions here, due to the dynamic and interpreted nature
 of Clojure. One catch-all approach with horrifying performance implications for
 production code is to add several layers of parsing, validation, and error reporting
 to all Clojure code, to catch and clearly elucidate the first variant of error,
 as well as to present less ambiguous messages for the latter error type. Because
 Clojure envisions itself as a production-friendly language, adopting these expensive
-runtime checks is out of the question.</p><p>The approach the authors of Clojure seem to be embracing is to introduce a static
+runtime checks is out of the question.</p>
+
+<p>The approach the authors of Clojure seem to be embracing is to introduce a static
 type-checking runtime to be bolted-onto the language, called
-<a href=https://clojure.org/guides/spec><code>core.spec</code></a> (inspired by Typed Racket).
+<a href="https://clojure.org/guides/spec"><code>core.spec</code></a> (inspired by Typed Racket).
 The idea is essentially to enable developers to toggle a flag in the runtime to
 indicate whether to perform extensive validations and type-checking at the language
-level, and if so, to validate API&rsquo;s.</p><ul><li>For beginners, this will provide friendlier errors without any real loss, since
-beginners are unlikely to be notice performance losses due to validations.</li><li>For developers using a development-to-production pipeline, this allows developers
-to validate their logic without hurting performance in production.</li></ul><p>Although <code>core.spec</code> is a clever way to attempt to have one&rsquo;s cake and eat it
-too, it isn&rsquo;t the panacea that some hope it would have been.</p><ul><li>It is fairly late to the game (ten years after the language first debuted)</li><li>It&rsquo;s unclear when it will land in the core runtime, which is fairly important
+level, and if so, to validate API&rsquo;s.</p>
+
+<ul>
+<li>For beginners, this will provide friendlier errors without any real loss, since
+beginners are unlikely to be notice performance losses due to validations.</li>
+<li>For developers using a development-to-production pipeline, this allows developers
+to validate their logic without hurting performance in production.</li>
+</ul>
+
+<p>Although <code>core.spec</code> is a clever way to attempt to have one&rsquo;s cake and eat it
+too, it isn&rsquo;t the panacea that some hope it would have been.</p>
+
+<ul>
+<li>It is fairly late to the game (ten years after the language first debuted)</li>
+<li>It&rsquo;s unclear when it will land in the core runtime, which is fairly important
 for beginners who shouldn&rsquo;t be expected to independently install such an
-important module</li><li>It still can&rsquo;t catch issues where Java/JVM API&rsquo;s are misused or invalid Clojure
+important module</li>
+<li>It still can&rsquo;t catch issues where Java/JVM API&rsquo;s are misused or invalid Clojure
 code is constructed (both of which would probably still emit cryptic error
-messages to beginners).</li></ul><h2 id=clojure-values-conceptual-purity-over-developer-happiness>Clojure Values Conceptual Purity Over Developer Happiness</h2><p>This point in the author&rsquo;s essay relates to a popular but also mildly controversial
+messages to beginners).</li>
+</ul>
+
+<h2 id="clojure-values-conceptual-purity-over-developer-happiness">Clojure Values Conceptual Purity Over Developer Happiness</h2>
+
+<p>This point in the author&rsquo;s essay relates to a popular but also mildly controversial
 talk given by Clojure&rsquo;s author, Rich Hickey, titled
-<a href=https://www.infoq.com/presentations/Simple-Made-Easy>&ldquo;Simple Made Easy&rdquo;</a>.
+<a href="https://www.infoq.com/presentations/Simple-Made-Easy">&ldquo;Simple Made Easy&rdquo;</a>.
 Rich argued for designing clean API&rsquo;s which do not introduce unnecessary complexity
 at a runtime/language/library level, even if doing so required making
 development less &ldquo;pleasant&rdquo; or &ldquo;easy&rdquo; for developers
 (for some definition of those words). This can be differentiated almost directly
 to a language like Ruby, which permits all sorts of hacky modifications to the
 runtime in the interest of developer ease, despite potentially complicating
-the runtime and API surface.</p><p>This core value is an essential part of Clojure&rsquo;s mission statement. It&rsquo;s
+the runtime and API surface.</p>
+
+<p>This core value is an essential part of Clojure&rsquo;s mission statement. It&rsquo;s
 impossible to imagine Clojure, with its clean API&rsquo;s and nearly-fanatical avoidance
-of impurity, without this concept front and center.</p><p>However, this concept and its ramifications arguably also reflect on the difficulty
+of impurity, without this concept front and center.</p>
+
+<p>However, this concept and its ramifications arguably also reflect on the difficulty
 of setting up a nice Clojure code base. Although ActiveSupport does terrible things
 to the Ruby runtime, the ability for a beginner to type code like <code>2.days_ago</code>
 and get a meaningful result is breathtakingly joyous. Compare that to having to
@@ -102,32 +245,44 @@ call a Clojure wrapper over a Java time API like
 <code>java.time.ZonedDateTime.now().minusDays(2)</code> using something like
 <code>(.minusDays (java.time.ZonedDateTime/now) 2)</code>, which requires learning that
 Java has multiple datetime libraries, that Java 8&rsquo;s libraries are better than
-both <code>java.util.Date</code> and Joda time, etc.</p><p>Clojure and its community generally prefer writing libraries and glueing them
+both <code>java.util.Date</code> and Joda time, etc.</p>
+
+<p>Clojure and its community generally prefer writing libraries and glueing them
 together by hand, rather than having a framework like Rails that has some sensible
 opinions that bypass the bikeshedding and let developers ship business logic.
 Although it&rsquo;s nice that Clojure apps can be pure because libraries are invoked
 manually, it&rsquo;s not nice to beginners that they must teach themselves all of web
 programming and how to safely and properly wire up calls, when Rails has done
-this out of the box for over a decade.</p><h2 id=clojure-s-primary-ldquo-killer-app-rdquo-is-proprietary>Clojure&rsquo;s Primary &ldquo;Killer App&rdquo; is Proprietary</h2><p>There is an argument out there that languages become popular because they have
+this out of the box for over a decade.</p>
+
+<h2 id="clojure-s-primary-ldquo-killer-app-rdquo-is-proprietary">Clojure&rsquo;s Primary &ldquo;Killer App&rdquo; is Proprietary</h2>
+
+<p>There is an argument out there that languages become popular because they have
 one or more &ldquo;killer apps&rdquo; written in them which motivate developers to
 flock to that ecosystem. Ruby obviously had Ruby on Rails; in recent years,
 Python has had many numerical analysis and machine learning libraries such as
 Numpy, Pandas, Scikit-Learn, and TensorFlow. Although Java doesn&rsquo;t have any
 one killer app, it&rsquo;s both an established enterprise player, as well as host
-to most of the Apache applications (each of which is itself a killer app).</p><p>(Although <a href=http://storm.apache.org/>Apache Storm</a> is an honorable mention as a
+to most of the Apache applications (each of which is itself a killer app).</p>
+
+<p>(Although <a href="http://storm.apache.org/">Apache Storm</a> is an honorable mention as a
 production quality Clojure application, it does not technically count for two
 reasons. First, the project was before-its-time and appears less popular than both
 Apache Spark&rsquo;s Streaming and Apache Flink, neither of which are true streaming
 solutions and both of which post-date Storm. Second, although Storm is primarily
 written in Clojure, its API&rsquo;s are heavily buried in Java API&rsquo;s to the extent that
-most users are probably unaware of its Clojure implementations.)</p><p>Rich Hickey and Cognitect developed a killer app in and for Clojure &mdash; the
-distributed database system <a href=http://www.datomic.com/>Datomic</a>. Datomic is an
+most users are probably unaware of its Clojure implementations.)</p>
+
+<p>Rich Hickey and Cognitect developed a killer app in and for Clojure &mdash; the
+distributed database system <a href="http://www.datomic.com/">Datomic</a>. Datomic is an
 attempt at creating a Datalog-powered fact-database, albeit one with clever
 locking, distribution, and caching mechanisms baked in. Datomic is truly elegant
 in that it handles distributed reads/writes/locking, maintains an immutable
 history (enabling audits and time traveling), caches in client memory (e.g. no
 separate cache layer required), and that it bakes in its own ORM (if you&rsquo;re okay
-with all your objects looking like Clojure maps).</p><p>However, Datomic is an exclusively commercial offering. This does partially make
+with all your objects looking like Clojure maps).</p>
+
+<p>However, Datomic is an exclusively commercial offering. This does partially make
 sense; it relies upon backends like AWS, and its appeal as a database is to those
 who would want its powerful enterprise capabilities and its all-in-one nature.
 However, it&rsquo;s a loss for the community that such a powerful and motivating app
@@ -135,9 +290,13 @@ sits behind a paywall. If people had to pay for Ruby on Rails, it&rsquo;s arguab
 both Ruby and Rails would not be where they are today; but the fact that they were
 both free meant that a community rapidly formed around Rails, <em>even despite the fact</em>
 that it was written in Ruby. If both Clojure and Datomic were completely free,
-more people might flock to Clojure to be able to more easily consume Datomic.</p><h2 id=clojure-s-maintainers-do-not-communicate-enough>Clojure&rsquo;s Maintainers Do Not Communicate Enough</h2><p>There was another Clojure controversy which managed to span nearly a year:
-<a href=https://dev.clojure.org/jira/browse/CLJ-1517>introducing tuples to Clojure</a>.
-<a href=https://github.com/ztellman>Zach Tellman</a>, a prominent Clojure library author,
+more people might flock to Clojure to be able to more easily consume Datomic.</p>
+
+<h2 id="clojure-s-maintainers-do-not-communicate-enough">Clojure&rsquo;s Maintainers Do Not Communicate Enough</h2>
+
+<p>There was another Clojure controversy which managed to span nearly a year:
+<a href="https://dev.clojure.org/jira/browse/CLJ-1517">introducing tuples to Clojure</a>.
+<a href="https://github.com/ztellman">Zach Tellman</a>, a prominent Clojure library author,
 attempted to contribute a patch to Clojure to provide some data structures which
 he believed would be more performant and optimal for Clojure&rsquo;s runtime. After
 nearly nine months of discussion and waiting for consideration, Rich Hickey
@@ -145,7 +304,9 @@ nearly nine months of discussion and waiting for consideration, Rich Hickey
 and without bringing him into the discussion until after the change had already
 been shipped. Although he made strong technical arguments for doing things his
 way, his behavior was not the kind you would expect from a gracious open source
-contributor.</p><p><a href=https://medium.com/@ztellman/standing-in-the-shadow-of-giants-9ac52f8b4051>Zach eventually wrote an essay expressing his sentiments about the Clojure development model</a>.
+contributor.</p>
+
+<p><a href="https://medium.com/@ztellman/standing-in-the-shadow-of-giants-9ac52f8b4051">Zach eventually wrote an essay expressing his sentiments about the Clojure development model</a>.
 It may not be fair to characterize what transpired as backroom-cigar-parlor
 planning on the part of Hickey/Cognitect, but it definitely flies in the face of
 the spirit of modern open source software to have an openly visible code base
@@ -155,7 +316,11 @@ as code develops, then the code base is clearly not open, despite its source
 being made available. It would be more honest in this case for Clojure&rsquo;s
 maintainers to officially announce that bug fixes may be accepted but that feature
 requests and code reviews may and probably will be rejected at an unspecified
-future date.</p><h2 id=where-to-go-from-here>Where to Go from Here?</h2><p>I still think Clojure is one of the most elegant languages I&rsquo;ve ever worked with,
+future date.</p>
+
+<h2 id="where-to-go-from-here">Where to Go from Here?</h2>
+
+<p>I still think Clojure is one of the most elegant languages I&rsquo;ve ever worked with,
 and I think that it&rsquo;s still a true beauty to work with once you&rsquo;ve gotten going
 with it. However, between a steep learning curve, lack of open-source killer apps,
 lack of bidirectional openness with the community, and a lack of fun Clojure
@@ -166,5 +331,108 @@ give many of the same benefits of Clojure but with easier learning curves and
 cleaner and easier experiences such as Kotlin, Elixir, Golang, etc., Clojure
 couldn&rsquo;t really afford to play things out the way it did. I&rsquo;ll continue to keep
 an eye on Clojure and see where using it makes sense; but I suspect it&rsquo;s already
-lost the war of developer interest (and my own, for now).</p><h2 id=references>References</h2><ul><li><a href=https://lambdaisland.com/blog/25-05-2017-simple-and-happy-is-clojure-dying-and-what-has-ruby-got-to-do-with-it>The instigating blog post</a><ul><li><a href="https://www.reddit.com/r/Clojure/comments/6d9say/simple_and_happy_is_clojure_dying_and_what_has/?ref=share&amp;ref_source=link">Analysis of that post on Reddit</a></li><li><a href="https://news.ycombinator.com/item?id=14418013">Analysis of that post on Hacker News</a></li></ul></li><li><a href=http://www.lispcast.com/cognitect-clojure>LispCast episode pondering whether Cognitect, Clojure&rsquo;s author&rsquo;s company, should do more for Clojure</a><ul><li><a href="https://www.reddit.com/r/Clojure/comments/6dbkys/should_cognitect_do_more_for_clojure/?ref=share&amp;ref_source=link">Analysis of that post on Reddit</a></li></ul></li></ul></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname='justabloginthepark';var disqus_loaded=false;function disqus(){if(!disqus_loaded){disqus_loaded=true;if(window.location.hostname=="localhost")
-return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);}};</script><script type=text/javascript>window.onscroll=function(e){if((window.innerHeight+window.scrollY)>=document.body.offsetHeight){if(!disqus_loaded){disqus();}}};</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2018</p></div></section><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js></script><script>hljs.initHighlightingOnLoad();</script>
+lost the war of developer interest (and my own, for now).</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="https://lambdaisland.com/blog/25-05-2017-simple-and-happy-is-clojure-dying-and-what-has-ruby-got-to-do-with-it">The instigating blog post</a>
+
+<ul>
+<li><a href="https://www.reddit.com/r/Clojure/comments/6d9say/simple_and_happy_is_clojure_dying_and_what_has/?ref=share&amp;ref_source=link">Analysis of that post on Reddit</a></li>
+<li><a href="https://news.ycombinator.com/item?id=14418013">Analysis of that post on Hacker News</a></li>
+</ul></li>
+<li><a href="http://www.lispcast.com/cognitect-clojure">LispCast episode pondering whether Cognitect, Clojure&rsquo;s author&rsquo;s company, should do more for Clojure</a>
+
+<ul>
+<li><a href="https://www.reddit.com/r/Clojure/comments/6dbkys/should_cognitect_do_more_for_clojure/?ref=share&amp;ref_source=link">Analysis of that post on Reddit</a></li>
+</ul></li>
+</ul>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <script type="text/javascript">
+      var disqus_shortname = 'justabloginthepark';
+      var disqus_loaded = false;
+
+      function disqus() {
+        if (!disqus_loaded) {
+          disqus_loaded = true;
+          
+          if (window.location.hostname == "localhost")
+            return;
+
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }
+      };
+    </script>
+    <script type="text/javascript">
+      window.onscroll = function(e) {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            if (!disqus_loaded) {
+              disqus();
+            }
+        }
+      };
+    </script>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/Artiavis">Jeff Rabinowitz</a>, 2018</p>
+  </div>
+</section>
+
+
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+

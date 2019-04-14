@@ -1,40 +1,245 @@
-<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>The Clojure “Reductions” Function | Just a Blog in the Park</title><link rel=stylesheet href=http://justabloginthepark.com//css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css><link rel=stylesheet href=http://justabloginthepark.com//css/vs2015.min.css><link rel=stylesheet href=http://justabloginthepark.com//css/images.min.css><section class=section><div class=container><nav class=nav><div class=nav-left><a href=/about><img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75"></a>
-<a class=nav-item href=http://justabloginthepark.com/><h1 class="title is-4">Just a Blog in the Park</h1></a></div><div class=nav-right><nav class="nav-item level is-mobile"><a class=level-item href=/photos><span class=icon><i class="fas fa-camera"></i></span></a><a class=level-item href=/tags><span class=icon><i class="fas fa-tags"></i></span></a><a class=level-item href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span></a><a class=level-item href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span></a><a class=level-item href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span></a><a class=level-item href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span></a></nav></div></nav></div></section><section class=section><div class=container><h2 class="subtitle is-6">November 17, 2015</h2><h1 class=title>The Clojure “Reductions” Function</h1><h2 class="subtitle is-6">2 minute read</h2><ul id=tags><li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i>clojure</a></li><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i>programming</a></li></ul><br><div class=content><p>Tonight, while attempting a problem at <a href=http://www.4clojure.com>4 Clojure</a>
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Clojure “Reductions” Function | Just a Blog in the Park</title>
+<link rel="stylesheet" href="http://justabloginthepark.com//css/style.css">
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/solid.js" integrity="sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/brands.js" integrity="sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js" integrity="sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM" crossorigin="anonymous"></script>
+
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    
+    <link rel="stylesheet" href="http://justabloginthepark.com//css/vs2015.min.css">
+
+
+    <link rel="stylesheet" href="http://justabloginthepark.com//css/images.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="/about">
+          <img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75" />
+        </a>
+        <a class="nav-item" href="http://justabloginthepark.com/"><h1 class="title is-4">Just a Blog in the Park</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="/photos">
+            <span class="icon">
+              <i class="fas fa-camera"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/tags">
+            <span class="icon">
+              <i class="fas fa-tags"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://github.com/Artiavis">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://linkedin.com/in/JeffreyCRabinowitz">
+            <span class="icon">
+              <i class="fab fa-linkedin"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1">
+            <span class="icon">
+              <i class="fas fa-file-pdf"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fas fa-rss-square"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">November 17, 2015</h2>
+    <h1 class="title">The Clojure “Reductions” Function</h1>
+    <h2 class="subtitle is-6" >2 minute read</h2>
+    <ul id="tags">
+  
+    <li><a href="/tags/clojure"><i class="fas fa-tag" aria-hidden="true"></i> clojure</a></li>
+  
+    <li><a href="/tags/programming"><i class="fas fa-tag" aria-hidden="true"></i> programming</a></li>
+  
+</ul>
+<br />
+    <div class="content">
+      
+
+<p>Tonight, while attempting a problem at <a href="http://www.4clojure.com">4 Clojure</a>
 (problem number omitted so as not to give too many hints),
-I was struck by the following problem:</p><blockquote><p>What if I need a Clojure function which can take a sequence of functions
-and can sequentially call them on some seed value?</p></blockquote><p>I&rsquo;m specifically looking at something like:</p><pre><code class=language-clojure>(defn some-fun
+I was struck by the following problem:</p>
+
+<blockquote>
+<p>What if I need a Clojure function which can take a sequence of functions
+  and can sequentially call them on some seed value?</p>
+</blockquote>
+
+<p>I&rsquo;m specifically looking at something like:</p>
+
+<pre><code class="language-clojure">(defn some-fun
   [seed-val &amp; funs]
   ; Keep passing the calculated value through, while also appending to sequence
   (list ((first funs) seed-val) ((second funs) ((first funs) seed-val)) ...))
-</code></pre><p>I ended up hacking something together using
-<a href=https://clojuredocs.org/clojure.core/iterate><code>iterate</code></a>,
+</code></pre>
+
+<p>I ended up hacking something together using
+<a href="https://clojuredocs.org/clojure.core/iterate"><code>iterate</code></a>,
 but which wasn&rsquo;t
-terribly elegant.</p><pre><code class=language-clojure>(defn some-fun
+terribly elegant.</p>
+
+<pre><code class="language-clojure">(defn some-fun
   [seed-val &amp; funs]
   ; Cycle through the given functions by index and build
   ; the incremental result of calling them into a sequence using map
   (let [funs-len (count funs) funs (vec funs)]
     (map first (iterate (fn [[x i]] [((funs (mod i funs-len)) x) (inc i)]) [v 0]))))
-</code></pre><p>When I compared my answer against a sample answer by a Clojure expert, I was
+</code></pre>
+
+<p>When I compared my answer against a sample answer by a Clojure expert, I was
 blown away to see that Clojure already has a function which obviates all
 of my messy hand-rolled cycling:
-<a href=https://clojuredocs.org/clojure.core/reductions><code>reductions</code></a>.</p><p>Although the examples on <a href=https://clojuredocs.org>Clojure Docs</a> all reference
+<a href="https://clojuredocs.org/clojure.core/reductions"><code>reductions</code></a>.</p>
+
+<p>Although the examples on <a href="https://clojuredocs.org">Clojure Docs</a> all reference
 the naive case of building a sequence of values from
 <strong>a single seed function and a (potentially) infinite sequence of values</strong>,
 the expert actually realized another application for this problem!
 <em>Instead of seeding a function</em>, the expert
 <strong>seeded a value to a (potentially) infinite sequence of functions</strong>!
 Specifically, a call was made to the
-<a href=https://clojuredocs.org/clojure.core/cycle><code>cycle</code></a> function
+<a href="https://clojuredocs.org/clojure.core/cycle"><code>cycle</code></a> function
 to cause a list of functions to become an infinitely repeated sequence
 of functions, which could then be lazily &ldquo;built up&rdquo; over the seed value.
-For example, to retrieve the first 5 terms of the sequence</p><div>$$\langle 2&#94;k:k\in\Bbb N_0\rangle$$</div><p>we can use the code</p><pre><code class=language-clojure>; Get the first 5 iterations of the sequence
+For example, to retrieve the first 5 terms of the sequence</p>
+
+<div>$$\langle 2&#94;k:k\in\Bbb N_0\rangle$$</div>
+
+<p>we can use the code</p>
+
+<pre><code class="language-clojure">; Get the first 5 iterations of the sequence
 
 (take 5 (reductions (fn [v f] (f v)) 1 (repeat (fn [x] (* 2 x)))))
-</code></pre><p>Just another example of how crazy and clever functional programming can
-really be if you can train yourself to think functionally.</p><h3 id=edit>Edit:</h3><p>Immediately after publishing this, I realized that the summary example
+</code></pre>
+
+<p>Just another example of how crazy and clever functional programming can
+really be if you can train yourself to think functionally.</p>
+
+<h3 id="edit">Edit:</h3>
+
+<p>Immediately after publishing this, I realized that the summary example
 could be replaced by the more idiomatic <code>iterate</code> function for the
 trivial case where there is only one function to call. That would
-look like</p><pre><code class=language-clojure>(take 5 (iterate (fn [v f] (f v)) 1 (fn [x] (* 2 x))))
-</code></pre></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname='justabloginthepark';var disqus_loaded=false;function disqus(){if(!disqus_loaded){disqus_loaded=true;if(window.location.hostname=="localhost")
-return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);}};</script><script type=text/javascript>window.onscroll=function(e){if((window.innerHeight+window.scrollY)>=document.body.offsetHeight){if(!disqus_loaded){disqus();}}};</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2018</p></div></section><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js></script><script>hljs.initHighlightingOnLoad();</script>
+look like</p>
+
+<pre><code class="language-clojure">(take 5 (iterate (fn [v f] (f v)) 1 (fn [x] (* 2 x))))
+</code></pre>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <script type="text/javascript">
+      var disqus_shortname = 'justabloginthepark';
+      var disqus_loaded = false;
+
+      function disqus() {
+        if (!disqus_loaded) {
+          disqus_loaded = true;
+          
+          if (window.location.hostname == "localhost")
+            return;
+
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }
+      };
+    </script>
+    <script type="text/javascript">
+      window.onscroll = function(e) {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            if (!disqus_loaded) {
+              disqus();
+            }
+        }
+      };
+    </script>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/Artiavis">Jeff Rabinowitz</a>, 2018</p>
+  </div>
+</section>
+
+
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+

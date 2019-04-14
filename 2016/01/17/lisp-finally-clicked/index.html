@@ -1,5 +1,93 @@
-<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Lisp Finally Clicked | Just a Blog in the Park</title><link rel=stylesheet href=http://justabloginthepark.com//css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css><link rel=stylesheet href=http://justabloginthepark.com//css/vs2015.min.css><link rel=stylesheet href=http://justabloginthepark.com//css/images.min.css><section class=section><div class=container><nav class=nav><div class=nav-left><a href=/about><img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75"></a>
-<a class=nav-item href=http://justabloginthepark.com/><h1 class="title is-4">Just a Blog in the Park</h1></a></div><div class=nav-right><nav class="nav-item level is-mobile"><a class=level-item href=/photos><span class=icon><i class="fas fa-camera"></i></span></a><a class=level-item href=/tags><span class=icon><i class="fas fa-tags"></i></span></a><a class=level-item href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span></a><a class=level-item href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span></a><a class=level-item href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span></a><a class=level-item href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span></a></nav></div></nav></div></section><section class=section><div class=container><h2 class="subtitle is-6">January 17, 2016</h2><h1 class=title>Lisp Finally Clicked</h1><h2 class="subtitle is-6">5 minute read</h2><ul id=tags><li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i>clojure</a></li><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i>programming</a></li></ul><br><div class=content><p>I&rsquo;ve been meaning to write this post for a couple of weeks now.
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lisp Finally Clicked | Just a Blog in the Park</title>
+<link rel="stylesheet" href="http://justabloginthepark.com//css/style.css">
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/solid.js" integrity="sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/brands.js" integrity="sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js" integrity="sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM" crossorigin="anonymous"></script>
+
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    
+    <link rel="stylesheet" href="http://justabloginthepark.com//css/vs2015.min.css">
+
+
+    <link rel="stylesheet" href="http://justabloginthepark.com//css/images.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="/about">
+          <img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75" />
+        </a>
+        <a class="nav-item" href="http://justabloginthepark.com/"><h1 class="title is-4">Just a Blog in the Park</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="/photos">
+            <span class="icon">
+              <i class="fas fa-camera"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/tags">
+            <span class="icon">
+              <i class="fas fa-tags"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://github.com/Artiavis">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://linkedin.com/in/JeffreyCRabinowitz">
+            <span class="icon">
+              <i class="fab fa-linkedin"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1">
+            <span class="icon">
+              <i class="fas fa-file-pdf"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fas fa-rss-square"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">January 17, 2016</h2>
+    <h1 class="title">Lisp Finally Clicked</h1>
+    <h2 class="subtitle is-6" >5 minute read</h2>
+    <ul id="tags">
+  
+    <li><a href="/tags/clojure"><i class="fas fa-tag" aria-hidden="true"></i> clojure</a></li>
+  
+    <li><a href="/tags/programming"><i class="fas fa-tag" aria-hidden="true"></i> programming</a></li>
+  
+</ul>
+<br />
+    <div class="content">
+      
+
+<p>I&rsquo;ve been meaning to write this post for a couple of weeks now.
 There is a story told among programming language enthusiasts that
 programming as an art only &ldquo;clicks&rdquo; once a programmer understands
 the Lisp programming language.
@@ -10,57 +98,106 @@ languages (like Python and Lisp), and why Lisp is often considered
 so much more flexible
 and powerful (at least in theory) than a language like Python or C.
 (For reference, see any of Paul Graham&rsquo;s somewhat self-assured arguments
-about Lisp. <a href=http://www.paulgraham.com/avg.html>I like his Blub essay the most.</a>).</p><h2 id=reserved-keywords-vs-provided-functions>Reserved Keywords vs. Provided Functions</h2><p>Take, for example, a <code>for</code> loop in Python:</p><pre><code class=language-python>for x in range(10):
+about Lisp. <a href="http://www.paulgraham.com/avg.html">I like his Blub essay the most.</a>).</p>
+
+<h2 id="reserved-keywords-vs-provided-functions">Reserved Keywords vs. Provided Functions</h2>
+
+<p>Take, for example, a <code>for</code> loop in Python:</p>
+
+<pre><code class="language-python">for x in range(10):
     yield x
-</code></pre><p>In Python, <code>for</code> is implemented as a reserved word. That means that a
+</code></pre>
+
+<p>In Python, <code>for</code> is implemented as a reserved word. That means that a
 programmer cannot name a function or variable <code>for</code>. And although this is
 reasonable in the case of <code>for</code>,
-<a href=https://docs.python.org/2/reference/lexical_analysis.html#keywords>there are actually 31 whole reserved keywords in Python 2 by my count</a>!
+<a href="https://docs.python.org/2/reference/lexical_analysis.html#keywords">there are actually 31 whole reserved keywords in Python 2 by my count</a>!
 The implication of this is that any developer who wants to hack on the Python
 language (by e.g. programatically rewriting Python source code)
 needs to be wary of those 31 different restricted Python
 symbols which cannot be customized at all. This challenge is further
 complicated by how most of the keywords react with the other keywords in
-complex ways.</p><ul><li><code>break</code> interacts with looping constructs <code>for</code> and <code>while</code></li><li><code>continue</code> interacts with looping constructs <code>for</code> and <code>while</code></li><li><code>elif</code> can only follow an <code>if</code> block</li><li><code>else</code> can only follow an <code>if</code>, <code>try</code>, or <code>for</code> block</li><li><code>print</code> is a statement and not a function in Python 2</li><li><code>def</code> creates a function and binds it to a name.
+complex ways.</p>
+
+<ul>
+<li><code>break</code> interacts with looping constructs <code>for</code> and <code>while</code></li>
+<li><code>continue</code> interacts with looping constructs <code>for</code> and <code>while</code></li>
+<li><code>elif</code> can only follow an <code>if</code> block</li>
+<li><code>else</code> can only follow an <code>if</code>, <code>try</code>, or <code>for</code> block</li>
+<li><code>print</code> is a statement and not a function in Python 2</li>
+<li><code>def</code> creates a function and binds it to a name.
 It can be defined within any scope a variable can be assigned,
-and has interactions with <code>return</code> and <code>yield</code></li><li><code>yield</code> permutes the enclosing function block to become a generator
-function, rather than a traditional function</li><li><code>return</code> will immediately exit any function scope it is nested within,
+and has interactions with <code>return</code> and <code>yield</code></li>
+<li><code>yield</code> permutes the enclosing function block to become a generator
+function, rather than a traditional function</li>
+<li><code>return</code> will immediately exit any function scope it is nested within,
 including within <code>for</code> and <code>while</code> loops. However, <code>return</code> <em>cannot</em>
 be invoked at the top level of a file, because there is no valid enclosing
-function scope.</li></ul><p>In general, it is nontrivial to rewrite programs
+function scope.</li>
+</ul>
+
+<p>In general, it is nontrivial to rewrite programs
 in most programming languages
 (which are not Lisps) because the keywords have
 complex interactions and behavior. The only
 real solution is to introduce a parser for
-the language in question.</p><p>Compare Python&rsquo;s 27 keywords with the 15 or so keywords in Clojure
+the language in question.</p>
+
+<p>Compare Python&rsquo;s 27 keywords with the 15 or so keywords in Clojure
 (many of which are targeted for Java interoperation)! The number of keywords
 is less than half, and in fact, there are far fewer keyword interactions than
 there would be in Python (or Java, C++, etc.). The essential keywords in
 Clojure for defining the base of the language (excluding the Java interop bits)
-are:</p><ul><li><code>def</code> binds a value to a symbol</li><li><code>fn</code> creates a function</li><li><code>if</code> creates a ternary block</li><li><code>do</code> evaluates a sequence of forms</li><li><code>let</code> temporarily binds values to symbols in a scope</li><li><code>loop</code> is like <code>let</code> but also creates a point of recursion for use with
-<code>recur</code></li><li><code>recur</code> evaluates its forms and then attempts to jump back to the immediate
-enclosing <code>fn</code> or <code>loop</code> point</li></ul><p>That&rsquo;s it. That&rsquo;s all it takes to define the language semantics of a Lisp.
+are:</p>
+
+<ul>
+<li><code>def</code> binds a value to a symbol</li>
+<li><code>fn</code> creates a function</li>
+<li><code>if</code> creates a ternary block</li>
+<li><code>do</code> evaluates a sequence of forms</li>
+<li><code>let</code> temporarily binds values to symbols in a scope</li>
+<li><code>loop</code> is like <code>let</code> but also creates a point of recursion for use with
+<code>recur</code></li>
+<li><code>recur</code> evaluates its forms and then attempts to jump back to the immediate
+enclosing <code>fn</code> or <code>loop</code> point</li>
+</ul>
+
+<p>That&rsquo;s it. That&rsquo;s all it takes to define the language semantics of a Lisp.
 Notice that 5 of the 7 special keywords in Clojure don&rsquo;t even care about the
 other keywords. <code>loop</code> and <code>recur</code> have special semantics with each other, but
-otherwise, there are far fewer global, arbitrary keywords to memorize.</p><p>How does a <code>for</code> loop look like in Clojure, then? See for yourself.</p><pre><code class=language-clojure>(for [x (range 10)]
+otherwise, there are far fewer global, arbitrary keywords to memorize.</p>
+
+<p>How does a <code>for</code> loop look like in Clojure, then? See for yourself.</p>
+
+<pre><code class="language-clojure">(for [x (range 10)]
   x)
-</code></pre><p>Like with Python, <code>for</code> takes a sequence as its argument(s), in this case <code>x</code>.
+</code></pre>
+
+<p>Like with Python, <code>for</code> takes a sequence as its argument(s), in this case <code>x</code>.
 It can be read as if it says &ldquo;for x in range 10&rdquo;, although it
 doesn&rsquo;t read quite as fluently as Python tends to. However, note that unlike
 Python, Clojure does not need to treat <code>for</code> as the beginning of a block, and
-<code>for</code> does not require the presence of a reserved <code>in</code> keyword either.</p><p>In fact, unlike in Python,
-<a href=https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L4444-L4529>Clojure implements its <code>for</code> as a macro</a>
+<code>for</code> does not require the presence of a reserved <code>in</code> keyword either.</p>
+
+<p>In fact, unlike in Python,
+<a href="https://github.com/clojure/clojure/blob/clojure-1.7.0/src/clj/clojure/core.clj#L4444-L4529">Clojure implements its <code>for</code> as a macro</a>
 which rewrites the sequence iteration as a recursive traversal, and accumulates
 the results into an output. While Python&rsquo;s <code>for</code> keyword needs to be
 implemented within the guts of the language, Clojure&rsquo;s <code>for</code> macro is provided
-solely as a convenience: you could have written it yourself.</p><h3 id=homoiconicity-and-you>Homoiconicity and You</h3><p>The appeal of Lisp is that its program have the property of
-<a href=https://en.wikipedia.org/wiki/Homoiconicity>homoiconicity</a>, which means that
+solely as a convenience: you could have written it yourself.</p>
+
+<h3 id="homoiconicity-and-you">Homoiconicity and You</h3>
+
+<p>The appeal of Lisp is that its program have the property of
+<a href="https://en.wikipedia.org/wiki/Homoiconicity">homoiconicity</a>, which means that
 Lisp program representations are structurally and semantically identical to
 how Lisp code is literally structured.
 (This is the farthest thing from the case in all other programming languages.
 Interpreting/compiling other languages requires lexing words in the language
 into tokens and then parsing the stream of tokens for meaning within the
-context of the language.)</p><p>We can
+context of the language.)</p>
+
+<p>We can
 ignore some of the more powerful implications of homoiconicity to start,
 and only focus on the clean and simple interpretation.
 All Lisp code looks the same;
@@ -68,6 +205,93 @@ all Lisp code follows the same rules;
 all Lisp code follows a predictable pattern.
 Unlike in most languages, which have special magical keywords and
 features (I&rsquo;m looking at you, Python
-<a href=https://docs.python.org/2/tutorial/datastructures.html#list-comprehensions>list comprehensions</a>), Lisp has nothing
-fancy and needs nothing fancy: only parenthesis.</p></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname='justabloginthepark';var disqus_loaded=false;function disqus(){if(!disqus_loaded){disqus_loaded=true;if(window.location.hostname=="localhost")
-return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);}};</script><script type=text/javascript>window.onscroll=function(e){if((window.innerHeight+window.scrollY)>=document.body.offsetHeight){if(!disqus_loaded){disqus();}}};</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2018</p></div></section><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js></script><script>hljs.initHighlightingOnLoad();</script>
+<a href="https://docs.python.org/2/tutorial/datastructures.html#list-comprehensions">list comprehensions</a>), Lisp has nothing
+fancy and needs nothing fancy: only parenthesis.</p>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <script type="text/javascript">
+      var disqus_shortname = 'justabloginthepark';
+      var disqus_loaded = false;
+
+      function disqus() {
+        if (!disqus_loaded) {
+          disqus_loaded = true;
+          
+          if (window.location.hostname == "localhost")
+            return;
+
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }
+      };
+    </script>
+    <script type="text/javascript">
+      window.onscroll = function(e) {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            if (!disqus_loaded) {
+              disqus();
+            }
+        }
+      };
+    </script>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/Artiavis">Jeff Rabinowitz</a>, 2018</p>
+  </div>
+</section>
+
+
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+

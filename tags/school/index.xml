@@ -1,2 +1,44 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>School on Just a Blog in the Park</title><link>http://justabloginthepark.com/tags/school/</link><description>Recent content in School on Just a Blog in the Park</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright><lastBuildDate>Sun, 09 Feb 2014 00:00:00 +0000</lastBuildDate><atom:link href="http://justabloginthepark.com/tags/school/index.xml" rel="self" type="application/rss+xml"/><item><title>Job Hunting On Campus</title><link>http://justabloginthepark.com/2014/02/09/job-hunting-on-campus/</link><pubDate>Sun, 09 Feb 2014 00:00:00 +0000</pubDate><guid>http://justabloginthepark.com/2014/02/09/job-hunting-on-campus/</guid><description>It&amp;rsquo;s February, and with the summer slowly approaching, many of my friends are beginning to look for work for after graduation (or just the summer if they&amp;rsquo;re continuing at University). I&amp;rsquo;m fortunate enough to already have had a job lined up for after graduation for a while, but this isn&amp;rsquo;t the norm. Most people are only beginning to look for jobs and internships now. Although I don&amp;rsquo;t claim to be an expert at searching for jobs (far from it), I have been out there since my freshman year, so I do have a couple of tips which will hopefully be helpful.</description></item><item><title>A Slight Change in Schedule…</title><link>http://justabloginthepark.com/2014/02/04/a-slight-change-in-schedule/</link><pubDate>Tue, 04 Feb 2014 00:00:00 +0000</pubDate><guid>http://justabloginthepark.com/2014/02/04/a-slight-change-in-schedule/</guid><description>Three months ago, I posted my tentative schedule for this semester, my final one in undergrad. At the time, I was very optimistic about taking Systems Programming because I had been recommended the professor, Brian Russell, by my roommate. In the end, I switched it out for a seminar in Gender and Sexuality in Judaism. Here&amp;rsquo;s how.
-Overlap Between Systems and Network Originally, I signed up for both Systems Programming and Network-centric Programming, both of which are low-level programming courses in the C programming language.</description></item><item><title>Classes for Final Semester</title><link>http://justabloginthepark.com/2013/10/28/classes-for-final-semester/</link><pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate><guid>http://justabloginthepark.com/2013/10/28/classes-for-final-semester/</guid><description>I recently finished signing up for (hopefully) my final semester of (undergraduate) classes at University. I don&amp;rsquo;t think the significance of this coming semester being my final one has quite sunk in yet. Maybe it&amp;rsquo;s simply due to me already being in the middle of the semester now, but I haven&amp;rsquo;t yet begun panicking or experiencing &amp;lsquo;senioritis&amp;rsquo;. I&amp;rsquo;m sure those will both come in due time, but in the meantime, I had to figure out which classes to take to round up my college education.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>School on Just a Blog in the Park</title>
+    <link>http://justabloginthepark.com/tags/school/</link>
+    <description>Recent content in School on Just a Blog in the Park</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright>
+    <lastBuildDate>Sun, 09 Feb 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://justabloginthepark.com/tags/school/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Job Hunting On Campus</title>
+      <link>http://justabloginthepark.com/2014/02/09/job-hunting-on-campus/</link>
+      <pubDate>Sun, 09 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/2014/02/09/job-hunting-on-campus/</guid>
+      <description>It&amp;rsquo;s February, and with the summer slowly approaching, many of my friends are beginning to look for work for after graduation (or just the summer if they&amp;rsquo;re continuing at University). I&amp;rsquo;m fortunate enough to already have had a job lined up for after graduation for a while, but this isn&amp;rsquo;t the norm. Most people are only beginning to look for jobs and internships now. Although I don&amp;rsquo;t claim to be an expert at searching for jobs (far from it), I have been out there since my freshman year, so I do have a couple of tips which will hopefully be helpful.</description>
+    </item>
+    
+    <item>
+      <title>A Slight Change in Schedule…</title>
+      <link>http://justabloginthepark.com/2014/02/04/a-slight-change-in-schedule/</link>
+      <pubDate>Tue, 04 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/2014/02/04/a-slight-change-in-schedule/</guid>
+      <description>Three months ago, I posted my tentative schedule for this semester, my final one in undergrad. At the time, I was very optimistic about taking Systems Programming because I had been recommended the professor, Brian Russell, by my roommate. In the end, I switched it out for a seminar in Gender and Sexuality in Judaism. Here&amp;rsquo;s how.
+Overlap Between Systems and Network Originally, I signed up for both Systems Programming and Network-centric Programming, both of which are low-level programming courses in the C programming language.</description>
+    </item>
+    
+    <item>
+      <title>Classes for Final Semester</title>
+      <link>http://justabloginthepark.com/2013/10/28/classes-for-final-semester/</link>
+      <pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/2013/10/28/classes-for-final-semester/</guid>
+      <description>I recently finished signing up for (hopefully) my final semester of (undergraduate) classes at University. I don&amp;rsquo;t think the significance of this coming semester being my final one has quite sunk in yet. Maybe it&amp;rsquo;s simply due to me already being in the middle of the semester now, but I haven&amp;rsquo;t yet begun panicking or experiencing &amp;lsquo;senioritis&amp;rsquo;. I&amp;rsquo;m sure those will both come in due time, but in the meantime, I had to figure out which classes to take to round up my college education.</description>
+    </item>
+    
+  </channel>
+</rss>

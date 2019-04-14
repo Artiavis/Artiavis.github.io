@@ -1,5 +1,93 @@
-<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>How to Pump Up the Bass: Understanding Audio Frequencies | Just a Blog in the Park</title><link rel=stylesheet href=http://justabloginthepark.com//css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css><link rel=stylesheet href=http://justabloginthepark.com//css/vs2015.min.css><link rel=stylesheet href=http://justabloginthepark.com//css/images.min.css><section class=section><div class=container><nav class=nav><div class=nav-left><a href=/about><img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75"></a>
-<a class=nav-item href=http://justabloginthepark.com/><h1 class="title is-4">Just a Blog in the Park</h1></a></div><div class=nav-right><nav class="nav-item level is-mobile"><a class=level-item href=/photos><span class=icon><i class="fas fa-camera"></i></span></a><a class=level-item href=/tags><span class=icon><i class="fas fa-tags"></i></span></a><a class=level-item href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span></a><a class=level-item href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span></a><a class=level-item href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span></a><a class=level-item href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span></a></nav></div></nav></div></section><section class=section><div class=container><h2 class="subtitle is-6">October 30, 2013</h2><h1 class=title>How to Pump Up the Bass: Understanding Audio Frequencies</h1><h2 class="subtitle is-6">3 minute read</h2><ul id=tags><li><a href=/tags/music><i class="fas fa-tag" aria-hidden=true></i>music</a></li><li><a href=/tags/dsp><i class="fas fa-tag" aria-hidden=true></i>dsp</a></li></ul><br><div class=content><p>The other day I was having a discussion with my roommate Mike about the physical
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Pump Up the Bass: Understanding Audio Frequencies | Just a Blog in the Park</title>
+<link rel="stylesheet" href="http://justabloginthepark.com//css/style.css">
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/solid.js" integrity="sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/brands.js" integrity="sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js" integrity="sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM" crossorigin="anonymous"></script>
+
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    
+    <link rel="stylesheet" href="http://justabloginthepark.com//css/vs2015.min.css">
+
+
+    <link rel="stylesheet" href="http://justabloginthepark.com//css/images.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="/about">
+          <img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75" />
+        </a>
+        <a class="nav-item" href="http://justabloginthepark.com/"><h1 class="title is-4">Just a Blog in the Park</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="/photos">
+            <span class="icon">
+              <i class="fas fa-camera"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/tags">
+            <span class="icon">
+              <i class="fas fa-tags"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://github.com/Artiavis">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://linkedin.com/in/JeffreyCRabinowitz">
+            <span class="icon">
+              <i class="fab fa-linkedin"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1">
+            <span class="icon">
+              <i class="fas fa-file-pdf"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml">
+            <span class="icon">
+              <i class="fas fa-rss-square"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">October 30, 2013</h2>
+    <h1 class="title">How to Pump Up the Bass: Understanding Audio Frequencies</h1>
+    <h2 class="subtitle is-6" >3 minute read</h2>
+    <ul id="tags">
+  
+    <li><a href="/tags/music"><i class="fas fa-tag" aria-hidden="true"></i> music</a></li>
+  
+    <li><a href="/tags/dsp"><i class="fas fa-tag" aria-hidden="true"></i> dsp</a></li>
+  
+</ul>
+<br />
+    <div class="content">
+      
+
+<p>The other day I was having a discussion with my roommate Mike about the physical
 intuition of digital photographs, and how performing even the most fundamental
 of operations (e.g. resizing) requires an appreciation of the underlying
 mathematics. We are both currently in image processing classes, but very
@@ -12,19 +100,39 @@ advantages to both educational approaches, but debating the merits of theory-
 centric versus application-centric education styles is beyond the scope of this
 post. Instead I want to quickly motivate some of the fundamental theorems of
 Signal Processing and show how they are applied. In this post, I will cover the
-first, and most intuitive, of signals: audio.</p><h3 id=time-frequency-duality>Time-Frequency Duality</h3><p>We&rsquo;re generally used to seeing and hearing things in the so-called &ldquo;time&rdquo;
+first, and most intuitive, of signals: audio.</p>
+
+<h3 id="time-frequency-duality">Time-Frequency Duality</h3>
+
+<p>We&rsquo;re generally used to seeing and hearing things in the so-called &ldquo;time&rdquo;
 domain, where anything we observe can be called a <em>signal</em>, and because they
 often vary over time, they are therefore <em>time-varying signals</em>. Take, for
-instance, a clip of the song Safe and Sound.</p><p><img src=/img/safeandsoundaudioplot.png alt="Plot of Song Amplitude of Safe and Sound clip"></p><p>The spikes represent spikes of volume, and read from left to right we see the
+instance, a clip of the song Safe and Sound.</p>
+
+<p><img src="/img/safeandsoundaudioplot.png" alt="Plot of Song Amplitude of Safe and Sound clip" /></p>
+
+<p>The spikes represent spikes of volume, and read from left to right we see the
 content of the music signal for a few seconds. We&rsquo;re probably all seen this
 representation before. On the other hand, we could take a look at the
 <em>frequency-varying signal</em> representation of the same clip. At the left end,
 where the fundamental frequencies of the singing and instruments are present,
-the signal is strongest, while the higher end with some details are not as loud.</p><p><img src=/img/safeandsoundequalizerfreq.png alt="Plot of Frequencies of Safe and Sound clip"></p><p>(Below is an example of the more stylized depiction of frequency representations of music.)</p><p><img src=/img/graphic-eq-visualization.jpg alt="Graphic eq visualization"></p><p>However, these are both representations of the same song! but simply seen from a
+the signal is strongest, while the higher end with some details are not as loud.</p>
+
+<p><img src="/img/safeandsoundequalizerfreq.png" alt="Plot of Frequencies of Safe and Sound clip" /></p>
+
+<p>(Below is an example of the more stylized depiction of frequency representations of music.)</p>
+
+<p><img src="/img/graphic-eq-visualization.jpg" alt="Graphic eq visualization" /></p>
+
+<p>However, these are both representations of the same song! but simply seen from a
 different perspective. However, there is an important insight to be had here.
 Both the &ldquo;time&rdquo; and the &ldquo;frequency&rdquo; depictions of a song, or any signal for that
 matter, are actually mutually equivalent; there is a duality between time and
-frequency.</p><h3 id=filtering-is-always-in-the-frequency-domain>Filtering is Always in the &ldquo;Frequency Domain&rdquo;</h3><p>When speaking about enhancing music, people often say things like &ldquo;pump up the
+frequency.</p>
+
+<h3 id="filtering-is-always-in-the-frequency-domain">Filtering is Always in the &ldquo;Frequency Domain&rdquo;</h3>
+
+<p>When speaking about enhancing music, people often say things like &ldquo;pump up the
 bass&rdquo; or &ldquo;boost the mids&rdquo;. What they really mean, of course, is that they want
 to selectively amplify a certain region of the frequencies of a given song,
 relative to the other component frequencies. The phenomenon wherein certain
@@ -35,5 +143,94 @@ over airwaves. It can pump up the bass by multiplying the intensity of those
 dividing the intensity of the &ldquo;high&rdquo; frequencies by some other amount. In
 general, <strong>a <em>filter</em></strong> is therefore the construct which, when given a signal,
 <strong>multiplies, divides, or otherwise shifts frequencies up or down</strong> to have some
-intended effect.</p><p><strong>Edit:</strong> This post has a second part available <a href=/posts/2013-11-04-smoothing-the-curves.html>here</a>.</p></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname='justabloginthepark';var disqus_loaded=false;function disqus(){if(!disqus_loaded){disqus_loaded=true;if(window.location.hostname=="localhost")
-return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);}};</script><script type=text/javascript>window.onscroll=function(e){if((window.innerHeight+window.scrollY)>=document.body.offsetHeight){if(!disqus_loaded){disqus();}}};</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2018</p></div></section><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js></script><script>hljs.initHighlightingOnLoad();</script>
+intended effect.</p>
+
+<p><strong>Edit:</strong> This post has a second part available <a href="/posts/2013-11-04-smoothing-the-curves.html">here</a>.</p>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <script type="text/javascript">
+      var disqus_shortname = 'justabloginthepark';
+      var disqus_loaded = false;
+
+      function disqus() {
+        if (!disqus_loaded) {
+          disqus_loaded = true;
+          
+          if (window.location.hostname == "localhost")
+            return;
+
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }
+      };
+    </script>
+    <script type="text/javascript">
+      window.onscroll = function(e) {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            if (!disqus_loaded) {
+              disqus();
+            }
+        }
+      };
+    </script>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/Artiavis">Jeff Rabinowitz</a>, 2018</p>
+  </div>
+</section>
+
+
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js"></script>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+

@@ -1,2 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vacation on Just a Blog in the Park</title><link>http://justabloginthepark.com/tags/vacation/</link><description>Recent content in Vacation on Just a Blog in the Park</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright><lastBuildDate>Sun, 26 Jun 2016 00:00:00 +0000</lastBuildDate><atom:link href="http://justabloginthepark.com/tags/vacation/index.xml" rel="self" type="application/rss+xml"/><item><title>My First Holiday in Italy</title><link>http://justabloginthepark.com/2016/06/26/my-first-holiday-in-italy/</link><pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate><guid>http://justabloginthepark.com/2016/06/26/my-first-holiday-in-italy/</guid><description>This blog post is long overdue; I&amp;rsquo;ve been a bit preoccupied since getting back to the States, but I wanted to briefly share some of my thoughts from my recent honeymoon in Italy.
-My wife and I had our long-overdue honeymoon early last month, in gorgeous Italy: Venice, Rome, Florence, and Milan. This was the realization of a dream for us; few countries in the world have the culture, history, art, dining, and exquisite beauty which Italy has.</description></item><item><title>Pathways Israel</title><link>http://justabloginthepark.com/2014/01/17/pathways-israel/</link><pubDate>Fri, 17 Jan 2014 00:00:00 +0000</pubDate><guid>http://justabloginthepark.com/2014/01/17/pathways-israel/</guid><description>Each winter at University, I find myself wondering what to do with my winter breaks about a week before finals. Usually I spend my breaks conducting research for various labs at Rutgers, or else getting a head-start on school for the Spring. So about this time last month, while wondering what I would do with my (hopefully) final winter break of undergraduate studies, I received an email which offered a fantastic opportunity &amp;mdash; go to Israel for two weeks on a deeply discounted program!</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vacation on Just a Blog in the Park</title>
+    <link>http://justabloginthepark.com/tags/vacation/</link>
+    <description>Recent content in Vacation on Just a Blog in the Park</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright>
+    <lastBuildDate>Sun, 26 Jun 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://justabloginthepark.com/tags/vacation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My First Holiday in Italy</title>
+      <link>http://justabloginthepark.com/2016/06/26/my-first-holiday-in-italy/</link>
+      <pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/2016/06/26/my-first-holiday-in-italy/</guid>
+      <description>This blog post is long overdue; I&amp;rsquo;ve been a bit preoccupied since getting back to the States, but I wanted to briefly share some of my thoughts from my recent honeymoon in Italy.
+My wife and I had our long-overdue honeymoon early last month, in gorgeous Italy: Venice, Rome, Florence, and Milan. This was the realization of a dream for us; few countries in the world have the culture, history, art, dining, and exquisite beauty which Italy has.</description>
+    </item>
+    
+    <item>
+      <title>Pathways Israel</title>
+      <link>http://justabloginthepark.com/2014/01/17/pathways-israel/</link>
+      <pubDate>Fri, 17 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/2014/01/17/pathways-israel/</guid>
+      <description>Each winter at University, I find myself wondering what to do with my winter breaks about a week before finals. Usually I spend my breaks conducting research for various labs at Rutgers, or else getting a head-start on school for the Spring. So about this time last month, while wondering what I would do with my (hopefully) final winter break of undergraduate studies, I received an email which offered a fantastic opportunity &amp;mdash; go to Israel for two weeks on a deeply discounted program!</description>
+    </item>
+    
+  </channel>
+</rss>

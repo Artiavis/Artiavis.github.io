@@ -1,4 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kotlin on Just a Blog in the Park</title><link>http://justabloginthepark.com/tags/kotlin/</link><description>Recent content in Kotlin on Just a Blog in the Park</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright><lastBuildDate>Sat, 23 Dec 2017 21:47:01 -0500</lastBuildDate><atom:link href="http://justabloginthepark.com/tags/kotlin/index.xml" rel="self" type="application/rss+xml"/><item><title>Why Kotlin Over Lombok?</title><link>http://justabloginthepark.com/2017/12/23/why-kotlin-over-lombok/</link><pubDate>Sat, 23 Dec 2017 21:47:01 -0500</pubDate><guid>http://justabloginthepark.com/2017/12/23/why-kotlin-over-lombok/</guid><description>This is a continuation of the ideas from &amp;ldquo;Is Kotlin the New Java?&amp;rdquo;.
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kotlin on Just a Blog in the Park</title>
+    <link>http://justabloginthepark.com/tags/kotlin/</link>
+    <description>Recent content in Kotlin on Just a Blog in the Park</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright>
+    <lastBuildDate>Sat, 23 Dec 2017 21:47:01 -0500</lastBuildDate>
+    
+	<atom:link href="http://justabloginthepark.com/tags/kotlin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why Kotlin Over Lombok?</title>
+      <link>http://justabloginthepark.com/2017/12/23/why-kotlin-over-lombok/</link>
+      <pubDate>Sat, 23 Dec 2017 21:47:01 -0500</pubDate>
+      
+      <guid>http://justabloginthepark.com/2017/12/23/why-kotlin-over-lombok/</guid>
+      <description>This is a continuation of the ideas from &amp;ldquo;Is Kotlin the New Java?&amp;rdquo;.
 What is Lombok? For those of you who are not familiar, Project Lombok is a build tool for the Java programming language, which adds nifty capabilities that many Java developers feel they sorely lack. Some of the more vanilla features include:
-&amp;ldquo;Getter&amp;rdquo; and &amp;ldquo;Setter&amp;rdquo; generators &amp;ldquo;ToString&amp;rdquo; and &amp;ldquo;EqualsAndHashCode&amp;rdquo; generators &amp;ldquo;Data&amp;rdquo; and &amp;ldquo;Value&amp;rdquo; class generators Automatic resource cleanup Not-Null assertions Builder class generators Constructor helpers of various sorts There&amp;rsquo;s also a few more exotic features (which I personally have not seen developers) use in the wild, but which no doubt someone is using, including suppressing checked exceptions, lazy fields, magic &amp;ldquo;val&amp;rdquo; keyword, delegation, &amp;ldquo;with&amp;rdquo;ers, util and helper classes.</description></item><item><title>Is Kotlin the new Java?</title><link>http://justabloginthepark.com/2017/06/28/is-kotlin-the-new-java/</link><pubDate>Wed, 28 Jun 2017 00:20:27 -0400</pubDate><guid>http://justabloginthepark.com/2017/06/28/is-kotlin-the-new-java/</guid><description>One of the programming languages I&amp;rsquo;ve (essentially) been ignoring for the past couple of years has been Kotlin, the &amp;ldquo;better Java&amp;rdquo; from Jetbrains, the author of IntelliJ and other IDE&amp;rsquo;s.1 Recently, Kotlin has come back into focus for me for the following reasons:
-Google finally announced official Android support for Kotlin Steve Yegge, that infamously opinionated programming language enthusiast, wrote a patently Yeggian post about how Kotlin scratches his itches without supporting academic or impractical features.</description></item></channel></rss>
+ &amp;ldquo;Getter&amp;rdquo; and &amp;ldquo;Setter&amp;rdquo; generators &amp;ldquo;ToString&amp;rdquo; and &amp;ldquo;EqualsAndHashCode&amp;rdquo; generators &amp;ldquo;Data&amp;rdquo; and &amp;ldquo;Value&amp;rdquo; class generators Automatic resource cleanup Not-Null assertions Builder class generators Constructor helpers of various sorts  There&amp;rsquo;s also a few more exotic features (which I personally have not seen developers) use in the wild, but which no doubt someone is using, including suppressing checked exceptions, lazy fields, magic &amp;ldquo;val&amp;rdquo; keyword, delegation, &amp;ldquo;with&amp;rdquo;ers, util and helper classes.</description>
+    </item>
+    
+    <item>
+      <title>Is Kotlin the new Java?</title>
+      <link>http://justabloginthepark.com/2017/06/28/is-kotlin-the-new-java/</link>
+      <pubDate>Wed, 28 Jun 2017 00:20:27 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/2017/06/28/is-kotlin-the-new-java/</guid>
+      <description>One of the programming languages I&amp;rsquo;ve (essentially) been ignoring for the past couple of years has been Kotlin, the &amp;ldquo;better Java&amp;rdquo; from Jetbrains, the author of IntelliJ and other IDE&amp;rsquo;s.1 Recently, Kotlin has come back into focus for me for the following reasons:
+ Google finally announced official Android support for Kotlin Steve Yegge, that infamously opinionated programming language enthusiast, wrote a patently Yeggian post about how Kotlin scratches his itches without supporting academic or impractical features.</description>
+    </item>
+    
+  </channel>
+</rss>
