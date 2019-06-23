@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dsp on Just a Blog in the Park</title>
+    <title>dsp on Just a Blog in the Park</title>
     <link>http://justabloginthepark.com/tags/dsp/</link>
-    <description>Recent content in Dsp on Just a Blog in the Park</description>
+    <description>Recent content in dsp on Just a Blog in the Park</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2019</copyright>
     <lastBuildDate>Thu, 21 Nov 2013 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://justabloginthepark.com/tags/dsp/index.xml" rel="self" type="application/rss+xml" />
@@ -32,10 +32,10 @@
     
     <item>
       <title>How to Smooth Out the Curves - Understanding Digital Image Filtering</title>
-      <link>http://justabloginthepark.com/2013/11/04/how-to-smooth-out-the-curves---understanding-digital-image-filtering/</link>
+      <link>http://justabloginthepark.com/2013/11/04/how-to-smooth-out-the-curves-understanding-digital-image-filtering/</link>
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://justabloginthepark.com/2013/11/04/how-to-smooth-out-the-curves---understanding-digital-image-filtering/</guid>
+      <guid>http://justabloginthepark.com/2013/11/04/how-to-smooth-out-the-curves-understanding-digital-image-filtering/</guid>
       <description>In a previous post, I discussed the physical interpretation of digital music (and all digital audio) as both a time-varying signal and a frequency-varying signal. This, of course, makes intuitive sense - as we spend three or four minutes listening to a song, we can hear the guitars and horns coming in and fading out, a singer intone the chorus of a song, etc. At the same time, we appreciate the frequencies changing as well &amp;mdash; the singer hitting different notes, the instruments forming different chords.</description>
     </item>
     

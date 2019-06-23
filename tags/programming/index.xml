@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programming on Just a Blog in the Park</title>
+    <title>programming on Just a Blog in the Park</title>
     <link>http://justabloginthepark.com/tags/programming/</link>
-    <description>Recent content in Programming on Just a Blog in the Park</description>
+    <description>Recent content in programming on Just a Blog in the Park</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright>
-    <lastBuildDate>Sat, 17 Mar 2018 23:50:00 -0400</lastBuildDate>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2019</copyright>
+    <lastBuildDate>Sun, 02 Jun 2019 18:07:26 -0400</lastBuildDate>
     
 	<atom:link href="http://justabloginthepark.com/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tiny Talk in Scheme</title>
+      <link>http://justabloginthepark.com/2019/06/02/tiny-talk-in-scheme/</link>
+      <pubDate>Sun, 02 Jun 2019 18:07:26 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/2019/06/02/tiny-talk-in-scheme/</guid>
+      <description>A while back, I started tinkering with a new flavor of Lisp (for me): Scheme, using the ChezScheme dialect. A Scheme-compliant Lisp is one which (among some other bits) implements a faily minimal set of functions/macros; simple string manipulations, data structures and compound data types, basic math and I/O, and a fairly sophisticated function definition, error handling, and hygienic macro facility (a full summary of the language spec can be found here).</description>
+    </item>
     
     <item>
       <title>Review: Java Concurrency in Practice</title>

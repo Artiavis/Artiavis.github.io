@@ -3,18 +3,65 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://justabloginthepark.com/</loc>
+    <lastmod>2019-06-02T18:07:26-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/post/</loc>
+    <lastmod>2019-06-02T18:07:26-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/</loc>
+    <lastmod>2019-06-02T18:07:26-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/2019/06/02/tiny-talk-in-scheme/</loc>
+    <lastmod>2019-06-02T18:07:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/programming/</loc>
+    <lastmod>2019-06-02T18:07:26-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/scheme/</loc>
+    <lastmod>2019-06-02T18:07:26-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://justabloginthepark.com/2018/08/25/learning-speedlights-with-nikon-sb-900/</loc>
     <lastmod>2018-08-25T21:51:13-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://justabloginthepark.com/2018/08/21/the-switch--nikon-d700/</loc>
+    <loc>http://justabloginthepark.com/tags/photography/</loc>
+    <lastmod>2018-08-25T21:51:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/2018/08/21/the-switch-nikon-d700/</loc>
     <lastmod>2018-08-21T21:17:19-04:00</lastmod>
   </url>
   
   <url>
     <loc>http://justabloginthepark.com/2018/08/12/the-legend-of-zelda-breath-of-the-wild-review/</loc>
     <lastmod>2018-08-12T11:30:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/video-games/</loc>
+    <lastmod>2018-08-12T11:30:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -43,13 +90,55 @@
   </url>
   
   <url>
+    <loc>http://justabloginthepark.com/tags/cooking/</loc>
+    <lastmod>2018-04-09T19:07:51-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://justabloginthepark.com/2018/03/27/computer-backup-methodologies/</loc>
     <lastmod>2018-03-27T22:58:22-04:00</lastmod>
   </url>
   
   <url>
+    <loc>http://justabloginthepark.com/tags/computers/</loc>
+    <lastmod>2018-03-27T22:58:22-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/tech-support/</loc>
+    <lastmod>2018-03-27T22:58:22-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/technology/</loc>
+    <lastmod>2018-03-27T22:58:22-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://justabloginthepark.com/2018/03/17/review-java-concurrency-in-practice/</loc>
     <lastmod>2018-03-17T23:50:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/concurrency/</loc>
+    <lastmod>2018-03-17T23:50:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/java/</loc>
+    <lastmod>2018-03-17T23:50:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/software-engineering/</loc>
+    <lastmod>2018-03-17T23:50:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -60,6 +149,12 @@
   <url>
     <loc>http://justabloginthepark.com/2017/12/23/why-kotlin-over-lombok/</loc>
     <lastmod>2017-12-23T21:47:01-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/kotlin/</loc>
+    <lastmod>2017-12-23T21:47:01-05:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -103,6 +198,18 @@
   </url>
   
   <url>
+    <loc>http://justabloginthepark.com/tags/clojure/</loc>
+    <lastmod>2017-06-28T00:20:27-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/scala/</loc>
+    <lastmod>2017-06-28T00:20:27-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://justabloginthepark.com/2017/06/18/clojure-and-the-esoteric-mysteries-of-namespaces/</loc>
     <lastmod>2017-06-18T13:12:46-04:00</lastmod>
   </url>
@@ -128,6 +235,18 @@
   </url>
   
   <url>
+    <loc>http://justabloginthepark.com/tags/meta/</loc>
+    <lastmod>2017-06-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/python/</loc>
+    <lastmod>2017-06-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://justabloginthepark.com/2017/03/19/xcom2-review/</loc>
     <lastmod>2017-03-19T00:00:00+00:00</lastmod>
   </url>
@@ -143,6 +262,12 @@
   </url>
   
   <url>
+    <loc>http://justabloginthepark.com/tags/emacs/</loc>
+    <lastmod>2016-10-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://justabloginthepark.com/2016/06/26/im-impressed-by-iphone-photography/</loc>
     <lastmod>2016-06-26T00:00:00+00:00</lastmod>
   </url>
@@ -150,6 +275,18 @@
   <url>
     <loc>http://justabloginthepark.com/2016/06/26/my-first-holiday-in-italy/</loc>
     <lastmod>2016-06-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/travel/</loc>
+    <lastmod>2016-06-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/vacation/</loc>
+    <lastmod>2016-06-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -168,6 +305,12 @@
   </url>
   
   <url>
+    <loc>http://justabloginthepark.com/tags/tv/</loc>
+    <lastmod>2016-03-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://justabloginthepark.com/2016/01/24/master-of-none/</loc>
     <lastmod>2016-01-24T00:00:00+00:00</lastmod>
   </url>
@@ -180,6 +323,12 @@
   <url>
     <loc>http://justabloginthepark.com/2016/01/10/comparing-freemium-game-models/</loc>
     <lastmod>2016-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/economics/</loc>
+    <lastmod>2016-01-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -203,6 +352,12 @@
   </url>
   
   <url>
+    <loc>http://justabloginthepark.com/tags/teaching/</loc>
+    <lastmod>2015-11-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://justabloginthepark.com/2015/11/05/clojure-zippers-emulate-object-oriented-programming/</loc>
     <lastmod>2015-11-05T00:00:00+00:00</lastmod>
   </url>
@@ -223,6 +378,12 @@
   </url>
   
   <url>
+    <loc>http://justabloginthepark.com/tags/f-sharp/</loc>
+    <lastmod>2015-10-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://justabloginthepark.com/2015/10/24/returning-to-blogging-with-cryogen/</loc>
     <lastmod>2015-10-24T00:00:00+00:00</lastmod>
   </url>
@@ -238,8 +399,20 @@
   </url>
   
   <url>
+    <loc>http://justabloginthepark.com/tags/big-data/</loc>
+    <lastmod>2014-04-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://justabloginthepark.com/2014/03/23/version-controlling-documents/</loc>
     <lastmod>2014-03-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/writing/</loc>
+    <lastmod>2014-03-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -253,12 +426,24 @@
   </url>
   
   <url>
+    <loc>http://justabloginthepark.com/tags/careers/</loc>
+    <lastmod>2014-02-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/school/</loc>
+    <lastmod>2014-02-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://justabloginthepark.com/2014/02/04/a-slight-change-in-schedule/</loc>
     <lastmod>2014-02-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://justabloginthepark.com/2014/01/23/global-entry---quick-border-reentry/</loc>
+    <loc>http://justabloginthepark.com/2014/01/23/global-entry-quick-border-reentry/</loc>
     <lastmod>2014-01-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -283,18 +468,30 @@
   </url>
   
   <url>
+    <loc>http://justabloginthepark.com/tags/dsp/</loc>
+    <lastmod>2013-11-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://justabloginthepark.com/2013/11/19/the-eigenfacebook/</loc>
     <lastmod>2013-11-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://justabloginthepark.com/2013/11/04/how-to-smooth-out-the-curves---understanding-digital-image-filtering/</loc>
+    <loc>http://justabloginthepark.com/2013/11/04/how-to-smooth-out-the-curves-understanding-digital-image-filtering/</loc>
     <lastmod>2013-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://justabloginthepark.com/2013/10/30/how-to-pump-up-the-bass-understanding-audio-frequencies/</loc>
     <lastmod>2013-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://justabloginthepark.com/tags/music/</loc>
+    <lastmod>2013-10-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -305,192 +502,6 @@
   <url>
     <loc>http://justabloginthepark.com/2013/10/28/welcome-to-the-park/</loc>
     <lastmod>2013-10-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/big-data/</loc>
-    <lastmod>2014-04-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/careers/</loc>
-    <lastmod>2014-02-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/clojure/</loc>
-    <lastmod>2017-06-28T00:20:27-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/computers/</loc>
-    <lastmod>2018-03-27T22:58:22-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/concurrency/</loc>
-    <lastmod>2018-03-17T23:50:00-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/cooking/</loc>
-    <lastmod>2018-04-09T19:07:51-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/dsp/</loc>
-    <lastmod>2013-11-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/economics/</loc>
-    <lastmod>2016-01-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/emacs/</loc>
-    <lastmod>2016-10-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/f-sharp/</loc>
-    <lastmod>2015-10-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/java/</loc>
-    <lastmod>2018-03-17T23:50:00-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/</loc>
-    <lastmod>2018-08-25T21:51:13-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/kotlin/</loc>
-    <lastmod>2017-12-23T21:47:01-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/meta/</loc>
-    <lastmod>2017-06-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/music/</loc>
-    <lastmod>2013-10-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/photography/</loc>
-    <lastmod>2018-08-25T21:51:13-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/post/</loc>
-    <lastmod>2018-08-25T21:51:13-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/programming/</loc>
-    <lastmod>2018-03-17T23:50:00-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/python/</loc>
-    <lastmod>2017-06-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/scala/</loc>
-    <lastmod>2017-06-28T00:20:27-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/school/</loc>
-    <lastmod>2014-02-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/software-engineering/</loc>
-    <lastmod>2018-03-17T23:50:00-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/</loc>
-    <lastmod>2014-04-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/teaching/</loc>
-    <lastmod>2015-11-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/tech-support/</loc>
-    <lastmod>2018-03-27T22:58:22-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/technology/</loc>
-    <lastmod>2018-03-27T22:58:22-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/travel/</loc>
-    <lastmod>2016-06-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/tv/</loc>
-    <lastmod>2016-03-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/vacation/</loc>
-    <lastmod>2016-06-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/video-games/</loc>
-    <lastmod>2018-08-12T11:30:00-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://justabloginthepark.com/tags/writing/</loc>
-    <lastmod>2014-03-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

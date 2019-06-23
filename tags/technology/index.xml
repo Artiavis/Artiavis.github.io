@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Technology on Just a Blog in the Park</title>
+    <title>technology on Just a Blog in the Park</title>
     <link>http://justabloginthepark.com/tags/technology/</link>
-    <description>Recent content in Technology on Just a Blog in the Park</description>
+    <description>Recent content in technology on Just a Blog in the Park</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2019</copyright>
     <lastBuildDate>Tue, 27 Mar 2018 22:58:22 -0400</lastBuildDate>
     
 	<atom:link href="http://justabloginthepark.com/tags/technology/index.xml" rel="self" type="application/rss+xml" />

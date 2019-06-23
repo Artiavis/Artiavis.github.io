@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Travel on Just a Blog in the Park</title>
+    <title>travel on Just a Blog in the Park</title>
     <link>http://justabloginthepark.com/tags/travel/</link>
-    <description>Recent content in Travel on Just a Blog in the Park</description>
+    <description>Recent content in travel on Just a Blog in the Park</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2019</copyright>
     <lastBuildDate>Sun, 26 Jun 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://justabloginthepark.com/tags/travel/index.xml" rel="self" type="application/rss+xml" />
@@ -24,10 +24,10 @@ My wife and I had our long-overdue honeymoon early last month, in gorgeous Italy
     
     <item>
       <title>Global Entry - Quick Border Reentry</title>
-      <link>http://justabloginthepark.com/2014/01/23/global-entry---quick-border-reentry/</link>
+      <link>http://justabloginthepark.com/2014/01/23/global-entry-quick-border-reentry/</link>
       <pubDate>Thu, 23 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://justabloginthepark.com/2014/01/23/global-entry---quick-border-reentry/</guid>
+      <guid>http://justabloginthepark.com/2014/01/23/global-entry-quick-border-reentry/</guid>
       <description>Last week, when I got back to JFK after my Israel trip, I was kind of dreading going through customs &amp;ndash; and not because I was carrying contraband. Last time I went through border control, I spent what felt like forty five minutes (after a twelve hour flight, no less) waiting to go to the bathroom and grab my luggage and scram. However, this time around, I saw something which piqued my interest, and somewhat reminded me of my earlier eigenface project.</description>
     </item>
     

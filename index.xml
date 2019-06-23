@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Just a Blog in the Park</title>
@@ -6,11 +5,20 @@
     <description>Recent content on Just a Blog in the Park</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright>
-    <lastBuildDate>Sat, 25 Aug 2018 21:51:13 -0400</lastBuildDate>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2019</copyright>
+    <lastBuildDate>Sun, 02 Jun 2019 18:07:26 -0400</lastBuildDate>
     
         <atom:link href="http://justabloginthepark.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tiny Talk in Scheme</title>
+      <link>http://justabloginthepark.com/2019/06/02/tiny-talk-in-scheme/</link>
+      <pubDate>Sun, 02 Jun 2019 18:07:26 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/2019/06/02/tiny-talk-in-scheme/</guid>
+      <description>A while back, I started tinkering with a new flavor of Lisp (for me): Scheme, using the ChezScheme dialect. A Scheme-compliant Lisp is one which (among some other bits) implements a faily minimal set of functions/macros; simple string manipulations, data structures and compound data types, basic math and I/O, and a fairly sophisticated function definition, error handling, and hygienic macro facility (a full summary of the language spec can be found here).</description>
+    </item>
     
     <item>
       <title>Learning Speedlights with Nikon SB-900</title>
@@ -23,10 +31,10 @@
     
     <item>
       <title>The Switch – Nikon D700</title>
-      <link>http://justabloginthepark.com/2018/08/21/the-switch--nikon-d700/</link>
+      <link>http://justabloginthepark.com/2018/08/21/the-switch-nikon-d700/</link>
       <pubDate>Tue, 21 Aug 2018 21:17:19 -0400</pubDate>
       
-      <guid>http://justabloginthepark.com/2018/08/21/the-switch--nikon-d700/</guid>
+      <guid>http://justabloginthepark.com/2018/08/21/the-switch-nikon-d700/</guid>
       <description>At the beginning of July, I commemorated one year with the Fujifilm X100T. Although it is more targeted and limited than an interchangeable-lens (ILC) camera. I really believe this limitation is a huge boon for learning. The rangefinder-styled camera, with a fast fixed-perspective lens, moves without my conscious intervention to capture a fleeting vision, the same way that a spoonful of soup just rises from my bowl and up to my mouth without really registering in my mind.</description>
     </item>
     
@@ -133,7 +141,7 @@ What is Lombok? For those of you who are not familiar, Project Lombok is a build
       
       <guid>http://justabloginthepark.com/2017/12/05/fuji-tcl-x100-ii/</guid>
       <description>In addition to my aforementioned impulsive purchase of the Fujifilm Instax SP-2 smartphone printer (for printing mementos from social occasions), I also impulsively purchased the Fujifilm TCL-X100 II teleconversion lens for my Fujifilm X100T camera. This was something I was thinking about for a while about a week, and although I hesitated quite a bit in the store, I ended up pulling the trigger on it.
-   The Fuji TCL-X100 II conveter lens is an engineering marvel, and when attached to the camera, looks quite convincingly part of the original body.</description>
+  The Fuji TCL-X100 II conveter lens is an engineering marvel, and when attached to the camera, looks quite convincingly part of the original body.</description>
     </item>
     
     <item>
@@ -486,10 +494,10 @@ Overlap Between Systems and Network Originally, I signed up for both Systems Pro
     
     <item>
       <title>Global Entry - Quick Border Reentry</title>
-      <link>http://justabloginthepark.com/2014/01/23/global-entry---quick-border-reentry/</link>
+      <link>http://justabloginthepark.com/2014/01/23/global-entry-quick-border-reentry/</link>
       <pubDate>Thu, 23 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://justabloginthepark.com/2014/01/23/global-entry---quick-border-reentry/</guid>
+      <guid>http://justabloginthepark.com/2014/01/23/global-entry-quick-border-reentry/</guid>
       <description>Last week, when I got back to JFK after my Israel trip, I was kind of dreading going through customs &amp;ndash; and not because I was carrying contraband. Last time I went through border control, I spent what felt like forty five minutes (after a twelve hour flight, no less) waiting to go to the bathroom and grab my luggage and scram. However, this time around, I saw something which piqued my interest, and somewhat reminded me of my earlier eigenface project.</description>
     </item>
     
@@ -541,10 +549,10 @@ For the past several decades, computer programming has been done in special prog
     
     <item>
       <title>How to Smooth Out the Curves - Understanding Digital Image Filtering</title>
-      <link>http://justabloginthepark.com/2013/11/04/how-to-smooth-out-the-curves---understanding-digital-image-filtering/</link>
+      <link>http://justabloginthepark.com/2013/11/04/how-to-smooth-out-the-curves-understanding-digital-image-filtering/</link>
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://justabloginthepark.com/2013/11/04/how-to-smooth-out-the-curves---understanding-digital-image-filtering/</guid>
+      <guid>http://justabloginthepark.com/2013/11/04/how-to-smooth-out-the-curves-understanding-digital-image-filtering/</guid>
       <description>In a previous post, I discussed the physical interpretation of digital music (and all digital audio) as both a time-varying signal and a frequency-varying signal. This, of course, makes intuitive sense - as we spend three or four minutes listening to a song, we can hear the guitars and horns coming in and fading out, a singer intone the chorus of a song, etc. At the same time, we appreciate the frequencies changing as well &amp;mdash; the singer hitting different notes, the instruments forming different chords.</description>
     </item>
     

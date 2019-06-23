@@ -6,140 +6,32 @@
     <description>Recent content in Tags on Just a Blog in the Park</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright>
-    <lastBuildDate>Thu, 10 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2019</copyright>
+    <lastBuildDate>Sun, 02 Jun 2019 18:07:26 -0400</lastBuildDate>
     
 	<atom:link href="http://justabloginthepark.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Big Data</title>
-      <link>http://justabloginthepark.com/tags/big-data/</link>
-      <pubDate>Thu, 10 Apr 2014 00:00:00 +0000</pubDate>
+      <title>programming</title>
+      <link>http://justabloginthepark.com/tags/programming/</link>
+      <pubDate>Sun, 02 Jun 2019 18:07:26 -0400</pubDate>
       
-      <guid>http://justabloginthepark.com/tags/big-data/</guid>
+      <guid>http://justabloginthepark.com/tags/programming/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Careers</title>
-      <link>http://justabloginthepark.com/tags/careers/</link>
-      <pubDate>Sun, 09 Feb 2014 00:00:00 +0000</pubDate>
+      <title>scheme</title>
+      <link>http://justabloginthepark.com/tags/scheme/</link>
+      <pubDate>Sun, 02 Jun 2019 18:07:26 -0400</pubDate>
       
-      <guid>http://justabloginthepark.com/tags/careers/</guid>
+      <guid>http://justabloginthepark.com/tags/scheme/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Clojure</title>
-      <link>http://justabloginthepark.com/tags/clojure/</link>
-      <pubDate>Wed, 28 Jun 2017 00:20:27 -0400</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/clojure/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Computers</title>
-      <link>http://justabloginthepark.com/tags/computers/</link>
-      <pubDate>Tue, 27 Mar 2018 22:58:22 -0400</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/computers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Concurrency</title>
-      <link>http://justabloginthepark.com/tags/concurrency/</link>
-      <pubDate>Sat, 17 Mar 2018 23:50:00 -0400</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/concurrency/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cooking</title>
-      <link>http://justabloginthepark.com/tags/cooking/</link>
-      <pubDate>Mon, 09 Apr 2018 19:07:51 -0400</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/cooking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dsp</title>
-      <link>http://justabloginthepark.com/tags/dsp/</link>
-      <pubDate>Thu, 21 Nov 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/dsp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Economics</title>
-      <link>http://justabloginthepark.com/tags/economics/</link>
-      <pubDate>Sun, 10 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/economics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Emacs</title>
-      <link>http://justabloginthepark.com/tags/emacs/</link>
-      <pubDate>Sun, 02 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/emacs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>F Sharp</title>
-      <link>http://justabloginthepark.com/tags/f-sharp/</link>
-      <pubDate>Wed, 28 Oct 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/f-sharp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>http://justabloginthepark.com/tags/java/</link>
-      <pubDate>Sat, 17 Mar 2018 23:50:00 -0400</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kotlin</title>
-      <link>http://justabloginthepark.com/tags/kotlin/</link>
-      <pubDate>Sat, 23 Dec 2017 21:47:01 -0500</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/kotlin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Meta</title>
-      <link>http://justabloginthepark.com/tags/meta/</link>
-      <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/meta/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Music</title>
-      <link>http://justabloginthepark.com/tags/music/</link>
-      <pubDate>Wed, 30 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/music/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Photography</title>
+      <title>photography</title>
       <link>http://justabloginthepark.com/tags/photography/</link>
       <pubDate>Sat, 25 Aug 2018 21:51:13 -0400</pubDate>
       
@@ -148,106 +40,7 @@
     </item>
     
     <item>
-      <title>Programming</title>
-      <link>http://justabloginthepark.com/tags/programming/</link>
-      <pubDate>Sat, 17 Mar 2018 23:50:00 -0400</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>http://justabloginthepark.com/tags/python/</link>
-      <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Scala</title>
-      <link>http://justabloginthepark.com/tags/scala/</link>
-      <pubDate>Wed, 28 Jun 2017 00:20:27 -0400</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/scala/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>School</title>
-      <link>http://justabloginthepark.com/tags/school/</link>
-      <pubDate>Sun, 09 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/school/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Software Engineering</title>
-      <link>http://justabloginthepark.com/tags/software-engineering/</link>
-      <pubDate>Sat, 17 Mar 2018 23:50:00 -0400</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/software-engineering/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Teaching</title>
-      <link>http://justabloginthepark.com/tags/teaching/</link>
-      <pubDate>Fri, 06 Nov 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/teaching/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tech Support</title>
-      <link>http://justabloginthepark.com/tags/tech-support/</link>
-      <pubDate>Tue, 27 Mar 2018 22:58:22 -0400</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/tech-support/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Technology</title>
-      <link>http://justabloginthepark.com/tags/technology/</link>
-      <pubDate>Tue, 27 Mar 2018 22:58:22 -0400</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/technology/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Travel</title>
-      <link>http://justabloginthepark.com/tags/travel/</link>
-      <pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/travel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tv</title>
-      <link>http://justabloginthepark.com/tags/tv/</link>
-      <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/tv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vacation</title>
-      <link>http://justabloginthepark.com/tags/vacation/</link>
-      <pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://justabloginthepark.com/tags/vacation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Video Games</title>
+      <title>video-games</title>
       <link>http://justabloginthepark.com/tags/video-games/</link>
       <pubDate>Sun, 12 Aug 2018 11:30:00 -0400</pubDate>
       
@@ -256,11 +49,227 @@
     </item>
     
     <item>
-      <title>Writing</title>
+      <title>cooking</title>
+      <link>http://justabloginthepark.com/tags/cooking/</link>
+      <pubDate>Mon, 09 Apr 2018 19:07:51 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/cooking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computers</title>
+      <link>http://justabloginthepark.com/tags/computers/</link>
+      <pubDate>Tue, 27 Mar 2018 22:58:22 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/computers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tech-support</title>
+      <link>http://justabloginthepark.com/tags/tech-support/</link>
+      <pubDate>Tue, 27 Mar 2018 22:58:22 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/tech-support/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technology</title>
+      <link>http://justabloginthepark.com/tags/technology/</link>
+      <pubDate>Tue, 27 Mar 2018 22:58:22 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/technology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>concurrency</title>
+      <link>http://justabloginthepark.com/tags/concurrency/</link>
+      <pubDate>Sat, 17 Mar 2018 23:50:00 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/concurrency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>http://justabloginthepark.com/tags/java/</link>
+      <pubDate>Sat, 17 Mar 2018 23:50:00 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software-engineering</title>
+      <link>http://justabloginthepark.com/tags/software-engineering/</link>
+      <pubDate>Sat, 17 Mar 2018 23:50:00 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/software-engineering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kotlin</title>
+      <link>http://justabloginthepark.com/tags/kotlin/</link>
+      <pubDate>Sat, 23 Dec 2017 21:47:01 -0500</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/kotlin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clojure</title>
+      <link>http://justabloginthepark.com/tags/clojure/</link>
+      <pubDate>Wed, 28 Jun 2017 00:20:27 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/clojure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scala</title>
+      <link>http://justabloginthepark.com/tags/scala/</link>
+      <pubDate>Wed, 28 Jun 2017 00:20:27 -0400</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/scala/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>meta</title>
+      <link>http://justabloginthepark.com/tags/meta/</link>
+      <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/meta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>http://justabloginthepark.com/tags/python/</link>
+      <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emacs</title>
+      <link>http://justabloginthepark.com/tags/emacs/</link>
+      <pubDate>Sun, 02 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>travel</title>
+      <link>http://justabloginthepark.com/tags/travel/</link>
+      <pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/travel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vacation</title>
+      <link>http://justabloginthepark.com/tags/vacation/</link>
+      <pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/vacation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tv</title>
+      <link>http://justabloginthepark.com/tags/tv/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/tv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>economics</title>
+      <link>http://justabloginthepark.com/tags/economics/</link>
+      <pubDate>Sun, 10 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/economics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>teaching</title>
+      <link>http://justabloginthepark.com/tags/teaching/</link>
+      <pubDate>Fri, 06 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/teaching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>f-sharp</title>
+      <link>http://justabloginthepark.com/tags/f-sharp/</link>
+      <pubDate>Wed, 28 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/f-sharp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>big-data</title>
+      <link>http://justabloginthepark.com/tags/big-data/</link>
+      <pubDate>Thu, 10 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/big-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>writing</title>
       <link>http://justabloginthepark.com/tags/writing/</link>
       <pubDate>Sun, 23 Mar 2014 00:00:00 +0000</pubDate>
       
       <guid>http://justabloginthepark.com/tags/writing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>careers</title>
+      <link>http://justabloginthepark.com/tags/careers/</link>
+      <pubDate>Sun, 09 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/careers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>school</title>
+      <link>http://justabloginthepark.com/tags/school/</link>
+      <pubDate>Sun, 09 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/school/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dsp</title>
+      <link>http://justabloginthepark.com/tags/dsp/</link>
+      <pubDate>Thu, 21 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/dsp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>music</title>
+      <link>http://justabloginthepark.com/tags/music/</link>
+      <pubDate>Wed, 30 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://justabloginthepark.com/tags/music/</guid>
       <description></description>
     </item>
     

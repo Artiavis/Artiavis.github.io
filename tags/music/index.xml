@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Music on Just a Blog in the Park</title>
+    <title>music on Just a Blog in the Park</title>
     <link>http://justabloginthepark.com/tags/music/</link>
-    <description>Recent content in Music on Just a Blog in the Park</description>
+    <description>Recent content in music on Just a Blog in the Park</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2019</copyright>
     <lastBuildDate>Wed, 30 Oct 2013 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://justabloginthepark.com/tags/music/index.xml" rel="self" type="application/rss+xml" />

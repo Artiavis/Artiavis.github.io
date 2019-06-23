@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Emacs on Just a Blog in the Park</title>
+    <title>emacs on Just a Blog in the Park</title>
     <link>http://justabloginthepark.com/tags/emacs/</link>
-    <description>Recent content in Emacs on Just a Blog in the Park</description>
+    <description>Recent content in emacs on Just a Blog in the Park</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2018</copyright>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2019</copyright>
     <lastBuildDate>Sun, 02 Oct 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://justabloginthepark.com/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
