@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>teaching on Just a Blog in the Park</title>
-    <link>http://justabloginthepark.com/tags/teaching/</link>
+    <link>justabloginthepark.com/tags/teaching/</link>
     <description>Recent content in teaching on Just a Blog in the Park</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://github.com/Artiavis&#34;&gt;Jeff Rabinowitz&lt;/a&gt;, 2019</copyright>
     <lastBuildDate>Fri, 06 Nov 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://justabloginthepark.com/tags/teaching/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="justabloginthepark.com/tags/teaching/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Teaching Binary Using the Socratic Method</title>
-      <link>http://justabloginthepark.com/2015/11/06/teaching-binary-using-the-socratic-method/</link>
+      <link>justabloginthepark.com/2015/11/06/teaching-binary-using-the-socratic-method/</link>
       <pubDate>Fri, 06 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://justabloginthepark.com/2015/11/06/teaching-binary-using-the-socratic-method/</guid>
+      <guid>justabloginthepark.com/2015/11/06/teaching-binary-using-the-socratic-method/</guid>
       <description>Yesterday, I saw this article shared on Reddit&amp;rsquo;s programming subreddit. I can&amp;rsquo;t due justice to the article, so I won&amp;rsquo;t even try to summarize it. (Definitely read it before reading on here.)
 However, I think it&amp;rsquo;s worth sharing because it highlights one of the most fundamental things that we take for granted when trying to teach friends or family something (not all of us are trained teachers). Not every new concept is actually so complex and layered that it can&amp;rsquo;t be easily intuited by someone with basic knowledge.</description>
     </item>
