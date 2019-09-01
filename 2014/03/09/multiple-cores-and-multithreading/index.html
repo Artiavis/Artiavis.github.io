@@ -1,260 +1,40 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Multiple Cores and Multithreading | Just a Blog in the Park</title>
-<link rel="stylesheet" href="/css/style.css">
-<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/solid.js" integrity="sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/brands.js" integrity="sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js" integrity="sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM" crossorigin="anonymous"></script>
-
-    
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    
-    <link rel="stylesheet" href="/css/vs2015.min.css">
-
-
-    <link rel="stylesheet" href="/css/images.min.css">
-
-
-<section class="section">
-  <div class="container">
-    <nav class="nav">
-      <div class="nav-left">
-        <a href="/about">
-          <img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75" />
-        </a>
-        <a class="nav-item" href="https://www.justabloginthepark.com"><h1 class="title is-4">Just a Blog in the Park</h1></a>
-      </div>
-      <div class="nav-right">
-        <nav class="nav-item level is-mobile">
-          
-          <a class="level-item" href="/photos">
-            <span class="icon">
-              <i class="fas fa-camera"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="/tags">
-            <span class="icon">
-              <i class="fas fa-tags"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="https://github.com/Artiavis">
-            <span class="icon">
-              <i class="fab fa-github"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="https://linkedin.com/in/JeffreyCRabinowitz">
-            <span class="icon">
-              <i class="fab fa-linkedin"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1">
-            <span class="icon">
-              <i class="fas fa-file-pdf"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="/index.xml">
-            <span class="icon">
-              <i class="fas fa-rss-square"></i>
-            </span>
-          </a>
-          
-        </nav>
-      </div>
-    </nav>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="subtitle is-6">March 9, 2014</h2>
-    <h1 class="title">Multiple Cores and Multithreading</h1>
-    <h2 class="subtitle is-6" >5 minute read</h2>
-    <ul id="tags">
-  
-    <li><a href="/tags/programming"><i class="fas fa-tag" aria-hidden="true"></i> programming</a></li>
-  
-    <li><a href="/tags/concurrency"><i class="fas fa-tag" aria-hidden="true"></i> concurrency</a></li>
-  
-</ul>
-<br />
-    <div class="content">
-      
-
-<p>Have you ever seen advertisements for the latest computers which promote fancy processors with multi-core processors and
-wonder exactly the advantage of having multiple cores is?</p>
-
-<p>The most tempting explanation, although perhaps too simplistic, is that &ldquo;more is better&rdquo;. The most common
+<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Multiple Cores and Multithreading | Just a Blog in the Park</title><link rel=stylesheet href=/css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css><link rel=stylesheet href=/css/vs2015.min.css><link rel=stylesheet href=/css/images.min.css><section class=section><div class=container><nav class=nav><div class=nav-left><a href=/about><img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75"></a>
+<a class=nav-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a></div><div class=nav-right><nav class="nav-item level is-mobile"><a class=level-item href=/photos><span class=icon><i class="fas fa-camera"></i></span></a><a class=level-item href=/tags><span class=icon><i class="fas fa-tags"></i></span></a><a class=level-item href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span></a><a class=level-item href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span></a><a class=level-item href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span></a><a class=level-item href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span></a></nav></div></nav></div></section><section class=section><div class=container><h2 class="subtitle is-6">March 9, 2014</h2><h1 class=title>Multiple Cores and Multithreading</h1><h2 class="subtitle is-6">5 minute read</h2><ul id=tags><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i>programming</a></li><li><a href=/tags/concurrency><i class="fas fa-tag" aria-hidden=true></i>concurrency</a></li></ul><br><div class=content><p>Have you ever seen advertisements for the latest computers which promote fancy processors with multi-core processors and
+wonder exactly the advantage of having multiple cores is?</p><p>The most tempting explanation, although perhaps too simplistic, is that &ldquo;more is better&rdquo;. The most common
 mistake is thinking that <em>n cores must run programs n times faster than one core</em>, ie a four core processor is
 approximately four times faster than a single-core processor. Although <em>this has the potential to happen occasionally</em>,
-the true benefits are actually slightly different. First, though, we must understand what a core <em>does</em>.</p>
-
-<h3 id="what-is-a-core">What is a core?</h3>
-
-<p>A processor&rsquo;s &lsquo;core&rsquo; is its most fundamental unit. It is basically is the one part of the computer which
+the true benefits are actually slightly different. First, though, we must understand what a core <em>does</em>.</p><h3 id=what-is-a-core>What is a core?</h3><p>A processor&rsquo;s &lsquo;core&rsquo; is its most fundamental unit. It is basically is the one part of the computer which
 does any real <em>computing</em>. Cores basically handle all instructions a computer needs to execute, whether they are simple
-for the computer (ie mathematical operations) or more difficult (ie rendering a Word document).</p>
-
-<p>A computer does nothing more or less than execute computer programs it has been given. In turn, those programs are
+for the computer (ie mathematical operations) or more difficult (ie rendering a Word document).</p><p>A computer does nothing more or less than execute computer programs it has been given. In turn, those programs are
 nothing more or less than a <strong>list</strong> of mathematical instructions to be followed. (As such, anybody could technically
-try and &lsquo;do&rsquo; a computer program, although it&rsquo;d probably take a very long time.)</p>
-
-<p>In simplistic terms, this means that a single core is essentially going down a list of instructions and performing each
-one, in turn, to some effect.</p>
-
-<h3 id="multi-core-architecture">Multi-core Architecture</h3>
-
-<p><img src="/img/Dual_Core_Generic.svg" alt="Diagram of Dual Core Processor Architecture" /></p>
-
-<p>As can be seen in this diagram, a multi-core processor has multiple cores connected in parallel. Like mentioned
+try and &lsquo;do&rsquo; a computer program, although it&rsquo;d probably take a very long time.)</p><p>In simplistic terms, this means that a single core is essentially going down a list of instructions and performing each
+one, in turn, to some effect.</p><h3 id=multi-core-architecture>Multi-core Architecture</h3><p><img src=/img/Dual_Core_Generic.svg alt="Diagram of Dual Core Processor Architecture"></p><p>As can be seen in this diagram, a multi-core processor has multiple cores connected in parallel. Like mentioned
 previously, each core is essentially an agent performing a list of instructions. However, there are two questions that
-this poses.</p>
-
-<ol>
-<li>Does having multiple cores allow multiple programs to be run at the same time?</li>
-<li>Does having multiple cores allow a single program to run faster?</li>
-</ol>
-
-<p>The answer to both of these questions lies in the diagram.</p>
-
-<ol>
-<li><p>Notice in the diagram that multiple cores still share one common bus (a connection) with the rest of the computer.
+this poses.</p><ol><li>Does having multiple cores allow multiple programs to be run at the same time?</li><li>Does having multiple cores allow a single program to run faster?</li></ol><p>The answer to both of these questions lies in the diagram.</p><ol><li><p>Notice in the diagram that multiple cores still share one common bus (a connection) with the rest of the computer.
 This mean having multiple cores is essentially like having many cooks in a cramped restaurant. Despite the many cooks,
 such a restaurant rarely gets enough customers to need to handle many different orders at once. Instead, often one (or
 sometimes) two cooks is all that is needed to handle every order. At the end of the day, although the computer may have
 a large capacity to do work, it can&rsquo;t fully leverage this across multiple programs because of the traffic across the
 bus. (Smart, modern operating systems still manage to get a lot done, but even they can&rsquo;t often fully utilize the cores
 available to them.) The choke point which is the dining room (the bus) often precludes getting multiple customers
-(programs) at once.</p></li>
-
-<li><p>If this restaurant gets a complex order with many distinct dishes from a customer, can they distribute the work
+(programs) at once.</p></li><li><p>If this restaurant gets a complex order with many distinct dishes from a customer, can they distribute the work
 between them to serve him more quickly? Just like a recipe which calls for many distinct phases of preparation can be
 worked on at the same time from different angles by the cooks, a program which calls for many distinct operations can be
-distributed across multiple cores.</p></li>
-</ol>
-
-<h3 id="multithreading-for-many-cooks">Multithreading for Many Cooks</h3>
-
-<p>The important takeaway is that multiple cores is most beneficial for programs which are specifically written to leverage
-having access to these multiple cores. This then shifts the onus of writing such programs to the authoring programmers.</p>
-
-<p>On my current homework assignment in my Network-centric Programming class, we are tasked to take a
-<a href="http://en.wikipedia.org/wiki/Web_proxy#Web_proxy_servers">web proxy</a> and make it multi-threaded
+distributed across multiple cores.</p></li></ol><h3 id=multithreading-for-many-cooks>Multithreading for Many Cooks</h3><p>The important takeaway is that multiple cores is most beneficial for programs which are specifically written to leverage
+having access to these multiple cores. This then shifts the onus of writing such programs to the authoring programmers.</p><p>On my current homework assignment in my Network-centric Programming class, we are tasked to take a
+<a href=http://en.wikipedia.org/wiki/Web_proxy#Web_proxy_servers>web proxy</a> and make it multi-threaded
 (where using multiple threads enables a processor with multiple cores to process those multiple threads concurrently).
-This is tricky because of a problem I didn&rsquo;t mention until now: sharing resources.</p>
-
-<p>Two cooks in a restaurant can&rsquo;t <strong>both</strong> be using a knife at the same time. For them to blindly try to do so will most
+This is tricky because of a problem I didn&rsquo;t mention until now: sharing resources.</p><p>Two cooks in a restaurant can&rsquo;t <strong>both</strong> be using a knife at the same time. For them to blindly try to do so will most
 likely result in one of them getting injured, bleeding all over the kitchen, and forcing the restaurant to abruptly
 cancel dinner. Even if this doesn&rsquo;t happen, the near miss may result in a butchered dish. This is approximately
 analogous to programming with multiple threads. When threads are trying to work towards a common goal &mdash; whether or
 not they need to actively &ldquo;speak&rdquo; with each other &mdash; they need to be careful to not attempt to utilize
 an otherwise common resource if it&rsquo;s otherwise in use. At best, this can interfere with the normal operation of a
-program; at worst, it is fatal.</p>
-
-<h4 id="a-form-of-solution">A Form of Solution</h4>
-
-<p>A special family of programming constructs known as <em>mutex locks</em>, or <em>mutual exclusion locks</em>, allow a thread to signal
+program; at worst, it is fatal.</p><h4 id=a-form-of-solution>A Form of Solution</h4><p>A special family of programming constructs known as <em>mutex locks</em>, or <em>mutual exclusion locks</em>, allow a thread to signal
 others that it has exclusive access to a shared resource. Notwithstanding these special constructs, dealing with sharing
 locks and otherwise minding the distinction between threads can easily become tedious, and mistakes made behind the
-scenes often aren&rsquo;t transparent to programmers.</p>
-
-<p>In general, these multithreading solutions are taken for granted every day in order to achieve the quickest and most
+scenes often aren&rsquo;t transparent to programmers.</p><p>In general, these multithreading solutions are taken for granted every day in order to achieve the quickest and most
 concurrent programs possible with modern computer architectures. However, because mistakes made with multiple threads
 are very difficult to catch as they aren&rsquo;t always fatal and don&rsquo;t even always result in actual errors, certain mistakes
-can slip through to production code. If you notice a quirky program, perhaps it is multithreaded.</p>
-
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <aside><div id="disqus_thread"></div></aside>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-    <script type="text/javascript">
-      var disqus_shortname = 'justabloginthepark';
-      var disqus_loaded = false;
-
-      function disqus() {
-        if (!disqus_loaded) {
-          disqus_loaded = true;
-          
-          if (window.location.hostname == "localhost")
-            return;
-
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }
-      };
-    </script>
-    <script type="text/javascript">
-      window.onscroll = function(e) {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            if (!disqus_loaded) {
-              disqus();
-            }
-        }
-      };
-    </script>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container has-text-centered">
-    <p>&copy; <a href="https://github.com/Artiavis">Jeff Rabinowitz</a>, 2019</p>
-  </div>
-</section>
-
-
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js"></script>
-    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js"></script>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
+can slip through to production code. If you notice a quirky program, perhaps it is multithreaded.</p></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname='justabloginthepark';var disqus_loaded=false;function disqus(){if(!disqus_loaded){disqus_loaded=true;if(window.location.hostname=="localhost")
+return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);}};</script><script type=text/javascript>window.onscroll=function(e){if((window.innerHeight+window.scrollY)>=document.body.offsetHeight){if(!disqus_loaded){disqus();}}};</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2019</p></div></section><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js></script><script>hljs.initHighlightingOnLoad();</script>
