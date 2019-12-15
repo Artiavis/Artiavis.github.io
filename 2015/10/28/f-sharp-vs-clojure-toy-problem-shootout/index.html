@@ -1,26 +1,26 @@
-<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>F Sharp vs Clojure Toy Problem Shootout | Just a Blog in the Park</title><link rel=stylesheet href=/css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css><link rel=stylesheet href=/css/vs2015.min.css><link rel=stylesheet href=/css/images.min.css><section class=section><div class=container><nav class=nav><div class=nav-left><a href=/about><img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75"></a>
-<a class=nav-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a></div><div class=nav-right><nav class="nav-item level is-mobile"><a class=level-item href=/photos><span class=icon><i class="fas fa-camera"></i></span></a><a class=level-item href=/tags><span class=icon><i class="fas fa-tags"></i></span></a><a class=level-item href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span></a><a class=level-item href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span></a><a class=level-item href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span></a><a class=level-item href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span></a></nav></div></nav></div></section><section class=section><div class=container><h2 class="subtitle is-6">October 28, 2015</h2><h1 class=title>F Sharp vs Clojure Toy Problem Shootout</h1><h2 class="subtitle is-6">10 minute read</h2><ul id=tags><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i>programming</a></li><li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i>clojure</a></li><li><a href=/tags/f-sharp><i class="fas fa-tag" aria-hidden=true></i>f-sharp</a></li></ul><br><div class=content><p>As a continuation of my forays in interesting and less industrially-oriented
+<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>F Sharp vs Clojure Toy Problem Shootout | Just a Blog in the Park</title><link rel=stylesheet href=/css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css><link rel=stylesheet href=/css/vs2015.min.css><link rel=stylesheet href=/css/images.min.css><section class=section><div class=container><nav class=nav><div class=nav-left><a href=/about><img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75"></a>
+<a class=nav-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a></div><div class=nav-right><nav class="nav-item level is-mobile"><a class=level-item href=/photos><span class=icon><i class="fas fa-camera"></i></span></a><a class=level-item href=/tags><span class=icon><i class="fas fa-tags"></i></span></a><a class=level-item href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span></a><a class=level-item href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span></a><a class=level-item href="https://www.dropbox.com/s/190j5fjr6dl3q5c/jeff_rabinowitz_resume_2019_12_15.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span></a><a class=level-item href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span></a></nav></div></nav></div></section><section class=section><div class=container><h2 class="subtitle is-6">October 28, 2015</h2><h1 class=title>F Sharp vs Clojure Toy Problem Shootout</h1><h2 class="subtitle is-6">10 minute read</h2><ul id=tags><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i>programming</a></li><li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i>clojure</a></li><li><a href=/tags/f-sharp><i class="fas fa-tag" aria-hidden=true></i>f-sharp</a></li></ul><br><div class=content><p>As a continuation of my forays in interesting and less industrially-oriented
 programming languages, I decided to compare
 <a href=fsharp.org>F Sharp</a>
 against <a href=clojure.org>Clojure</a> for a relatively simple programming
 problem, and to compare how the two felt in terms of programming ease,
 friendliness, and how they each viewed the problem.</p><h2 id=the-problem>The Problem</h2><p>The problem is a relatively one from
-<a href=https://reddit.com/r/dailyprogrammer>Reddit&rsquo;s &ldquo;Daily Programmer&rdquo; subreddit</a>, called
+<a href=https://reddit.com/r/dailyprogrammer>Reddit's “Daily Programmer” subreddit</a>, called
 <a href=https://www.reddit.com/r/dailyprogrammer/comments/3j3pvm/20150831_challenge_230_easy_json_treasure_hunt/>JSON Treasure Hunt</a>:
 given a random, unstructured JSON object, traverse the object looking for
 a specific terminal value (in this case, a string &ldquo;dailyprogrammer&rdquo;).
-This is, of course, an unstructured tree traversal question.</p><p>Anyone who&rsquo;s taken a basic data structures or algorithms course can immediately
+This is, of course, an unstructured tree traversal question.</p><p>Anyone who's taken a basic data structures or algorithms course can immediately
 recognize that this problem lends itself naturally to a recursive solution.
-(Of course, it&rsquo;s possible to traverse trees using stacks or queues, but where&rsquo;s
+(Of course, it's possible to traverse trees using stacks or queues, but where's
 the fun in that?)</p><p>What makes this problem interesting is that the tree, as valid JSON, can
 be of any JSON type:</p><ul><li>a number (whether integers are supported is language-specific, but both
-of our languages in question do support integers)</li><li>a string</li><li>a boolean (true/false)</li><li>null</li><li>a list of any valid JSON type</li><li>an object mapping any of the first four types to any valid JSON type</li></ul><p>Because the JSON is unstructured, it&rsquo;s not possible to know the types of each
+of our languages in question do support integers)</li><li>a string</li><li>a boolean (true/false)</li><li>null</li><li>a list of any valid JSON type</li><li>an object mapping any of the first four types to any valid JSON type</li></ul><p>Because the JSON is unstructured, it's not possible to know the types of each
 value in advance, other than that it can be any of these. Therefore, we ideally
 need a recursive way to dispatch based upon type.</p><p>There is a minor complication here because we need to maintain a path to the specific value in question.
 <strong>This is tricky because the path can consist of both strings and integers</strong>:</p><ul><li>Any object on the way to the specified value is generally keyed by a string</li><li>Any array on the way to the specified value is keyed by an integer</li></ul><p>We will need a return type that can represent both strings and integers in
-a collection seamlessly.</p><h2 id=f-sharp-solution>F Sharp Solution</h2><p>Although I didn&rsquo;t write the F Sharp solution until after I had already written
+a collection seamlessly.</p><h2 id=f-sharp-solution>F Sharp Solution</h2><p>Although I didn't write the F Sharp solution until after I had already written
 the Clojure solution, I actually found it easier to model this problem using
-F Sharp&rsquo;s native data types. Therefore, I&rsquo;ll begin with my treatment of F Sharp.</p><p>When I first saw this problem, I immediately thought of how I could represent
+F Sharp's native data types. Therefore, I'll begin with my treatment of F Sharp.</p><p>When I first saw this problem, I immediately thought of how I could represent
 it in a typed language like F Sharp. F Sharp, like other statically typed
 functional languages, supports
 <a href=http://fsharpforfunandprofit.com/posts/discriminated-unions/>discriminated unions</a>,
@@ -31,166 +31,161 @@ As it happens, the
 <a href=http://fsharpforfunandprofit.com/posts/match-expression/>pattern match</a>
 each of the types in turn to ensure that every type of JSON data is
 handled appropriately.</p><p>To solve the earlier problem of needing to represent both strings and integers
-in our return type (our solution), we can write our own simple union type:</p><pre><code class=language-fsharp>type TreasurePathCrumb =
-    | Index of int
-    | Key of string
-</code></pre><p>This crumb type will help us remember the path to the specified value
+in our return type (our solution), we can write our own simple union type:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fsharp data-lang=fsharp><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>TreasurePathCrumb</span> <span style=color:#f92672>=</span>
+    <span style=color:#f92672>|</span> Index <span style=color:#66d9ef>of</span> int
+    <span style=color:#f92672>|</span> Key <span style=color:#66d9ef>of</span> <span style=color:#66d9ef>string</span>
+</code></pre></div><p>This crumb type will help us remember the path to the specified value
 (although, since this is a recursive solution, it technically would be more
 accurate to say it will help us to remember the path <em>from</em> the specified
 value).</p><p>Now, once we find the value in question, we can simply begin returning values
-by wrapping them in this union type. When we&rsquo;ve captured the sequence of union
-types in our main function, we can just unpack them and convert them to strings:</p><pre><code class=language-fsharp>let buildTreasurePathString (path:TreasurePathCrumb list) = 
-    let crumbToString crumb = 
-        match crumb with
-        | TreasurePathCrumb.Index i -&gt; string i
-        | TreasurePathCrumb.Key k -&gt; k
-    let stringCrumbs = List.map crumbToString path
-    stringCrumbs |&gt; String.concat &quot; -&gt; &quot;
-</code></pre><p>This function preserves strings while converting the integers to strings,
+by wrapping them in this union type. When we've captured the sequence of union
+types in our main function, we can just unpack them and convert them to strings:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fsharp data-lang=fsharp><span style=color:#66d9ef>let</span> buildTreasurePathString <span style=color:#f92672>(</span>path<span style=color:#f92672>:</span>TreasurePathCrumb <span style=color:#66d9ef>list</span><span style=color:#f92672>)</span> <span style=color:#f92672>=</span> 
+    <span style=color:#66d9ef>let</span> crumbToString crumb <span style=color:#f92672>=</span> 
+        <span style=color:#66d9ef>match</span> crumb <span style=color:#66d9ef>with</span>
+        <span style=color:#f92672>|</span> TreasurePathCrumb.Index i <span style=color:#f92672>-&gt;</span> <span style=color:#66d9ef>string</span> i
+        <span style=color:#f92672>|</span> TreasurePathCrumb.Key k <span style=color:#f92672>-&gt;</span> k
+    <span style=color:#66d9ef>let</span> stringCrumbs <span style=color:#f92672>=</span> List.map crumbToString path
+    stringCrumbs <span style=color:#f92672>|</span><span style=color:#f92672>&gt;</span> String.concat <span style=color:#e6db74>&#34;</span><span style=color:#e6db74> -&gt; </span><span style=color:#e6db74>&#34;</span>
+</code></pre></div><p>This function preserves strings while converting the integers to strings,
 so that we can cleanly concatenate all the values at once.
-(I&rsquo;m not fluent in F#, so this may be completely unnecessary, but it&rsquo;s
-also a pleasure how straightforward this is to do!)</p><p>However, there&rsquo;s still one unresolved type question: what do we do when we
-don&rsquo;t find a value? This is obviously going to be happening far more often than
+(I'm not fluent in F#, so this may be completely unnecessary, but it's
+also a pleasure how straightforward this is to do!)</p><p>However, there's still one unresolved type question: what do we do when we
+don't find a value? This is obviously going to be happening far more often than
 finding the specified value.</p><p>As it happens, F# (and its brethren) have an answer to this as well:
-<a href=http://fsharpforfunandprofit.com/posts/the-option-type/>the Option type</a>:</p><pre><code class=language-fsharp>// Taken from http://fsharpforfunandprofit.com/posts/the-option-type/
-type Option&lt;'a&gt; =       // use a generic definition  
-   | Some of 'a           // valid value
-   | None                 // missing
-</code></pre><p>An option type responsibly answers the question, &ldquo;What if there is not
+<a href=http://fsharpforfunandprofit.com/posts/the-option-type/>the Option type</a>:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fsharp data-lang=fsharp><span style=color:#75715e>// Taken from http://fsharpforfunandprofit.com/posts/the-option-type/
+</span><span style=color:#75715e></span><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>Option</span><span style=color:#f92672>&lt;</span><span style=color:#66d9ef>&#39;</span>a<span style=color:#f92672>&gt;</span> <span style=color:#f92672>=</span>       <span style=color:#75715e>// use a generic definition  
+</span><span style=color:#75715e></span>   <span style=color:#f92672>|</span> Some <span style=color:#66d9ef>of</span> <span style=color:#66d9ef>&#39;</span>a           <span style=color:#75715e>// valid value
+</span><span style=color:#75715e></span>   <span style=color:#f92672>|</span> None                 <span style=color:#75715e>// missing
+</span></code></pre></div><p>An option type responsibly answers the question, &ldquo;What if there is not
 necessarily a solution to this question (function)?&rdquo; In our case,
-the data type <code>[1, 2, null, false, &quot;hi&quot;]</code> does not contain the value
-<code>&quot;dailyprogrammer&quot;</code>. If our function was passed this array, it would return
+the data type <code>[1, 2, null, false, "hi"]</code> does not contain the value
+<code>"dailyprogrammer"</code>. If our function was passed this array, it would return
 the <code>None</code> type. On the other hand, if it was passed
-<code>[1, 2, null, false, &quot;dailyprogrammer&quot;]</code>, we could return a
+<code>[1, 2, null, false, "dailyprogrammer"]</code>, we could return a
 <code>Some(TreasurePathCrumb.Index(4))</code>!</p><p>With all these pieces in place, we now know which types our recursive solution
 requires. We just need to write the recursive function which can do a match
 on the terminal types and can recur on the collection types. For clarity,
 I split the function on the collection types out into their own functions.
-(I also implemented my own Option type, because I forgot F# has it built in.)</p><pre><code class=language-fsharp>type TreasurePathCrumb =
-    | Index of int
-    | Key of string
+(I also implemented my own Option type, because I forgot F# has it built in.)</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fsharp data-lang=fsharp><span style=color:#66d9ef>type</span> <span style=color:#a6e22e>TreasurePathCrumb</span> <span style=color:#f92672>=</span>
+    <span style=color:#f92672>|</span> Index <span style=color:#66d9ef>of</span> int
+    <span style=color:#f92672>|</span> Key <span style=color:#66d9ef>of</span> <span style=color:#66d9ef>string</span>
 
-type HuntResult =
-    | Null 
-    | TreasurePath of TreasurePathCrumb list
+<span style=color:#66d9ef>type</span> <span style=color:#a6e22e>HuntResult</span> <span style=color:#f92672>=</span>
+    <span style=color:#f92672>|</span> Null 
+    <span style=color:#f92672>|</span> TreasurePath <span style=color:#66d9ef>of</span> TreasurePathCrumb <span style=color:#66d9ef>list</span>
 
-let rec findMapTreasure (json:(string * JsonValue) list) =
-    match json with
-    | [] -&gt; HuntResult.Null
-    | (key, value) :: rest -&gt;
-        match findTreasure value with
-            | HuntResult.Null -&gt; findMapTreasure rest
-            | HuntResult.TreasurePath (path) -&gt; HuntResult.TreasurePath (TreasurePathCrumb.Key(key)::path)
+<span style=color:#66d9ef>let</span> rec findMapTreasure <span style=color:#f92672>(</span>json<span style=color:#f92672>:</span><span style=color:#f92672>(</span><span style=color:#66d9ef>string</span> <span style=color:#f92672>*</span> JsonValue<span style=color:#f92672>)</span> <span style=color:#66d9ef>list</span><span style=color:#f92672>)</span> <span style=color:#f92672>=</span>
+    <span style=color:#66d9ef>match</span> json <span style=color:#66d9ef>with</span>
+    <span style=color:#f92672>|</span> [] <span style=color:#f92672>-&gt;</span> HuntResult.Null
+    <span style=color:#f92672>|</span> <span style=color:#f92672>(</span>key<span style=color:#f92672>,</span> value<span style=color:#f92672>)</span> <span style=color:#f92672>::</span> rest <span style=color:#f92672>-&gt;</span>
+        <span style=color:#66d9ef>match</span> findTreasure value <span style=color:#66d9ef>with</span>
+            <span style=color:#f92672>|</span> HuntResult.Null <span style=color:#f92672>-&gt;</span> findMapTreasure rest
+            <span style=color:#f92672>|</span> HuntResult.TreasurePath <span style=color:#f92672>(</span>path<span style=color:#f92672>)</span> <span style=color:#f92672>-&gt;</span> HuntResult.TreasurePath <span style=color:#f92672>(</span>TreasurePathCrumb.Key<span style=color:#f92672>(</span>key<span style=color:#f92672>)</span><span style=color:#f92672>::</span>path<span style=color:#f92672>)</span>
 
-and findListTreasure (list:JsonValue list) (index:int) =
-    match list with
-    | [] -&gt; HuntResult.Null
-    | first :: rest -&gt; 
-        match findTreasure first with
-            | HuntResult.Null -&gt; findListTreasure rest (1 + index)
-            | HuntResult.TreasurePath (path) -&gt; HuntResult.TreasurePath (TreasurePathCrumb.Index(index)::path)
+<span style=color:#f92672>and</span> findListTreasure <span style=color:#f92672>(</span><span style=color:#66d9ef>list</span><span style=color:#f92672>:</span>JsonValue <span style=color:#66d9ef>list</span><span style=color:#f92672>)</span> <span style=color:#f92672>(</span>index<span style=color:#f92672>:</span>int<span style=color:#f92672>)</span> <span style=color:#f92672>=</span>
+    <span style=color:#66d9ef>match</span> <span style=color:#66d9ef>list</span> <span style=color:#66d9ef>with</span>
+    <span style=color:#f92672>|</span> [] <span style=color:#f92672>-&gt;</span> HuntResult.Null
+    <span style=color:#f92672>|</span> first <span style=color:#f92672>::</span> rest <span style=color:#f92672>-&gt;</span> 
+        <span style=color:#66d9ef>match</span> findTreasure first <span style=color:#66d9ef>with</span>
+            <span style=color:#f92672>|</span> HuntResult.Null <span style=color:#f92672>-&gt;</span> findListTreasure rest <span style=color:#f92672>(</span>1 <span style=color:#f92672>+</span> index<span style=color:#f92672>)</span>
+            <span style=color:#f92672>|</span> HuntResult.TreasurePath <span style=color:#f92672>(</span>path<span style=color:#f92672>)</span> <span style=color:#f92672>-&gt;</span> HuntResult.TreasurePath <span style=color:#f92672>(</span>TreasurePathCrumb.Index<span style=color:#f92672>(</span>index<span style=color:#f92672>)</span><span style=color:#f92672>::</span>path<span style=color:#f92672>)</span>
 
-and findTreasure (json:JsonValue) =
-    match json with
-        | JsonValue.Null -&gt; HuntResult.Null
-        | JsonValue.Boolean b -&gt; HuntResult.Null
-        | JsonValue.Float f -&gt; HuntResult.Null
-        | JsonValue.Number n -&gt; HuntResult.Null
-        | JsonValue.String s -&gt;
-            if s = &quot;dailyprogrammer&quot; then HuntResult.TreasurePath([])
-            else HuntResult.Null
-        | JsonValue.Array a -&gt; findListTreasure (Array.toList a) 0
-        | JsonValue.Record map -&gt; findMapTreasure (Array.toList map)
-</code></pre><p>The <code>findTreasure</code> function is trivial to understand: if given a terminal
+<span style=color:#f92672>and</span> findTreasure <span style=color:#f92672>(</span>json<span style=color:#f92672>:</span>JsonValue<span style=color:#f92672>)</span> <span style=color:#f92672>=</span>
+    <span style=color:#66d9ef>match</span> json <span style=color:#66d9ef>with</span>
+        <span style=color:#f92672>|</span> JsonValue.Null <span style=color:#f92672>-&gt;</span> HuntResult.Null
+        <span style=color:#f92672>|</span> JsonValue.Boolean b <span style=color:#f92672>-&gt;</span> HuntResult.Null
+        <span style=color:#f92672>|</span> JsonValue.Float f <span style=color:#f92672>-&gt;</span> HuntResult.Null
+        <span style=color:#f92672>|</span> JsonValue.Number n <span style=color:#f92672>-&gt;</span> HuntResult.Null
+        <span style=color:#f92672>|</span> JsonValue.String s <span style=color:#f92672>-&gt;</span>
+            <span style=color:#66d9ef>if</span> s <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>dailyprogrammer</span><span style=color:#e6db74>&#34;</span> <span style=color:#66d9ef>then</span> HuntResult.TreasurePath<span style=color:#f92672>(</span>[]<span style=color:#f92672>)</span>
+            <span style=color:#66d9ef>else</span> HuntResult.Null
+        <span style=color:#f92672>|</span> JsonValue.Array a <span style=color:#f92672>-&gt;</span> findListTreasure <span style=color:#f92672>(</span>Array.toList a<span style=color:#f92672>)</span> 0
+        <span style=color:#f92672>|</span> JsonValue.Record map <span style=color:#f92672>-&gt;</span> findMapTreasure <span style=color:#f92672>(</span>Array.toList map<span style=color:#f92672>)</span>
+</code></pre></div><p>The <code>findTreasure</code> function is trivial to understand: if given a terminal
 type, return the option, and if given a compound type, refer to the
-appropriate function implementation for more information.</p><p><code>findMapTreasure</code> and <code>findListTreasure</code> work with the same three modes:
-1. If the collection is empty, the value isn&rsquo;t here, and return None.
-2. If the value of the next item in the collection isn&rsquo;t the treasure,
-recur with the rest of the collection
-3. If the value of the next item is the treasure, return it! (With a
-crumb, of course.)</p><h2 id=clojure-solution>Clojure Solution</h2><p>As mentioned above, I needed to meditate on the types of this solution like I
+appropriate function implementation for more information.</p><p><code>findMapTreasure</code> and <code>findListTreasure</code> work with the same three modes:</p><ol><li>If the collection is empty, the value isn't here, and return None.</li><li>If the value of the next item in the collection isn't the treasure,
+recur with the rest of the collection</li><li>If the value of the next item is the treasure, return it! (With a
+crumb, of course.)</li></ol><h2 id=clojure-solution>Clojure Solution</h2><p>As mentioned above, I needed to meditate on the types of this solution like I
 would with F# before I could even begin to think about implementing it in
 Clojure. This was true even though I wrote the Clojure solution first!
-Although Clojure doesn&rsquo;t require being as contractually formal with types as
-F# does, it doesn&rsquo;t obviate the need for clearly establishing the types
+Although Clojure doesn't require being as contractually formal with types as
+F# does, it doesn't obviate the need for clearly establishing the types
 relationships. (Maybe this is part of what Rich Hickey refers to as
 <a href="https://www.youtube.com/watch?v=f84n5oFoZBc">Hammock-driven development</a>?)</p><p>Ultimately, however, I found myself confronting the following problems with the
-Clojure implementation:</p><ol><li>How do I accurately capture what type(s) the return type can be?</li><li>If I can&rsquo;t pattern match on union types, what other ways can I pattern match on each of the 6 types?</li><li><a href=http://jakemccrary.com/blog/2010/12/06/trampolining-through-mutual-recursion/>Since Clojure doesn&rsquo;t have (effective) mutual recursion</a>,
+Clojure implementation:</p><ol><li>How do I accurately capture what type(s) the return type can be?</li><li>If I can't pattern match on union types, what other ways can I pattern match on each of the 6 types?</li><li><a href=http://jakemccrary.com/blog/2010/12/06/trampolining-through-mutual-recursion/>Since Clojure doesn't have (effective) mutual recursion</a>,
 how can I have all recur calls jump back to the same function?</li></ol><p>For anyone who has programmed in a dynamically typed language before, the
-solution to question 1 is trivial: don&rsquo;t express the types,
+solution to question 1 is trivial: don't express the types,
 express the values, and just make sure you can handle the types correctly
-wherever you catch them.</p><p>Okay, so we just return e.g. a list of either integers or strings. That&rsquo;s not
-too bad at all. But how should we solve questions 2 and 3?</p><p>As it turns out, Clojure has a solution for both of those, and I didn&rsquo;t believe
-it would work until I tried it myself!</p><p>Although Clojure doesn&rsquo;t implement classes, it does implement
+wherever you catch them.</p><p>Okay, so we just return e.g. a list of either integers or strings. That's not
+too bad at all. But how should we solve questions 2 and 3?</p><p>As it turns out, Clojure has a solution for both of those, and I didn't believe
+it would work until I tried it myself!</p><p>Although Clojure doesn't implement classes, it does implement
 something akin to methods, using
 a clever technique dubbed <a href=http://www.braveclojure.com/multimethods-records-protocols/#Protocols>protocols</a>.
 Protocols essentially permit dynamically defining methods on object types,
-even if you don&rsquo;t have the source for those object types, and even if they
-aren&rsquo;t aware of your code.
-(<a href=http://adambard.com/blog/structured-clojure-protocols-and-multimethods/>In other words, they solve the expression problem.</a>)</p><p>Protocols consist of two parts:
-1. Define the protocol, analogous to defining an interface.
-2. Implement the protocol for a specific type. This is like implementing an
+even if you don't have the source for those object types, and even if they
+aren't aware of your code.
+(<a href=http://adambard.com/blog/structured-clojure-protocols-and-multimethods/>In other words, they solve the expression problem.</a>)</p><p>Protocols consist of two parts:</p><ol><li>Define the protocol, analogous to defining an interface.</li><li>Implement the protocol for a specific type. This is like implementing an
 interface, with the important distinction that it allows the implementation
-retroactively.</p><pre><code class=language-clojure>(defprotocol ContainsTreasure
-  (find-treasure [obj]))
+retroactively.</li></ol><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-clojure data-lang=clojure>(<span style=color:#66d9ef>defprotocol </span>ContainsTreasure
+  (<span style=color:#a6e22e>find-treasure</span> [obj]))
 
-(extend-protocol ContainsTreasure
+(<span style=color:#a6e22e>extend-protocol</span> ContainsTreasure
   nil
-  (find-treasure [obj]
+  (<span style=color:#a6e22e>find-treasure</span> [obj]
     false)
   java.lang.Integer
-  (find-treasure [obj]
+  (<span style=color:#a6e22e>find-treasure</span> [obj]
     false)
   java.lang.Boolean
-  (find-treasure [obj]
+  (<span style=color:#a6e22e>find-treasure</span> [obj]
     false)
   java.lang.Double
-  (find-treasure [obj]
+  (<span style=color:#a6e22e>find-treasure</span> [obj]
     false)
   java.lang.String [obj]
-    (= &quot;dailyprogrammer&quot; obj)))
-</code></pre><p>Protocols solve our earlier problem 2 using traditional polymorphism. We can
+    (= <span style=color:#e6db74>&#34;dailyprogrammer&#34;</span> obj)))
+</code></pre></div><p>Protocols solve our earlier problem 2 using traditional polymorphism. We can
 simply implement the method for each of the 6 types
 (although only the terminal types are shown here), and we will have the
 appropriate type-based dispatching. Pretty cool!</p><p>I was surprised to discover that, in this case, protocols also permit
 self-recursion! Because the interface of the protocol was uniform across
 all 6 types, each protocol implementation was able to dive back into
-the same function defined on another type:</p><pre><code class=language-clojure>(extend-protocol ContainsTreasure
-  ; iterate over vector, tracking index, and see if any values
-  ; recursively satisfy the value check. If so, return the accumulated
-  ; path back.
+the same function defined on another type:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-clojure data-lang=clojure>(<span style=color:#a6e22e>extend-protocol</span> ContainsTreasure
+  <span style=color:#75715e>; iterate over vector, tracking index, and see if any values</span>
+  <span style=color:#75715e>; recursively satisfy the value check. If so, return the accumulated</span>
+  <span style=color:#75715e>; path back.</span>
   clojure.lang.IPersistentVector
-  (find-treasure [obj]
-    (loop [i 0
+  (<span style=color:#a6e22e>find-treasure</span> [obj]
+    (<span style=color:#66d9ef>loop </span>[i <span style=color:#ae81ff>0</span>
            elems (seq obj)]
-      (let [f (first elems)
-            treasure (find-treasure f)]
-        (cond
-          treasure (if (seq? treasure)
+      (<span style=color:#66d9ef>let </span>[f (first elems)
+            treasure (<span style=color:#a6e22e>find-treasure</span> f)]
+        (<span style=color:#a6e22e>cond</span>
+          treasure (<span style=color:#66d9ef>if </span>(seq? treasure)
                      (cons i treasure)
                      (list i))
           (nil? (next elems)) false
-          :else (recur (inc i) (rest elems))))))
+          <span style=color:#e6db74>:else</span> (<span style=color:#a6e22e>recur</span> (inc i) (rest elems))))))
 
-  ; iterate over map, tracking keys, and see if any values
-  ; recursively satisfy the value check.
+  <span style=color:#75715e>; iterate over map, tracking keys, and see if any values</span>
+  <span style=color:#75715e>; recursively satisfy the value check.</span>
   clojure.lang.IPersistentMap
-  (find-treasure [obj]
-    (loop [kvpairs (seq obj)]
-      (let [kv (first kvpairs)
-            treasure (find-treasure (second kv))]
-        (cond
+  (<span style=color:#a6e22e>find-treasure</span> [obj]
+    (<span style=color:#66d9ef>loop </span>[kvpairs (seq obj)]
+      (<span style=color:#66d9ef>let </span>[kv (first kvpairs)
+            treasure (<span style=color:#a6e22e>find-treasure</span> (second kv))]
+        (<span style=color:#a6e22e>cond</span>
           (nil? kv) false
-          treasure (if (seq? treasure)
+          treasure (<span style=color:#66d9ef>if </span>(seq? treasure)
                      (cons (first kv) treasure)
                      (list (first kv)))
-          :else (recur (rest kvpairs)))))))
-</code></pre><p>There are many keywords here, which perhaps make this a bit tricker to follow
-than the equivalent F# function, but they both do the same action.</p><ol><li>Store the next item in the sequence in <code>f</code>/<code>kvpairs</code>. Check whether it&rsquo;s
+          <span style=color:#e6db74>:else</span> (<span style=color:#a6e22e>recur</span> (rest kvpairs)))))))
+</code></pre></div><p>There are many keywords here, which perhaps make this a bit tricker to follow
+than the equivalent F# function, but they both do the same action.</p><ol><li>Store the next item in the sequence in <code>f`/</code>kvpairs`. Check whether it's
 the specified value.</li><li>If it is, then return the crumb to the value.</li><li>If it is not, keep recurring.</li></ol><h2 id=comparison-of-solutions>Comparison of Solutions</h2><p>In my unscientific ad-hoc benchmarking, the Clojure solution ran on the hardest
 data set in about 140ms in the REPL (Ubuntu), while the F# solution ran in
 about 200ms in F# Interactive (Windows 7).
-I was actually surprised by how much quicker Clojure seemed, although I&rsquo;m
+I was actually surprised by how much quicker Clojure seemed, although I'm
 probably missing several optimizations in each language.</p><h3 id=feel-of-languages>Feel of Languages</h3><p>F# definitely felt more natural to express this problem. I think its powerful
 and flexible static type system allows for expressing any desired combination
 of input and output types, and having confidence that they work consistently.
@@ -205,13 +200,13 @@ data model would require Clojure to start implementing dynamic dispatch
 using lookup tables (which seems somewhat gross to me), I would not
 rule Clojure out just for that. (After all, what does C do?)</p><p>Type dispatching aside, I found that the Clojure code was more of a joy
 to write when implementing scaffolding code around the core algorithm.
-This seems reasonable, as I don&rsquo;t know many people who like wrestling
+This seems reasonable, as I don't know many people who like wrestling
 with types when reading or writing files (unless they really do need
-to catch all sorts of exceptions). I didn&rsquo;t find Clojure to be as strong
+to catch all sorts of exceptions). I didn't find Clojure to be as strong
 at expressing the actual algorithm as I found F#, as mentioned above.
 My takeaway from this would probably be that, depending on whether
 flexible and rapid system design or strong algorithmic modeling is more
 important, Clojure or F# may be a more natural fit.</p><p>Do you have any thoughts on which language you prefer? Leave your
 thoughts below!</p><h2 id=references>References</h2><p><a href=https://gist.github.com/Artiavis/29de21935d0afae782c4>My F# solution</a>
 <a href=https://gist.github.com/Artiavis/017b42017a3275cbbfe8>My Clojure solution</a></p></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname='justabloginthepark';var disqus_loaded=false;function disqus(){if(!disqus_loaded){disqus_loaded=true;if(window.location.hostname=="localhost")
-return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);}};</script><script type=text/javascript>window.onscroll=function(e){if((window.innerHeight+window.scrollY)>=document.body.offsetHeight){if(!disqus_loaded){disqus();}}};</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2019</p></div></section><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js></script><script>hljs.initHighlightingOnLoad();</script>
+return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);}};</script><script type=text/javascript>window.onscroll=function(e){if((window.innerHeight+window.scrollY)>=document.body.offsetHeight){if(!disqus_loaded){disqus();}}};</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2019</p></div></section><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/clojure.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/cs.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/cpp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/css.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/fsharp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/go.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/kotlin.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/javascript.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/ini.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/java.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/json.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/markdown.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/ruby.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/scala.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/scheme.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/sql.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/tex.min.js></script><script>hljs.initHighlightingOnLoad();</script>

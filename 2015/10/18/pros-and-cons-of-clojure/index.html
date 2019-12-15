@@ -1,43 +1,43 @@
-<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Pros and Cons of Clojure | Just a Blog in the Park</title><link rel=stylesheet href=/css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css><link rel=stylesheet href=/css/vs2015.min.css><link rel=stylesheet href=/css/images.min.css><section class=section><div class=container><nav class=nav><div class=nav-left><a href=/about><img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75"></a>
-<a class=nav-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a></div><div class=nav-right><nav class="nav-item level is-mobile"><a class=level-item href=/photos><span class=icon><i class="fas fa-camera"></i></span></a><a class=level-item href=/tags><span class=icon><i class="fas fa-tags"></i></span></a><a class=level-item href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span></a><a class=level-item href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span></a><a class=level-item href="https://www.dropbox.com/s/f71ni06ghor76d3/jeff_rabinowitz_resume_2018_03_24.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span></a><a class=level-item href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span></a></nav></div></nav></div></section><section class=section><div class=container><h2 class="subtitle is-6">October 18, 2015</h2><h1 class=title>Pros and Cons of Clojure</h1><h2 class="subtitle is-6">10 minute read</h2><ul id=tags><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i>programming</a></li><li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i>clojure</a></li></ul><br><div class=content><p>As part of my forays in interesting (and generally unusable at work)
+<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Pros and Cons of Clojure | Just a Blog in the Park</title><link rel=stylesheet href=/css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css><link rel=stylesheet href=/css/vs2015.min.css><link rel=stylesheet href=/css/images.min.css><section class=section><div class=container><nav class=nav><div class=nav-left><a href=/about><img src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=75"></a>
+<a class=nav-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a></div><div class=nav-right><nav class="nav-item level is-mobile"><a class=level-item href=/photos><span class=icon><i class="fas fa-camera"></i></span></a><a class=level-item href=/tags><span class=icon><i class="fas fa-tags"></i></span></a><a class=level-item href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span></a><a class=level-item href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span></a><a class=level-item href="https://www.dropbox.com/s/190j5fjr6dl3q5c/jeff_rabinowitz_resume_2019_12_15.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span></a><a class=level-item href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span></a></nav></div></nav></div></section><section class=section><div class=container><h2 class="subtitle is-6">October 18, 2015</h2><h1 class=title>Pros and Cons of Clojure</h1><h2 class="subtitle is-6">10 minute read</h2><ul id=tags><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i>programming</a></li><li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i>clojure</a></li></ul><br><div class=content><p>As part of my forays in interesting (and generally unusable at work)
 programming languages, I began investigating
 <a href=clojure.org>Clojure</a> back in June. Although I really love the
-language as a whole (and, in fact, I&rsquo;m using it to power this blog!),
+language as a whole (and, in fact, I'm using it to power this blog!),
 I struggled not only to set it up, but to find its ideal niche.
 This essay/rant is a result of a conversation I had about Clojure with
 two friends, one who is an excellent polyglot programmer, and one
-who is a beginner simply interested in Clojure as a practical Lisp.</p><h2 id=strengths-of-clojure-as-a-language>Strengths of Clojure as a Language</h2><p>I have to hand it to Rich Hickey &mdash; Clojure is a brilliant and well-designed
+who is a beginner simply interested in Clojure as a practical Lisp.</p><h2 id=strengths-of-clojure-as-a-language>Strengths of Clojure as a Language</h2><p>I have to hand it to Rich Hickey — Clojure is a brilliant and well-designed
 language. This is in no small part due to the power of Lisp and its ability
 to incorporate almost anything as part of the language, but is also helped by
-Rich&rsquo;s insistence on not simply chucking half-baked features into the language.
-A brilliant example of this (I&rsquo;m unsure whether this is native to Lisps or
+Rich's insistence on not simply chucking half-baked features into the language.
+A brilliant example of this (I'm unsure whether this is native to Lisps or
 simply a Clojure implementation detail) is that keys to maps double as functions
 for retrieving the corresponding values from maps (and vice versa).</p><h3 id=multiparadigm>Multiparadigm</h3><p>Lisp is leveraged to great effect not only in flexibly implementing the core
 language, but also in implementing language constructs borrowed from other languages.
 Clojure borrows actors from Erlang, Go routines from Go,
-and logic programming from Prolog. It&rsquo;s possible to cover many of the language
+and logic programming from Prolog. It's possible to cover many of the language
 features of those languages (and probably new ones) without ever needing
 to leave Clojure land.</p><h3 id=functional-programming-constructs>Functional Programming Constructs</h3><p>Lately, functional programming has been experiencing an increase in popularity
 as technologies like <a href=https://facebook.github.io/react/>React.js</a>
 highlight the power of not mutating state in long-running applications.
 Although Object Oriented Programming is a robust and clever solution to
 a certain class of problems, it often struggles and can be unnatural in others.
-In fact, I recently read a blog post (which I can&rsquo;t seem to find anymore)
+In fact, I recently read a blog post (which I can't seem to find anymore)
 which I believe explains this point nicely (paraphrased from memory):</p><blockquote><p>In programming, there are certain intrinsically stateful &ldquo;entities&rdquo;, which are
 reasonable to represent using objects: databases and files, for example.
 At any point in time, the state of these entities can be almost anything,
 and they are not fixed even during the lifetime of a program,
-so it&rsquo;s reasonable to represent them as stateful objects.</p><p>However, most things in programming are <em>not</em> stateful entities.
+so it's reasonable to represent them as stateful objects.</p></blockquote><blockquote><p>However, most things in programming are <em>not</em> stateful entities.
 Objects are often just glorified maps with simple operations defined upon
 them, which have no need for or significant gain from intrinsic state.
-Anything which isn&rsquo;t a complex entity, such as a list or map or string,
+Anything which isn't a complex entity, such as a list or map or string,
 almost definitely need not be represented using objects, and should instead
-be represented using &ldquo;pure&rdquo; data types.</p><p>In general, a program may only need to interact with one or two entities
+be represented using &ldquo;pure&rdquo; data types.</p></blockquote><blockquote><p>In general, a program may only need to interact with one or two entities
 but will probably need to interact with many thousands of data types.
 For a domain with need of few entities but many pieces of data, does it make
 more sense to choose a paradigm which favors data, or entities?</p></blockquote><p>Clojure builds on the functional programming nature of languages like
 Haskell by having variables be immutable by default, as part of the core
-language runtime. It&rsquo;s beautiful that the persistent collections are built
+language runtime. It's beautiful that the persistent collections are built
 into the language and impossible to violate or contaminate.</p><h2 id=strengths-of-clojure-from-the-jvm>Strengths of Clojure from the JVM</h2><p>As a dynamically typed language, Clojure shares the same blazing
 speed of rapid prototyping as Python. But as a JVM-based language,
 Clojure manages to be relatively performant (even with persistent collections)!</p><p>Clojure also manages to piggyback on the existing ecosystem of Java tools rather well. Clojure can run almost any Java library using its language interop features.
@@ -48,44 +48,44 @@ to compile code into JavaScript
 (<a href=https://github.com/clojure/clojurescript/wiki>ClojureScript</a>)!</p><h2 id=weaknesses-of-clojure-as-a-language>Weaknesses of Clojure as a Language</h2><p>Although the Clojure language is <em>usually</em> beautiful, that beauty unfortunately
 is not present everywhere.</p><h3 id=primitive-types-are-still-java-primitives>Primitive Types are Still Java Primitives</h3><p>Although Clojure promises to be a high level abstraction over the Java language, where interop features should only be
 needed for libraries, the truth is that even nuts and bolts of the language occasionally require dropping down to Java.
-My sticking point is that in order to convert the string &ldquo;5&rdquo; to the integer 5, I need to call the Java Integer class&rsquo;s
-&ldquo;parseInt&rdquo; method, which is essentially an interop call.</p><pre><code class=language-clojure>(defn parse-int
-  &quot;I need to call to a static method on the Integer class
-  in order to cast an integer to a string!&quot;
+My sticking point is that in order to convert the string &ldquo;5&rdquo; to the integer 5, I need to call the Java Integer class's
+&ldquo;parseInt&rdquo; method, which is essentially an interop call.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-clojure data-lang=clojure>(<span style=color:#66d9ef>defn </span>parse-int
+  <span style=color:#e6db74>&#34;I need to call to a static method on the Integer class
+</span><span style=color:#e6db74>  in order to cast an integer to a string!&#34;</span>
   [int]
-  (Integer/parseInt int))
-</code></pre><p>Although I understand that Clojure is built above the JVM and primitives
-can&rsquo;t be completely wrapped by the Clojure runtime without suffering
-performance penalties, it&rsquo;s still a jarring compromise.</p><h3 id=wrapping-exceptions>Wrapping Exceptions</h3><p>Exceptions and Exceptional handling aren&rsquo;t meant to be done in Clojure (think C style &ldquo;codes&rdquo; signifying error
+  (<span style=color:#a6e22e>Integer/parseInt</span> int))
+</code></pre></div><p>Although I understand that Clojure is built above the JVM and primitives
+can't be completely wrapped by the Clojure runtime without suffering
+performance penalties, it's still a jarring compromise.</p><h3 id=wrapping-exceptions>Wrapping Exceptions</h3><p>Exceptions and Exceptional handling aren't meant to be done in Clojure (think C style &ldquo;codes&rdquo; signifying error
 conditions) itself, and Clojure has reasonable ways of handling these things. However, in practice much of writing
 Clojure requires wrapping Java libraries which do make heavy use of this feature, and in particular anyone writing a
 production-ready Clojure app needs to make sure every conceivable Exception does get caught to ensure horrifying stack
-traces don&rsquo;t get spilled to users. As a result, people writing production Clojure code (presumably its target use case?)
+traces don't get spilled to users. As a result, people writing production Clojure code (presumably its target use case?)
 must still get down and dirty by writing lots of messy Exception handling code in a (functional) language whose paradigm
 was never meant to support them.</p><h3 id=stack-traces>Stack Traces</h3><p>This is a bit of a funny issue. Generally, you hope to never see a stack
 trace from a program, as it is a worst-case scenario for code execution.
-On the other hand, they&rsquo;re generally unavoidable, making this problem even
+On the other hand, they're generally unavoidable, making this problem even
 more frustration.</p><p>Because Clojure is an <strong>interpreted</strong> language <strong>built above another runtime</strong>,
 a crashing Clojure program will necessarily spill a (very large) Java stack trace.
 This is both aesthetically unpleasing and practically a tough thing to debug,
 as it can be difficult to ascertain whether the cause of the crash was a Clojure
-problem or a Java problem.</p><h2 id=challenge-of-the-learning-curve>Challenge of the Learning Curve</h2><p>Let&rsquo;s be frank here and admit that Clojure has one of the highest learning curves
-of any programming language. But it&rsquo;s not for the reason one typically expects,
+problem or a Java problem.</p><h2 id=challenge-of-the-learning-curve>Challenge of the Learning Curve</h2><p>Let's be frank here and admit that Clojure has one of the highest learning curves
+of any programming language. But it's not for the reason one typically expects,
 that the language itself has a conceptually complex set of rules
 like Haskell or Rust
 (although persistent collections take a while to grasp).
 Rather, simply getting a fully functioning Clojure installation and editing
 environment can be extremely frustrating.</p><h3 id=editor>Editor</h3><p>The ideal Clojure development model
-is so-called &ldquo;REPL-based development&rdquo; &mdash;: writing all code in
+is so-called “REPL-based development” —: writing all code in
 an editor which is connected to a live interactive Clojure session, and
-&ldquo;sending&rdquo; chunks of code into the session for evaluation.
-(For those who haven&rsquo;t done this in languages like Ruby or Python, it&rsquo;s
+“sending” chunks of code into the session for evaluation.
+(For those who haven't done this in languages like Ruby or Python, it's
 incredibly powerful and far more useful than debugging for piecing out programs.)</p><p>The only editor which supports this model (and Clojure itself) out of the box
 is <a href=http://lighttable.com/>Light Table</a>, essentially a working prototype
 of a REPL-based editor. However, Light Table is only really preferable for
 Clojure, because every other language has a generally superior editor available.
 In order for someone to get up to speed in Clojure, they need to first learn
-the language in Light Table. However, Light Table isn&rsquo;t generally scalable
+the language in Light Table. However, Light Table isn't generally scalable
 to large projects due to its small ecosystem of plugins.
 Once a Clojure student is ready for the next step,
 they must bite off the huge task of learning a text editor or IDE
@@ -95,11 +95,11 @@ functional environment.</p><h3 id=paredit>Paredit</h3><p>Anyone with experience 
 serious Lisp programming. (Paredit is a family of text-manipulation shortcuts
 for manipulating Lisp-based languages.) Other languages generally
 use blocks and indentations naturally during coding, such that one or more lines of code
-can be seamlessly moved up or down to allow manipulating code. Due to Lisp&rsquo;s
-favored style of code structuring, it&rsquo;s impossible to do this with Lisp code.
+can be seamlessly moved up or down to allow manipulating code. Due to Lisp's
+favored style of code structuring, it's impossible to do this with Lisp code.
 One has to manually copy and paste code until one is ready to bite the bullet
 and invest in learning Paredit (which, as mentioned above, requires a &ldquo;big boy&rdquo;
-editor).</p><h2 id=weaknesses-of-clojure-as-a-tool-of-choice>Weaknesses of Clojure as a Tool of Choice</h2><h3 id=initialization-time>Initialization Time</h3><p>Despite its beauty as a language, Clojure isn&rsquo;t ideal for certain tasks
+editor).</p><h2 id=weaknesses-of-clojure-as-a-tool-of-choice>Weaknesses of Clojure as a Tool of Choice</h2><h3 id=initialization-time>Initialization Time</h3><p>Despite its beauty as a language, Clojure isn't ideal for certain tasks
 like command-line utilities and short scripts.
 The cost of bootstrapping both the JVM and the Clojure runtime make it
 so that even relatively short programs which take milliseconds to run
@@ -111,18 +111,18 @@ Although Clojure has projects like
 <a href=https://github.com/clojure/core.typed>Typed Clojure</a>
 and
 <a href=https://github.com/Prismatic/schema>Prismatic</a>,
-which aim to help, they aren&rsquo;t quite the same as having types built into the language when it comes to refactoring.</p><h3 id=ecosystem-still-isn-t-at-critical-mass>Ecosystem Still Isn&rsquo;t at Critical Mass</h3><p>Although this is probably a topic for another post, it&rsquo;s generally understood that
-a programming language doesn&rsquo;t exist in a vacuum. In order to achieve mainstream
+which aim to help, they aren't quite the same as having types built into the language when it comes to refactoring.</p><h3 id=ecosystem-still-isnt-at-critical-mass>Ecosystem Still Isn't at Critical Mass</h3><p>Although this is probably a topic for another post, it's generally understood that
+a programming language doesn't exist in a vacuum. In order to achieve mainstream
 popularity, a language needs not only approachability and ease of learning,
 but also a healthy and vibrant ecosystem of users available to help, libraries
 for common tasks, and frameworks for common applications: mindshare. Even if a language were
 trivial, the lack of a strong ecosystem can prevent a language from ever being
-feasible. Most developers don&rsquo;t have the luxury of getting to reinvent the wheel
+feasible. Most developers don't have the luxury of getting to reinvent the wheel
 in their language of choice, so having an army of tried and true libraries for
 routine tasks is imperative to succeed.</p><p>While Clojure has a good number of libraries, benefiting in particular here from
-its ability to leverage Java for low-level features, it still doesn&rsquo;t feel like
+its ability to leverage Java for low-level features, it still doesn't feel like
 there is a plethora of fully fleshed out Clojure libraries in late 2015.
-Clojure simply doesn&rsquo;t have the number of libraries that Java, Python, Ruby,
+Clojure simply doesn't have the number of libraries that Java, Python, Ruby,
 or even (especially?) JavaScript each have.</p><p>This makes Clojure risky to develop serious projects with. Without the library
 ecosystem, who can be sure that there will be fresh new developers coming in
 to develop new projects and grow or maintain existing ones? At the end of the day,
@@ -131,13 +131,13 @@ much larger ecosystem and mindshare?</p><h2 id=overall-sentiments>Overall Sentim
 makes up for its occasional Java warts. Any time I may want to use Java,
 I could probably also make use of Clojure
 (<a href=http://blog.ndk.io/2015/04/23/state-of-coa.html>except for Android</a>).</p><p>However, I would still be concerned about starting a new Clojure project in a
-professional environment. I just don&rsquo;t think Clojure is &ldquo;shiny&rdquo;
+professional environment. I just don't think Clojure is “shiny”
 enough or commercially appealing enough to incentivize newcomers to roll the
-dice on it when a company or project is on the line, and I don&rsquo;t think the
+dice on it when a company or project is on the line, and I don't think the
 library ecosystem is currently strong enough to confidently bet a project
 on the right libraries existing.</p><p>If a beginner asked me whether learning Clojure is a good professional investment in 2015,
-I&rsquo;d have to tell them no. I can&rsquo;t, in good conscience, condone a language
+I'd have to tell them no. I can't, in good conscience, condone a language
 that I feel has limited industrial applications for the aforementioned reason.
-This doesn&rsquo;t even take into account the learning curve!</p><p>Clojure will probably be a hobby language for me; I don&rsquo;t expect to be fortunate
+This doesn't even take into account the learning curve!</p><p>Clojure will probably be a hobby language for me; I don't expect to be fortunate
 enough to use it professionally any time soon.</p></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname='justabloginthepark';var disqus_loaded=false;function disqus(){if(!disqus_loaded){disqus_loaded=true;if(window.location.hostname=="localhost")
-return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);}};</script><script type=text/javascript>window.onscroll=function(e){if((window.innerHeight+window.scrollY)>=document.body.offsetHeight){if(!disqus_loaded){disqus();}}};</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2019</p></div></section><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/clojure.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cs.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/fsharp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ini.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/json.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/markdown.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/ruby.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js></script><script>hljs.initHighlightingOnLoad();</script>
+return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);}};</script><script type=text/javascript>window.onscroll=function(e){if((window.innerHeight+window.scrollY)>=document.body.offsetHeight){if(!disqus_loaded){disqus();}}};</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2019</p></div></section><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/clojure.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/cs.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/cpp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/css.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/fsharp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/go.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/kotlin.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/javascript.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/ini.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/java.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/json.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/markdown.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/ruby.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/scala.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/scheme.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/sql.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/tex.min.js></script><script>hljs.initHighlightingOnLoad();</script>
