@@ -11,7 +11,7 @@ and a fairly sophisticated function definition, error handling, and hygienic mac
 (a full summary of the language spec can be found <a href=https://www.scheme.com/tspl4/summary.html#./summary:h0>here</a>).
 I chose Chez Scheme because of its fascinating heritage as an industrial-strengh
 production-ready Scheme dialect, and because it seemed more traditional (being fully self-hosted);
-but that's a conversation for another post.</p><p>As a minimal Lisp, Scheme has only a primitive &ldquo;object&rdquo; system
+but that&rsquo;s a conversation for another post.</p><p>As a minimal Lisp, Scheme has only a primitive &ldquo;object&rdquo; system
 (if you can even call it that): <a href=https://www.scheme.com/tspl4/records.html#./records:s13>records</a>,
 which are roughly analogous to <code>struct</code>s in C.
 For example, a tree-node structure from the worked examples in
@@ -32,7 +32,7 @@ and both <a href=https://en.wikipedia.org/wiki/Mutator_method>getters/setters</a
 <a href=https://en.wikipedia.org/wiki/Object-oriented_programming>object-oriented programming paradigm</a>
 (classes),
 preferring to let programmers roll their own.
-Now, I don't think I can invent a novel or particularly interesting
+Now, I don&rsquo;t think I can invent a novel or particularly interesting
 object-oriented programming system; but I do find it fascinating to study
 how others have done it.</p><p>Typically, objects are at least somewhat self-aware
 (ie it is possible to ask an object for its type, and usually also to
@@ -44,7 +44,7 @@ languages, for a few reasons:</p><ol><li>Objects can be built using only one dat
 Prototypes are typically objects with associated code but no data; instances
 are typically objects with associated data but no code; but there is no firm
 requirement to make this distinction.</li><li>Combining objects is as simple as including them in the delegation chain
-of another object.</li></ol><p>One such neat system I've recently stumbled upon is
+of another object.</li></ol><p>One such neat system I&rsquo;ve recently stumbled upon is
 &ldquo;<a href=https://launchpad.net/kend>TinyTalk</a>",
 a minimal Smalltalk-like prototype-based object system,
 developed by Ken Dickey as a spiritual successor
@@ -73,15 +73,15 @@ It defines a full object-oriented system in under 400 lines-of-code!</p><p>In Ja
   <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>Point</span>;
 }());
 </code></pre></div><p>In this case, <code>Point</code> is both the name of the type, as well as the factory-function
-with which to produce instances. However, there isn't really a <code>Point</code> class, so
+with which to produce instances. However, there isn&rsquo;t really a <code>Point</code> class, so
 much as an anonymous <code>Point</code> object which contains both the constructor and function
 definitions. Per the convention described above, data are stored on the object itself
-(<code>this.x = x</code>), but the code is stored on the object's prototype
+(<code>this.x = x</code>), but the code is stored on the object&rsquo;s prototype
 (<code>Point.prototype.distanceBetween = ...</code>).
 And, due to historical baggage, JavaScript class factories generally share a name
 with their types, and are invoked by calling the <code>new</code> operator on a particular
 prototype.</p><p>In TinyTalk, something equivalent looks like:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme>(<span style=color:#66d9ef>define </span>proto-point
-  (<span style=color:#a6e22e>object</span> () <span style=color:#75715e>;; Methods only</span>
+  (<span style=color:#a6e22e>object</span> () <span style=color:#75715e>;; Methods only</span>
     [(<span style=color:#a6e22e>point?</span> self) <span style=color:#66d9ef>#t</span>]
     [(<span style=color:#a6e22e>distance-between</span> self other)
       (<span style=color:#a6e22e>unless</span> (<span style=color:#a6e22e>point?</span> other)
@@ -96,8 +96,8 @@ prototype.</p><p>In TinyTalk, something equivalent looks like:</p><div class=hig
 
 (<span style=color:#66d9ef>define </span>(<span style=color:#a6e22e>new-point</span> x y)
   (<span style=color:#a6e22e>object</span>
-    ([x x] [y y]) <span style=color:#75715e>;; Each instance has its own data...</span>
-    [(<span style=color:#a6e22e>delegate</span> self) proto-point])) <span style=color:#75715e>;; but shares code...</span>
+    ([x x] [y y]) <span style=color:#75715e>;; Each instance has its own data...</span>
+    [(<span style=color:#a6e22e>delegate</span> self) proto-point])) <span style=color:#75715e>;; but shares code...</span>
 </code></pre></div><p>Here, <code>new-point</code> is the factory-function for creating instances.
 TinyTalk names its prototype lookup <code>delegate</code> instead of <code>prototype</code>,
 although it is functionally identical.</p><p>Of course, prototypes have other fun capabilities, such as dynamic
@@ -127,14 +127,14 @@ This global dictionary leverages the Scheme
 built-in type-types (e.g. <code>(list? (list))</code> returns true).
 Virtual prototypes are created for the built in types, and
 added to the global dictionary. Whenever an unknown object is invoked,
-not only is that object's own prototype consulted (when it exists), but the
-dictionary is, too.</p><h2 id=when-would-i-use-this>When would I use this?</h2><p>That's a good question! Most of the time, when I do personal programming,
-I'm using a language like Python/Clojure, which already has a robust
+not only is that object&rsquo;s own prototype consulted (when it exists), but the
+dictionary is, too.</p><h2 id=when-would-i-use-this>When would I use this?</h2><p>That&rsquo;s a good question! Most of the time, when I do personal programming,
+I&rsquo;m using a language like Python/Clojure, which already has a robust
 object system built in.
-(Python's object system is essentially prototype-based, whereas Clojure's
-has prototype-like flexibility but isn't actually prototype-based.)</p><p>I suppose that <em>if</em> I were writing a video game from scratch,
+(Python&rsquo;s object system is essentially prototype-based, whereas Clojure&rsquo;s
+has prototype-like flexibility but isn&rsquo;t actually prototype-based.)</p><p>I suppose that <em>if</em> I were writing a video game from scratch,
 <em>and</em> I was also writing the engine from scratch,
-<em>and</em> I was going to embed an engine (that wasn't Lua),
+<em>and</em> I was going to embed an engine (that wasn&rsquo;t Lua),
 I could use ChezScheme with TinyTalk to do so.
-But even if I don't do that, it's nice to know that it's there.</p></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname='justabloginthepark';var disqus_loaded=false;function disqus(){if(!disqus_loaded){disqus_loaded=true;if(window.location.hostname=="localhost")
-return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);}};</script><script type=text/javascript>window.onscroll=function(e){if((window.innerHeight+window.scrollY)>=document.body.offsetHeight){if(!disqus_loaded){disqus();}}};</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2019</p></div></section><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/clojure.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/cs.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/cpp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/css.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/fsharp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/go.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/kotlin.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/javascript.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/ini.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/java.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/json.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/markdown.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/ruby.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/scala.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/scheme.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/sql.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/tex.min.js></script><script>hljs.initHighlightingOnLoad();</script>
+But even if I don&rsquo;t do that, it&rsquo;s nice to know that it&rsquo;s there.</p></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname='justabloginthepark';var disqus_loaded=false;function disqus(){if(!disqus_loaded){disqus_loaded=true;if(window.location.hostname=="localhost")
+return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);}};</script><script type=text/javascript>window.onscroll=function(e){if((window.innerHeight+window.scrollY)>=document.body.offsetHeight){if(!disqus_loaded){disqus();}}};</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2020</p></div></section><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/clojure.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/cs.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/cpp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/css.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/fsharp.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/go.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/kotlin.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/javascript.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/ini.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/java.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/json.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/markdown.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/ruby.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/scala.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/scheme.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/sql.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/tex.min.js></script><script>hljs.initHighlightingOnLoad();</script>
