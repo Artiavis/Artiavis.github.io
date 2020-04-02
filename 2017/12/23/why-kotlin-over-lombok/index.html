@@ -15,18 +15,18 @@ they know and &ldquo;love&rdquo; (for some definition of &ldquo;love&rdquo;).</p
     Object object<span style=color:#f92672>;</span>
 <span style=color:#f92672>}</span>
 <span style=color:#75715e>// turns into something
-</span><span style=color:#75715e></span><span style=color:#75715e>// like this...
+</span><span style=color:#75715e>// like this...
 </span><span style=color:#75715e></span><span style=color:#66d9ef>final</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>MyPojo</span> <span style=color:#f92672>{</span>
     <span style=color:#66d9ef>final</span> String string<span style=color:#f92672>;</span>
     <span style=color:#66d9ef>final</span> Integer integer<span style=color:#f92672>;</span>
     <span style=color:#66d9ef>final</span> Object object<span style=color:#f92672>;</span>
 
     MyPojo<span style=color:#f92672>(</span>String string<span style=color:#f92672>,</span> Integer integer<span style=color:#f92672>,</span> Object object<span style=color:#f92672>)</span> <span style=color:#f92672>{</span> <span style=color:#f92672>}</span>
-    <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getString</span><span style=color:#f92672>(</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span> <span style=color:#f92672>}</span>
-    <span style=color:#66d9ef>public</span> Integer <span style=color:#a6e22e>getInteger</span><span style=color:#f92672>(</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span> <span style=color:#f92672>}</span>
-    <span style=color:#66d9ef>public</span> Object <span style=color:#a6e22e>getObject</span><span style=color:#f92672>(</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span> <span style=color:#f92672>}</span>
-    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> <span style=color:#a6e22e>hashCode</span><span style=color:#f92672>(</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span> <span style=color:#f92672>}</span>
-    <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>toString</span><span style=color:#f92672>(</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span> <span style=color:#f92672>}</span>
+    <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getString</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span> <span style=color:#f92672>}</span>
+    <span style=color:#66d9ef>public</span> Integer <span style=color:#a6e22e>getInteger</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span> <span style=color:#f92672>}</span>
+    <span style=color:#66d9ef>public</span> Object <span style=color:#a6e22e>getObject</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span> <span style=color:#f92672>}</span>
+    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> <span style=color:#a6e22e>hashCode</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span> <span style=color:#f92672>}</span>
+    <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>toString</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span> <span style=color:#f92672>}</span>
     <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>equals</span><span style=color:#f92672>(</span>Object o<span style=color:#f92672>)</span> <span style=color:#f92672>{</span> <span style=color:#f92672>}</span>
 <span style=color:#f92672>}</span>
 </code></pre></div><p><a href=http://notatube.blogspot.com/2010/11/project-lombok-trick-explained.html>This excellent post explains that Lombok does this by abusing Java annotations and annotation processors</a>.

@@ -11,27 +11,27 @@ really understand. I&rsquo;m going to attempt to walk through the relevant bits,
 it may not make much sense without also reading the relevant portions of source
 code. Thankfully, Lisps are simple to understand, so it should only take a few
 hours (instead of days or weeks). However, if you just want the short version/the spoiler,
-here&rsquo;s the TL;DR:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-clojure data-lang=clojure><span style=color:#75715e>;; In Clojure, this works:</span>
+here&rsquo;s the TL;DR:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-clojure data-lang=clojure><span style=color:#75715e>;; In Clojure, this works:</span>
 (<span style=color:#66d9ef>ns </span>namespace-1)
 (println *ns*)
-<span style=color:#75715e>;; #namespace[namespace-1]</span>
+<span style=color:#75715e>;; #namespace[namespace-1]</span>
 
-<span style=color:#75715e>;; This also works</span>
+<span style=color:#75715e>;; This also works</span>
 (in-ns <span style=color:#e6db74>&#39;namespace-2</span>)
 (<span style=color:#a6e22e>clojure.core/println</span> clojure.core/*ns*)
-<span style=color:#75715e>;; #namespace[namespace-2]</span>
-<span style=color:#75715e>;; you could use</span>
+<span style=color:#75715e>;; #namespace[namespace-2]</span>
+<span style=color:#75715e>;; you could use</span>
 (<span style=color:#a6e22e>refer-clojure</span>)
-<span style=color:#75715e>;; to use the shorthand syntax available in the previous example</span>
+<span style=color:#75715e>;; to use the shorthand syntax available in the previous example</span>
 
-<span style=color:#75715e>;; However, this fails miserably at runtime, and there is no good documentation</span>
-<span style=color:#75715e>;; available which explains why this is so:</span>
+<span style=color:#75715e>;; However, this fails miserably at runtime, and there is no good documentation</span>
+<span style=color:#75715e>;; available which explains why this is so:</span>
 (<span style=color:#66d9ef>defn </span>-main
   [<span style=color:#f92672>&amp;</span> args]
   (in-ns <span style=color:#e6db74>&#39;namespace-3</span>)
   (<span style=color:#a6e22e>refer-clojure</span>)
   (println *ns*))
-<span style=color:#75715e>;; Will shout and complain that you can&#39;t set a Var that&#39;s not locally bound</span>
+<span style=color:#75715e>;; Will shout and complain that you can&#39;t set a Var that&#39;s not locally bound</span>
 </code></pre></div><h2 id=whats-in-a-name>What&rsquo;s in a Name?</h2><p>Since the earliest days of Computer Science, programmers have struggled with
 confining subsets of their routines into global compartments, to both minimize
 the cognitive load of juggling a multitude of routines and variable names, as
@@ -203,27 +203,27 @@ particularly special about the Clojure compiler or REPL; they just happen to hav
 the local bindings set up correctly. If you need to do runtime code loading (via
 <code>eval</code> or the like), you could similarly set up new namespaces for that code.
 (Technically Clojure does not guard against malicious actors, so custom classloaders
-may be needed if you&rsquo;re loading code from an untrusted party.)</p><h2 id=bringing-it-all-together>Bringing it All Together</h2><p>To save you some scrolling, I&rsquo;ll repeat my example from above, down here:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-clojure data-lang=clojure><span style=color:#75715e>;; In Clojure, this works:</span>
+may be needed if you&rsquo;re loading code from an untrusted party.)</p><h2 id=bringing-it-all-together>Bringing it All Together</h2><p>To save you some scrolling, I&rsquo;ll repeat my example from above, down here:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-clojure data-lang=clojure><span style=color:#75715e>;; In Clojure, this works:</span>
 (<span style=color:#66d9ef>ns </span>namespace-1)
 (println *ns*)
-<span style=color:#75715e>;; #namespace[namespace-1]</span>
+<span style=color:#75715e>;; #namespace[namespace-1]</span>
 
-<span style=color:#75715e>;; This also works</span>
+<span style=color:#75715e>;; This also works</span>
 (in-ns <span style=color:#e6db74>&#39;namespace-2</span>)
 (<span style=color:#a6e22e>clojure.core/println</span> clojure.core/*ns*)
-<span style=color:#75715e>;; #namespace[namespace-2]</span>
-<span style=color:#75715e>;; you could use</span>
+<span style=color:#75715e>;; #namespace[namespace-2]</span>
+<span style=color:#75715e>;; you could use</span>
 (<span style=color:#a6e22e>refer-clojure</span>)
-<span style=color:#75715e>;; to use the shorthand syntax available in the previous example</span>
+<span style=color:#75715e>;; to use the shorthand syntax available in the previous example</span>
 
-<span style=color:#75715e>;; However, this fails miserably at runtime, and there is no good documentation</span>
-<span style=color:#75715e>;; available which explains why this is so:</span>
+<span style=color:#75715e>;; However, this fails miserably at runtime, and there is no good documentation</span>
+<span style=color:#75715e>;; available which explains why this is so:</span>
 (<span style=color:#66d9ef>defn </span>-main
   [<span style=color:#f92672>&amp;</span> args]
   (in-ns <span style=color:#e6db74>&#39;namespace-3</span>)
   (<span style=color:#a6e22e>refer-clojure</span>)
   (println *ns*))
-<span style=color:#75715e>;; Will shout and complain that you can&#39;t set a Var that&#39;s not locally bound</span>
+<span style=color:#75715e>;; Will shout and complain that you can&#39;t set a Var that&#39;s not locally bound</span>
 </code></pre></div><p><em>Why is it that the first two examples work (during compilation and the REPL) and the last one does not (at runtime)?</em>
 I&rsquo;ve already hinted why above, but I&rsquo;ll give the long-form explanation.</p><p>In the interest of efficiency and expediency, the compiler and the REPL both
 pretend to be within an interactive user session, and allow the global

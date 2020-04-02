@@ -4,10 +4,7 @@
 <span class="icon is-small"><i class="fas fa-angle-double-right"></i></span></a></div></article><article><h2 class="subtitle is-6">November 17, 2015</h2><h1 class=title><a href=/2015/11/17/the-clojure-reductions-function/>The Clojure “Reductions” Function</a></h1><div class=content>Tonight, while attempting a problem at 4 Clojure (problem number omitted so as not to give too many hints), I was struck by the following problem:
 What if I need a Clojure function which can take a sequence of functions and can sequentially call them on some seed value?
 I&rsquo;m specifically looking at something like:
-(defn some-fun
-[seed-val & funs]
-; Keep passing the calculated value through, while also appending to sequence
-(list ((first funs) seed-val) ((second funs) ((first funs) seed-val)) .
+(defn some-fun [seed-val & funs] ; Keep passing the calculated value through, while also appending to sequence (list ((first funs) seed-val) ((second funs) ((first funs) seed-val)) .
 ...<br><ul id=tags><li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i>clojure</a></li><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i>programming</a></li></ul><a class="button is-link" href=/2015/11/17/the-clojure-reductions-function/ style=height:28px>Read more
 <span class="icon is-small"><i class="fas fa-angle-double-right"></i></span></a></div></article><article><h2 class="subtitle is-6">November 5, 2015</h2><h1 class=title><a href=/2015/11/05/clojure-zippers-emulate-object-oriented-programming/>Clojure Zippers Emulate Object-Oriented Programming?</a></h1><div class=content>Yesterday, I posted about using Clojure zippers to solve the problem of automatically generating a Table of Contents. During my work with Clojure&rsquo;s implementation of zippers, I noticed something interesting.
 The zipper function creates (and returns) a new zipper object. Its parameters are the following (lifted straight from the documentation):

@@ -49,13 +49,13 @@ and then not-so-obviously wrong ways to do things. Many of these are not obvious
 at first glance, so I thought I&rsquo;d enumerate them for reference.</p><h3 id=double-checked-locking>Double-checked locking</h3><p>There&rsquo;s a common but incredibly unsafe idiom in Java code, to do the following:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>DoubleCheckedLocking</span> <span style=color:#f92672>{</span>
   <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> Resource resource<span style=color:#f92672>;</span>
 
-  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> Object <span style=color:#a6e22e>getInstance</span><span style=color:#f92672>(</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-    <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>resource <span style=color:#f92672>=</span><span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> Object <span style=color:#a6e22e>getInstance</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+    <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>resource <span style=color:#f92672>==</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
       <span style=color:#66d9ef>synchronized</span> <span style=color:#f92672>(</span>DoubleCheckedLocking<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-        <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>resource <span style=color:#f92672>=</span><span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>)</span>
+        <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>resource <span style=color:#f92672>==</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>)</span>
           <span style=color:#75715e>// BAD! Without a memory barrier, the object will not be
 </span><span style=color:#75715e></span>          <span style=color:#75715e>// safe to read on threads other than the constructing thread.
-</span><span style=color:#75715e></span>          resource <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Resource<span style=color:#f92672>(</span><span style=color:#f92672>)</span><span style=color:#f92672>;</span>
+</span><span style=color:#75715e></span>          resource <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Resource<span style=color:#f92672>();</span>
       <span style=color:#f92672>}</span>
     <span style=color:#f92672>}</span>
     <span style=color:#66d9ef>return</span> resource<span style=color:#f92672>;</span>
@@ -71,16 +71,16 @@ as a memory barrier,
 </span><span style=color:#75715e></span>  <span style=color:#66d9ef>transient</span> T value<span style=color:#f92672>;</span>
 
   MemoizingSupplier<span style=color:#f92672>(</span>Supplier<span style=color:#f92672>&lt;</span>T<span style=color:#f92672>&gt;</span> delegate<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-    <span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>delegate</span> <span style=color:#f92672>=</span> checkNotNull<span style=color:#f92672>(</span>delegate<span style=color:#f92672>)</span><span style=color:#f92672>;</span>
+    <span style=color:#66d9ef>this</span><span style=color:#f92672>.</span><span style=color:#a6e22e>delegate</span> <span style=color:#f92672>=</span> checkNotNull<span style=color:#f92672>(</span>delegate<span style=color:#f92672>);</span>
   <span style=color:#f92672>}</span>
 
   <span style=color:#a6e22e>@Override</span>
-  <span style=color:#66d9ef>public</span> T <span style=color:#a6e22e>get</span><span style=color:#f92672>(</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+  <span style=color:#66d9ef>public</span> T <span style=color:#a6e22e>get</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
     <span style=color:#75715e>// A 2-field variant of Double Checked Locking.
-</span><span style=color:#75715e></span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span><span style=color:#f92672>!</span>initialized<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>(!</span>initialized<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
       <span style=color:#66d9ef>synchronized</span> <span style=color:#f92672>(</span><span style=color:#66d9ef>this</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-        <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span><span style=color:#f92672>!</span>initialized<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-          T t <span style=color:#f92672>=</span> delegate<span style=color:#f92672>.</span><span style=color:#a6e22e>get</span><span style=color:#f92672>(</span><span style=color:#f92672>)</span><span style=color:#f92672>;</span>
+        <span style=color:#66d9ef>if</span> <span style=color:#f92672>(!</span>initialized<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+          T t <span style=color:#f92672>=</span> delegate<span style=color:#f92672>.</span><span style=color:#a6e22e>get</span><span style=color:#f92672>();</span>
           value <span style=color:#f92672>=</span> t<span style=color:#f92672>;</span>
           initialized <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span><span style=color:#f92672>;</span>
           <span style=color:#66d9ef>return</span> t<span style=color:#f92672>;</span>
@@ -98,20 +98,20 @@ a &ldquo;NumberRange&rdquo; class which is
 intended to be thread-safe for testing whether an integer is a prescribed range.
 (These days everyone knows to do this using immutable objects, but some people
 may not see the mistake either.)</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>NumberRange</span> <span style=color:#f92672>{</span>
-  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> AtomicInteger lower <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> AtomicInteger<span style=color:#f92672>(</span>0<span style=color:#f92672>)</span><span style=color:#f92672>;</span>
-  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> AtomicInteger upper <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> AtomicInteger<span style=color:#f92672>(</span>0<span style=color:#f92672>)</span><span style=color:#f92672>;</span>
+  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> AtomicInteger lower <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> AtomicInteger<span style=color:#f92672>(</span>0<span style=color:#f92672>);</span>
+  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> AtomicInteger upper <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> AtomicInteger<span style=color:#f92672>(</span>0<span style=color:#f92672>);</span>
 
   <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setLower</span><span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-    lower<span style=color:#f92672>.</span><span style=color:#a6e22e>set</span><span style=color:#f92672>(</span>i<span style=color:#f92672>)</span><span style=color:#f92672>;</span>
+    lower<span style=color:#f92672>.</span><span style=color:#a6e22e>set</span><span style=color:#f92672>(</span>i<span style=color:#f92672>);</span>
   <span style=color:#f92672>}</span>
   <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setUpper</span><span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-    upper<span style=color:#f92672>.</span><span style=color:#a6e22e>set</span><span style=color:#f92672>(</span>i<span style=color:#f92672>)</span><span style=color:#f92672>;</span>
+    upper<span style=color:#f92672>.</span><span style=color:#a6e22e>set</span><span style=color:#f92672>(</span>i<span style=color:#f92672>);</span>
   <span style=color:#f92672>}</span>
   <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>isInRange</span><span style=color:#f92672>(</span><span style=color:#66d9ef>int</span> i<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
     <span style=color:#75715e>// BAD! The two &#34;get&#34; calls happen separately
 </span><span style=color:#75715e></span>    <span style=color:#75715e>// and the range can change between getting one
 </span><span style=color:#75715e></span>    <span style=color:#75715e>// and getting the other.
-</span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span> <span style=color:#f92672>(</span>i <span style=color:#f92672>&gt;</span><span style=color:#f92672>=</span> lower<span style=color:#f92672>.</span><span style=color:#a6e22e>get</span><span style=color:#f92672>(</span><span style=color:#f92672>)</span> <span style=color:#f92672>&amp;</span><span style=color:#f92672>&amp;</span> i <span style=color:#f92672>&lt;</span><span style=color:#f92672>=</span> upper<span style=color:#f92672>.</span><span style=color:#a6e22e>get</span><span style=color:#f92672>(</span><span style=color:#f92672>)</span><span style=color:#f92672>)</span><span style=color:#f92672>;</span>
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span> <span style=color:#f92672>(</span>i <span style=color:#f92672>&gt;=</span> lower<span style=color:#f92672>.</span><span style=color:#a6e22e>get</span><span style=color:#f92672>()</span> <span style=color:#f92672>&amp;&amp;</span> i <span style=color:#f92672>&lt;=</span> upper<span style=color:#f92672>.</span><span style=color:#a6e22e>get</span><span style=color:#f92672>());</span>
   <span style=color:#f92672>}</span>
 <span style=color:#f92672>}</span>
 </code></pre></div><p>A safer (and more performant/sane etc.) way to do this is to do as done in the
@@ -126,17 +126,17 @@ middle of the operation, and that memory safety is guaranteed.</p><div class=hig
 </code></pre></div><h3 id=leaking-synchronized-resources-to-unsynchronized-contexts>Leaking synchronized resources to unsynchronized contexts</h3><p>This one took me by surprise, even though it should not have. It&rsquo;s possible to
 accidentally &ldquo;leak&rdquo; a guarded mutable resource in an unsafe way, via things
 as innocuous as String concatenation:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>HiddenIterator</span> <span style=color:#f92672>{</span>
-  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> Set<span style=color:#f92672>&lt;</span>Integer<span style=color:#f92672>&gt;</span> set <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> HashSet<span style=color:#f92672>&lt;</span><span style=color:#f92672>&gt;</span><span style=color:#f92672>(</span><span style=color:#f92672>)</span><span style=color:#f92672>;</span>
+  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> Set<span style=color:#f92672>&lt;</span>Integer<span style=color:#f92672>&gt;</span> set <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> HashSet<span style=color:#f92672>&lt;&gt;();</span>
 
-  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>synchronized</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>add</span><span style=color:#f92672>(</span>Integer i<span style=color:#f92672>)</span> <span style=color:#f92672>{</span> set<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span>i<span style=color:#f92672>)</span><span style=color:#f92672>;</span> <span style=color:#f92672>}</span>
-  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>synchronized</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>remove</span><span style=color:#f92672>(</span>Integer i<span style=color:#f92672>)</span> <span style=color:#f92672>{</span> set<span style=color:#f92672>.</span><span style=color:#a6e22e>remove</span><span style=color:#f92672>(</span>i<span style=color:#f92672>)</span><span style=color:#f92672>;</span> <span style=color:#f92672>}</span>
-  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>doStuff</span><span style=color:#f92672>(</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>synchronized</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>add</span><span style=color:#f92672>(</span>Integer i<span style=color:#f92672>)</span> <span style=color:#f92672>{</span> set<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span>i<span style=color:#f92672>);</span> <span style=color:#f92672>}</span>
+  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>synchronized</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>remove</span><span style=color:#f92672>(</span>Integer i<span style=color:#f92672>)</span> <span style=color:#f92672>{</span> set<span style=color:#f92672>.</span><span style=color:#a6e22e>remove</span><span style=color:#f92672>(</span>i<span style=color:#f92672>);</span> <span style=color:#f92672>}</span>
+  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>doStuff</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
     <span style=color:#75715e>// Do some stuff...
 </span><span style=color:#75715e></span>
     <span style=color:#75715e>// BAD! Concatenating the set calls toString on it,
 </span><span style=color:#75715e></span>    <span style=color:#75715e>// which requires iterating it, which is not thread-safe
 </span><span style=color:#75715e></span>    <span style=color:#75715e>// because we allow modification in the middle of iteration!
-</span><span style=color:#75715e></span>    System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;DEBUG: Current set is &#34;</span> <span style=color:#f92672>+</span> set<span style=color:#f92672>)</span><span style=color:#f92672>;</span>
+</span><span style=color:#75715e></span>    System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;DEBUG: Current set is &#34;</span> <span style=color:#f92672>+</span> set<span style=color:#f92672>);</span>
   <span style=color:#f92672>}</span>
 <span style=color:#f92672>}</span>
 </code></pre></div><p>The answer here is that <em>everything</em> a class does with its internal state needs

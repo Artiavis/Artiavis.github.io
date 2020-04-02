@@ -45,7 +45,7 @@ types in our main function, we can just unpack them and convert them to strings:
         <span style=color:#f92672>|</span> TreasurePathCrumb.Index i <span style=color:#f92672>-&gt;</span> <span style=color:#66d9ef>string</span> i
         <span style=color:#f92672>|</span> TreasurePathCrumb.Key k <span style=color:#f92672>-&gt;</span> k
     <span style=color:#66d9ef>let</span> stringCrumbs <span style=color:#f92672>=</span> List.map crumbToString path
-    stringCrumbs <span style=color:#f92672>|</span><span style=color:#f92672>&gt;</span> String.concat <span style=color:#e6db74>&#34;</span><span style=color:#e6db74> -&gt; </span><span style=color:#e6db74>&#34;</span>
+    stringCrumbs <span style=color:#f92672>|&gt;</span> String.concat <span style=color:#e6db74>&#34; -&gt; &#34;</span>
 </code></pre></div><p>This function preserves strings while converting the integers to strings,
 so that we can cleanly concatenate all the values at once.
 (I&rsquo;m not fluent in F#, so this may be completely unnecessary, but it&rsquo;s
@@ -74,13 +74,13 @@ I split the function on the collection types out into their own functions.
     <span style=color:#f92672>|</span> Null 
     <span style=color:#f92672>|</span> TreasurePath <span style=color:#66d9ef>of</span> TreasurePathCrumb <span style=color:#66d9ef>list</span>
 
-<span style=color:#66d9ef>let</span> rec findMapTreasure <span style=color:#f92672>(</span>json<span style=color:#f92672>:</span><span style=color:#f92672>(</span><span style=color:#66d9ef>string</span> <span style=color:#f92672>*</span> JsonValue<span style=color:#f92672>)</span> <span style=color:#66d9ef>list</span><span style=color:#f92672>)</span> <span style=color:#f92672>=</span>
+<span style=color:#66d9ef>let</span> rec findMapTreasure <span style=color:#f92672>(</span>json<span style=color:#f92672>:(</span><span style=color:#66d9ef>string</span> <span style=color:#f92672>*</span> JsonValue<span style=color:#f92672>)</span> <span style=color:#66d9ef>list</span><span style=color:#f92672>)</span> <span style=color:#f92672>=</span>
     <span style=color:#66d9ef>match</span> json <span style=color:#66d9ef>with</span>
     <span style=color:#f92672>|</span> [] <span style=color:#f92672>-&gt;</span> HuntResult.Null
     <span style=color:#f92672>|</span> <span style=color:#f92672>(</span>key<span style=color:#f92672>,</span> value<span style=color:#f92672>)</span> <span style=color:#f92672>::</span> rest <span style=color:#f92672>-&gt;</span>
         <span style=color:#66d9ef>match</span> findTreasure value <span style=color:#66d9ef>with</span>
             <span style=color:#f92672>|</span> HuntResult.Null <span style=color:#f92672>-&gt;</span> findMapTreasure rest
-            <span style=color:#f92672>|</span> HuntResult.TreasurePath <span style=color:#f92672>(</span>path<span style=color:#f92672>)</span> <span style=color:#f92672>-&gt;</span> HuntResult.TreasurePath <span style=color:#f92672>(</span>TreasurePathCrumb.Key<span style=color:#f92672>(</span>key<span style=color:#f92672>)</span><span style=color:#f92672>::</span>path<span style=color:#f92672>)</span>
+            <span style=color:#f92672>|</span> HuntResult.TreasurePath <span style=color:#f92672>(</span>path<span style=color:#f92672>)</span> <span style=color:#f92672>-&gt;</span> HuntResult.TreasurePath <span style=color:#f92672>(</span>TreasurePathCrumb.Key<span style=color:#f92672>(</span>key<span style=color:#f92672>)::</span>path<span style=color:#f92672>)</span>
 
 <span style=color:#f92672>and</span> findListTreasure <span style=color:#f92672>(</span><span style=color:#66d9ef>list</span><span style=color:#f92672>:</span>JsonValue <span style=color:#66d9ef>list</span><span style=color:#f92672>)</span> <span style=color:#f92672>(</span>index<span style=color:#f92672>:</span>int<span style=color:#f92672>)</span> <span style=color:#f92672>=</span>
     <span style=color:#66d9ef>match</span> <span style=color:#66d9ef>list</span> <span style=color:#66d9ef>with</span>
@@ -88,7 +88,7 @@ I split the function on the collection types out into their own functions.
     <span style=color:#f92672>|</span> first <span style=color:#f92672>::</span> rest <span style=color:#f92672>-&gt;</span> 
         <span style=color:#66d9ef>match</span> findTreasure first <span style=color:#66d9ef>with</span>
             <span style=color:#f92672>|</span> HuntResult.Null <span style=color:#f92672>-&gt;</span> findListTreasure rest <span style=color:#f92672>(</span>1 <span style=color:#f92672>+</span> index<span style=color:#f92672>)</span>
-            <span style=color:#f92672>|</span> HuntResult.TreasurePath <span style=color:#f92672>(</span>path<span style=color:#f92672>)</span> <span style=color:#f92672>-&gt;</span> HuntResult.TreasurePath <span style=color:#f92672>(</span>TreasurePathCrumb.Index<span style=color:#f92672>(</span>index<span style=color:#f92672>)</span><span style=color:#f92672>::</span>path<span style=color:#f92672>)</span>
+            <span style=color:#f92672>|</span> HuntResult.TreasurePath <span style=color:#f92672>(</span>path<span style=color:#f92672>)</span> <span style=color:#f92672>-&gt;</span> HuntResult.TreasurePath <span style=color:#f92672>(</span>TreasurePathCrumb.Index<span style=color:#f92672>(</span>index<span style=color:#f92672>)::</span>path<span style=color:#f92672>)</span>
 
 <span style=color:#f92672>and</span> findTreasure <span style=color:#f92672>(</span>json<span style=color:#f92672>:</span>JsonValue<span style=color:#f92672>)</span> <span style=color:#f92672>=</span>
     <span style=color:#66d9ef>match</span> json <span style=color:#66d9ef>with</span>
@@ -97,7 +97,7 @@ I split the function on the collection types out into their own functions.
         <span style=color:#f92672>|</span> JsonValue.Float f <span style=color:#f92672>-&gt;</span> HuntResult.Null
         <span style=color:#f92672>|</span> JsonValue.Number n <span style=color:#f92672>-&gt;</span> HuntResult.Null
         <span style=color:#f92672>|</span> JsonValue.String s <span style=color:#f92672>-&gt;</span>
-            <span style=color:#66d9ef>if</span> s <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>dailyprogrammer</span><span style=color:#e6db74>&#34;</span> <span style=color:#66d9ef>then</span> HuntResult.TreasurePath<span style=color:#f92672>(</span>[]<span style=color:#f92672>)</span>
+            <span style=color:#66d9ef>if</span> s <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;dailyprogrammer&#34;</span> <span style=color:#66d9ef>then</span> HuntResult.TreasurePath<span style=color:#f92672>(</span>[]<span style=color:#f92672>)</span>
             <span style=color:#66d9ef>else</span> HuntResult.Null
         <span style=color:#f92672>|</span> JsonValue.Array a <span style=color:#f92672>-&gt;</span> findListTreasure <span style=color:#f92672>(</span>Array.toList a<span style=color:#f92672>)</span> 0
         <span style=color:#f92672>|</span> JsonValue.Record map <span style=color:#f92672>-&gt;</span> findMapTreasure <span style=color:#f92672>(</span>Array.toList map<span style=color:#f92672>)</span>
@@ -151,9 +151,9 @@ appropriate type-based dispatching. Pretty cool!</p><p>I was surprised to discov
 self-recursion! Because the interface of the protocol was uniform across
 all 6 types, each protocol implementation was able to dive back into
 the same function defined on another type:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-clojure data-lang=clojure>(<span style=color:#a6e22e>extend-protocol</span> ContainsTreasure
-  <span style=color:#75715e>; iterate over vector, tracking index, and see if any values</span>
-  <span style=color:#75715e>; recursively satisfy the value check. If so, return the accumulated</span>
-  <span style=color:#75715e>; path back.</span>
+  <span style=color:#75715e>; iterate over vector, tracking index, and see if any values</span>
+  <span style=color:#75715e>; recursively satisfy the value check. If so, return the accumulated</span>
+  <span style=color:#75715e>; path back.</span>
   clojure.lang.IPersistentVector
   (<span style=color:#a6e22e>find-treasure</span> [obj]
     (<span style=color:#66d9ef>loop </span>[i <span style=color:#ae81ff>0</span>
@@ -167,8 +167,8 @@ the same function defined on another type:</p><div class=highlight><pre style=co
           (nil? (next elems)) false
           <span style=color:#e6db74>:else</span> (<span style=color:#a6e22e>recur</span> (inc i) (rest elems))))))
 
-  <span style=color:#75715e>; iterate over map, tracking keys, and see if any values</span>
-  <span style=color:#75715e>; recursively satisfy the value check.</span>
+  <span style=color:#75715e>; iterate over map, tracking keys, and see if any values</span>
+  <span style=color:#75715e>; recursively satisfy the value check.</span>
   clojure.lang.IPersistentMap
   (<span style=color:#a6e22e>find-treasure</span> [obj]
     (<span style=color:#66d9ef>loop </span>[kvpairs (seq obj)]

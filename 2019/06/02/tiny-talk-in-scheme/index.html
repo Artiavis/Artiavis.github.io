@@ -81,7 +81,7 @@ definitions. Per the convention described above, data are stored on the object i
 And, due to historical baggage, JavaScript class factories generally share a name
 with their types, and are invoked by calling the <code>new</code> operator on a particular
 prototype.</p><p>In TinyTalk, something equivalent looks like:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme>(<span style=color:#66d9ef>define </span>proto-point
-  (<span style=color:#a6e22e>object</span> () <span style=color:#75715e>;; Methods only</span>
+  (<span style=color:#a6e22e>object</span> () <span style=color:#75715e>;; Methods only</span>
     [(<span style=color:#a6e22e>point?</span> self) <span style=color:#66d9ef>#t</span>]
     [(<span style=color:#a6e22e>distance-between</span> self other)
       (<span style=color:#a6e22e>unless</span> (<span style=color:#a6e22e>point?</span> other)
@@ -96,8 +96,8 @@ prototype.</p><p>In TinyTalk, something equivalent looks like:</p><div class=hig
 
 (<span style=color:#66d9ef>define </span>(<span style=color:#a6e22e>new-point</span> x y)
   (<span style=color:#a6e22e>object</span>
-    ([x x] [y y]) <span style=color:#75715e>;; Each instance has its own data...</span>
-    [(<span style=color:#a6e22e>delegate</span> self) proto-point])) <span style=color:#75715e>;; but shares code...</span>
+    ([x x] [y y]) <span style=color:#75715e>;; Each instance has its own data...</span>
+    [(<span style=color:#a6e22e>delegate</span> self) proto-point])) <span style=color:#75715e>;; but shares code...</span>
 </code></pre></div><p>Here, <code>new-point</code> is the factory-function for creating instances.
 TinyTalk names its prototype lookup <code>delegate</code> instead of <code>prototype</code>,
 although it is functionally identical.</p><p>Of course, prototypes have other fun capabilities, such as dynamic
