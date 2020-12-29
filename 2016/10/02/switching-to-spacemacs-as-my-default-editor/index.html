@@ -25,7 +25,7 @@ to extensibility. Although VIM has a scripting layer which adds extra
 capabilities to the basic VIM runtime, there are three primary limitations to
 doing so (as I understand it):</p><ol><li>VIM uses its own language for scripting, called &ldquo;vimscript&rdquo;. Although it&rsquo;s
 not terrible, it&rsquo;s not a &ldquo;real&rdquo; programming language, and it&rsquo;s definitely
-not as powerful as Emacs&rsquo; own scripting language, which is a &ldquo;real&rdquo;
+not as powerful as Emacs' own scripting language, which is a &ldquo;real&rdquo;
 programming language.</li><li>Unlike Emacs, VIM does not encourage (although does not strictly limit)
 using buffers in &ldquo;creative&rdquo; ways. Emacs plugins essentially use buffers as
 portals to extra functionality, which makes them more like apps
@@ -49,7 +49,7 @@ and word deletion/insertion are programmatic routines within Emacs,
 and Emacs defines all its operations within Lisp, Emacs permits users to change
 even its <em>core functionality</em> to behave like that of a completely different
 editor!</p><h2 id=emacs-buffers-are-like-apps>Emacs Buffers Are Like Apps</h2><p>Although I said above that Emacs&rsquo;s default use case is to use buffers for
-editing text, their use is limited only be a programmers&rsquo; ingenuity.
+editing text, their use is limited only be a programmers' ingenuity.
 There are several world-class plugins that have been emulated on hosts
 of other platforms because of how desirable they are:</p><h3 id=org-mode-the-organizer-app>Org Mode: The Organizer App</h3><p><a href=http://orgmode.org/>Org mode</a> is somewhat famous amongst programmers for how
 powerful and extensive
@@ -61,7 +61,7 @@ and fairly ubiquitous today among programmers, but is a bit unfriendly to use
 without some high-level tools. Magit is one such tool - it wraps the low-level
 plumbing of how to operate Git in several friendly(ish) subcommands
 (essentially like screens in an app) to expose most of Git&rsquo;s power without
-inducing hair-ripping or screaming. Here again a plugin leverages Emacs&rsquo; buffers
+inducing hair-ripping or screaming. Here again a plugin leverages Emacs' buffers
 as a host system for embedding essentially a stand-alone app capability.</p><h2 id=helm-like-siri-for-emacs>Helm: Like Siri for Emacs</h2><p>A capability most programmers enjoy from their IDE&rsquo;s is the ability to
 &ldquo;jump to anything&rdquo; - to name some snippet of a word in a file
 looked at weeks ago and to have that file pulled up and that exact word found.

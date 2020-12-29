@@ -121,7 +121,7 @@ This is safe because the <code>final</code> properties mean that things can&rsqu
 middle of the operation, and that memory safety is guaranteed.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>IntRange</span>(start: Int, endInclusive: Int) <span style=color:#75715e>/* ... */</span> {
   <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>val</span> start: Int <span style=color:#66d9ef>get</span>() = first
   <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>val</span> endInclusive: Int <span style=color:#66d9ef>get</span>() = last
-  <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>fun</span> <span style=color:#a6e22e>contains</span>(value: Int) = first &lt;= value &amp;&amp; value &lt;= last
+  <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>fun</span> <span style=color:#a6e22e>contains</span>(value: Int) = first <span style=color:#f92672>&lt;=</span> value <span style=color:#f92672>&amp;&amp;</span> value <span style=color:#f92672>&lt;=</span> last
 }
 </code></pre></div><h3 id=leaking-synchronized-resources-to-unsynchronized-contexts>Leaking synchronized resources to unsynchronized contexts</h3><p>This one took me by surprise, even though it should not have. It&rsquo;s possible to
 accidentally &ldquo;leak&rdquo; a guarded mutable resource in an unsafe way, via things

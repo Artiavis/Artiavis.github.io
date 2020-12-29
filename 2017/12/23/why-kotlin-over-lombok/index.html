@@ -74,15 +74,15 @@ impossible to hack onto Java through Lombok:</p><ul><li><a href=https://kotlinla
 languages have now, <a href=https://stackoverflow.com/questions/44188240/kotlin-how-to-correctly-concatenate-a-string>is string interpolation</a>:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin><span style=color:#66d9ef>val</span> firstName = <span style=color:#e6db74>&#34;firstName&#34;</span>
 <span style=color:#66d9ef>val</span> lastName = <span style=color:#e6db74>&#34;lastName&#34;</span>
 <span style=color:#66d9ef>val</span> query = <span style=color:#e6db74>&#34;&#34;&#34;
-</span><span style=color:#e6db74>SELECT $firstName, $lastName
+</span><span style=color:#e6db74>SELECT </span><span style=color:#e6db74>$firstName</span><span style=color:#e6db74>, </span><span style=color:#e6db74>$lastName</span><span style=color:#e6db74>
 </span><span style=color:#e6db74>FROM customers
-</span><span style=color:#e6db74>WHERE $lastName LIKE &#39;%smith%&#39;;
+</span><span style=color:#e6db74>WHERE </span><span style=color:#e6db74>$lastName</span><span style=color:#e6db74> LIKE &#39;%smith%&#39;;
 </span><span style=color:#e6db74>&#34;&#34;&#34;</span>
 </code></pre></div><p>Another one of my favorite features of Kotlin is its type-safe builders feature (which I
 am given to understand is derived from Groovy). For example, the
 <a href=https://github.com/kotlintest/kotlintest>KotlinTest</a> library adds support
 for behavior-driven development <em>from within Kotlin</em> programs!</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>MyTests</span> : StringSpec() {
-  init {
+  <span style=color:#66d9ef>init</span> {
     <span style=color:#e6db74>&#34;length should return size of string&#34;</span> {
       <span style=color:#e6db74>&#34;hello&#34;</span>.length shouldBe <span style=color:#ae81ff>5</span>
     }
@@ -97,7 +97,7 @@ are ideal fits for interoperating with existing legacy code bases with large
 footprints, sensitive responsiveness times, and requirements for fast and easy
 tooling and compilation.</p><p>As seen in this widget below, (originally pointed out by a colleague), Kotlin
 interest surged <a href=https://blog.jetbrains.com/kotlin/2017/05/kotlin-on-android-now-official/>in the late spring when Google announced official support for Kotlin on Android</a>,
-and has been steadily climbing ever since.</p><h2 id=what-are-the-differences-between-lombok-and-kotlin>What are the differences between Lombok and Kotlin?</h2><p>Here&rsquo;s where I believe most Java developers&rsquo; ears pick up. To date, Lombok has
+and has been steadily climbing ever since.</p><h2 id=what-are-the-differences-between-lombok-and-kotlin>What are the differences between Lombok and Kotlin?</h2><p>Here&rsquo;s where I believe most Java developers' ears pick up. To date, Lombok has
 excelled at the POJO use case, and some developers also enjoy its ability to aid
 with other types of common application-level boilerplate. Kotlin provides all of
 this as table-stakes, and also adds features from many other popular Java tools
