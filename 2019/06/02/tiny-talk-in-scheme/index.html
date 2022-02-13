@@ -1,11 +1,94 @@
-<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Tiny Talk in Scheme | Just a Blog in the Park</title><link rel=stylesheet href=/css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=/css/images.min.css><section class=section><div class=container><nav class=navbar role=navigation aria-label="main navigation"><div class=navbar-brand><a class=navbar-item href=/about><img width=50 height=50 alt="Gravatar image of Jeff" src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=50"></a>
-<a class=navbar-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a><a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false><span aria-hidden=true></span><span aria-hidden=true></span><span aria-hidden=true></span></a></div><div class=navbar-menu id=navMenu><div class=navbar-start></div><div class=navbar-end><div class=navbar-item><a href=/photos><span class=icon><i class="fas fa-camera"></i></span>
-Photos</a></div><div class=navbar-item><a href=/tags><span class=icon><i class="fas fa-tags"></i></span>
-Tags</a></div><div class=navbar-item><a href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span>
-GitHub</a></div><div class=navbar-item><a href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span>
-LinkedIn</a></div><div class=navbar-item><a href="https://www.dropbox.com/s/190j5fjr6dl3q5c/jeff_rabinowitz_resume_2019_12_15.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span>
-Resume</a></div><div class=navbar-item><a href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span>
-Subscribe</a></div></div></div></nav></div></section><section class=section><div class=container><h2 class="subtitle is-6">June 2, 2019</h2><h1 class=title>Tiny Talk in Scheme</h1><h2 class="subtitle is-6">6 minute read</h2><ul id=tags><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li><li><a href=/tags/scheme><i class="fas fa-tag" aria-hidden=true></i> scheme</a></li></ul><br><div class=content><p>A while back, I started tinkering with a new flavor of Lisp (for me):
+<!doctype html><html lang=en-us>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Tiny Talk in Scheme | Just a Blog in the Park</title>
+<link rel=stylesheet href=/css/style.css>
+<script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script>
+<script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script>
+<script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script>
+<link rel=stylesheet href=/css/images.min.css>
+<section class=section>
+<div class=container>
+<nav class=navbar role=navigation aria-label="main navigation">
+<div class=navbar-brand>
+<a class=navbar-item href=/about>
+<img width=50 height=50 alt="Gravatar image of Jeff" src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=50">
+</a>
+<a class=navbar-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a>
+<a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span>
+</a>
+</div>
+<div class=navbar-menu id=navMenu>
+<div class=navbar-start></div>
+<div class=navbar-end>
+<div class=navbar-item>
+<a href=/photos>
+<span class=icon>
+<i class="fas fa-camera"></i>
+</span>
+Photos
+</a>
+</div>
+<div class=navbar-item>
+<a href=/tags>
+<span class=icon>
+<i class="fas fa-tags"></i>
+</span>
+Tags
+</a>
+</div>
+<div class=navbar-item>
+<a href=https://github.com/Artiavis>
+<span class=icon>
+<i class="fab fa-github"></i>
+</span>
+GitHub
+</a>
+</div>
+<div class=navbar-item>
+<a href=https://linkedin.com/in/JeffreyCRabinowitz>
+<span class=icon>
+<i class="fab fa-linkedin"></i>
+</span>
+LinkedIn
+</a>
+</div>
+<div class=navbar-item>
+<a href="https://www.dropbox.com/s/v3nfsxijmrcj197/jeff_rabinowitz_resume_2022_02_12.pdf?dl=1">
+<span class=icon>
+<i class="fas fa-file-pdf"></i>
+</span>
+Resume
+</a>
+</div>
+<div class=navbar-item>
+<a href=/index.xml>
+<span class=icon>
+<i class="fas fa-rss-square"></i>
+</span>
+Subscribe
+</a>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</section>
+<section class=section>
+<div class=container>
+<h2 class="subtitle is-6">June 2, 2019</h2>
+<h1 class=title>Tiny Talk in Scheme</h1>
+<h2 class="subtitle is-6">6 minute read</h2>
+<ul id=tags>
+<li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li>
+<li><a href=/tags/scheme><i class="fas fa-tag" aria-hidden=true></i> scheme</a></li>
+</ul>
+<br>
+<div class=content>
+<p>A while back, I started tinkering with a new flavor of Lisp (for me):
 <a href=https://en.wikipedia.org/wiki/Scheme_(programming_language)>Scheme</a>,
 using the
 <a href=https://cisco.github.io/ChezScheme/>ChezScheme</a>
@@ -17,12 +100,14 @@ and a fairly sophisticated function definition, error handling, and hygienic mac
 (a full summary of the language spec can be found <a href=https://www.scheme.com/tspl4/summary.html#./summary:h0>here</a>).
 I chose Chez Scheme because of its fascinating heritage as an industrial-strengh
 production-ready Scheme dialect, and because it seemed more traditional (being fully self-hosted);
-but that&rsquo;s a conversation for another post.</p><p>As a minimal Lisp, Scheme has only a primitive &ldquo;object&rdquo; system
+but that&rsquo;s a conversation for another post.</p>
+<p>As a minimal Lisp, Scheme has only a primitive &ldquo;object&rdquo; system
 (if you can even call it that): <a href=https://www.scheme.com/tspl4/records.html#./records:s13>records</a>,
 which are roughly analogous to <code>struct</code>s in C.
 For example, a tree-node structure from the worked examples in
 <a href=https://www.scheme.com/tspl4/examples.html#./examples:h4>The Scheme Programming Language Version 4</a>,
-produces a structure not unlike one which would be used in Java.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme>(<span style=color:#a6e22e>define-record-type</span> tnode
+produces a structure not unlike one which would be used in Java.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme>(<span style=color:#a6e22e>define-record-type</span> tnode
   (<span style=color:#a6e22e>fields</span> (<span style=color:#a6e22e>immutable</span> word)
           (<span style=color:#a6e22e>mutable</span> left)
           (<span style=color:#a6e22e>mutable</span> right)
@@ -34,30 +119,51 @@ produces a structure not unlike one which would be used in Java.</p><div class=h
 </code></pre></div><p>The <code>define-record-type</code> macro generates (in this case) a custom constructor of a single parameter,
 a predicate for testing whether objects are instances of <code>tnode</code>,
 and both <a href=https://en.wikipedia.org/wiki/Mutator_method>getters/setters</a>
-(the setters by default are the getters with the suffix <code>-set!</code>):</p><ul><li><code>make-tnode</code></li><li><code>tnode?</code></li><li><code>tnode-word</code></li><li><code>tnode-left</code></li><li><code>tnode-left-set!</code></li><li><code>tnode-right</code></li><li><code>tnode-right-set!</code></li><li><code>tnode-count</code></li><li><code>tnode-count-set!</code></li></ul><p>Scheme intentionally does not include a particular implementation of a
+(the setters by default are the getters with the suffix <code>-set!</code>):</p>
+<ul>
+<li><code>make-tnode</code></li>
+<li><code>tnode?</code></li>
+<li><code>tnode-word</code></li>
+<li><code>tnode-left</code></li>
+<li><code>tnode-left-set!</code></li>
+<li><code>tnode-right</code></li>
+<li><code>tnode-right-set!</code></li>
+<li><code>tnode-count</code></li>
+<li><code>tnode-count-set!</code></li>
+</ul>
+<p>Scheme intentionally does not include a particular implementation of a
 <a href=https://en.wikipedia.org/wiki/Object-oriented_programming>object-oriented programming paradigm</a>
 (classes),
 preferring to let programmers roll their own.
 Now, I don&rsquo;t think I can invent a novel or particularly interesting
 object-oriented programming system; but I do find it fascinating to study
-how others have done it.</p><p>Typically, objects are at least somewhat self-aware
+how others have done it.</p>
+<p>Typically, objects are at least somewhat self-aware
 (ie it is possible to ask an object for its type, and usually also to
 ask an object whether it conforms to some type).
 <a href=https://en.wikipedia.org/wiki/Prototype-based_programming>Prototypical inheritance</a>
 affords one of the simpler ways to devise
 an object system, especially for dynamically typed programming
-languages, for a few reasons:</p><ol><li>Objects can be built using only one data structure: the all-powerful dictionary.</li><li>Instances of objects, and object prototypes, do not need to be differentiated.
+languages, for a few reasons:</p>
+<ol>
+<li>Objects can be built using only one data structure: the all-powerful dictionary.</li>
+<li>Instances of objects, and object prototypes, do not need to be differentiated.
 Prototypes are typically objects with associated code but no data; instances
 are typically objects with associated data but no code; but there is no firm
-requirement to make this distinction.</li><li>Combining objects is as simple as including them in the delegation chain
-of another object.</li></ol><p>One such neat system I&rsquo;ve recently stumbled upon is
+requirement to make this distinction.</li>
+<li>Combining objects is as simple as including them in the delegation chain
+of another object.</li>
+</ol>
+<p>One such neat system I&rsquo;ve recently stumbled upon is
 &ldquo;<a href=https://launchpad.net/kend>TinyTalk</a>&rdquo;,
 a minimal Smalltalk-like prototype-based object system,
 developed by Ken Dickey as a spiritual successor
 to his Yet-Another-Simple-Object-System (YASOS)
 system.
 (For those of you unfamiliar with Smalltalk, think JavaScript, but more consistent.)
-It defines a full object-oriented system in under 400 lines-of-code!</p><p>In JavaScript, one might define a &ldquo;Point&rdquo; class as:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>Point</span> <span style=color:#f92672>=</span> (<span style=color:#66d9ef>function</span>() {
+It defines a full object-oriented system in under 400 lines-of-code!</p>
+<p>In JavaScript, one might define a &ldquo;Point&rdquo; class as:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>Point</span> <span style=color:#f92672>=</span> (<span style=color:#66d9ef>function</span>() {
   <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Point</span>(<span style=color:#a6e22e>x</span>, <span style=color:#a6e22e>y</span>) {
     <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>x</span>;
     <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>y</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>y</span>;
@@ -86,7 +192,9 @@ definitions. Per the convention described above, data are stored on the object i
 (<code>Point.prototype.distanceBetween = ...</code>).
 And, due to historical baggage, JavaScript class factories generally share a name
 with their types, and are invoked by calling the <code>new</code> operator on a particular
-prototype.</p><p>In TinyTalk, something equivalent looks like:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme>(<span style=color:#66d9ef>define </span>proto-point
+prototype.</p>
+<p>In TinyTalk, something equivalent looks like:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme>(<span style=color:#66d9ef>define </span>proto-point
   (<span style=color:#a6e22e>object</span> () <span style=color:#75715e>;; Methods only</span>
     [(<span style=color:#a6e22e>point?</span> self) <span style=color:#66d9ef>#t</span>]
     [(<span style=color:#a6e22e>distance-between</span> self other)
@@ -106,10 +214,12 @@ prototype.</p><p>In TinyTalk, something equivalent looks like:</p><div class=hig
     [(<span style=color:#a6e22e>delegate</span> self) proto-point])) <span style=color:#75715e>;; but shares code...</span>
 </code></pre></div><p>Here, <code>new-point</code> is the factory-function for creating instances.
 TinyTalk names its prototype lookup <code>delegate</code> instead of <code>prototype</code>,
-although it is functionally identical.</p><p>Of course, prototypes have other fun capabilities, such as dynamic
+although it is functionally identical.</p>
+<p>Of course, prototypes have other fun capabilities, such as dynamic
 extension. Because objects are backed by the dictionary data structure,
 adding new functionality to an existing prototype or object is as simple
-as adding a new entry into the appropriate dictionary.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme>(<span style=color:#a6e22e>$</span> add-method! proto-point <span style=color:#e6db74>&#39;-&gt;string</span>
+as adding a new entry into the appropriate dictionary.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme>(<span style=color:#a6e22e>$</span> add-method! proto-point <span style=color:#e6db74>&#39;-&gt;string</span>
   (<span style=color:#66d9ef>lambda </span>(<span style=color:#a6e22e>self</span>)
     (<span style=color:#a6e22e>string-append</span>
       <span style=color:#e6db74>&#34;(point &#34;</span>
@@ -117,29 +227,53 @@ as adding a new entry into the appropriate dictionary.</p><div class=highlight><
       <span style=color:#e6db74>&#34; &#34;</span>
       (<span style=color:#a6e22e>-&gt;string</span> [$ y self])
       <span style=color:#e6db74>&#34;)&#34;</span>)))
-</code></pre></div><h2 id=objects-all-the-way-up>Objects all the way&mldr; up?</h2><p>Now, in a typical programming environment which supports classes, <em>all</em>
+</code></pre></div><h2 id=objects-all-the-way-up>Objects all the way&mldr; up?</h2>
+<p>Now, in a typical programming environment which supports classes, <em>all</em>
 objects should strive to conform to the class system. How does TinyTalk
 manage to do this for e.g. ChezScheme, whose built-in data structures like
-lists and vectors exist outside the object system?</p><p>The answer is both clever and either satisfying or ugly
+lists and vectors exist outside the object system?</p>
+<p>The answer is both clever and either satisfying or ugly
 (depending on your taste). TinyTalk includes a dynamic &ldquo;escape hatch&rdquo; for its
 type system, to allow retrofitting the rest of the Scheme types with the
 object system. Unlike typical TinyTalk objects, whose code lives exclusively
 inside their self-contained prototype chain, the built-in types can be given
-&ldquo;global&rdquo; prototypes.</p><p>TinyTalk contains a global getter/setter called <code>custom-method-finder</code>, which
+&ldquo;global&rdquo; prototypes.</p>
+<p>TinyTalk contains a global getter/setter called <code>custom-method-finder</code>, which
 is included in the delegation chain for <em>all</em> TinyTalk objects. By default
-it is always disabled, running and built-in types do not have prototypes.</p><p>However, TinyTalk also ships with a module named <code>tiny-talk-plus.sls</code>, which
+it is always disabled, running and built-in types do not have prototypes.</p>
+<p>However, TinyTalk also ships with a module named <code>tiny-talk-plus.sls</code>, which
 activates the <code>custom-method-finder</code> and binds it to a global dictionary.
 This global dictionary leverages the Scheme
 built-in type-types (e.g. <code>(list? (list))</code> returns true).
 Virtual prototypes are created for the built in types, and
 added to the global dictionary. Whenever an unknown object is invoked,
 not only is that object&rsquo;s own prototype consulted (when it exists), but the
-dictionary is, too.</p><h2 id=when-would-i-use-this>When would I use this?</h2><p>That&rsquo;s a good question! Most of the time, when I do personal programming,
+dictionary is, too.</p>
+<h2 id=when-would-i-use-this>When would I use this?</h2>
+<p>That&rsquo;s a good question! Most of the time, when I do personal programming,
 I&rsquo;m using a language like Python/Clojure, which already has a robust
 object system built in.
 (Python&rsquo;s object system is essentially prototype-based, whereas Clojure&rsquo;s
-has prototype-like flexibility but isn&rsquo;t actually prototype-based.)</p><p>I suppose that <em>if</em> I were writing a video game from scratch,
+has prototype-like flexibility but isn&rsquo;t actually prototype-based.)</p>
+<p>I suppose that <em>if</em> I were writing a video game from scratch,
 <em>and</em> I was also writing the engine from scratch,
 <em>and</em> I was going to embed an engine (that wasn&rsquo;t Lua),
 I could use ChezScheme with TinyTalk to do so.
-But even if I don&rsquo;t do that, it&rsquo;s nice to know that it&rsquo;s there.</p></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname='justabloginthepark',disqus_loaded=!1;function disqus(){if(!disqus_loaded){if(disqus_loaded=!0,window.location.hostname=="localhost")return;var a=document.createElement('script');a.type='text/javascript',a.async=!0,a.src='//'+disqus_shortname+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)}}</script><script type=text/javascript>window.onscroll=function(a){window.innerHeight+window.scrollY>=document.body.offsetHeight&&(disqus_loaded||disqus())}</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2021</p></div></section><script type=text/javascript src=/js/bulmamenu.min.js defer></script>
+But even if I don&rsquo;t do that, it&rsquo;s nice to know that it&rsquo;s there.</p>
+</div>
+</div>
+</section>
+<section class=section>
+<div class=container>
+<aside><div id=disqus_thread></div></aside>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript>
+<script type=text/javascript>var disqus_shortname='justabloginthepark',disqus_loaded=!1;function disqus(){if(!disqus_loaded){if(disqus_loaded=!0,window.location.hostname=="localhost")return;var a=document.createElement('script');a.type='text/javascript',a.async=!0,a.src='//'+disqus_shortname+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)}}</script>
+<script type=text/javascript>window.onscroll=function(a){window.innerHeight+window.scrollY>=document.body.offsetHeight&&(disqus_loaded||disqus())}</script>
+</div>
+</section>
+<section class=section>
+<div class="container has-text-centered">
+<p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2022</p>
+</div>
+</section>
+<script type=text/javascript src=/js/bulmamenu.min.js defer></script>

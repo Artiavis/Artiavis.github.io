@@ -1,44 +1,149 @@
-<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Review: Java Concurrency in Practice | Just a Blog in the Park</title><link rel=stylesheet href=/css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=/css/images.min.css><section class=section><div class=container><nav class=navbar role=navigation aria-label="main navigation"><div class=navbar-brand><a class=navbar-item href=/about><img width=50 height=50 alt="Gravatar image of Jeff" src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=50"></a>
-<a class=navbar-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a><a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false><span aria-hidden=true></span><span aria-hidden=true></span><span aria-hidden=true></span></a></div><div class=navbar-menu id=navMenu><div class=navbar-start></div><div class=navbar-end><div class=navbar-item><a href=/photos><span class=icon><i class="fas fa-camera"></i></span>
-Photos</a></div><div class=navbar-item><a href=/tags><span class=icon><i class="fas fa-tags"></i></span>
-Tags</a></div><div class=navbar-item><a href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span>
-GitHub</a></div><div class=navbar-item><a href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span>
-LinkedIn</a></div><div class=navbar-item><a href="https://www.dropbox.com/s/190j5fjr6dl3q5c/jeff_rabinowitz_resume_2019_12_15.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span>
-Resume</a></div><div class=navbar-item><a href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span>
-Subscribe</a></div></div></div></nav></div></section><section class=section><div class=container><h2 class="subtitle is-6">March 17, 2018</h2><h1 class=title>Review: Java Concurrency in Practice</h1><h2 class="subtitle is-6">6 minute read</h2><ul id=tags><li><a href=/tags/java><i class="fas fa-tag" aria-hidden=true></i> java</a></li><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li><li><a href=/tags/software-engineering><i class="fas fa-tag" aria-hidden=true></i> software-engineering</a></li><li><a href=/tags/concurrency><i class="fas fa-tag" aria-hidden=true></i> concurrency</a></li></ul><br><div class=content><p>I was recently assigned to a new project at work, which requires some concurrent
+<!doctype html><html lang=en-us>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Review: Java Concurrency in Practice | Just a Blog in the Park</title>
+<link rel=stylesheet href=/css/style.css>
+<script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script>
+<script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script>
+<script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script>
+<link rel=stylesheet href=/css/images.min.css>
+<section class=section>
+<div class=container>
+<nav class=navbar role=navigation aria-label="main navigation">
+<div class=navbar-brand>
+<a class=navbar-item href=/about>
+<img width=50 height=50 alt="Gravatar image of Jeff" src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=50">
+</a>
+<a class=navbar-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a>
+<a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span>
+</a>
+</div>
+<div class=navbar-menu id=navMenu>
+<div class=navbar-start></div>
+<div class=navbar-end>
+<div class=navbar-item>
+<a href=/photos>
+<span class=icon>
+<i class="fas fa-camera"></i>
+</span>
+Photos
+</a>
+</div>
+<div class=navbar-item>
+<a href=/tags>
+<span class=icon>
+<i class="fas fa-tags"></i>
+</span>
+Tags
+</a>
+</div>
+<div class=navbar-item>
+<a href=https://github.com/Artiavis>
+<span class=icon>
+<i class="fab fa-github"></i>
+</span>
+GitHub
+</a>
+</div>
+<div class=navbar-item>
+<a href=https://linkedin.com/in/JeffreyCRabinowitz>
+<span class=icon>
+<i class="fab fa-linkedin"></i>
+</span>
+LinkedIn
+</a>
+</div>
+<div class=navbar-item>
+<a href="https://www.dropbox.com/s/v3nfsxijmrcj197/jeff_rabinowitz_resume_2022_02_12.pdf?dl=1">
+<span class=icon>
+<i class="fas fa-file-pdf"></i>
+</span>
+Resume
+</a>
+</div>
+<div class=navbar-item>
+<a href=/index.xml>
+<span class=icon>
+<i class="fas fa-rss-square"></i>
+</span>
+Subscribe
+</a>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</section>
+<section class=section>
+<div class=container>
+<h2 class="subtitle is-6">March 17, 2018</h2>
+<h1 class=title>Review: Java Concurrency in Practice</h1>
+<h2 class="subtitle is-6">6 minute read</h2>
+<ul id=tags>
+<li><a href=/tags/java><i class="fas fa-tag" aria-hidden=true></i> java</a></li>
+<li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li>
+<li><a href=/tags/software-engineering><i class="fas fa-tag" aria-hidden=true></i> software-engineering</a></li>
+<li><a href=/tags/concurrency><i class="fas fa-tag" aria-hidden=true></i> concurrency</a></li>
+</ul>
+<br>
+<div class=content>
+<p>I was recently assigned to a new project at work, which requires some concurrent
 programming. I&rsquo;ve long put off investing in any formal Java programming texts,
 partly out of thriftiness and partially because none of the professional
 programming I&rsquo;ve done to date required a formal education/reading of relevant
 texts to avoid writing completely incorrect code. Usually in line-of-business
 application development, a sub-optimal solution is not <em>completely incorrect</em>;
 at worst, it wastes CPU cycles. However, when it comes to concurrent programming,
-there&rsquo;s three options:</p><ul><li>It&rsquo;s not thread-safe and very obviously not so. Nobody has any misconceptions
-about whether this routine will perform properly in a concurrent context.</li><li>It&rsquo;s definitely thread-safe, and you know you can trust it. The set of such
+there&rsquo;s three options:</p>
+<ul>
+<li>It&rsquo;s not thread-safe and very obviously not so. Nobody has any misconceptions
+about whether this routine will perform properly in a concurrent context.</li>
+<li>It&rsquo;s definitely thread-safe, and you know you can trust it. The set of such
 programs is actually fairly small; you <em>usually</em> trust that your Java Virtual
 Machine is bug-free, and that its standard libraries are bug-free. Beyond that
-it&rsquo;s a bit of a toss up.</li><li>It may or may not be thread-safe, and even if it thinks it&rsquo;s thread-safe, it
-very well may not be, in subtle ways, which are hard to reason about.</li></ul><p>The problems with concurrent programming are that even the smallest mistake may
+it&rsquo;s a bit of a toss up.</li>
+<li>It may or may not be thread-safe, and even if it thinks it&rsquo;s thread-safe, it
+very well may not be, in subtle ways, which are hard to reason about.</li>
+</ul>
+<p>The problems with concurrent programming are that even the smallest mistake may
 cause byzantine complications of horrifying consequence, which are difficult or
 impossible to clearly reason about after the fact. Compared with costing my firm
 millions of dollars in lost revenue, paying $20 for a reference book seems like
 the right thing to do. So I went down to amazon.com and bought myself a copy of
 <a href=https://amazon.com/dp/0321349601>Java Concurrency in Practice</a>
 , henceforth
-referred to as &ldquo;JCP&rdquo;.</p><p>I had high expectations, because this book is reputed to be <em>the</em> bible of
+referred to as &ldquo;JCP&rdquo;.</p>
+<p>I had high expectations, because this book is reputed to be <em>the</em> bible of
 writing safe concurrent programs, and is practically considered required reading
 for many jobs. There&rsquo;s even a Rich Hickey video wherein he describes how JCP
 is a shocking read for those who&rsquo;ve never picked it up, and echoes the requirement
-to read it:</p><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe src=https://www.youtube-nocookie.com/embed/dGVqrGmwOAw style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe></div><h2 id=review>Review</h2><p>Suffice it to say, this book deserves the reputation it has. Brian Goetz manages
+to read it:</p>
+<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+<iframe src=https://www.youtube-nocookie.com/embed/dGVqrGmwOAw style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
+</div>
+<h2 id=review>Review</h2>
+<p>Suffice it to say, this book deserves the reputation it has. Brian Goetz manages
 to be interesting while covering extremely dry material, and he neither skimps
 on information nor belabours the point. The book is helpfully divided into four
-parts, which I found to be a useful demarcation:</p><ol><li>&ldquo;Fundamentals&rdquo;, which should be required reading for all Java programmers.</li><li>&ldquo;Structuring Concurrent Applications&rdquo;, useful for defining application-wide
-or framework-wide concurrency concepts.</li><li>&ldquo;Liveness, Performance, and Testing&rdquo;, which should be read by all Java
-programmers, but is less critical than reading the fundamentals.</li><li>&ldquo;Advanced Topics&rdquo;, which can be considered an expansion of &ldquo;Fundamentals&rdquo;;
+parts, which I found to be a useful demarcation:</p>
+<ol>
+<li>&ldquo;Fundamentals&rdquo;, which should be required reading for all Java programmers.</li>
+<li>&ldquo;Structuring Concurrent Applications&rdquo;, useful for defining application-wide
+or framework-wide concurrency concepts.</li>
+<li>&ldquo;Liveness, Performance, and Testing&rdquo;, which should be read by all Java
+programmers, but is less critical than reading the fundamentals.</li>
+<li>&ldquo;Advanced Topics&rdquo;, which can be considered an expansion of &ldquo;Fundamentals&rdquo;;
 should be read by anyone writing concurrent libraries or algorithms, but is
-critical reading than &ldquo;Fundamentals&rdquo; for general-purpose concepts.</li></ol><p>As a languages nerd who also takes a keen interest in low-level details, I
+critical reading than &ldquo;Fundamentals&rdquo; for general-purpose concepts.</li>
+</ol>
+<p>As a languages nerd who also takes a keen interest in low-level details, I
 basically jumped straight from &ldquo;Fundamentals&rdquo; to &ldquo;Advanced Topics&rdquo; before working
 my way back through the other chapters. That said, the order is less important
-than ensuring the right concepts are learned.</p><p>Before I opened this book, I didn&rsquo;t realize what a can of worms the Java Memory
+than ensuring the right concepts are learned.</p>
+<p>Before I opened this book, I didn&rsquo;t realize what a can of worms the Java Memory
 Model (JMM for short) can be. The JMM is a bit devilish in that it makes all sorts
 of wonderful guarantees about the performance-safety tradeoff of concurrent Java
 programs, <em>with the caveat that this tradeoff relies on tricky contextual semantics</em>.
@@ -46,13 +151,19 @@ If a Java programmer doesn&rsquo;t know about the contract of the JMM, s/he may 
 concurrency safety in subtle ways, which are never flagged by the compiler.
 Only by learning the fundamentals can one safeguard themselves against doing
 terrible things; even having read it, it&rsquo;s still all-too-easy to make critical
-mistakes.</p><p>This was an easy enough read for a Saturday afternoon to get a firm feel for the
+mistakes.</p>
+<p>This was an easy enough read for a Saturday afternoon to get a firm feel for the
 basics, and it changed my life (okay fine, my <em>Java programming life</em>).
 Recommending this book is not a strong enough term; I will chase you down in the
 street and chuck this book at your head, if you tell me that you haven&rsquo;t read it
-but believe you can write thread-safe Java programs.</p><h2 id=appendix-unsafe-idioms-that-dont-look-obviously-wrong>Appendix: Unsafe idioms that don&rsquo;t look obviously wrong</h2><p>The book has a number of helpfully demarcated examples, indicating safe, dodgy,
+but believe you can write thread-safe Java programs.</p>
+<h2 id=appendix-unsafe-idioms-that-dont-look-obviously-wrong>Appendix: Unsafe idioms that don&rsquo;t look obviously wrong</h2>
+<p>The book has a number of helpfully demarcated examples, indicating safe, dodgy,
 and then not-so-obviously wrong ways to do things. Many of these are not obvious
-at first glance, so I thought I&rsquo;d enumerate them for reference.</p><h3 id=double-checked-locking>Double-checked locking</h3><p>There&rsquo;s a common but incredibly unsafe idiom in Java code, to do the following:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>DoubleCheckedLocking</span> <span style=color:#f92672>{</span>
+at first glance, so I thought I&rsquo;d enumerate them for reference.</p>
+<h3 id=double-checked-locking>Double-checked locking</h3>
+<p>There&rsquo;s a common but incredibly unsafe idiom in Java code, to do the following:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>DoubleCheckedLocking</span> <span style=color:#f92672>{</span>
   <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> Resource resource<span style=color:#f92672>;</span>
 
   <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> Object <span style=color:#a6e22e>getInstance</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
@@ -69,7 +180,8 @@ at first glance, so I thought I&rsquo;d enumerate them for reference.</p><h3 id=
 <span style=color:#f92672>}</span>
 </code></pre></div><p>This idiom can be made safe by introducing a <code>volatile</code> boolean flag for using
 as a memory barrier,
-<a href=https://github.com/google/guava/blob/e24fddc5fff7fd36d33ea38737b6606a7e476845/guava/src/com/google/common/base/Suppliers.java#L147-L174>as indicated by Guava&rsquo;s <code>Suppliers.memoize(...)</code> function</a>:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>static</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>NonSerializableMemoizingSupplier</span><span style=color:#f92672>&lt;</span>T<span style=color:#f92672>&gt;</span> <span style=color:#66d9ef>implements</span> Supplier<span style=color:#f92672>&lt;</span>T<span style=color:#f92672>&gt;</span> <span style=color:#f92672>{</span>
+<a href=https://github.com/google/guava/blob/e24fddc5fff7fd36d33ea38737b6606a7e476845/guava/src/com/google/common/base/Suppliers.java#L147-L174>as indicated by Guava&rsquo;s <code>Suppliers.memoize(...)</code> function</a>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>static</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>NonSerializableMemoizingSupplier</span><span style=color:#f92672>&lt;</span>T<span style=color:#f92672>&gt;</span> <span style=color:#66d9ef>implements</span> Supplier<span style=color:#f92672>&lt;</span>T<span style=color:#f92672>&gt;</span> <span style=color:#f92672>{</span>
   <span style=color:#66d9ef>volatile</span> Supplier<span style=color:#f92672>&lt;</span>T<span style=color:#f92672>&gt;</span> delegate<span style=color:#f92672>;</span>
   <span style=color:#66d9ef>volatile</span> <span style=color:#66d9ef>boolean</span> initialized<span style=color:#f92672>;</span>
   <span style=color:#75715e>// &#34;value&#34; does not need to be volatile; visibility piggy-backs
@@ -97,13 +209,15 @@ as a memory barrier,
   <span style=color:#f92672>}</span>
   <span style=color:#75715e>// ...
 </span><span style=color:#75715e></span><span style=color:#f92672>}</span>
-</code></pre></div><h3 id=improper-atomicity-delegation>Improper atomicity delegation</h3><p>Many developers mistakenly rely upon individual atomic operations and forget
+</code></pre></div><h3 id=improper-atomicity-delegation>Improper atomicity delegation</h3>
+<p>Many developers mistakenly rely upon individual atomic operations and forget
 that per-class atomicity requires transactional atomicity, not merely atomicity
 of independent components. JCP has a great example of what not to do:
 a &ldquo;NumberRange&rdquo; class which is
 intended to be thread-safe for testing whether an integer is a prescribed range.
 (These days everyone knows to do this using immutable objects, but some people
-may not see the mistake either.)</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>NumberRange</span> <span style=color:#f92672>{</span>
+may not see the mistake either.)</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>NumberRange</span> <span style=color:#f92672>{</span>
   <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> AtomicInteger lower <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> AtomicInteger<span style=color:#f92672>(</span>0<span style=color:#f92672>);</span>
   <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> AtomicInteger upper <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> AtomicInteger<span style=color:#f92672>(</span>0<span style=color:#f92672>);</span>
 
@@ -124,14 +238,17 @@ may not see the mistake either.)</p><div class=highlight><pre style=color:#f8f8f
 Kotlin standard library for the equivalent class,
 <a href=https://github.com/JetBrains/kotlin/blob/e43175b16f68f09ac58000b133c69a0b0c609d2c/core/builtins/src/kotlin/Ranges.kt#L50-L71>IntRange</a>.
 This is safe because the <code>final</code> properties mean that things can&rsquo;t change in the
-middle of the operation, and that memory safety is guaranteed.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>IntRange</span>(start: Int, endInclusive: Int) <span style=color:#75715e>/* ... */</span> {
+middle of the operation, and that memory safety is guaranteed.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>IntRange</span>(start: Int, endInclusive: Int) <span style=color:#75715e>/* ... */</span> {
   <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>val</span> start: Int <span style=color:#66d9ef>get</span>() = first
   <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>val</span> endInclusive: Int <span style=color:#66d9ef>get</span>() = last
   <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>fun</span> <span style=color:#a6e22e>contains</span>(value: Int) = first <span style=color:#f92672>&lt;=</span> value <span style=color:#f92672>&amp;&amp;</span> value <span style=color:#f92672>&lt;=</span> last
 }
-</code></pre></div><h3 id=leaking-synchronized-resources-to-unsynchronized-contexts>Leaking synchronized resources to unsynchronized contexts</h3><p>This one took me by surprise, even though it should not have. It&rsquo;s possible to
+</code></pre></div><h3 id=leaking-synchronized-resources-to-unsynchronized-contexts>Leaking synchronized resources to unsynchronized contexts</h3>
+<p>This one took me by surprise, even though it should not have. It&rsquo;s possible to
 accidentally &ldquo;leak&rdquo; a guarded mutable resource in an unsafe way, via things
-as innocuous as String concatenation:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>HiddenIterator</span> <span style=color:#f92672>{</span>
+as innocuous as String concatenation:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>HiddenIterator</span> <span style=color:#f92672>{</span>
   <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> Set<span style=color:#f92672>&lt;</span>Integer<span style=color:#f92672>&gt;</span> set <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> HashSet<span style=color:#f92672>&lt;&gt;();</span>
 
   <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>synchronized</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>add</span><span style=color:#f92672>(</span>Integer i<span style=color:#f92672>)</span> <span style=color:#f92672>{</span> set<span style=color:#f92672>.</span><span style=color:#a6e22e>add</span><span style=color:#f92672>(</span>i<span style=color:#f92672>);</span> <span style=color:#f92672>}</span>
@@ -147,4 +264,21 @@ as innocuous as String concatenation:</p><div class=highlight><pre style=color:#
 <span style=color:#f92672>}</span>
 </code></pre></div><p>The answer here is that <em>everything</em> a class does with its internal state needs
 to be wrapped, including otherwise innocuous looking methods like
-<code>equals</code>, <code>hashCode</code>, and <code>toString</code>!</p></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname='justabloginthepark',disqus_loaded=!1;function disqus(){if(!disqus_loaded){if(disqus_loaded=!0,window.location.hostname=="localhost")return;var a=document.createElement('script');a.type='text/javascript',a.async=!0,a.src='//'+disqus_shortname+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)}}</script><script type=text/javascript>window.onscroll=function(a){window.innerHeight+window.scrollY>=document.body.offsetHeight&&(disqus_loaded||disqus())}</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2021</p></div></section><script type=text/javascript src=/js/bulmamenu.min.js defer></script>
+<code>equals</code>, <code>hashCode</code>, and <code>toString</code>!</p>
+</div>
+</div>
+</section>
+<section class=section>
+<div class=container>
+<aside><div id=disqus_thread></div></aside>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript>
+<script type=text/javascript>var disqus_shortname='justabloginthepark',disqus_loaded=!1;function disqus(){if(!disqus_loaded){if(disqus_loaded=!0,window.location.hostname=="localhost")return;var a=document.createElement('script');a.type='text/javascript',a.async=!0,a.src='//'+disqus_shortname+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)}}</script>
+<script type=text/javascript>window.onscroll=function(a){window.innerHeight+window.scrollY>=document.body.offsetHeight&&(disqus_loaded||disqus())}</script>
+</div>
+</section>
+<section class=section>
+<div class="container has-text-centered">
+<p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2022</p>
+</div>
+</section>
+<script type=text/javascript src=/js/bulmamenu.min.js defer></script>

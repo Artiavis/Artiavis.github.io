@@ -1,31 +1,119 @@
-<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Coding: Debugging the Gender Gap | Just a Blog in the Park</title><link rel=stylesheet href=/css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=/css/images.min.css><section class=section><div class=container><nav class=navbar role=navigation aria-label="main navigation"><div class=navbar-brand><a class=navbar-item href=/about><img width=50 height=50 alt="Gravatar image of Jeff" src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=50"></a>
-<a class=navbar-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a><a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false><span aria-hidden=true></span><span aria-hidden=true></span><span aria-hidden=true></span></a></div><div class=navbar-menu id=navMenu><div class=navbar-start></div><div class=navbar-end><div class=navbar-item><a href=/photos><span class=icon><i class="fas fa-camera"></i></span>
-Photos</a></div><div class=navbar-item><a href=/tags><span class=icon><i class="fas fa-tags"></i></span>
-Tags</a></div><div class=navbar-item><a href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span>
-GitHub</a></div><div class=navbar-item><a href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span>
-LinkedIn</a></div><div class=navbar-item><a href="https://www.dropbox.com/s/190j5fjr6dl3q5c/jeff_rabinowitz_resume_2019_12_15.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span>
-Resume</a></div><div class=navbar-item><a href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span>
-Subscribe</a></div></div></div></nav></div></section><section class=section><div class=container><h2 class="subtitle is-6">November 5, 2015</h2><h1 class=title>Coding: Debugging the Gender Gap</h1><h2 class="subtitle is-6">2 minute read</h2><ul id=tags><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li></ul><br><div class=content><p>On Monday, I had the chance to view a private screening of the newish
+<!doctype html><html lang=en-us>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Coding: Debugging the Gender Gap | Just a Blog in the Park</title>
+<link rel=stylesheet href=/css/style.css>
+<script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script>
+<script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script>
+<script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script>
+<link rel=stylesheet href=/css/images.min.css>
+<section class=section>
+<div class=container>
+<nav class=navbar role=navigation aria-label="main navigation">
+<div class=navbar-brand>
+<a class=navbar-item href=/about>
+<img width=50 height=50 alt="Gravatar image of Jeff" src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=50">
+</a>
+<a class=navbar-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a>
+<a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span>
+</a>
+</div>
+<div class=navbar-menu id=navMenu>
+<div class=navbar-start></div>
+<div class=navbar-end>
+<div class=navbar-item>
+<a href=/photos>
+<span class=icon>
+<i class="fas fa-camera"></i>
+</span>
+Photos
+</a>
+</div>
+<div class=navbar-item>
+<a href=/tags>
+<span class=icon>
+<i class="fas fa-tags"></i>
+</span>
+Tags
+</a>
+</div>
+<div class=navbar-item>
+<a href=https://github.com/Artiavis>
+<span class=icon>
+<i class="fab fa-github"></i>
+</span>
+GitHub
+</a>
+</div>
+<div class=navbar-item>
+<a href=https://linkedin.com/in/JeffreyCRabinowitz>
+<span class=icon>
+<i class="fab fa-linkedin"></i>
+</span>
+LinkedIn
+</a>
+</div>
+<div class=navbar-item>
+<a href="https://www.dropbox.com/s/v3nfsxijmrcj197/jeff_rabinowitz_resume_2022_02_12.pdf?dl=1">
+<span class=icon>
+<i class="fas fa-file-pdf"></i>
+</span>
+Resume
+</a>
+</div>
+<div class=navbar-item>
+<a href=/index.xml>
+<span class=icon>
+<i class="fas fa-rss-square"></i>
+</span>
+Subscribe
+</a>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</section>
+<section class=section>
+<div class=container>
+<h2 class="subtitle is-6">November 5, 2015</h2>
+<h1 class=title>Coding: Debugging the Gender Gap</h1>
+<h2 class="subtitle is-6">2 minute read</h2>
+<ul id=tags>
+<li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li>
+</ul>
+<br>
+<div class=content>
+<p>On Monday, I had the chance to view a private screening of the newish
 documentary
 <a href=http://www.codedocumentary.com/>“Code: Debugging the Gender Gap”</a>.
 The premise of the documentary,
-<a href="http://www.imdb.com/title/tt4335520/plotsummary?ref_=tt_ov_pl">lifted straight from IMDB:</a></p><blockquote><p>CODE documentary exposes the dearth of female and minority software
+<a href="http://www.imdb.com/title/tt4335520/plotsummary?ref_=tt_ov_pl">lifted straight from IMDB:</a></p>
+<blockquote>
+<p>CODE documentary exposes the dearth of female and minority software
 engineers and explores the reasons for this gender gap and digital divide.
 The film highlights breakthrough efforts that are producing more diverse
 programmers and shows how this critical gap can be closed. CODE asks: what
 would society gain from having more women and people of color code, and how
-do we get there?</p></blockquote><p>Going into the screening, I was already relatively well-informed about most
+do we get there?</p>
+</blockquote>
+<p>Going into the screening, I was already relatively well-informed about most
 of the social issues and controversies highlighted in the documentary. What I
 was hoping to see was a stab at answering the question posed above, namely,
 “… What would society gain from having more women… code,
-and how do we get there?”</p><p>Unfortunately, the documentary did not make any claims about how to solve this
+and how do we get there?”</p>
+<p>Unfortunately, the documentary did not make any claims about how to solve this
 issue, other than observing that many people are trying to promote the entry
 of girls and women into computer programming and computer science. I&rsquo;m not sure
 it&rsquo;s so simple to solve the issue – to my knowledge, there are women
 entering programming who <em>want</em> to make it their field, but who feel pushed
 out by the rampant problems which exist in it. I was hoping to see some stab at
 a true solution, but none was provided. Maybe none exists, other than just
-changing cultural norms organically.</p><p>I&rsquo;d say that the film has a reasonable depiction of the industry,
+changing cultural norms organically.</p>
+<p>I&rsquo;d say that the film has a reasonable depiction of the industry,
 and covers its material in decent form.
 Many people outside the programming industry aren&rsquo;t aware of the nature and
 depth of the problems within it; to them, programming is just another growing
@@ -35,4 +123,21 @@ industry who don&rsquo;t necessarily have the cross-cutting view of the professi
 to see all of the problems (especially because most programmers are men
 not from ethnic minorities, and can be unaware of these issues).
 I don&rsquo;t think it has any big answers,
-but sometimes, asking questions is good enough.</p></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname='justabloginthepark',disqus_loaded=!1;function disqus(){if(!disqus_loaded){if(disqus_loaded=!0,window.location.hostname=="localhost")return;var a=document.createElement('script');a.type='text/javascript',a.async=!0,a.src='//'+disqus_shortname+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)}}</script><script type=text/javascript>window.onscroll=function(a){window.innerHeight+window.scrollY>=document.body.offsetHeight&&(disqus_loaded||disqus())}</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2021</p></div></section><script type=text/javascript src=/js/bulmamenu.min.js defer></script>
+but sometimes, asking questions is good enough.</p>
+</div>
+</div>
+</section>
+<section class=section>
+<div class=container>
+<aside><div id=disqus_thread></div></aside>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript>
+<script type=text/javascript>var disqus_shortname='justabloginthepark',disqus_loaded=!1;function disqus(){if(!disqus_loaded){if(disqus_loaded=!0,window.location.hostname=="localhost")return;var a=document.createElement('script');a.type='text/javascript',a.async=!0,a.src='//'+disqus_shortname+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)}}</script>
+<script type=text/javascript>window.onscroll=function(a){window.innerHeight+window.scrollY>=document.body.offsetHeight&&(disqus_loaded||disqus())}</script>
+</div>
+</section>
+<section class=section>
+<div class="container has-text-centered">
+<p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2022</p>
+</div>
+</section>
+<script type=text/javascript src=/js/bulmamenu.min.js defer></script>

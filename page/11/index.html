@@ -1,17 +1,182 @@
-<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Just a Blog in the Park</title><link rel=stylesheet href=/css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=/css/images.min.css><section class=section><div class=container><nav class=navbar role=navigation aria-label="main navigation"><div class=navbar-brand><a class=navbar-item href=/about><img width=50 height=50 alt="Gravatar image of Jeff" src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=50"></a>
-<a class=navbar-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a><a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false><span aria-hidden=true></span><span aria-hidden=true></span><span aria-hidden=true></span></a></div><div class=navbar-menu id=navMenu><div class=navbar-start></div><div class=navbar-end><div class=navbar-item><a href=/photos><span class=icon><i class="fas fa-camera"></i></span>
-Photos</a></div><div class=navbar-item><a href=/tags><span class=icon><i class="fas fa-tags"></i></span>
-Tags</a></div><div class=navbar-item><a href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span>
-GitHub</a></div><div class=navbar-item><a href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span>
-LinkedIn</a></div><div class=navbar-item><a href="https://www.dropbox.com/s/190j5fjr6dl3q5c/jeff_rabinowitz_resume_2019_12_15.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span>
-Resume</a></div><div class=navbar-item><a href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span>
-Subscribe</a></div></div></div></nav></div></section><section class=section><div class=container><article><h2 class="subtitle is-6">October 28, 2015</h2><h1 class=title><a href=/2015/10/28/f-sharp-vs-clojure-toy-problem-shootout/>F Sharp vs Clojure Toy Problem Shootout</a></h1><h2 class="subtitle is-6">10 minute read</h2><div class=content>As a continuation of my forays in interesting and less industrially-oriented programming languages, I decided to compare F Sharp against Clojure for a relatively simple programming problem, and to compare how the two felt in terms of programming ease, friendliness, and how they each viewed the problem.
+<!doctype html><html lang=en-us>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Just a Blog in the Park</title>
+<link rel=stylesheet href=/css/style.css>
+<script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script>
+<script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script>
+<script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script>
+<link rel=stylesheet href=/css/images.min.css>
+<section class=section>
+<div class=container>
+<nav class=navbar role=navigation aria-label="main navigation">
+<div class=navbar-brand>
+<a class=navbar-item href=/about>
+<img width=50 height=50 alt="Gravatar image of Jeff" src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=50">
+</a>
+<a class=navbar-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a>
+<a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span>
+</a>
+</div>
+<div class=navbar-menu id=navMenu>
+<div class=navbar-start></div>
+<div class=navbar-end>
+<div class=navbar-item>
+<a href=/photos>
+<span class=icon>
+<i class="fas fa-camera"></i>
+</span>
+Photos
+</a>
+</div>
+<div class=navbar-item>
+<a href=/tags>
+<span class=icon>
+<i class="fas fa-tags"></i>
+</span>
+Tags
+</a>
+</div>
+<div class=navbar-item>
+<a href=https://github.com/Artiavis>
+<span class=icon>
+<i class="fab fa-github"></i>
+</span>
+GitHub
+</a>
+</div>
+<div class=navbar-item>
+<a href=https://linkedin.com/in/JeffreyCRabinowitz>
+<span class=icon>
+<i class="fab fa-linkedin"></i>
+</span>
+LinkedIn
+</a>
+</div>
+<div class=navbar-item>
+<a href="https://www.dropbox.com/s/v3nfsxijmrcj197/jeff_rabinowitz_resume_2022_02_12.pdf?dl=1">
+<span class=icon>
+<i class="fas fa-file-pdf"></i>
+</span>
+Resume
+</a>
+</div>
+<div class=navbar-item>
+<a href=/index.xml>
+<span class=icon>
+<i class="fas fa-rss-square"></i>
+</span>
+Subscribe
+</a>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</section>
+<section class=section>
+<div class=container>
+<article>
+<h2 class="subtitle is-6">October 28, 2015</h2>
+<h1 class=title><a href=/2015/10/28/f-sharp-vs-clojure-toy-problem-shootout/>F Sharp vs Clojure Toy Problem Shootout</a></h1>
+<h2 class="subtitle is-6">10 minute read</h2>
+<div class=content>
+As a continuation of my forays in interesting and less industrially-oriented programming languages, I decided to compare F Sharp against Clojure for a relatively simple programming problem, and to compare how the two felt in terms of programming ease, friendliness, and how they each viewed the problem.
 The Problem The problem is a relatively one from Reddit&rsquo;s “Daily Programmer” subreddit, called JSON Treasure Hunt: given a random, unstructured JSON object, traverse the object looking for a specific terminal value (in this case, a string &ldquo;dailyprogrammer&rdquo;).
-...<br><ul id=tags><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li><li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i> clojure</a></li><li><a href=/tags/f-sharp><i class="fas fa-tag" aria-hidden=true></i> f-sharp</a></li></ul></div></article><article><h2 class="subtitle is-6">October 24, 2015</h2><h1 class=title><a href=/2015/10/24/returning-to-blogging-with-cryogen/>Returning to Blogging with Cryogen</a></h1><h2 class="subtitle is-6">5 minute read</h2><div class=content>It&rsquo;s been a long while since I last blogged. My last post dates back to April of 2014, shortly before I graduated from Rutgers Engineering. My life since then has been a bit of a whirlwind. I&rsquo;ve since graduated, moved to the Upper West Side, started working in banking, gotten engaged and married, and moved out. I suppose I could be forgiven for not blogging as actively.
+...<br>
+<ul id=tags>
+<li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li>
+<li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i> clojure</a></li>
+<li><a href=/tags/f-sharp><i class="fas fa-tag" aria-hidden=true></i> f-sharp</a></li>
+</ul>
+</div>
+</article>
+<article>
+<h2 class="subtitle is-6">October 24, 2015</h2>
+<h1 class=title><a href=/2015/10/24/returning-to-blogging-with-cryogen/>Returning to Blogging with Cryogen</a></h1>
+<h2 class="subtitle is-6">5 minute read</h2>
+<div class=content>
+It&rsquo;s been a long while since I last blogged. My last post dates back to April of 2014, shortly before I graduated from Rutgers Engineering. My life since then has been a bit of a whirlwind. I&rsquo;ve since graduated, moved to the Upper West Side, started working in banking, gotten engaged and married, and moved out. I suppose I could be forgiven for not blogging as actively.
 Why I Took Down My Old Blog My old blog was running on Ghost, a nifty JavaScript-based modern reimagination of the classic web-based blogging platform.
-...<br><ul id=tags><li><a href=/tags/meta><i class="fas fa-tag" aria-hidden=true></i> meta</a></li><li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i> clojure</a></li><li><a href=/tags/python><i class="fas fa-tag" aria-hidden=true></i> python</a></li></ul></div></article><article><h2 class="subtitle is-6">October 18, 2015</h2><h1 class=title><a href=/2015/10/18/pros-and-cons-of-clojure/>Pros and Cons of Clojure</a></h1><h2 class="subtitle is-6">10 minute read</h2><div class=content>As part of my forays in interesting (and generally unusable at work) programming languages, I began investigating Clojure back in June. Although I really love the language as a whole (and, in fact, I&rsquo;m using it to power this blog!), I struggled not only to set it up, but to find its ideal niche. This essay/rant is a result of a conversation I had about Clojure with two friends, one who is an excellent polyglot programmer, and one who is a beginner simply interested in Clojure as a practical Lisp.
-...<br><ul id=tags><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li><li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i> clojure</a></li></ul></div></article><article><h2 class="subtitle is-6">April 10, 2014</h2><h1 class=title><a href=/2014/04/10/intro-to-big-data/>Intro to Big Data</a></h1><h2 class="subtitle is-6">2 minute read</h2><div class=content>Last Friday, I had the chance to attend a panel of career technologists and data scientists who all work in the fascinating field known as “big data”. “Big data” is an umbrella term to describe data whose qualities are so atypical that classical data analysis techniques fail to even begin to tackle understanding them. The data can be in any conceivable format and in any field of study. For instance, in news analysis, “How are news articles relevantly accessed when more arrive in a single day than a person can read in a lifetime?
-...<br><ul id=tags><li><a href=/tags/big-data><i class="fas fa-tag" aria-hidden=true></i> big-data</a></li></ul></div></article><article><h2 class="subtitle is-6">March 23, 2014</h2><h1 class=title><a href=/2014/03/23/version-controlling-documents/>Version Controlling Documents</a></h1><h2 class="subtitle is-6">5 minute read</h2><div class=content>As a college student (and despite studying Engineering), I&rsquo;m occasionally required to write paper for class. Sometimes they&rsquo;re simply one-off papers that only need to be a page or two (like for my Ethics class), in which case it doesn&rsquo;t really matter what I write the papers in or whether I back them up in any meaningful capacity. In theory, if the worst happened and I lost the file, I could rewrite it in a couple of hours and it wouldn’t be the end of the world.
-...<br><ul id=tags><li><a href=/tags/writing><i class="fas fa-tag" aria-hidden=true></i> writing</a></li></ul></div></article></div></section><section class=section><div class=container><nav class="level is-mobile"><div class=level-left><div class=level-item><a class=button href=/page/10/><span class="icon is-small is-marginless"><i class="fa fa-angle-left"></i></span>
-Newer posts</a></div></div><div class="level-right is-marginless"><div class=level-item><a class=button href=/page/12/>Older posts
-<span class="icon is-small is-marginless"><i class="fa fa-angle-right"></i></span></a></div></div></nav></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2021</p></div></section><script type=text/javascript src=/js/bulmamenu.min.js defer></script>
+...<br>
+<ul id=tags>
+<li><a href=/tags/meta><i class="fas fa-tag" aria-hidden=true></i> meta</a></li>
+<li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i> clojure</a></li>
+<li><a href=/tags/python><i class="fas fa-tag" aria-hidden=true></i> python</a></li>
+</ul>
+</div>
+</article>
+<article>
+<h2 class="subtitle is-6">October 18, 2015</h2>
+<h1 class=title><a href=/2015/10/18/pros-and-cons-of-clojure/>Pros and Cons of Clojure</a></h1>
+<h2 class="subtitle is-6">10 minute read</h2>
+<div class=content>
+As part of my forays in interesting (and generally unusable at work) programming languages, I began investigating Clojure back in June. Although I really love the language as a whole (and, in fact, I&rsquo;m using it to power this blog!), I struggled not only to set it up, but to find its ideal niche. This essay/rant is a result of a conversation I had about Clojure with two friends, one who is an excellent polyglot programmer, and one who is a beginner simply interested in Clojure as a practical Lisp.
+...<br>
+<ul id=tags>
+<li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li>
+<li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i> clojure</a></li>
+</ul>
+</div>
+</article>
+<article>
+<h2 class="subtitle is-6">April 10, 2014</h2>
+<h1 class=title><a href=/2014/04/10/intro-to-big-data/>Intro to Big Data</a></h1>
+<h2 class="subtitle is-6">2 minute read</h2>
+<div class=content>
+Last Friday, I had the chance to attend a panel of career technologists and data scientists who all work in the fascinating field known as “big data”. “Big data” is an umbrella term to describe data whose qualities are so atypical that classical data analysis techniques fail to even begin to tackle understanding them. The data can be in any conceivable format and in any field of study. For instance, in news analysis, “How are news articles relevantly accessed when more arrive in a single day than a person can read in a lifetime?
+...<br>
+<ul id=tags>
+<li><a href=/tags/big-data><i class="fas fa-tag" aria-hidden=true></i> big-data</a></li>
+</ul>
+</div>
+</article>
+<article>
+<h2 class="subtitle is-6">March 23, 2014</h2>
+<h1 class=title><a href=/2014/03/23/version-controlling-documents/>Version Controlling Documents</a></h1>
+<h2 class="subtitle is-6">5 minute read</h2>
+<div class=content>
+As a college student (and despite studying Engineering), I&rsquo;m occasionally required to write paper for class. Sometimes they&rsquo;re simply one-off papers that only need to be a page or two (like for my Ethics class), in which case it doesn&rsquo;t really matter what I write the papers in or whether I back them up in any meaningful capacity. In theory, if the worst happened and I lost the file, I could rewrite it in a couple of hours and it wouldn’t be the end of the world.
+...<br>
+<ul id=tags>
+<li><a href=/tags/writing><i class="fas fa-tag" aria-hidden=true></i> writing</a></li>
+</ul>
+</div>
+</article>
+</div>
+</section>
+<section class=section>
+<div class=container>
+<nav class="level is-mobile">
+<div class=level-left>
+<div class=level-item>
+<a class=button href=/page/10/>
+<span class="icon is-small is-marginless">
+<i class="fa fa-angle-left"></i>
+</span>
+Newer posts
+</a>
+</div>
+</div>
+<div class="level-right is-marginless">
+<div class=level-item>
+<a class=button href=/page/12/>
+Older posts
+<span class="icon is-small is-marginless">
+<i class="fa fa-angle-right"></i>
+</span>
+</a>
+</div>
+</div>
+</nav>
+</div>
+</section>
+<section class=section>
+<div class="container has-text-centered">
+<p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2022</p>
+</div>
+</section>
+<script type=text/javascript src=/js/bulmamenu.min.js defer></script>
