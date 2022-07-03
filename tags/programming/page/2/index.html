@@ -1,178 +1,23 @@
-<!doctype html><html lang=en-us>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>programming | Just a Blog in the Park</title>
-<link rel=stylesheet href=/css/style.css>
-<script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script>
+<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>programming | Just a Blog in the Park</title><link rel=stylesheet href=/css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script>
 <script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script>
 <script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script>
-<link rel=stylesheet href=/css/images.min.css>
-<section class=section>
-<div class=container>
-<nav class=navbar role=navigation aria-label="main navigation">
-<div class=navbar-brand>
-<a class=navbar-item href=/about>
-<img width=50 height=50 alt="Gravatar image of Jeff" src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=50">
-</a>
-<a class=navbar-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a>
-<a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false>
+<link rel=stylesheet href=/css/images.min.css><section class=section><div class=container><nav class=navbar role=navigation aria-label="main navigation"><div class=navbar-brand><a class=navbar-item href=/about><img width=50 height=50 alt="Gravatar image of Jeff" src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=50"></a>
+<a class=navbar-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a><a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false><span aria-hidden=true></span>
 <span aria-hidden=true></span>
-<span aria-hidden=true></span>
-<span aria-hidden=true></span>
-</a>
-</div>
-<div class=navbar-menu id=navMenu>
-<div class=navbar-start></div>
-<div class=navbar-end>
-<div class=navbar-item>
-<a href=/photos>
-<span class=icon>
-<i class="fas fa-camera"></i>
-</span>
-Photos
-</a>
-</div>
-<div class=navbar-item>
-<a href=/tags>
-<span class=icon>
-<i class="fas fa-tags"></i>
-</span>
-Tags
-</a>
-</div>
-<div class=navbar-item>
-<a href=https://github.com/Artiavis>
-<span class=icon>
-<i class="fab fa-github"></i>
-</span>
-GitHub
-</a>
-</div>
-<div class=navbar-item>
-<a href=https://linkedin.com/in/JeffreyCRabinowitz>
-<span class=icon>
-<i class="fab fa-linkedin"></i>
-</span>
-LinkedIn
-</a>
-</div>
-<div class=navbar-item>
-<a href="https://www.dropbox.com/s/v3nfsxijmrcj197/jeff_rabinowitz_resume_2022_02_12.pdf?dl=1">
-<span class=icon>
-<i class="fas fa-file-pdf"></i>
-</span>
-Resume
-</a>
-</div>
-<div class=navbar-item>
-<a href=/index.xml>
-<span class=icon>
-<i class="fas fa-rss-square"></i>
-</span>
-Subscribe
-</a>
-</div>
-</div>
-</div>
-</nav>
-</div>
-</section>
-<section class=section>
-<div class=container>
-<article>
-<h2 class="subtitle is-6">June 18, 2017</h2>
-<h1 class=title><a href=/2017/06/18/clojure-and-the-esoteric-mysteries-of-namespaces/>Clojure and the Esoteric Mysteries of Namespaces</a></h1>
-<div class=content>
-If you&rsquo;ve ever been programming in Clojure and encountered an error which looks something like, IllegalStateException("Can't change/establish root binding of: *ns* with set"), read on!
+<span aria-hidden=true></span></a></div><div class=navbar-menu id=navMenu><div class=navbar-start></div><div class=navbar-end><div class=navbar-item><a href=/photos><span class=icon><i class="fas fa-camera"></i></span>
+Photos</a></div><div class=navbar-item><a href=/tags><span class=icon><i class="fas fa-tags"></i></span>
+Tags</a></div><div class=navbar-item><a href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span>
+GitHub</a></div><div class=navbar-item><a href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span>
+LinkedIn</a></div><div class=navbar-item><a href="https://www.dropbox.com/s/v3nfsxijmrcj197/jeff_rabinowitz_resume_2022_02_12.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span>
+Resume</a></div><div class=navbar-item><a href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span>
+Subscribe</a></div></div></div></nav></div></section><section class=section><div class=container><article><h2 class="subtitle is-6">June 18, 2017</h2><h1 class=title><a href=/2017/06/18/clojure-and-the-esoteric-mysteries-of-namespaces/>Clojure and the Esoteric Mysteries of Namespaces</a></h1><div class=content>If you&rsquo;ve ever been programming in Clojure and encountered an error which looks something like, IllegalStateException("Can't change/establish root binding of: *ns* with set"), read on!
 Preface I recently had the drive/opportunity to deep-dive on how Clojure&rsquo;s namespaces function and how they provide a simple abstraction using the concept of Clojure&rsquo;s “Vars”. Here is a deep-dive on how they work. This is a two-part series. The previous part of the series is available at Clojure and the Esoteric Mysteries of Vars.
-...<br>
-<ul id=tags>
-<li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li>
-<li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i> clojure</a></li>
-</ul>
-</div>
-</article>
-<article>
-<h2 class="subtitle is-6">June 18, 2017</h2>
-<h1 class=title><a href=/2017/06/18/clojure-and-the-esoteric-mysteries-of-vars/>Clojure and the Esoteric Mysteries of Vars</a></h1>
-<div class=content>
-I recently had the drive/opportunity to deep-dive on how Clojure&rsquo;s namespaces function and how they provide a simple abstraction using the concept of Clojure&rsquo;s “Vars”. Here is a deep-dive on how they work. This is a two-part series. The next part of the series is available at Clojure and the Esoteric Mysteries of Namespaces.
+...<br><ul id=tags><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li><li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i> clojure</a></li></ul></div></article><article><h2 class="subtitle is-6">June 18, 2017</h2><h1 class=title><a href=/2017/06/18/clojure-and-the-esoteric-mysteries-of-vars/>Clojure and the Esoteric Mysteries of Vars</a></h1><div class=content>I recently had the drive/opportunity to deep-dive on how Clojure&rsquo;s namespaces function and how they provide a simple abstraction using the concept of Clojure&rsquo;s “Vars”. Here is a deep-dive on how they work. This is a two-part series. The next part of the series is available at Clojure and the Esoteric Mysteries of Namespaces.
 Vars: A Simplified Model of Variables One of Clojure&rsquo;s essential motivations is to provide a hosted runtime for easily concurrent programs, wherein most of the challenges of locking and thread-safety are provided “for free” (at least in the sense of the programmer not having to worry about these low-level concepts).
-...<br>
-<ul id=tags>
-<li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i> clojure</a></li>
-<li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li>
-</ul>
-</div>
-</article>
-<article>
-<h2 class="subtitle is-6">June 4, 2017</h2>
-<h1 class=title><a href=/2017/06/04/bearish-on-clojure-in-2017/>Bearish on Clojure in 2017</a></h1>
-<div class=content>
-There was a recent brouhaha in the Clojure community about the recent blog post by a Clojure dabbler to the effect that Clojure may be a clean and beautiful language but that it fails in a few pragmatic and ergonomic senses which hurts its adoption and limits its appeal. Although the author admits that he probably made a mistake in jumping to adopt Clojure, a foreign technological concept to him, for a startup in a space that was also completely foreign to him, he does bring up some worthwhile points that are worth chewing over.
-...<br>
-<ul id=tags>
-<li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li>
-<li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i> clojure</a></li>
-</ul>
-</div>
-</article>
-<article>
-<h2 class="subtitle is-6">October 2, 2016</h2>
-<h1 class=title><a href=/2016/10/02/switching-to-spacemacs-as-my-default-editor/>Switching to Spacemacs As My Default Editor</a></h1>
-<div class=content>
-I recently began to use Emacs as my default text editor for most things, having switched from Sublime Text. Specifically, I&rsquo;m using the brilliant Spacemacs project, which can best be described as a fairly comprehensive set of sensible defaults and plugins for Emacs with a clever plugin architecture.
+...<br><ul id=tags><li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i> clojure</a></li><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li></ul></div></article><article><h2 class="subtitle is-6">June 4, 2017</h2><h1 class=title><a href=/2017/06/04/bearish-on-clojure-in-2017/>Bearish on Clojure in 2017</a></h1><div class=content>There was a recent brouhaha in the Clojure community about the recent blog post by a Clojure dabbler to the effect that Clojure may be a clean and beautiful language but that it fails in a few pragmatic and ergonomic senses which hurts its adoption and limits its appeal. Although the author admits that he probably made a mistake in jumping to adopt Clojure, a foreign technological concept to him, for a startup in a space that was also completely foreign to him, he does bring up some worthwhile points that are worth chewing over.
+...<br><ul id=tags><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li><li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i> clojure</a></li></ul></div></article><article><h2 class="subtitle is-6">October 2, 2016</h2><h1 class=title><a href=/2016/10/02/switching-to-spacemacs-as-my-default-editor/>Switching to Spacemacs As My Default Editor</a></h1><div class=content>I recently began to use Emacs as my default text editor for most things, having switched from Sublime Text. Specifically, I&rsquo;m using the brilliant Spacemacs project, which can best be described as a fairly comprehensive set of sensible defaults and plugins for Emacs with a clever plugin architecture.
 I used to be a casual VIM user for remote file editing and a Sublime Text user for local editing (with plugins). However, neither of these solutions truly satisfied me.
-...<br>
-<ul id=tags>
-<li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li>
-<li><a href=/tags/emacs><i class="fas fa-tag" aria-hidden=true></i> emacs</a></li>
-</ul>
-</div>
-</article>
-<article>
-<h2 class="subtitle is-6">January 17, 2016</h2>
-<h1 class=title><a href=/2016/01/17/lisp-finally-clicked/>Lisp Finally Clicked</a></h1>
-<div class=content>
-I&rsquo;ve been meaning to write this post for a couple of weeks now. There is a story told among programming language enthusiasts that programming as an art only “clicks” once a programmer understands the Lisp programming language. I finally feel like I&rsquo;ve reached that point. Although I don&rsquo;t think I&rsquo;m an amazing programmer, I finally feel like I understand the difference between languages (like Python and Lisp), and why Lisp is often considered so much more flexible and powerful (at least in theory) than a language like Python or C.
-...<br>
-<ul id=tags>
-<li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i> clojure</a></li>
-<li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li>
-</ul>
-</div>
-</article>
-</div>
-</section>
-<section class=section>
-<div class=container>
-<nav class="level is-mobile">
-<div class=level-left>
-<div class=level-item>
-<a class=button href=/tags/programming/>
-<span class="icon is-small is-marginless">
-<i class="fa fa-angle-left"></i>
-</span>
-Newer posts
-</a>
-</div>
-</div>
-<div class="level-right is-marginless">
-<div class=level-item>
-<a class=button href=/tags/programming/page/3/>
-Older posts
-<span class="icon is-small is-marginless">
-<i class="fa fa-angle-right"></i>
-</span>
-</a>
-</div>
-</div>
-</nav>
-</div>
-</section>
-<section class=section>
-<div class="container has-text-centered">
-<p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2022</p>
-</div>
-</section>
-<script type=text/javascript src=/js/bulmamenu.min.js defer></script>
+...<br><ul id=tags><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li><li><a href=/tags/emacs><i class="fas fa-tag" aria-hidden=true></i> emacs</a></li></ul></div></article><article><h2 class="subtitle is-6">January 17, 2016</h2><h1 class=title><a href=/2016/01/17/lisp-finally-clicked/>Lisp Finally Clicked</a></h1><div class=content>I&rsquo;ve been meaning to write this post for a couple of weeks now. There is a story told among programming language enthusiasts that programming as an art only “clicks” once a programmer understands the Lisp programming language. I finally feel like I&rsquo;ve reached that point. Although I don&rsquo;t think I&rsquo;m an amazing programmer, I finally feel like I understand the difference between languages (like Python and Lisp), and why Lisp is often considered so much more flexible and powerful (at least in theory) than a language like Python or C.
+...<br><ul id=tags><li><a href=/tags/clojure><i class="fas fa-tag" aria-hidden=true></i> clojure</a></li><li><a href=/tags/programming><i class="fas fa-tag" aria-hidden=true></i> programming</a></li></ul></div></article></div></section><section class=section><div class=container><nav class="level is-mobile"><div class=level-left><div class=level-item><a class=button href=/tags/programming/><span class="icon is-small is-marginless"><i class="fa fa-angle-left"></i></span>
+Newer posts</a></div></div><div class="level-right is-marginless"><div class=level-item><a class=button href=/tags/programming/page/3/>Older posts
+<span class="icon is-small is-marginless"><i class="fa fa-angle-right"></i></span></a></div></div></nav></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2022</p></div></section><script type=text/javascript src=/js/bulmamenu.min.js defer></script>

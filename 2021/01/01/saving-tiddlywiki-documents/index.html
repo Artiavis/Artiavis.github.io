@@ -1,146 +1,23 @@
-<!doctype html><html lang=en-us>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>Saving TiddlyWiki Documents | Just a Blog in the Park</title>
-<link rel=stylesheet href=/css/style.css>
-<script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script>
+<!doctype html><html lang=en-us><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Saving TiddlyWiki Documents | Just a Blog in the Park</title><link rel=stylesheet href=/css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script>
 <script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script>
 <script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script>
-<link rel=stylesheet href=/css/images.min.css>
-<section class=section>
-<div class=container>
-<nav class=navbar role=navigation aria-label="main navigation">
-<div class=navbar-brand>
-<a class=navbar-item href=/about>
-<img width=50 height=50 alt="Gravatar image of Jeff" src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=50">
-</a>
-<a class=navbar-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a>
-<a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false>
+<link rel=stylesheet href=/css/images.min.css><section class=section><div class=container><nav class=navbar role=navigation aria-label="main navigation"><div class=navbar-brand><a class=navbar-item href=/about><img width=50 height=50 alt="Gravatar image of Jeff" src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=50"></a>
+<a class=navbar-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a><a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false><span aria-hidden=true></span>
 <span aria-hidden=true></span>
-<span aria-hidden=true></span>
-<span aria-hidden=true></span>
-</a>
-</div>
-<div class=navbar-menu id=navMenu>
-<div class=navbar-start></div>
-<div class=navbar-end>
-<div class=navbar-item>
-<a href=/photos>
-<span class=icon>
-<i class="fas fa-camera"></i>
-</span>
-Photos
-</a>
-</div>
-<div class=navbar-item>
-<a href=/tags>
-<span class=icon>
-<i class="fas fa-tags"></i>
-</span>
-Tags
-</a>
-</div>
-<div class=navbar-item>
-<a href=https://github.com/Artiavis>
-<span class=icon>
-<i class="fab fa-github"></i>
-</span>
-GitHub
-</a>
-</div>
-<div class=navbar-item>
-<a href=https://linkedin.com/in/JeffreyCRabinowitz>
-<span class=icon>
-<i class="fab fa-linkedin"></i>
-</span>
-LinkedIn
-</a>
-</div>
-<div class=navbar-item>
-<a href="https://www.dropbox.com/s/v3nfsxijmrcj197/jeff_rabinowitz_resume_2022_02_12.pdf?dl=1">
-<span class=icon>
-<i class="fas fa-file-pdf"></i>
-</span>
-Resume
-</a>
-</div>
-<div class=navbar-item>
-<a href=/index.xml>
-<span class=icon>
-<i class="fas fa-rss-square"></i>
-</span>
-Subscribe
-</a>
-</div>
-</div>
-</div>
-</nav>
-</div>
-</section>
-<section class=section>
-<div class=container>
-<h2 class="subtitle is-6">January 1, 2021</h2>
-<h1 class=title>Saving TiddlyWiki Documents</h1>
-<h2 class="subtitle is-6">3 minute read</h2>
-<ul id=tags>
-<li><a href=/tags/tiddlywiki><i class="fas fa-tag" aria-hidden=true></i> tiddlywiki</a></li>
-</ul>
-<br>
-<div class=content>
-<p>Using a TiddlyWiki is a tale of two cities:</p>
-<ol>
-<li>Each TiddlyWiki document is a single HTML file <a href=https://tiddlywiki.com/#Quine>that contains 100% of its own source code and data</a> and <a href=https://tiddlywiki.com/#BrowserCompatibility>is compatible with all modern browsers</a> (and operating systems). Therefore, opening and reading a TiddlyWiki couldn&rsquo;t be simpler.</li>
-<li>On the other hand, editing TiddlyWiki is a bit messy if done without a plugin.</li>
-</ol>
-<ul>
-<li><em>With a plugin</em>, editing and saving a TiddlyWiki happens &ldquo;in-place&rdquo;, the same as with a Microsoft Word document (or the like). If I edit <code>mytiddlywiki.html</code> from my <code>Downloads</code> folder, I can save back to <code>mytiddlywiki.html</code> in my <code>Downloads</code> folder.</li>
-<li><em>Without a plugin</em>, editing and saving a TiddlyWiki spits out a _clone of the modified wiki. If I edit <code>mytiddlywiki.html</code> from my <code>Downloads</code> folder, I can save <code>mytiddlywiki copy.html</code>, but I won&rsquo;t be able to save back to <code>mytiddlywiki.html</code>.</li>
-</ul>
-<p>For that reason, serious users of TiddlyWiki should adopt an app or plugin which allows saving TiddlyWikis in-place.</p>
-<h2 id=for-desktop>For Desktop</h2>
-<p>For desktop, I got started with <a href=https://tiddlywiki.com/#Saving%20on%20TiddlyDesktop>TiddlyDesktop</a>, which is a special web browser that can open and save TiddlyWikis. This is one of the simplest ways to get started, and works fine, but requires downloading the TiddlyDesktop app.</p>
-<figure><img src=/img/2021/01/01/TiddlyDesktopSample.png alt="The TiddlyDesktop app is a simple way to get started."><figcaption>
-<p>The TiddlyDesktop app is a simple way to get started.</p>
-</figcaption>
-</figure>
-<p>After playing around with that for a few days, I decided to take the plunge with <a href=https://tiddlywiki.com/#Timimi%3A%20WebExtension%20and%20Native%20Host%20by%20Riz>Timimi</a> instead. For Timimi, I downloaded a Firefox plugin, and a desktop plugin, and the two work together to save wikis from Firefox to the hard drive.</p>
-<h2 id=for-mobile>For Mobile</h2>
-<p>Things are similar on mobile, but I have to pay the &ldquo;Apple tax&rdquo; since I have an iPhone.
-<a href=https://tiddlywiki.com/#Saving%20on%20iPad%2FiPhone>The main solution recommended for iPhone/iPad</a> is to pay $5 to download the <a href=https://apps.apple.com/us/app/quine-2/id1450128957>Quine 2</a> app, and use that together with a Dropbox account to be able to open and save TiddlyWikis from both desktop and mobile.</p>
-<p>First, <a href=https://tiddlywiki.com/#Encryption>I enabled a password on my TiddlyWiki following the official instructions</a>.
+<span aria-hidden=true></span></a></div><div class=navbar-menu id=navMenu><div class=navbar-start></div><div class=navbar-end><div class=navbar-item><a href=/photos><span class=icon><i class="fas fa-camera"></i></span>
+Photos</a></div><div class=navbar-item><a href=/tags><span class=icon><i class="fas fa-tags"></i></span>
+Tags</a></div><div class=navbar-item><a href=https://github.com/Artiavis><span class=icon><i class="fab fa-github"></i></span>
+GitHub</a></div><div class=navbar-item><a href=https://linkedin.com/in/JeffreyCRabinowitz><span class=icon><i class="fab fa-linkedin"></i></span>
+LinkedIn</a></div><div class=navbar-item><a href="https://www.dropbox.com/s/v3nfsxijmrcj197/jeff_rabinowitz_resume_2022_02_12.pdf?dl=1"><span class=icon><i class="fas fa-file-pdf"></i></span>
+Resume</a></div><div class=navbar-item><a href=/index.xml><span class=icon><i class="fas fa-rss-square"></i></span>
+Subscribe</a></div></div></div></nav></div></section><section class=section><div class=container><h2 class="subtitle is-6">January 1, 2021</h2><h1 class=title>Saving TiddlyWiki Documents</h1><h2 class="subtitle is-6">3 minute read</h2><ul id=tags><li><a href=/tags/tiddlywiki><i class="fas fa-tag" aria-hidden=true></i> tiddlywiki</a></li></ul><br><div class=content><p>Using a TiddlyWiki is a tale of two cities:</p><ol><li>Each TiddlyWiki document is a single HTML file <a href=https://tiddlywiki.com/#Quine>that contains 100% of its own source code and data</a> and <a href=https://tiddlywiki.com/#BrowserCompatibility>is compatible with all modern browsers</a> (and operating systems). Therefore, opening and reading a TiddlyWiki couldn&rsquo;t be simpler.</li><li>On the other hand, editing TiddlyWiki is a bit messy if done without a plugin.</li></ol><ul><li><em>With a plugin</em>, editing and saving a TiddlyWiki happens &ldquo;in-place&rdquo;, the same as with a Microsoft Word document (or the like). If I edit <code>mytiddlywiki.html</code> from my <code>Downloads</code> folder, I can save back to <code>mytiddlywiki.html</code> in my <code>Downloads</code> folder.</li><li><em>Without a plugin</em>, editing and saving a TiddlyWiki spits out a _clone of the modified wiki. If I edit <code>mytiddlywiki.html</code> from my <code>Downloads</code> folder, I can save <code>mytiddlywiki copy.html</code>, but I won&rsquo;t be able to save back to <code>mytiddlywiki.html</code>.</li></ul><p>For that reason, serious users of TiddlyWiki should adopt an app or plugin which allows saving TiddlyWikis in-place.</p><h2 id=for-desktop>For Desktop</h2><p>For desktop, I got started with <a href=https://tiddlywiki.com/#Saving%20on%20TiddlyDesktop>TiddlyDesktop</a>, which is a special web browser that can open and save TiddlyWikis. This is one of the simplest ways to get started, and works fine, but requires downloading the TiddlyDesktop app.</p><figure><img src=/img/2021/01/01/TiddlyDesktopSample.png alt="The TiddlyDesktop app is a simple way to get started."><figcaption><p>The TiddlyDesktop app is a simple way to get started.</p></figcaption></figure><p>After playing around with that for a few days, I decided to take the plunge with <a href=https://tiddlywiki.com/#Timimi%3A%20WebExtension%20and%20Native%20Host%20by%20Riz>Timimi</a> instead. For Timimi, I downloaded a Firefox plugin, and a desktop plugin, and the two work together to save wikis from Firefox to the hard drive.</p><h2 id=for-mobile>For Mobile</h2><p>Things are similar on mobile, but I have to pay the &ldquo;Apple tax&rdquo; since I have an iPhone.
+<a href=https://tiddlywiki.com/#Saving%20on%20iPad%2FiPhone>The main solution recommended for iPhone/iPad</a> is to pay $5 to download the <a href=https://apps.apple.com/us/app/quine-2/id1450128957>Quine 2</a> app, and use that together with a Dropbox account to be able to open and save TiddlyWikis from both desktop and mobile.</p><p>First, <a href=https://tiddlywiki.com/#Encryption>I enabled a password on my TiddlyWiki following the official instructions</a>.
 This way, the contents of my TiddlyWiki will be safe even if they&rsquo;re stored on the
-cloud.</p>
-<p>Then, I set up the sync from my desktop. I installed
+cloud.</p><p>Then, I set up the sync from my desktop. I installed
 <a href=https://help.dropbox.com/installs-integrations/sync-uploads/sync-overview>Dropbox&rsquo;s Desktop sync feature</a>
 to synchronize the TiddlyWiki to Dropbox&rsquo;s cloud.
 Then, I moved my TiddlyWiki file from my <code>Downloads</code> folder into my <code>Dropbox</code>
-folder on my desktop computer, and voila! TiddlyWiki in the cloud.</p>
-<p>Finally, I downloaded the Quine 2 and Dropbox apps onto my iPhone. As you can
+folder on my desktop computer, and voila! TiddlyWiki in the cloud.</p><p>Finally, I downloaded the Quine 2 and Dropbox apps onto my iPhone. As you can
 see in the screenshots below, this allows opening and saving TiddlyWikis
 from mobile. (I don&rsquo;t plan to do a lot of editing from my phone, but it would
-be handy to be able to view things from there.)</p>
-<figure><img src=/img/2021/01/01/Quine2AppBrowseDropboxWikis.jpeg alt="Quine 2 allows creating and opening TiddlyWiki documents in Dropbox."><figcaption>
-<p>Quine 2 allows creating and opening TiddlyWiki documents in Dropbox.</p>
-</figcaption>
-</figure>
-<figure><img src=/img/2021/01/01/Quine2AppOpenedEmptyTiddlyWiki.jpeg alt="The save button can save TiddlyWiki documents back to Dropbox, too."><figcaption>
-<p>The save button can save TiddlyWiki documents back to Dropbox, too.</p>
-</figcaption>
-</figure>
-</div>
-</div>
-</section>
-<section class=section>
-<div class=container>
-<aside><div id=disqus_thread></div></aside>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript>
-<script type=text/javascript>var disqus_shortname='justabloginthepark',disqus_loaded=!1;function disqus(){if(!disqus_loaded){if(disqus_loaded=!0,window.location.hostname=="localhost")return;var a=document.createElement('script');a.type='text/javascript',a.async=!0,a.src='//'+disqus_shortname+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)}}</script>
-<script type=text/javascript>window.onscroll=function(a){window.innerHeight+window.scrollY>=document.body.offsetHeight&&(disqus_loaded||disqus())}</script>
-</div>
-</section>
-<section class=section>
-<div class="container has-text-centered">
-<p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2022</p>
-</div>
-</section>
-<script type=text/javascript src=/js/bulmamenu.min.js defer></script>
+be handy to be able to view things from there.)</p><figure><img src=/img/2021/01/01/Quine2AppBrowseDropboxWikis.jpeg alt="Quine 2 allows creating and opening TiddlyWiki documents in Dropbox."><figcaption><p>Quine 2 allows creating and opening TiddlyWiki documents in Dropbox.</p></figcaption></figure><figure><img src=/img/2021/01/01/Quine2AppOpenedEmptyTiddlyWiki.jpeg alt="The save button can save TiddlyWiki documents back to Dropbox, too."><figcaption><p>The save button can save TiddlyWiki documents back to Dropbox, too.</p></figcaption></figure></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname="justabloginthepark",disqus_loaded=!1;function disqus(){if(!disqus_loaded){if(disqus_loaded=!0,window.location.hostname=="localhost")return;var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+disqus_shortname+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}}</script><script type=text/javascript>window.onscroll=function(){window.innerHeight+window.scrollY>=document.body.offsetHeight&&(disqus_loaded||disqus())}</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2022</p></div></section><script type=text/javascript src=/js/bulmamenu.min.js defer></script>
