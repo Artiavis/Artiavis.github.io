@@ -1,2 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>javascript on Just a Blog in the Park</title><link>https://www.justabloginthepark.com/tags/javascript/</link><description>Recent content in javascript on Just a Blog in the Park</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; &lt;a href="https://github.com/Artiavis">Jeff Rabinowitz&lt;/a>, 2023</copyright><lastBuildDate>Sun, 02 Feb 2020 22:00:00 -0500</lastBuildDate><atom:link href="https://www.justabloginthepark.com/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>Recommended Programming Languages for High School Students</title><link>https://www.justabloginthepark.com/2020/02/02/recommended-programming-languages-for-high-school-students/</link><pubDate>Sun, 02 Feb 2020 22:00:00 -0500</pubDate><guid>https://www.justabloginthepark.com/2020/02/02/recommended-programming-languages-for-high-school-students/</guid><description>Disclaimer: All opinions expressed herein are my own and don&amp;rsquo;t necessarily reflect that of my employer. Caveat: I hold these opinions and make these recommendations specifically with respect to high school students (or casual hobbyists).
-I have a friend in my neighborhood who teaches high school computer science. When she happened to mention that she was trying a new curriculum for one of her classes, I asked her which programming language she was planning to use in her class.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Javascript on Just a Blog in the Park</title><link>https://www.justabloginthepark.com/tags/javascript/</link><description>Recent content in Javascript on Just a Blog in the Park</description><generator>Hugo</generator><language>en-us</language><copyright>&amp;copy; &lt;a href="https://github.com/Artiavis">Jeff Rabinowitz&lt;/a>, 2025</copyright><lastBuildDate>Sun, 02 Feb 2020 22:00:00 -0500</lastBuildDate><atom:link href="https://www.justabloginthepark.com/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>Recommended Programming Languages for High School Students</title><link>https://www.justabloginthepark.com/2020/02/02/recommended-programming-languages-for-high-school-students/</link><pubDate>Sun, 02 Feb 2020 22:00:00 -0500</pubDate><guid>https://www.justabloginthepark.com/2020/02/02/recommended-programming-languages-for-high-school-students/</guid><description>&lt;p>&lt;em>&lt;strong>Disclaimer&lt;/strong>: All opinions expressed herein are my own and don&amp;rsquo;t necessarily
+reflect that of my employer.&lt;/em>
+&lt;em>&lt;strong>Caveat&lt;/strong>: I hold these opinions and make these recommendations specifically
+with respect to high school students (or casual hobbyists).&lt;/em>&lt;/p>
+&lt;p>I have a friend in my neighborhood who teaches high school computer science.
+When she happened to mention that she was trying a new curriculum for one of
+her classes, I asked her which programming language she was planning to use
+in her class. She said that she hadn&amp;rsquo;t quite decided yet, but was leaning
+towards JavaScript, because it&amp;rsquo;s ubiquitous and (importantly!) runs well on her
+school&amp;rsquo;s Chromebook machines.
+Upon hearing that she was favoring JavaScript,
+I ran my mouth and
+recommend that she instead consider Python.
+Based on my professional experience with both JavaScript and Python,
+I feel comfortable stating that JavaScript has quite a few pitfalls in terms of
+learning, and has a non-trivial path to writing high-quality code.
+I also feel comfortable stating that Python has a number of educational virtues,
+and has a fairly strong path for students to learn to write high-quality code.&lt;/p></description></item></channel></rss>

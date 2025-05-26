@@ -1,6 +1,5 @@
-<!doctype html><html lang=en-us><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Implementing a Table of Contents Using Zippers | Just a Blog in the Park</title>
-<link rel=stylesheet href=/css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=/css/images.min.css><section class=section><div class=container><nav class=navbar role=navigation aria-label="main navigation"><div class=navbar-brand><a class=navbar-item href=/about><img width=50 height=50 alt="Gravatar image of Jeff" src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=50">
-</a><a class=navbar-item href=https://www.justabloginthepark.com><h1 class="title is-4">Just a Blog in the Park</h1></a><a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false><span aria-hidden=true></span>
+<!doctype html><html lang=en-us><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Implementing a Table of Contents Using Zippers | Just a Blog in the Park</title><link rel=stylesheet href=https://www.justabloginthepark.com//css/style.css><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/solid.js integrity=sha384-Z7p3uC4xXkxbK7/4keZjny0hTCWPXWfXl/mJ36+pW7ffAGnXzO7P+iCZ0mZv5Zt0 crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/brands.js integrity=sha384-ZqDZAkGUHrXxm3bvcTCmQWz4lt7QGLxzlqauKOyLwg8U0wYcYPDIIVTbZZXjbfsM crossorigin=anonymous></script><script defer src=https://use.fontawesome.com/releases/v5.1.0/js/fontawesome.js integrity=sha384-juNb2Ils/YfoXkciRFz//Bi34FN+KKL2AN4R/COdBOMD9/sV/UsxI6++NqifNitM crossorigin=anonymous></script><link rel=stylesheet href=https://www.justabloginthepark.com//css/images.min.css><section class=section><div class=container><nav class=navbar role=navigation aria-label="main navigation"><div class=navbar-brand><a class=navbar-item href=/about><img width=50 height=50 alt="Gravatar image of Jeff" src="https://www.gravatar.com/avatar/f5bb1c072afd984893fbef4adcb697e5?s=50">
+</a><a class=navbar-item href=https://www.justabloginthepark.com/><h1 class="title is-4">Just a Blog in the Park</h1></a><a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false><span aria-hidden=true></span>
 <span aria-hidden=true></span>
 <span aria-hidden=true></span></a></div><div class=navbar-menu id=navMenu><div class=navbar-start></div><div class=navbar-end><div class=navbar-item><a href=/photos><span class=icon><i class="fas fa-camera"></i>
 </span>Photos</a></div><div class=navbar-item><a href=/tags><span class=icon><i class="fas fa-tags"></i>
@@ -30,10 +29,23 @@ any variety of the sequence <code>h1 h2 h3 h4 h5 h6</code>). (It&rsquo;s importa
 stress that header tags are generally used for <em>visually indicating</em>
 the section&rsquo;s content significance, and don&rsquo;t strictly signify the
 presence of a section, a subsection, a sub-subsection, etc.)</p><p>Naively, a document with three sections, each with nested subsections,
-should wind up with a TOC which looks like the following:</p><p>This is all well and good — we have a beautiful table of contents
+should wind up with a TOC which looks like the following:</p><table class=table><tr><thead><th>Structure of Document</th><th>Appearance of TOC</th></thead><td><pre>
+h1. Introduction
+    h2. Exposition
+    h2. Problem Statement
+h1. Proposed Solutions
+    h2. Solution 1
+    h2. Solution 2
+h1. Conclusion
+    h2. Takeaways
+</pre></td><td><ol><li>Introduction</li><ol><li>Exposition</li><li>Problem Statement</li></ol><li>Proposed Solutions</li><ol><li>Solution 1</li><li>Solution 2</li></ol><li>Conclusion</li><ol><li>Takeaways</li></ol></ol></td></tr></table><p>This is all well and good — we have a beautiful table of contents
 which perfectly mirrors the document structure!</p><p>On the other hand, what if you want a structure wherein there are only
 two solutions enumerated in small headers, and then a slightly larger
-takeaways header? Something like this?</p><p>As alluded to earlier, header tags are meant to convey visual effect
+takeaways header? Something like this?</p><table class=table><tr><thead><th>Structure of Document</th><th>Appearance of TOC</th></thead><td><pre>
+h2. Solution 1
+h2. Solution 2
+h1. Takeaways
+</pre></td><td><ol><ol><li>Solution 1</li><li>Solution 2</li></ol><li>Takeaways</li></ol></td></tr></table><p>As alluded to earlier, header tags are meant to convey visual effect
 in addition to (in)directly denoting the presence of sections of a
 document. However, in the event that an author prefers a larger
 and more pronounced choice of header for a conclusion paragraph than
@@ -41,7 +53,15 @@ in introductory paragraph, should the earlier headers be naively indented
 in the same way as they were above? Probably not.</p><h3 id=problem-statement>Problem Statement</h3><p>The problem, then, is as follows:</p><blockquote><p>A document should be able to have its headers appear in any order, but still
 maintain a consistent level of indentation in the table of contents. Any
 top-level header should be at the outermost indentation level of the TOC,
-even if the value of those headers are different.</p></blockquote><p>Visually, this organization should be respected:</p><h2 id=the-algorithm>The Algorithm</h2><h3 id=the-old-algorithm>The Old Algorithm</h3><p>The naive algorithm for generating a table of contents was roughly as follows:</p><ol><li>For each header in the document, if that header is of smaller/larger size
+even if the value of those headers are different.</p></blockquote><p>Visually, this organization should be respected:</p><table class=table><tr><thead><th>Structure of Document</th><th>Appearance of TOC</th></thead><td><pre>
+h2. Solution 1
+    h3. Aspect 1
+    h3. Aspect 2
+h2. Solution 2
+    h4. Elaboration
+    h3. Complications
+h1. Takeaways
+</pre></td><td><ol><li>Solution 1</li><ol><li>Aspect 1</li><li>Aspect 2</li></ol><li>Solution 2</li><ol><li>Elaboration</li><li>Complications</li></ol><li>Takeaways</li></ol></td></tr></table><h2 id=the-algorithm>The Algorithm</h2><h3 id=the-old-algorithm>The Old Algorithm</h3><p>The naive algorithm for generating a table of contents was roughly as follows:</p><ol><li>For each header in the document, if that header is of smaller/larger size
 than the previous header, add/subtract levels of indentation representing
 the difference in their magnitude.</li><li>If it turns out levels of indentation were completely skipped
 (e.g. from two levels of indentation straight to four, with nothing
@@ -98,4 +118,4 @@ API, I found that having access to it really made this algorithm simpler to
 implement and understand. I also found that learning about the zipper helped
 me understand the Lens data structure as well. In another post, I&rsquo;d like to
 review some of the interesting nuances of the Zipper API, and how it appears
-that a form of object-oriented design was elegantly achieved.</p><h2 id=references>References</h2><ul><li><a href=https://clojuredocs.org/clojure.zip/zipper>Documentation on the Zipper function</a></li><li><a href=http://www.exampler.com/blog/2010/09/01/editing-trees-in-clojure-with-clojurezip>The blog post which helped me grasp zippers</a></li><li><a href=https://en.wikipedia.org/wiki/Zipper_%28data_structure%29>Wikipedia</a></li></ul></div></div></section><section class=section><div class=container><aside><div id=disqus_thread></div></aside><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript rel=nofollow>comments powered by Disqus.</a></noscript><script type=text/javascript>var disqus_shortname="justabloginthepark",disqus_loaded=!1;function disqus(){if(!disqus_loaded){if(disqus_loaded=!0,window.location.hostname=="localhost")return;var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+disqus_shortname+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}}</script><script type=text/javascript>window.onscroll=function(){window.innerHeight+window.scrollY>=document.body.offsetHeight&&(disqus_loaded||disqus())}</script></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2023</p></div></section><script type=text/javascript src=/js/bulmamenu.min.js defer></script>
+that a form of object-oriented design was elegantly achieved.</p><h2 id=references>References</h2><ul><li><a href=https://clojuredocs.org/clojure.zip/zipper>Documentation on the Zipper function</a></li><li><a href=http://www.exampler.com/blog/2010/09/01/editing-trees-in-clojure-with-clojurezip>The blog post which helped me grasp zippers</a></li><li><a href=https://en.wikipedia.org/wiki/Zipper_%28data_structure%29>Wikipedia</a></li></ul></div></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://github.com/Artiavis>Jeff Rabinowitz</a>, 2025</p></div></section><script type=text/javascript src=/js/bulmamenu.min.js defer></script>

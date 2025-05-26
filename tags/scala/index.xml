@@ -1,2 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>scala on Just a Blog in the Park</title><link>https://www.justabloginthepark.com/tags/scala/</link><description>Recent content in scala on Just a Blog in the Park</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&amp;copy; &lt;a href="https://github.com/Artiavis">Jeff Rabinowitz&lt;/a>, 2023</copyright><lastBuildDate>Wed, 28 Jun 2017 00:20:27 -0400</lastBuildDate><atom:link href="https://www.justabloginthepark.com/tags/scala/index.xml" rel="self" type="application/rss+xml"/><item><title>Is Kotlin the new Java?</title><link>https://www.justabloginthepark.com/2017/06/28/is-kotlin-the-new-java/</link><pubDate>Wed, 28 Jun 2017 00:20:27 -0400</pubDate><guid>https://www.justabloginthepark.com/2017/06/28/is-kotlin-the-new-java/</guid><description>One of the programming languages I&amp;rsquo;ve (essentially) been ignoring for the past couple of years has been Kotlin, the “better Java” from Jetbrains, the author of IntelliJ and other IDE&amp;rsquo;s.1 Recently, Kotlin has come back into focus for me for the following reasons:
-Google finally announced official Android support for Kotlin Steve Yegge, that infamously opinionated programming language enthusiast, wrote a patently Yeggian post about how Kotlin scratches his itches without supporting academic or impractical features.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Scala on Just a Blog in the Park</title><link>https://www.justabloginthepark.com/tags/scala/</link><description>Recent content in Scala on Just a Blog in the Park</description><generator>Hugo</generator><language>en-us</language><copyright>&amp;copy; &lt;a href="https://github.com/Artiavis">Jeff Rabinowitz&lt;/a>, 2025</copyright><lastBuildDate>Wed, 28 Jun 2017 00:20:27 -0400</lastBuildDate><atom:link href="https://www.justabloginthepark.com/tags/scala/index.xml" rel="self" type="application/rss+xml"/><item><title>Is Kotlin the new Java?</title><link>https://www.justabloginthepark.com/2017/06/28/is-kotlin-the-new-java/</link><pubDate>Wed, 28 Jun 2017 00:20:27 -0400</pubDate><guid>https://www.justabloginthepark.com/2017/06/28/is-kotlin-the-new-java/</guid><description>&lt;p>One of the programming languages I&amp;rsquo;ve (essentially) been ignoring for the past
+couple of years has been &lt;a href="http://kotlinlang.org/">Kotlin&lt;/a>,
+the “better Java” from Jetbrains,
+the author of IntelliJ and other IDE&amp;rsquo;s.&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>
+Recently, Kotlin has come back into focus for me for the following reasons:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://developer.android.com/kotlin/index.html">Google finally announced official Android support for Kotlin&lt;/a>&lt;/li>
+&lt;li>Steve Yegge, that infamously opinionated programming language enthusiast,
+&lt;a href="http://steve-yegge.blogspot.com/2017/05/why-kotlin-is-better-than-whatever-dumb.html">wrote a patently Yeggian post about how Kotlin scratches his itches&lt;/a>
+without supporting academic or impractical features.&lt;/li>
+&lt;li>I began to tire (after only a handful of months!!) of diligently reminding my
+colleagues to prefer &lt;a href="https://github.com/google/guava/wiki/ImmutableCollectionsExplained">Guava Immutable collections&lt;/a>
+over Java collections,
+&lt;a href="https://projectlombok.org/features/Value">Lombok&lt;/a>/&lt;a href="https://immutables.github.io/">Immutables&lt;/a> over hand-rolled POJO&amp;rsquo;s, and
+&lt;a href="https://stackoverflow.com/questions/13484202/how-to-use-nullable-and-nonnull-annotations-more-effectively">to please please use the &lt;code>@Nullable&lt;/code> and &lt;code>@Nonnull&lt;/code> annotations&lt;/a>
+or at the very least &lt;a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html">&lt;code>java.util.Optional&lt;/code>&lt;/a>
+instead of returning ambiguous types (such as empty/nullable/possibly full collections of possibly null values).&lt;/li>
+&lt;/ul>
+&lt;h3 id="some-features-need-to-exist-at-the-language-level">Some features need to exist at the language level&lt;/h3>
+&lt;p>To paraphrase Jeff Bezos,&lt;/p></description></item></channel></rss>
